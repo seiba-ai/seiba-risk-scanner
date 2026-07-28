@@ -1,0 +1,33 @@
+Banking Transaction Review - Confidential
+Account Review Date: 2024-01-16
+Reviewer: Lisa Thompson, Senior Fraud Analyst
+
+Okay so I'm looking at account 1234567890, routing 021000021. Account holder is David Thompson, SSN 345-67-8901, DOB 12/05/1975. Email david.thompson@bankmail.com, phone 1-800-555-3456. Address on file: 890 Financial Plaza, Suite 500, Miami, FL 33101.
+
+Account type is Premium Checking. Current balance $45,678.90, credit limit $50,000.00. Account opened March 20, 2015, so he's been a customer for almost 9 years. Good standing, no issues historically.
+
+Let me go through the recent transactions:
+
+January 15th - Debit $1,234.56 to AMAZON.COM. That's a pretty large Amazon charge. Could be legitimate - maybe buying electronics or furniture? But it's higher than his typical Amazon purchases which are usually $50-200. Flagged for review.
+
+January 14th - Credit $3,500.00 marked as "Payroll Deposit". That's his regular bi-weekly paycheck. Looks normal, same amount as usual, from the same employer. No concerns there.
+
+January 13th - Debit $89.99 to APPLE STORE. Reasonable amount, probably an app purchase or accessory. Nothing suspicious.
+
+January 12th - Transfer $500.00 to account 0987654321. That's a different account number. Need to verify if this is an account he owns or if it's a third party. Could be legitimate - maybe paying a friend or family member? But we should confirm.
+
+Credit card on file: 4111-1111-1111-1111, expires 09/27, CVV 789, cardholder name DAVID THOMPSON. This is linked to the checking account for overdraft protection.
+
+Digital access shows last login from IP 198.51.100.42, location Miami, FL, on 2024-01-16 at 08:30:15. Device type Desktop, browser Chrome 120.0. That matches his usual login pattern - he typically accesses from home in the mornings before work.
+
+Driver's license on file: FL-D789-456-123-45. We verified this when he opened the account.
+
+I called him today to verify the Amazon charge. He confirmed it was him - buying a new laptop for his daughter's college. Makes sense, that would explain the higher amount. He seemed a bit annoyed that I called, but that's our job. Better safe than sorry.
+
+The transfer to account 0987654321 - he said that's his savings account at another bank. He's been moving money around, trying to get a better interest rate. Fair enough, people do that.
+
+Overall, account looks clean. No signs of fraud. The Amazon charge was legitimate. I'll close this review case.
+
+Random system note: The fraud detection algorithm flagged this account because of the large Amazon purchase, but after manual review it's fine. Sometimes the algorithms are too sensitive. Also, the system logged something about "weather conditions" which makes no sense. Probably a bug in the logging system. I'll mention it to IT.
+
+The coffee in the break room is terrible today. Tastes like it's been sitting there for hours. Someone needs to make a fresh pot. Completely unrelated to this review but it's annoying.

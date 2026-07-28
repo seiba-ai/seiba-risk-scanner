@@ -1,0 +1,153 @@
+{"_meta": {"file": "patient_discharge_summary.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::account_number", "openmed::age", "openmed::certificate_license_number", "openmed::city", "openmed::company_name", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::first_name", "openmed::gender", "openmed::health_plan_beneficiary_number", "openmed::language", "openmed::last_name", "openmed::medical_record_number", "openmed::npi", "openmed::occupation", "openmed::phone_number", "openmed::postcode", "openmed::race_ethnicity", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::time", "openmed::unique_id", "openmed::user_name"], "clinical_label_set": "disease_detection_superclinical", "clinical_allowed_entity_ids": ["openmed::CONDITION", "openmed::DISEASE", "openmed::PATHOLOGY"], "clinical_annotation_notes": "Patient-specific disease/condition/pathology spans for OpenMed disease_detection_superclinical. Family-history-only mentions and negated conditions are excluded."}}
+{"start": 159, "end": 191, "text": "Memorial Regional Medical Center", "entity_id": "openmed::company_name"}
+{"start": 251, "end": 264, "text": "April 3, 2024", "entity_id": "openmed::date"}
+{"start": 281, "end": 295, "text": "March 28, 2024", "entity_id": "openmed::date"}
+{"start": 344, "end": 351, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 352, "end": 358, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 359, "end": 363, "text": "Park", "entity_id": "openmed::last_name"}
+{"start": 393, "end": 405, "text": "MD-456789123", "entity_id": "openmed::certificate_license_number"}
+{"start": 418, "end": 428, "text": "9876543210", "entity_id": "openmed::npi"}
+{"start": 446, "end": 460, "text": "(650) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 478, "end": 504, "text": "mpark@memorialregional.com", "entity_id": "openmed::email"}
+{"start": 559, "end": 564, "text": "Emily", "entity_id": "openmed::first_name"}
+{"start": 570, "end": 578, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 594, "end": 612, "text": "September 15, 1976", "entity_id": "openmed::date_of_birth"}
+{"start": 618, "end": 620, "text": "47", "entity_id": "openmed::age"}
+{"start": 635, "end": 641, "text": "Female", "entity_id": "openmed::gender"}
+{"start": 665, "end": 678, "text": "MRN-456789012", "entity_id": "openmed::medical_record_number"}
+{"start": 703, "end": 717, "text": "ACCT-789456123", "entity_id": "openmed::account_number"}
+{"start": 742, "end": 753, "text": "678-90-1234", "entity_id": "openmed::ssn"}
+{"start": 770, "end": 793, "text": "Caucasian, Non-Hispanic", "entity_id": "openmed::race_ethnicity"}
+{"start": 814, "end": 821, "text": "English", "entity_id": "openmed::language"}
+{"start": 858, "end": 879, "text": "High School Principal", "entity_id": "openmed::occupation"}
+{"start": 1082, "end": 1089, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 1090, "end": 1094, "text": "Park", "entity_id": "openmed::last_name"}
+{"start": 1129, "end": 1143, "text": "March 28, 2024", "entity_id": "openmed::date"}
+{"start": 1147, "end": 1155, "text": "11:45 PM", "entity_id": "openmed::time"}
+{"start": 1248, "end": 1263, "text": "4567 Oak Street", "entity_id": "openmed::street_address"}
+{"start": 1265, "end": 1274, "text": "San Mateo", "entity_id": "openmed::city"}
+{"start": 1276, "end": 1278, "text": "CA", "entity_id": "openmed::state"}
+{"start": 1279, "end": 1284, "text": "94403", "entity_id": "openmed::postcode"}
+{"start": 1367, "end": 1381, "text": "(650) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 1396, "end": 1410, "text": "1-650-555-7890", "entity_id": "openmed::phone_number"}
+{"start": 1423, "end": 1437, "text": "(650) 555-1234", "entity_id": "openmed::phone_number"}
+{"start": 1452, "end": 1466, "text": "(650) 555-4568", "entity_id": "openmed::phone_number"}
+{"start": 1495, "end": 1519, "text": "emily.thompson@email.com", "entity_id": "openmed::email"}
+{"start": 1526, "end": 1554, "text": "ethompson@schooldistrict.edu", "entity_id": "openmed::email"}
+{"start": 1591, "end": 1596, "text": "David", "entity_id": "openmed::first_name"}
+{"start": 1597, "end": 1605, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 1635, "end": 1649, "text": "(650) 555-4568", "entity_id": "openmed::phone_number"}
+{"start": 1690, "end": 1714, "text": "david.thompson@email.com", "entity_id": "openmed::email"}
+{"start": 1733, "end": 1741, "text": "Margaret", "entity_id": "openmed::first_name"}
+{"start": 1742, "end": 1750, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 1779, "end": 1793, "text": "(415) 555-2345", "entity_id": "openmed::phone_number"}
+{"start": 1803, "end": 1823, "text": "1234 Elder Care Lane", "entity_id": "openmed::street_address"}
+{"start": 1825, "end": 1838, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 1840, "end": 1842, "text": "CA", "entity_id": "openmed::state"}
+{"start": 1843, "end": 1848, "text": "94102", "entity_id": "openmed::postcode"}
+{"start": 1856, "end": 1883, "text": "margaret.thompson@email.com", "entity_id": "openmed::email"}
+{"start": 1967, "end": 1983, "text": "UnitedHealthcare", "entity_id": "openmed::company_name"}
+{"start": 1999, "end": 2012, "text": "UHC-789456123", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 2027, "end": 2038, "text": "GRP-EDU-456", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 2056, "end": 2061, "text": "Emily", "entity_id": "openmed::first_name"}
+{"start": 2062, "end": 2070, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 2093, "end": 2106, "text": "SUB-456789012", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 2196, "end": 2210, "text": "AUTH-789456123", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 2507, "end": 2515, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 2600, "end": 2614, "text": "March 28, 2024", "entity_id": "openmed::date"}
+{"start": 2632, "end": 2640, "text": "11:00 PM", "entity_id": "openmed::time"}
+{"start": 2883, "end": 2890, "text": "8:00 PM", "entity_id": "openmed::time"}
+{"start": 3719, "end": 3751, "text": "Memorial Regional Medical Center", "entity_id": "openmed::company_name"}
+{"start": 4879, "end": 4885, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 4886, "end": 4894, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 5044, "end": 5052, "text": "Margaret", "entity_id": "openmed::first_name"}
+{"start": 5053, "end": 5061, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 5457, "end": 5462, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 5463, "end": 5471, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 5536, "end": 5541, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 5542, "end": 5550, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 6084, "end": 6105, "text": "High School Principal", "entity_id": "openmed::occupation"}
+{"start": 6109, "end": 6128, "text": "Lincoln High School", "entity_id": "openmed::company_name"}
+{"start": 6152, "end": 6161, "text": "San Mateo", "entity_id": "openmed::city"}
+{"start": 6163, "end": 6165, "text": "CA", "entity_id": "openmed::state"}
+{"start": 6166, "end": 6171, "text": "94403", "entity_id": "openmed::postcode"}
+{"start": 6180, "end": 6194, "text": "(650) 555-1234", "entity_id": "openmed::phone_number"}
+{"start": 6825, "end": 6839, "text": "March 28, 2024", "entity_id": "openmed::date"}
+{"start": 6893, "end": 6901, "text": "11:00 PM", "entity_id": "openmed::time"}
+{"start": 7153, "end": 7159, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 7160, "end": 7163, "text": "Kim", "entity_id": "openmed::last_name"}
+{"start": 7209, "end": 7219, "text": "8765432109", "entity_id": "openmed::npi"}
+{"start": 15426, "end": 15433, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 15434, "end": 15438, "text": "Park", "entity_id": "openmed::last_name"}
+{"start": 15516, "end": 15545, "text": "5678 Medical Plaza, Suite 200", "entity_id": "openmed::street_address"}
+{"start": 15547, "end": 15556, "text": "San Mateo", "entity_id": "openmed::city"}
+{"start": 15558, "end": 15560, "text": "CA", "entity_id": "openmed::state"}
+{"start": 15561, "end": 15566, "text": "94403", "entity_id": "openmed::postcode"}
+{"start": 15579, "end": 15593, "text": "(650) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 15617, "end": 15631, "text": "April 10, 2024", "entity_id": "openmed::date"}
+{"start": 15635, "end": 15642, "text": "2:00 PM", "entity_id": "openmed::time"}
+{"start": 15664, "end": 15678, "text": "APPT-789456123", "entity_id": "openmed::unique_id"}
+{"start": 15726, "end": 15731, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 15732, "end": 15736, "text": "Chen", "entity_id": "openmed::last_name"}
+{"start": 15795, "end": 15819, "text": "1234 Health Center Drive", "entity_id": "openmed::street_address"}
+{"start": 15821, "end": 15830, "text": "San Mateo", "entity_id": "openmed::city"}
+{"start": 15832, "end": 15834, "text": "CA", "entity_id": "openmed::state"}
+{"start": 15835, "end": 15840, "text": "94403", "entity_id": "openmed::postcode"}
+{"start": 15853, "end": 15867, "text": "(650) 555-2345", "entity_id": "openmed::phone_number"}
+{"start": 15891, "end": 15905, "text": "April 15, 2024", "entity_id": "openmed::date"}
+{"start": 15939, "end": 15953, "text": "APPT-789456124", "entity_id": "openmed::unique_id"}
+{"start": 16082, "end": 16091, "text": "San Mateo", "entity_id": "openmed::city"}
+{"start": 16093, "end": 16095, "text": "CA", "entity_id": "openmed::state"}
+{"start": 16096, "end": 16101, "text": "94403", "entity_id": "openmed::postcode"}
+{"start": 16114, "end": 16128, "text": "(650) 555-5678", "entity_id": "openmed::phone_number"}
+{"start": 16154, "end": 16168, "text": "April 17, 2024", "entity_id": "openmed::date"}
+{"start": 16243, "end": 16256, "text": "REF-789456123", "entity_id": "openmed::unique_id"}
+{"start": 16323, "end": 16331, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 16332, "end": 16340, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 16440, "end": 16449, "text": "San Mateo", "entity_id": "openmed::city"}
+{"start": 16451, "end": 16453, "text": "CA", "entity_id": "openmed::state"}
+{"start": 16454, "end": 16459, "text": "94403", "entity_id": "openmed::postcode"}
+{"start": 16472, "end": 16486, "text": "(650) 555-6789", "entity_id": "openmed::phone_number"}
+{"start": 16510, "end": 16524, "text": "April 12, 2024", "entity_id": "openmed::date"}
+{"start": 16558, "end": 16572, "text": "APPT-789456125", "entity_id": "openmed::unique_id"}
+{"start": 18543, "end": 18548, "text": "Maria", "entity_id": "openmed::first_name"}
+{"start": 18549, "end": 18555, "text": "Santos", "entity_id": "openmed::last_name"}
+{"start": 18557, "end": 18561, "text": "LCSW", "entity_id": "openmed::occupation"}
+{"start": 18571, "end": 18585, "text": "(650) 555-3456", "entity_id": "openmed::phone_number"}
+{"start": 19312, "end": 19325, "text": "April 3, 2024", "entity_id": "openmed::date"}
+{"start": 19390, "end": 19395, "text": "David", "entity_id": "openmed::first_name"}
+{"start": 19396, "end": 19404, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 19456, "end": 19463, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 19464, "end": 19470, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 19471, "end": 19475, "text": "Park", "entity_id": "openmed::last_name"}
+{"start": 19526, "end": 19538, "text": "MD-456789123", "entity_id": "openmed::certificate_license_number"}
+{"start": 19544, "end": 19554, "text": "9876543210", "entity_id": "openmed::npi"}
+{"start": 19561, "end": 19574, "text": "April 3, 2024", "entity_id": "openmed::date"}
+{"start": 19612, "end": 19635, "text": "MRP-2024-04-03-11:15:00", "entity_id": "openmed::unique_id"}
+{"start": 19707, "end": 19712, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 19713, "end": 19717, "text": "Chen", "entity_id": "openmed::last_name"}
+{"start": 19728, "end": 19738, "text": "1122334455", "entity_id": "openmed::npi"}
+{"start": 19758, "end": 19764, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 19765, "end": 19768, "text": "Kim", "entity_id": "openmed::last_name"}
+{"start": 19785, "end": 19795, "text": "8765432109", "entity_id": "openmed::npi"}
+{"start": 19948, "end": 19964, "text": "UnitedHealthcare", "entity_id": "openmed::company_name"}
+{"start": 19974, "end": 19987, "text": "UHC-789456123", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 20556, "end": 20574, "text": "DIS-2024-456789012", "entity_id": "openmed::unique_id"}
+{"start": 20599, "end": 20612, "text": "April 3, 2024", "entity_id": "openmed::date"}
+{"start": 20670, "end": 20678, "text": "mpark-md", "entity_id": "openmed::user_name"}
+{"start": 20684, "end": 20691, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 20692, "end": 20696, "text": "Park", "entity_id": "openmed::last_name"}
+{"start": 968, "end": 991, "text": "acute coronary syndrome", "entity_id": "openmed::DISEASE"}
+{"start": 3624, "end": 3681, "text": "acute inferior ST-elevation myocardial infarction (STEMI)", "entity_id": "openmed::DISEASE"}
+{"start": 3984, "end": 3996, "text": "Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 4046, "end": 4060, "text": "Hyperlipidemia", "entity_id": "openmed::DISEASE"}
+{"start": 4098, "end": 4105, "text": "Obesity", "entity_id": "openmed::CONDITION"}
+{"start": 4134, "end": 4152, "text": "Migraine headaches", "entity_id": "openmed::CONDITION"}
+{"start": 8488, "end": 8515, "text": "acute myocardial infarction", "entity_id": "openmed::DISEASE"}
+{"start": 8609, "end": 8634, "text": "Inferior wall hypokinesis", "entity_id": "openmed::PATHOLOGY"}
+{"start": 8637, "end": 8662, "text": "Mild mitral regurgitation", "entity_id": "openmed::PATHOLOGY"}
+{"start": 12167, "end": 12192, "text": "Inferior wall hypokinesis", "entity_id": "openmed::PATHOLOGY"}
+{"start": 12195, "end": 12220, "text": "Mild mitral regurgitation", "entity_id": "openmed::PATHOLOGY"}
+{"start": 12656, "end": 12668, "text": "Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 12672, "end": 12686, "text": "Hyperlipidemia", "entity_id": "openmed::DISEASE"}
+{"start": 12690, "end": 12697, "text": "Obesity", "entity_id": "openmed::CONDITION"}

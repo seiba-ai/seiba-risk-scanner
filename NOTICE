@@ -1,0 +1,44 @@
+Seiba Risk Scanner
+Copyright 2026 Seiba AI
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file in the project root.
+
+---------------------------------------------------------------------------
+Third-party data and attributions
+---------------------------------------------------------------------------
+
+This repository may include or derive detection patterns and medical-term
+gazetteer artifacts from publicly available vocabularies. Those upstream
+resources remain subject to their own terms. Redistribution of raw source
+dumps (for example full RxNorm / UMLS releases) is not granted by this
+NOTICE and may require a separate license or agreement from the upstream
+provider. Prefer shipping only curated runtime artifacts with the
+distributed package; keep raw extractors and source dumps as maintainer
+build inputs.
+
+MONDO Disease Ontology
+  Source: https://mondo.monarchinitiative.org/
+  Typical license: CC BY 4.0 (confirm against the version you vendored)
+
+RxNorm (U.S. National Library of Medicine)
+  Source: https://www.nlm.nih.gov/research/umls/rxnorm/
+  Use and redistribution of RxNorm / UMLS Metathesaurus content are
+  governed by the UMLS Metathesaurus License Agreement. Obtain a UMLS
+  license before redistributing raw RxNorm files. Curated term lists
+  derived for detection may still require compliance review before
+  public redistribution.
+
+Consumer Health Vocabulary (CHV)
+  Historical CHV flat files used as build inputs for lay-term surfaces.
+  Confirm attribution and redistribution terms for the exact file version
+  checked into or used by this repository.
+
+spaCy / MedspaCy / OpenMed / Hugging Face models (optional extras)
+  Not bundled in the core package. When users install optional extras or
+  download models, those components are licensed separately by their
+  respective authors.
+
+This NOTICE is for attribution and informational purposes and does not
+modify the Apache License, Version 2.0 that covers Seiba AI's original
+code in this project.

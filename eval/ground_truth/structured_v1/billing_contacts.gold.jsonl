@@ -1,0 +1,441 @@
+{"_meta": {"file": "billing_contacts.json", "allowed_entity_ids": ["phi_entity_ontology::hospital_names", "pii_entity_ontology::account_reference_number", "pii_entity_ontology::city", "pii_entity_ontology::dates", "pii_entity_ontology::email_address", "pii_entity_ontology::employer_organization", "pii_entity_ontology::person_names", "pii_entity_ontology::phone_number", "pii_entity_ontology::ssn", "pii_entity_ontology::state", "pii_entity_ontology::zip_code"]}}
+{"row": 0, "key": "patient_name", "start": 0, "end": 14, "text": "Marcus Boateng", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 0, "key": "email", "start": 0, "end": 26, "text": "marcus.boateng@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 0, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1000", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 0, "key": "ssn", "start": 0, "end": 11, "text": "200-45-6000", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 0, "key": "city", "start": 0, "end": 5, "text": "Miami", "entity_id": "pii_entity_ontology::city"}
+{"row": 0, "key": "state", "start": 0, "end": 2, "text": "FL", "entity_id": "pii_entity_ontology::state"}
+{"row": 0, "key": "zip_code", "start": 0, "end": 5, "text": "02000", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 0, "key": "visit_date", "start": 0, "end": 10, "text": "2024-01-10", "entity_id": "pii_entity_ontology::dates"}
+{"row": 0, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 0, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 0, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700000", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 1, "key": "patient_name", "start": 0, "end": 15, "text": "Tomas Lindqvist", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 1, "key": "email", "start": 0, "end": 27, "text": "tomas.lindqvist@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 1, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1001", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 1, "key": "ssn", "start": 0, "end": 11, "text": "201-45-6001", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 1, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 1, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 1, "key": "zip_code", "start": 0, "end": 5, "text": "02001", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 1, "key": "visit_date", "start": 0, "end": 10, "text": "2024-02-11", "entity_id": "pii_entity_ontology::dates"}
+{"row": 1, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 1, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 1, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700001", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 2, "key": "patient_name", "start": 0, "end": 10, "text": "Marcus Ali", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 2, "key": "email", "start": 0, "end": 22, "text": "marcus.ali@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 2, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1002", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 2, "key": "ssn", "start": 0, "end": 11, "text": "202-45-6002", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 2, "key": "city", "start": 0, "end": 7, "text": "Seattle", "entity_id": "pii_entity_ontology::city"}
+{"row": 2, "key": "state", "start": 0, "end": 2, "text": "WA", "entity_id": "pii_entity_ontology::state"}
+{"row": 2, "key": "zip_code", "start": 0, "end": 5, "text": "02002", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 2, "key": "visit_date", "start": 0, "end": 10, "text": "2024-03-12", "entity_id": "pii_entity_ontology::dates"}
+{"row": 2, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 2, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 2, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700002", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 3, "key": "patient_name", "start": 0, "end": 12, "text": "Noah Boateng", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 3, "key": "email", "start": 0, "end": 24, "text": "noah.boateng@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 3, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1003", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 3, "key": "ssn", "start": 0, "end": 11, "text": "203-45-6003", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 3, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 3, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 3, "key": "zip_code", "start": 0, "end": 5, "text": "02003", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 3, "key": "visit_date", "start": 0, "end": 10, "text": "2024-04-13", "entity_id": "pii_entity_ontology::dates"}
+{"row": 3, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 3, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 3, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700003", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 4, "key": "patient_name", "start": 0, "end": 13, "text": "Priya Herrera", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 4, "key": "email", "start": 0, "end": 25, "text": "priya.herrera@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 4, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1004", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 4, "key": "ssn", "start": 0, "end": 11, "text": "204-45-6004", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 4, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 4, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 4, "key": "zip_code", "start": 0, "end": 5, "text": "02004", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 4, "key": "visit_date", "start": 0, "end": 10, "text": "2024-05-14", "entity_id": "pii_entity_ontology::dates"}
+{"row": 4, "key": "employer", "start": 0, "end": 17, "text": "Blue Harbor Foods", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 4, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 4, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700004", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 5, "key": "patient_name", "start": 0, "end": 15, "text": "Diego Lindqvist", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 5, "key": "email", "start": 0, "end": 27, "text": "diego.lindqvist@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 5, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1005", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 5, "key": "ssn", "start": 0, "end": 11, "text": "205-45-6005", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 5, "key": "city", "start": 0, "end": 5, "text": "Miami", "entity_id": "pii_entity_ontology::city"}
+{"row": 5, "key": "state", "start": 0, "end": 2, "text": "FL", "entity_id": "pii_entity_ontology::state"}
+{"row": 5, "key": "zip_code", "start": 0, "end": 5, "text": "02005", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 5, "key": "visit_date", "start": 0, "end": 10, "text": "2024-06-15", "entity_id": "pii_entity_ontology::dates"}
+{"row": 5, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 5, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 5, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700005", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 6, "key": "patient_name", "start": 0, "end": 15, "text": "Diego Lindqvist", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 6, "key": "email", "start": 0, "end": 27, "text": "diego.lindqvist@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 6, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1006", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 6, "key": "ssn", "start": 0, "end": 11, "text": "206-45-6006", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 6, "key": "city", "start": 0, "end": 7, "text": "Phoenix", "entity_id": "pii_entity_ontology::city"}
+{"row": 6, "key": "state", "start": 0, "end": 2, "text": "AZ", "entity_id": "pii_entity_ontology::state"}
+{"row": 6, "key": "zip_code", "start": 0, "end": 5, "text": "02006", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 6, "key": "visit_date", "start": 0, "end": 10, "text": "2024-07-16", "entity_id": "pii_entity_ontology::dates"}
+{"row": 6, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 6, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 6, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700006", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 7, "key": "patient_name", "start": 0, "end": 9, "text": "Aisha Ali", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 7, "key": "email", "start": 0, "end": 21, "text": "aisha.ali@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 7, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1007", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 7, "key": "ssn", "start": 0, "end": 11, "text": "207-45-6007", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 7, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 7, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 7, "key": "zip_code", "start": 0, "end": 5, "text": "02007", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 7, "key": "visit_date", "start": 0, "end": 10, "text": "2024-08-17", "entity_id": "pii_entity_ontology::dates"}
+{"row": 7, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 7, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 7, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700007", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 8, "key": "patient_name", "start": 0, "end": 15, "text": "Tomas Ramaswamy", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 8, "key": "email", "start": 0, "end": 27, "text": "tomas.ramaswamy@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 8, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1008", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 8, "key": "ssn", "start": 0, "end": 11, "text": "208-45-6008", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 8, "key": "city", "start": 0, "end": 5, "text": "Miami", "entity_id": "pii_entity_ontology::city"}
+{"row": 8, "key": "state", "start": 0, "end": 2, "text": "FL", "entity_id": "pii_entity_ontology::state"}
+{"row": 8, "key": "zip_code", "start": 0, "end": 5, "text": "02008", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 8, "key": "visit_date", "start": 0, "end": 10, "text": "2024-09-18", "entity_id": "pii_entity_ontology::dates"}
+{"row": 8, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 8, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 8, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700008", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 9, "key": "patient_name", "start": 0, "end": 13, "text": "Tomas Okonkwo", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 9, "key": "email", "start": 0, "end": 25, "text": "tomas.okonkwo@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 9, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1009", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 9, "key": "ssn", "start": 0, "end": 11, "text": "209-45-6009", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 9, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 9, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 9, "key": "zip_code", "start": 0, "end": 5, "text": "02009", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 9, "key": "visit_date", "start": 0, "end": 10, "text": "2024-01-10", "entity_id": "pii_entity_ontology::dates"}
+{"row": 9, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 9, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 9, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700009", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 10, "key": "patient_name", "start": 0, "end": 9, "text": "Leila Ali", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 10, "key": "email", "start": 0, "end": 21, "text": "leila.ali@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 10, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1010", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 10, "key": "ssn", "start": 0, "end": 11, "text": "210-45-6010", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 10, "key": "city", "start": 0, "end": 5, "text": "Miami", "entity_id": "pii_entity_ontology::city"}
+{"row": 10, "key": "state", "start": 0, "end": 2, "text": "FL", "entity_id": "pii_entity_ontology::state"}
+{"row": 10, "key": "zip_code", "start": 0, "end": 5, "text": "02010", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 10, "key": "visit_date", "start": 0, "end": 10, "text": "2024-02-11", "entity_id": "pii_entity_ontology::dates"}
+{"row": 10, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 10, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 10, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700010", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 11, "key": "patient_name", "start": 0, "end": 14, "text": "Diego Nakamura", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 11, "key": "email", "start": 0, "end": 26, "text": "diego.nakamura@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 11, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1011", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 11, "key": "ssn", "start": 0, "end": 11, "text": "211-45-6011", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 11, "key": "city", "start": 0, "end": 6, "text": "Boston", "entity_id": "pii_entity_ontology::city"}
+{"row": 11, "key": "state", "start": 0, "end": 2, "text": "MA", "entity_id": "pii_entity_ontology::state"}
+{"row": 11, "key": "zip_code", "start": 0, "end": 5, "text": "02011", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 11, "key": "visit_date", "start": 0, "end": 10, "text": "2024-03-12", "entity_id": "pii_entity_ontology::dates"}
+{"row": 11, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 11, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 11, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700011", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 12, "key": "patient_name", "start": 0, "end": 15, "text": "Leila Ramaswamy", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 12, "key": "email", "start": 0, "end": 27, "text": "leila.ramaswamy@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 12, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1012", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 12, "key": "ssn", "start": 0, "end": 11, "text": "212-45-6012", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 12, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 12, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 12, "key": "zip_code", "start": 0, "end": 5, "text": "02012", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 12, "key": "visit_date", "start": 0, "end": 10, "text": "2024-04-13", "entity_id": "pii_entity_ontology::dates"}
+{"row": 12, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 12, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 12, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700012", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 13, "key": "patient_name", "start": 0, "end": 18, "text": "Jennifer Whitfield", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 13, "key": "email", "start": 0, "end": 30, "text": "jennifer.whitfield@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 13, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1013", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 13, "key": "ssn", "start": 0, "end": 11, "text": "213-45-6013", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 13, "key": "city", "start": 0, "end": 6, "text": "Boston", "entity_id": "pii_entity_ontology::city"}
+{"row": 13, "key": "state", "start": 0, "end": 2, "text": "MA", "entity_id": "pii_entity_ontology::state"}
+{"row": 13, "key": "zip_code", "start": 0, "end": 5, "text": "02013", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 13, "key": "visit_date", "start": 0, "end": 10, "text": "2024-05-14", "entity_id": "pii_entity_ontology::dates"}
+{"row": 13, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 13, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 13, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700013", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 14, "key": "patient_name", "start": 0, "end": 18, "text": "Jennifer Whitfield", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 14, "key": "email", "start": 0, "end": 30, "text": "jennifer.whitfield@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 14, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1014", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 14, "key": "ssn", "start": 0, "end": 11, "text": "214-45-6014", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 14, "key": "city", "start": 0, "end": 6, "text": "Boston", "entity_id": "pii_entity_ontology::city"}
+{"row": 14, "key": "state", "start": 0, "end": 2, "text": "MA", "entity_id": "pii_entity_ontology::state"}
+{"row": 14, "key": "zip_code", "start": 0, "end": 5, "text": "02014", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 14, "key": "visit_date", "start": 0, "end": 10, "text": "2024-06-15", "entity_id": "pii_entity_ontology::dates"}
+{"row": 14, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 14, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 14, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700014", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 15, "key": "patient_name", "start": 0, "end": 9, "text": "Priya Ali", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 15, "key": "email", "start": 0, "end": 21, "text": "priya.ali@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 15, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1015", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 15, "key": "ssn", "start": 0, "end": 11, "text": "215-45-6015", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 15, "key": "city", "start": 0, "end": 8, "text": "Portland", "entity_id": "pii_entity_ontology::city"}
+{"row": 15, "key": "state", "start": 0, "end": 2, "text": "OR", "entity_id": "pii_entity_ontology::state"}
+{"row": 15, "key": "zip_code", "start": 0, "end": 5, "text": "02015", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 15, "key": "visit_date", "start": 0, "end": 10, "text": "2024-07-16", "entity_id": "pii_entity_ontology::dates"}
+{"row": 15, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 15, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 15, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700015", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 16, "key": "patient_name", "start": 0, "end": 16, "text": "Jennifer Herrera", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 16, "key": "email", "start": 0, "end": 28, "text": "jennifer.herrera@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 16, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1016", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 16, "key": "ssn", "start": 0, "end": 11, "text": "216-45-6016", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 16, "key": "city", "start": 0, "end": 5, "text": "Miami", "entity_id": "pii_entity_ontology::city"}
+{"row": 16, "key": "state", "start": 0, "end": 2, "text": "FL", "entity_id": "pii_entity_ontology::state"}
+{"row": 16, "key": "zip_code", "start": 0, "end": 5, "text": "02016", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 16, "key": "visit_date", "start": 0, "end": 10, "text": "2024-08-17", "entity_id": "pii_entity_ontology::dates"}
+{"row": 16, "key": "employer", "start": 0, "end": 17, "text": "Blue Harbor Foods", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 16, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 16, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700016", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 17, "key": "patient_name", "start": 0, "end": 13, "text": "Priya Herrera", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 17, "key": "email", "start": 0, "end": 25, "text": "priya.herrera@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 17, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1017", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 17, "key": "ssn", "start": 0, "end": 11, "text": "217-45-6017", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 17, "key": "city", "start": 0, "end": 6, "text": "Austin", "entity_id": "pii_entity_ontology::city"}
+{"row": 17, "key": "state", "start": 0, "end": 2, "text": "TX", "entity_id": "pii_entity_ontology::state"}
+{"row": 17, "key": "zip_code", "start": 0, "end": 5, "text": "02017", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 17, "key": "visit_date", "start": 0, "end": 10, "text": "2024-09-18", "entity_id": "pii_entity_ontology::dates"}
+{"row": 17, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 17, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 17, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700017", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 18, "key": "patient_name", "start": 0, "end": 13, "text": "Leila Herrera", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 18, "key": "email", "start": 0, "end": 25, "text": "leila.herrera@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 18, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1018", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 18, "key": "ssn", "start": 0, "end": 11, "text": "218-45-6018", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 18, "key": "city", "start": 0, "end": 7, "text": "Seattle", "entity_id": "pii_entity_ontology::city"}
+{"row": 18, "key": "state", "start": 0, "end": 2, "text": "WA", "entity_id": "pii_entity_ontology::state"}
+{"row": 18, "key": "zip_code", "start": 0, "end": 5, "text": "02018", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 18, "key": "visit_date", "start": 0, "end": 10, "text": "2024-01-10", "entity_id": "pii_entity_ontology::dates"}
+{"row": 18, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 18, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 18, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700018", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 19, "key": "patient_name", "start": 0, "end": 13, "text": "Diego Boateng", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 19, "key": "email", "start": 0, "end": 25, "text": "diego.boateng@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 19, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1019", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 19, "key": "ssn", "start": 0, "end": 11, "text": "219-45-6019", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 19, "key": "city", "start": 0, "end": 7, "text": "Seattle", "entity_id": "pii_entity_ontology::city"}
+{"row": 19, "key": "state", "start": 0, "end": 2, "text": "WA", "entity_id": "pii_entity_ontology::state"}
+{"row": 19, "key": "zip_code", "start": 0, "end": 5, "text": "02019", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 19, "key": "visit_date", "start": 0, "end": 10, "text": "2024-02-11", "entity_id": "pii_entity_ontology::dates"}
+{"row": 19, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 19, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 19, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700019", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 20, "key": "patient_name", "start": 0, "end": 15, "text": "Marcus Nakamura", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 20, "key": "email", "start": 0, "end": 27, "text": "marcus.nakamura@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 20, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1020", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 20, "key": "ssn", "start": 0, "end": 11, "text": "220-45-6020", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 20, "key": "city", "start": 0, "end": 8, "text": "Portland", "entity_id": "pii_entity_ontology::city"}
+{"row": 20, "key": "state", "start": 0, "end": 2, "text": "OR", "entity_id": "pii_entity_ontology::state"}
+{"row": 20, "key": "zip_code", "start": 0, "end": 5, "text": "02020", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 20, "key": "visit_date", "start": 0, "end": 10, "text": "2024-03-12", "entity_id": "pii_entity_ontology::dates"}
+{"row": 20, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 20, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 20, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700020", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 21, "key": "patient_name", "start": 0, "end": 15, "text": "Leila Whitfield", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 21, "key": "email", "start": 0, "end": 27, "text": "leila.whitfield@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 21, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1021", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 21, "key": "ssn", "start": 0, "end": 11, "text": "221-45-6021", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 21, "key": "city", "start": 0, "end": 8, "text": "Portland", "entity_id": "pii_entity_ontology::city"}
+{"row": 21, "key": "state", "start": 0, "end": 2, "text": "OR", "entity_id": "pii_entity_ontology::state"}
+{"row": 21, "key": "zip_code", "start": 0, "end": 5, "text": "02021", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 21, "key": "visit_date", "start": 0, "end": 10, "text": "2024-04-13", "entity_id": "pii_entity_ontology::dates"}
+{"row": 21, "key": "employer", "start": 0, "end": 17, "text": "Blue Harbor Foods", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 21, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 21, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700021", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 22, "key": "patient_name", "start": 0, "end": 14, "text": "Priya Nakamura", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 22, "key": "email", "start": 0, "end": 26, "text": "priya.nakamura@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 22, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1022", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 22, "key": "ssn", "start": 0, "end": 11, "text": "222-45-6022", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 22, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 22, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 22, "key": "zip_code", "start": 0, "end": 5, "text": "02022", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 22, "key": "visit_date", "start": 0, "end": 10, "text": "2024-05-14", "entity_id": "pii_entity_ontology::dates"}
+{"row": 22, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 22, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 22, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700022", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 23, "key": "patient_name", "start": 0, "end": 18, "text": "Jennifer Lindqvist", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 23, "key": "email", "start": 0, "end": 30, "text": "jennifer.lindqvist@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 23, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1023", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 23, "key": "ssn", "start": 0, "end": 11, "text": "223-45-6023", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 23, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 23, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 23, "key": "zip_code", "start": 0, "end": 5, "text": "02023", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 23, "key": "visit_date", "start": 0, "end": 10, "text": "2024-06-15", "entity_id": "pii_entity_ontology::dates"}
+{"row": 23, "key": "employer", "start": 0, "end": 17, "text": "Blue Harbor Foods", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 23, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 23, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700023", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 24, "key": "patient_name", "start": 0, "end": 15, "text": "Tomas Lindqvist", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 24, "key": "email", "start": 0, "end": 27, "text": "tomas.lindqvist@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 24, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1024", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 24, "key": "ssn", "start": 0, "end": 11, "text": "224-45-6024", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 24, "key": "city", "start": 0, "end": 6, "text": "Denver", "entity_id": "pii_entity_ontology::city"}
+{"row": 24, "key": "state", "start": 0, "end": 2, "text": "CO", "entity_id": "pii_entity_ontology::state"}
+{"row": 24, "key": "zip_code", "start": 0, "end": 5, "text": "02024", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 24, "key": "visit_date", "start": 0, "end": 10, "text": "2024-07-16", "entity_id": "pii_entity_ontology::dates"}
+{"row": 24, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 24, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 24, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700024", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 25, "key": "patient_name", "start": 0, "end": 9, "text": "Tomas Ali", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 25, "key": "email", "start": 0, "end": 21, "text": "tomas.ali@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 25, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1025", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 25, "key": "ssn", "start": 0, "end": 11, "text": "225-45-6025", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 25, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 25, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 25, "key": "zip_code", "start": 0, "end": 5, "text": "02025", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 25, "key": "visit_date", "start": 0, "end": 10, "text": "2024-08-17", "entity_id": "pii_entity_ontology::dates"}
+{"row": 25, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 25, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 25, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700025", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 26, "key": "patient_name", "start": 0, "end": 9, "text": "Diego Ali", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 26, "key": "email", "start": 0, "end": 21, "text": "diego.ali@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 26, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1026", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 26, "key": "ssn", "start": 0, "end": 11, "text": "226-45-6026", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 26, "key": "city", "start": 0, "end": 6, "text": "Boston", "entity_id": "pii_entity_ontology::city"}
+{"row": 26, "key": "state", "start": 0, "end": 2, "text": "MA", "entity_id": "pii_entity_ontology::state"}
+{"row": 26, "key": "zip_code", "start": 0, "end": 5, "text": "02026", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 26, "key": "visit_date", "start": 0, "end": 10, "text": "2024-09-18", "entity_id": "pii_entity_ontology::dates"}
+{"row": 26, "key": "employer", "start": 0, "end": 17, "text": "Blue Harbor Foods", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 26, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 26, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700026", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 27, "key": "patient_name", "start": 0, "end": 9, "text": "Diego Ali", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 27, "key": "email", "start": 0, "end": 21, "text": "diego.ali@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 27, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1027", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 27, "key": "ssn", "start": 0, "end": 11, "text": "227-45-6027", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 27, "key": "city", "start": 0, "end": 6, "text": "Denver", "entity_id": "pii_entity_ontology::city"}
+{"row": 27, "key": "state", "start": 0, "end": 2, "text": "CO", "entity_id": "pii_entity_ontology::state"}
+{"row": 27, "key": "zip_code", "start": 0, "end": 5, "text": "02027", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 27, "key": "visit_date", "start": 0, "end": 10, "text": "2024-01-10", "entity_id": "pii_entity_ontology::dates"}
+{"row": 27, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 27, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 27, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700027", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 28, "key": "patient_name", "start": 0, "end": 15, "text": "Priya Whitfield", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 28, "key": "email", "start": 0, "end": 27, "text": "priya.whitfield@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 28, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1028", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 28, "key": "ssn", "start": 0, "end": 11, "text": "228-45-6028", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 28, "key": "city", "start": 0, "end": 7, "text": "Phoenix", "entity_id": "pii_entity_ontology::city"}
+{"row": 28, "key": "state", "start": 0, "end": 2, "text": "AZ", "entity_id": "pii_entity_ontology::state"}
+{"row": 28, "key": "zip_code", "start": 0, "end": 5, "text": "02028", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 28, "key": "visit_date", "start": 0, "end": 10, "text": "2024-02-11", "entity_id": "pii_entity_ontology::dates"}
+{"row": 28, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 28, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 28, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700028", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 29, "key": "patient_name", "start": 0, "end": 13, "text": "Noah Nakamura", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 29, "key": "email", "start": 0, "end": 25, "text": "noah.nakamura@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 29, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1029", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 29, "key": "ssn", "start": 0, "end": 11, "text": "229-45-6029", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 29, "key": "city", "start": 0, "end": 6, "text": "Boston", "entity_id": "pii_entity_ontology::city"}
+{"row": 29, "key": "state", "start": 0, "end": 2, "text": "MA", "entity_id": "pii_entity_ontology::state"}
+{"row": 29, "key": "zip_code", "start": 0, "end": 5, "text": "02029", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 29, "key": "visit_date", "start": 0, "end": 10, "text": "2024-03-12", "entity_id": "pii_entity_ontology::dates"}
+{"row": 29, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 29, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 29, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700029", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 30, "key": "patient_name", "start": 0, "end": 13, "text": "Diego Boateng", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 30, "key": "email", "start": 0, "end": 25, "text": "diego.boateng@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 30, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1030", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 30, "key": "ssn", "start": 0, "end": 11, "text": "230-45-6030", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 30, "key": "city", "start": 0, "end": 7, "text": "Seattle", "entity_id": "pii_entity_ontology::city"}
+{"row": 30, "key": "state", "start": 0, "end": 2, "text": "WA", "entity_id": "pii_entity_ontology::state"}
+{"row": 30, "key": "zip_code", "start": 0, "end": 5, "text": "02030", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 30, "key": "visit_date", "start": 0, "end": 10, "text": "2024-04-13", "entity_id": "pii_entity_ontology::dates"}
+{"row": 30, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 30, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 30, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700030", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 31, "key": "patient_name", "start": 0, "end": 13, "text": "Priya Herrera", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 31, "key": "email", "start": 0, "end": 25, "text": "priya.herrera@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 31, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1031", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 31, "key": "ssn", "start": 0, "end": 11, "text": "231-45-6031", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 31, "key": "city", "start": 0, "end": 6, "text": "Austin", "entity_id": "pii_entity_ontology::city"}
+{"row": 31, "key": "state", "start": 0, "end": 2, "text": "TX", "entity_id": "pii_entity_ontology::state"}
+{"row": 31, "key": "zip_code", "start": 0, "end": 5, "text": "02031", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 31, "key": "visit_date", "start": 0, "end": 10, "text": "2024-05-14", "entity_id": "pii_entity_ontology::dates"}
+{"row": 31, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 31, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 31, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700031", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 32, "key": "patient_name", "start": 0, "end": 15, "text": "Tomas Whitfield", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 32, "key": "email", "start": 0, "end": 27, "text": "tomas.whitfield@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 32, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1032", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 32, "key": "ssn", "start": 0, "end": 11, "text": "232-45-6032", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 32, "key": "city", "start": 0, "end": 6, "text": "Denver", "entity_id": "pii_entity_ontology::city"}
+{"row": 32, "key": "state", "start": 0, "end": 2, "text": "CO", "entity_id": "pii_entity_ontology::state"}
+{"row": 32, "key": "zip_code", "start": 0, "end": 5, "text": "02032", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 32, "key": "visit_date", "start": 0, "end": 10, "text": "2024-06-15", "entity_id": "pii_entity_ontology::dates"}
+{"row": 32, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 32, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 32, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700032", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 33, "key": "patient_name", "start": 0, "end": 15, "text": "Diego Lindqvist", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 33, "key": "email", "start": 0, "end": 27, "text": "diego.lindqvist@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 33, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1033", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 33, "key": "ssn", "start": 0, "end": 11, "text": "233-45-6033", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 33, "key": "city", "start": 0, "end": 7, "text": "Seattle", "entity_id": "pii_entity_ontology::city"}
+{"row": 33, "key": "state", "start": 0, "end": 2, "text": "WA", "entity_id": "pii_entity_ontology::state"}
+{"row": 33, "key": "zip_code", "start": 0, "end": 5, "text": "02033", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 33, "key": "visit_date", "start": 0, "end": 10, "text": "2024-07-16", "entity_id": "pii_entity_ontology::dates"}
+{"row": 33, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 33, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 33, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700033", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 34, "key": "patient_name", "start": 0, "end": 13, "text": "Tomas Boateng", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 34, "key": "email", "start": 0, "end": 25, "text": "tomas.boateng@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 34, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1034", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 34, "key": "ssn", "start": 0, "end": 11, "text": "234-45-6034", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 34, "key": "city", "start": 0, "end": 7, "text": "Atlanta", "entity_id": "pii_entity_ontology::city"}
+{"row": 34, "key": "state", "start": 0, "end": 2, "text": "GA", "entity_id": "pii_entity_ontology::state"}
+{"row": 34, "key": "zip_code", "start": 0, "end": 5, "text": "02034", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 34, "key": "visit_date", "start": 0, "end": 10, "text": "2024-08-17", "entity_id": "pii_entity_ontology::dates"}
+{"row": 34, "key": "employer", "start": 0, "end": 17, "text": "Blue Harbor Foods", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 34, "key": "facility", "start": 0, "end": 20, "text": "Mercy Medical Center", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 34, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700034", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 35, "key": "patient_name", "start": 0, "end": 13, "text": "Diego Okonkwo", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 35, "key": "email", "start": 0, "end": 25, "text": "diego.okonkwo@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 35, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1035", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 35, "key": "ssn", "start": 0, "end": 11, "text": "235-45-6035", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 35, "key": "city", "start": 0, "end": 6, "text": "Denver", "entity_id": "pii_entity_ontology::city"}
+{"row": 35, "key": "state", "start": 0, "end": 2, "text": "CO", "entity_id": "pii_entity_ontology::state"}
+{"row": 35, "key": "zip_code", "start": 0, "end": 5, "text": "02035", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 35, "key": "visit_date", "start": 0, "end": 10, "text": "2024-09-18", "entity_id": "pii_entity_ontology::dates"}
+{"row": 35, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 35, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 35, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700035", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 36, "key": "patient_name", "start": 0, "end": 13, "text": "Aisha Okonkwo", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 36, "key": "email", "start": 0, "end": 25, "text": "aisha.okonkwo@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 36, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1036", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 36, "key": "ssn", "start": 0, "end": 11, "text": "236-45-6036", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 36, "key": "city", "start": 0, "end": 6, "text": "Austin", "entity_id": "pii_entity_ontology::city"}
+{"row": 36, "key": "state", "start": 0, "end": 2, "text": "TX", "entity_id": "pii_entity_ontology::state"}
+{"row": 36, "key": "zip_code", "start": 0, "end": 5, "text": "02036", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 36, "key": "visit_date", "start": 0, "end": 10, "text": "2024-01-10", "entity_id": "pii_entity_ontology::dates"}
+{"row": 36, "key": "employer", "start": 0, "end": 19, "text": "Northwind Logistics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 36, "key": "facility", "start": 0, "end": 29, "text": "Springfield Memorial Hospital", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 36, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700036", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 37, "key": "patient_name", "start": 0, "end": 15, "text": "Priya Whitfield", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 37, "key": "email", "start": 0, "end": 27, "text": "priya.whitfield@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 37, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1037", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 37, "key": "ssn", "start": 0, "end": 11, "text": "237-45-6037", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 37, "key": "city", "start": 0, "end": 5, "text": "Miami", "entity_id": "pii_entity_ontology::city"}
+{"row": 37, "key": "state", "start": 0, "end": 2, "text": "FL", "entity_id": "pii_entity_ontology::state"}
+{"row": 37, "key": "zip_code", "start": 0, "end": 5, "text": "02037", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 37, "key": "visit_date", "start": 0, "end": 10, "text": "2024-02-11", "entity_id": "pii_entity_ontology::dates"}
+{"row": 37, "key": "employer", "start": 0, "end": 16, "text": "Vertex Analytics", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 37, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 37, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700037", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 38, "key": "patient_name", "start": 0, "end": 13, "text": "Tomas Okonkwo", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 38, "key": "email", "start": 0, "end": 25, "text": "tomas.okonkwo@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 38, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1038", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 38, "key": "ssn", "start": 0, "end": 11, "text": "238-45-6038", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 38, "key": "city", "start": 0, "end": 5, "text": "Miami", "entity_id": "pii_entity_ontology::city"}
+{"row": 38, "key": "state", "start": 0, "end": 2, "text": "FL", "entity_id": "pii_entity_ontology::state"}
+{"row": 38, "key": "zip_code", "start": 0, "end": 5, "text": "02038", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 38, "key": "visit_date", "start": 0, "end": 10, "text": "2024-03-12", "entity_id": "pii_entity_ontology::dates"}
+{"row": 38, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 38, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 38, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700038", "entity_id": "pii_entity_ontology::account_reference_number"}
+{"row": 39, "key": "patient_name", "start": 0, "end": 15, "text": "Tomas Lindqvist", "entity_id": "pii_entity_ontology::person_names"}
+{"row": 39, "key": "email", "start": 0, "end": 27, "text": "tomas.lindqvist@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"row": 39, "key": "phone", "start": 0, "end": 14, "text": "(617) 555-1039", "entity_id": "pii_entity_ontology::phone_number"}
+{"row": 39, "key": "ssn", "start": 0, "end": 11, "text": "239-45-6039", "entity_id": "pii_entity_ontology::ssn"}
+{"row": 39, "key": "city", "start": 0, "end": 8, "text": "Portland", "entity_id": "pii_entity_ontology::city"}
+{"row": 39, "key": "state", "start": 0, "end": 2, "text": "OR", "entity_id": "pii_entity_ontology::state"}
+{"row": 39, "key": "zip_code", "start": 0, "end": 5, "text": "02039", "entity_id": "pii_entity_ontology::zip_code"}
+{"row": 39, "key": "visit_date", "start": 0, "end": 10, "text": "2024-04-13", "entity_id": "pii_entity_ontology::dates"}
+{"row": 39, "key": "employer", "start": 0, "end": 19, "text": "TechCorp Industries", "entity_id": "pii_entity_ontology::employer_organization"}
+{"row": 39, "key": "facility", "start": 0, "end": 15, "text": "Lakeside Clinic", "entity_id": "phi_entity_ontology::hospital_names"}
+{"row": 39, "key": "account_ref", "start": 0, "end": 10, "text": "ACC-700039", "entity_id": "pii_entity_ontology::account_reference_number"}

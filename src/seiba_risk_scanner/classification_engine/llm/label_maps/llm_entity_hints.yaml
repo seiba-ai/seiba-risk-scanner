@@ -1,0 +1,64 @@
+# Per-entity hints for the LLM gap-fill prompt.
+# Only entities where LLM adds value beyond deterministic+NER are listed here.
+# Deterministic-perfect entities (email, SSN, credit card, etc.) are excluded —
+# they are filtered in llm_runner._SKIP_SUFFIXES and never sent to the LLM.
+
+pii_entity_ontology::person_names:
+  description: "full or partial human name"
+  examples: ["John Smith", "Dr. Emily", "Sarah J."]
+
+pii_entity_ontology::city:
+  description: "city or town name"
+  examples: ["Boston", "San Francisco", "New York"]
+
+pii_entity_ontology::state:
+  description: "US state or non-US country/province, full name or abbreviation"
+  examples: ["CA", "Massachusetts", "Ontario", "Bavaria"]
+
+pii_entity_ontology::street_address:
+  description: "street address, apartment, suite, or building designator"
+  examples: ["123 Main St", "Apt 4B", "Suite 200", "Floor 12"]
+
+pii_entity_ontology::dates:
+  description: "specific date, time, or duration reference"
+  examples: ["January 15", "8:30am", "last week", "3 months ago", "2024-01-15"]
+
+pii_entity_ontology::relative_date_expressions:
+  description: "vague or relative time expression"
+  examples: ["last month", "a few weeks ago", "this morning", "for 6 months", "recently"]
+
+pii_entity_ontology::drivers_license_number:
+  description: "driver's license number"
+  examples: ["D1234567", "CA-B1234567", "DL-987654"]
+
+pii_entity_ontology::passport_number:
+  description: "passport number"
+  examples: ["A12345678", "GB1234567"]
+
+pii_entity_ontology::web_url:
+  description: "website URL or domain"
+  examples: ["https://example.com", "www.site.org", "example.com/path"]
+
+phi_entity_ontology::physician_names:
+  description: "doctor, physician, or healthcare provider name"
+  examples: ["Dr. Martinez", "Dr. Sarah Chen", "Nurse Johnson"]
+
+phi_entity_ontology::hospital_names:
+  description: "hospital, clinic, or healthcare facility name"
+  examples: ["Mass General", "Boston Children's Hospital", "City Medical Center"]
+
+phi_entity_ontology::health_plan_beneficiary_number:
+  description: "health insurance member or beneficiary ID"
+  examples: ["UHC-12345678", "BCBS-MEM-9876", "INS-GRP-001"]
+
+phi_entity_ontology::genomic_variants:
+  description: "genetic variant, allele, or genomic marker"
+  examples: ["BRCA1 positive", "APOE E3/E4", "rs334", "HER2-positive"]
+
+phi_entity_ontology::relative_date_expressions:
+  description: "clinical relative time reference"
+  examples: ["last visit", "3 weeks post-op", "from the lab today", "at last appointment"]
+
+fin_entity_ontology::bank_account_number:
+  description: "bank account number in financial context"
+  examples: ["account 0987654321", "savings account ending 4321", "acct 00112233"]

@@ -1,0 +1,120 @@
+{
+  "config": {
+    "cells": 1320,
+    "docs": [
+      "billing_contacts",
+      "clinical_intake_messy",
+      "patient_registry"
+    ],
+    "ner_backend": "openmed"
+  },
+  "headline": {
+    "matcher": "type_overlap",
+    "micro": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "per_entity": {
+    "phi_entity_ontology::medical_record_number_mrn": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 40,
+      "tp": 40
+    },
+    "pii_entity_ontology::account_reference_number": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 94,
+      "tp": 94
+    },
+    "pii_entity_ontology::city": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 80,
+      "tp": 80
+    },
+    "pii_entity_ontology::dates": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 80,
+      "tp": 80
+    },
+    "pii_entity_ontology::email_address": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 80,
+      "tp": 80
+    },
+    "pii_entity_ontology::organization": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 160,
+      "tp": 160
+    },
+    "pii_entity_ontology::person_names": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 160,
+      "tp": 160
+    },
+    "pii_entity_ontology::phone_number": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 152,
+      "tp": 152
+    },
+    "pii_entity_ontology::ssn": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 100,
+      "tp": 100
+    },
+    "pii_entity_ontology::state": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 80,
+      "tp": 80
+    },
+    "pii_entity_ontology::zip_code": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 120,
+      "tp": 120
+    }
+  }
+}

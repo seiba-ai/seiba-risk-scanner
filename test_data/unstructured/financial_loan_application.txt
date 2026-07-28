@@ -1,0 +1,569 @@
+MORTGAGE LOAN APPLICATION - CONFIDENTIAL FINANCIAL INFORMATION
+================================================================
+CONFIDENTIAL - PRIVACY ACT PROTECTED
+
+Financial Institution: First National Home Lending
+Address: 1234 Financial Plaza, Suite 800, Los Angeles, CA 90025
+Phone: (310) 555-1234
+Fax: (310) 555-1235
+Email: loans@firstnational.com
+Website: www.firstnational.com
+
+Loan Officer: Jennifer Martinez
+Loan Officer ID: LO-789456
+License: NMLS ID 456789
+Email: j.martinez@firstnational.com
+Direct Phone: (310) 555-1236
+
+Loan Application Number: APP-2024-789456123
+Application Date: May 15, 2024
+Application Status: Under Review
+Loan Type: Conventional 30-Year Fixed Rate Mortgage
+Property Type: Primary Residence - Single Family Home
+
+APPLICANT INFORMATION
+---------------------
+Primary Applicant:
+Full Legal Name: Robert James Wilson
+Date of Birth: October 22, 1987
+Age: 36 years
+Social Security Number: 123-45-6789
+Driver's License Number: CA-D789-123-456-78
+License Expiration: October 22, 2026
+Passport Number: 123456789 (if applicable)
+Passport Expiration: March 15, 2028
+
+Current Address:
+4567 Sunset Boulevard, Apartment 12B
+Los Angeles, CA 90027
+
+Previous Addresses (Last 2 Years):
+1. 1234 Vine Street, Apartment 5C, Los Angeles, CA 90028
+   Dates: January 2020 - March 2023
+   Reason for Move: Upgraded to larger apartment
+
+2. 7890 Hollywood Boulevard, Unit 8, Los Angeles, CA 90046
+   Dates: June 2018 - December 2019
+   Reason for Move: End of lease, found better location
+
+Contact Information:
+Home Phone: (323) 555-4567
+Mobile Phone: 1-323-555-7890
+Work Phone: (310) 555-2345
+Email: robert.wilson@email.com
+Work Email: rwilson@corporation.com
+Alternate Email: rjwilson@protonmail.com
+
+Marital Status: Married
+Spouse Name: Sarah Wilson (Co-Applicant)
+Spouse Date of Birth: March 15, 1989
+Spouse Social Security Number: 234-56-7890
+Spouse Driver's License: CA-D890-234-567-89
+
+CO-APPLICANT INFORMATION
+-------------------------
+Full Legal Name: Sarah Elizabeth Wilson
+Date of Birth: March 15, 1989
+Age: 35 years
+Social Security Number: 234-56-7890
+Driver's License Number: CA-D890-234-567-89
+License Expiration: March 15, 2027
+
+Current Address: Same as primary applicant
+
+Contact Information:
+Home Phone: (323) 555-4567
+Mobile Phone: 1-323-555-9012
+Work Phone: (310) 555-3456
+Email: sarah.wilson@email.com
+Work Email: swilson@company.com
+
+EMPLOYMENT INFORMATION
+-----------------------
+Primary Applicant Employment:
+Current Employer:
+Company: TechCorp Solutions Inc.
+Address: 1234 Corporate Drive, Suite 500, Los Angeles, CA 90025
+Position: Senior Software Engineer
+Employee ID: EMP-123456789
+Start Date: March 1, 2018
+Employment Type: Full-Time, Salaried
+Annual Base Salary: $145,000
+Annual Bonus: $15,000 - $25,000 (variable, based on performance)
+Total Annual Income: $160,000 - $170,000
+Monthly Gross Income: $13,333 - $14,167
+Supervisor: Michael Park, Engineering Manager
+Supervisor Phone: (310) 555-2346
+Supervisor Email: mpark@techcorp.com
+
+Previous Employment:
+Company: StartupTech Inc.
+Position: Software Engineer
+Dates: June 2015 - February 2018
+Annual Salary: $95,000 - $120,000
+Reason for Leaving: Accepted higher-paying position at TechCorp
+Supervisor: David Thompson
+Supervisor Phone: (415) 555-5678
+
+Co-Applicant Employment:
+Current Employer:
+Company: Marketing Agency Pro
+Address: 5678 Business Boulevard, Los Angeles, CA 90025
+Position: Marketing Director
+Employee ID: EMP-234567890
+Start Date: January 1, 2020
+Employment Type: Full-Time, Salaried
+Annual Base Salary: $125,000
+Annual Bonus: $10,000 - $20,000 (variable)
+Total Annual Income: $135,000 - $145,000
+Monthly Gross Income: $11,250 - $12,083
+Supervisor: Lisa Chen, VP of Marketing
+Supervisor Phone: (310) 555-3457
+Supervisor Email: lchen@marketingagency.com
+
+Previous Employment:
+Company: Creative Solutions Marketing
+Position: Senior Marketing Manager
+Dates: August 2016 - December 2019
+Annual Salary: $85,000 - $105,000
+Reason for Leaving: Career advancement opportunity
+
+COMBINED INCOME INFORMATION
+----------------------------
+Total Annual Household Income: $295,000 - $315,000
+Total Monthly Gross Income: $24,583 - $26,250
+Average Monthly Gross Income (for qualification): $25,417
+
+Income Verification:
+- Primary Applicant: Pay stubs (last 2 months), W-2 forms (2021, 2022, 2023), employment verification letter
+- Co-Applicant: Pay stubs (last 2 months), W-2 forms (2021, 2022, 2023), employment verification letter
+- Verification Status: Pending
+
+ASSETS
+------
+Bank Accounts:
+Checking Account 1:
+Bank: Bank of America
+Account Number: ****5678 (Last 4 digits)
+Routing Number: 121000248
+Account Type: Joint
+Current Balance: $35,000
+Average Balance (Last 2 Months): $32,000
+
+Checking Account 2:
+Bank: Chase Bank
+Account Number: ****9012 (Last 4 digits)
+Routing Number: 021000021
+Account Type: Individual (Robert Wilson)
+Current Balance: $12,000
+Average Balance (Last 2 Months): $10,500
+
+Savings Account 1:
+Bank: Bank of America
+Account Number: ****3456 (Last 4 digits)
+Routing Number: 121000248
+Account Type: Joint
+Current Balance: $85,000
+Average Balance (Last 2 Months): $82,000
+
+Savings Account 2:
+Bank: Wells Fargo
+Account Number: ****7890 (Last 4 digits)
+Routing Number: 121042882
+Account Type: Joint
+Current Balance: $45,000
+Average Balance (Last 2 Months): $43,000
+
+Investment Accounts:
+Brokerage Account:
+Financial Institution: Fidelity Investments
+Account Number: INV-789456123
+Account Type: Joint
+Current Value: $125,000
+Account Type: Taxable brokerage account
+
+Retirement Accounts:
+401(k) Account (Robert Wilson):
+Provider: Fidelity Investments (through TechCorp)
+Account Number: 401K-123456789
+Current Balance: $185,000
+Vested Balance: $185,000
+Loan Against 401(k): None
+Early Withdrawal Penalty: Would apply if withdrawn
+
+401(k) Account (Sarah Wilson):
+Provider: Vanguard (through Marketing Agency Pro)
+Account Number: 401K-234567890
+Current Balance: $95,000
+Vested Balance: $95,000
+Loan Against 401(k): None
+
+IRA Account (Robert Wilson):
+Provider: Charles Schwab
+Account Number: IRA-456789012
+Current Value: $45,000
+Account Type: Traditional IRA
+
+IRA Account (Sarah Wilson):
+Provider: Charles Schwab
+Account Number: IRA-567890123
+Current Value: $35,000
+Account Type: Roth IRA
+
+Other Assets:
+Vehicle 1:
+Year: 2021
+Make: Toyota
+Model: Camry
+VIN: 4T1B11HK5MU123456
+Current Value: $22,000
+Loan Balance: $8,500
+Equity: $13,500
+Lienholder: Toyota Financial Services
+Loan Account: AUTO-789456123
+Monthly Payment: $350
+
+Vehicle 2:
+Year: 2020
+Make: Honda
+Model: CR-V
+VIN: 5J6RM4H75LL234567
+Current Value: $25,000
+Loan Balance: $12,000
+Equity: $13,000
+Lienholder: Honda Financial Services
+Loan Account: AUTO-890567234
+Monthly Payment: $380
+
+Personal Property:
+Estimated Value: $15,000 (furniture, electronics, etc.)
+
+Total Liquid Assets: $177,000 (checking + savings)
+Total Investment Assets: $485,000 (brokerage + retirement accounts)
+Total Vehicle Equity: $26,500
+Total Other Assets: $15,000
+Total Assets: $703,500
+
+LIABILITIES
+-----------
+Credit Cards:
+Credit Card 1:
+Issuer: Chase Visa
+Account Number: ****1234 (Last 4 digits)
+Credit Limit: $15,000
+Current Balance: $3,500
+Minimum Monthly Payment: $105
+Account Type: Individual (Robert Wilson)
+
+Credit Card 2:
+Issuer: American Express
+Account Number: ****5678 (Last 4 digits)
+Credit Limit: $20,000
+Current Balance: $5,200
+Minimum Monthly Payment: $156
+Account Type: Joint
+
+Credit Card 3:
+Issuer: Bank of America Mastercard
+Account Number: ****9012 (Last 4 digits)
+Credit Limit: $10,000
+Current Balance: $1,800
+Minimum Monthly Payment: $54
+Account Type: Individual (Sarah Wilson)
+
+Total Credit Card Debt: $10,500
+Total Minimum Monthly Payments: $315
+
+Auto Loans:
+Vehicle 1 Loan:
+Lender: Toyota Financial Services
+Loan Account: AUTO-789456123
+Original Loan Amount: $28,000
+Current Balance: $8,500
+Monthly Payment: $350
+Interest Rate: 3.9%
+Remaining Term: 24 months
+
+Vehicle 2 Loan:
+Lender: Honda Financial Services
+Loan Account: AUTO-890567234
+Original Loan Amount: $32,000
+Current Balance: $12,000
+Monthly Payment: $380
+Interest Rate: 4.2%
+Remaining Term: 36 months
+
+Total Auto Loan Debt: $20,500
+Total Monthly Auto Payments: $730
+
+Student Loans:
+Student Loan 1 (Robert Wilson):
+Lender: Federal Student Aid
+Loan Account: STU-123456789
+Current Balance: $25,000
+Monthly Payment: $280
+Interest Rate: 4.5%
+Repayment Plan: Income-Driven Repayment
+
+Student Loan 2 (Sarah Wilson):
+Lender: Federal Student Aid
+Loan Account: STU-234567890
+Current Balance: $18,000
+Monthly Payment: $200
+Interest Rate: 5.2%
+Repayment Plan: Standard 10-Year
+
+Total Student Loan Debt: $43,000
+Total Monthly Student Loan Payments: $480
+
+Other Debts:
+Personal Loan:
+Lender: Personal Finance Company
+Loan Account: PER-789456123
+Current Balance: $5,000
+Monthly Payment: $150
+Interest Rate: 8.5%
+Remaining Term: 36 months
+
+Total Other Debts: $5,000
+Total Monthly Other Debt Payments: $150
+
+Total Liabilities: $79,000
+Total Monthly Debt Payments: $1,675
+
+PROPERTY INFORMATION
+--------------------
+Property Address:
+7890 Oak Street, Los Angeles, CA 90027
+
+Property Type: Single Family Home
+Property Use: Primary Residence
+Year Built: 2015
+Square Footage: 2,400 square feet
+Lot Size: 7,500 square feet (0.17 acres)
+Number of Bedrooms: 4
+Number of Bathrooms: 2.5
+Garage: 2-car attached garage
+Property Condition: Excellent
+
+Purchase Price: $850,000
+Down Payment: $170,000 (20%)
+Loan Amount Requested: $680,000
+Loan-to-Value (LTV) Ratio: 80%
+
+Property Taxes:
+Annual Property Taxes: $10,200 (estimated, 1.2% of purchase price)
+Monthly Property Taxes: $850
+
+Homeowners Insurance:
+Annual Premium: $2,400 (estimated)
+Monthly Premium: $200
+
+Homeowners Association (HOA):
+Monthly HOA Fee: $150
+HOA Name: Oak Street Homeowners Association
+HOA Contact: (323) 555-6789
+
+LOAN TERMS
+----------
+Loan Type: Conventional 30-Year Fixed Rate Mortgage
+Loan Amount: $680,000
+Interest Rate: 6.75% (APR: 6.89%)
+Loan Term: 30 years (360 months)
+Monthly Principal and Interest: $4,405.47
+Monthly Property Taxes: $850.00
+Monthly Homeowners Insurance: $200.00
+Monthly PMI (Private Mortgage Insurance): $0 (not required with 20% down)
+Monthly HOA Fee: $150.00
+Total Monthly Payment: $5,605.47
+
+Down Payment Source:
+- Savings Account: $120,000
+- Gift from Parents: $50,000 (gift letter provided)
+- Total: $170,000
+
+Closing Costs:
+Estimated Closing Costs: $15,000 - $18,000
+Seller Credits: $5,000
+Net Closing Costs: $10,000 - $13,000
+
+CREDIT INFORMATION
+------------------
+Primary Applicant Credit:
+Credit Score (FICO): 765
+Credit Bureau: Experian, Equifax, TransUnion
+Credit Report Date: May 15, 2024
+Credit Report Number: CR-789456123
+
+Credit History:
+- Length of Credit History: 15 years
+- Number of Accounts: 12 (8 open, 4 closed)
+- Payment History: 100% on-time payments
+- Credit Utilization: 18% (excellent)
+- Derogatory Marks: None
+- Bankruptcies: None
+- Foreclosures: None
+- Collections: None
+- Inquiries (Last 12 Months): 3 (2 mortgage-related, 1 auto loan)
+
+Co-Applicant Credit:
+Credit Score (FICO): 752
+Credit Bureau: Experian, Equifax, TransUnion
+Credit Report Date: May 15, 2024
+Credit Report Number: CR-890567234
+
+Credit History:
+- Length of Credit History: 12 years
+- Number of Accounts: 10 (7 open, 3 closed)
+- Payment History: 100% on-time payments
+- Credit Utilization: 22% (good)
+- Derogatory Marks: None
+- Bankruptcies: None
+- Foreclosures: None
+- Collections: None
+- Inquiries (Last 12 Months): 2 (both mortgage-related)
+
+DEBT-TO-INCOME RATIO
+--------------------
+Monthly Gross Income: $25,417
+Monthly Debt Payments:
+- Credit Cards: $315
+- Auto Loans: $730
+- Student Loans: $480
+- Other Debts: $150
+- Proposed Mortgage: $4,405.47
+Total Monthly Debt Payments: $6,080.47
+
+Front-End Ratio (Housing Debt / Gross Income):
+- Monthly Housing Payment: $5,605.47
+- Front-End Ratio: 22.1% (Target: <28%, Excellent)
+
+Back-End Ratio (Total Debt / Gross Income):
+- Total Monthly Debt: $6,080.47
+- Back-End Ratio: 23.9% (Target: <36%, Excellent)
+
+Both ratios are well within acceptable limits for conventional loan approval.
+
+DOCUMENTATION PROVIDED
+----------------------
+Identity Verification:
+✓ Driver's License (Primary Applicant) - Copy provided
+✓ Driver's License (Co-Applicant) - Copy provided
+✓ Social Security Card (Primary Applicant) - Copy provided
+✓ Social Security Card (Co-Applicant) - Copy provided
+
+Income Verification:
+✓ Pay Stubs - Last 2 months (Primary Applicant)
+✓ Pay Stubs - Last 2 months (Co-Applicant)
+✓ W-2 Forms - 2021, 2022, 2023 (Primary Applicant)
+✓ W-2 Forms - 2021, 2022, 2023 (Co-Applicant)
+✓ Employment Verification Letters (Both applicants)
+✓ Tax Returns - 2021, 2022, 2023 (Both applicants, filed jointly)
+
+Asset Verification:
+✓ Bank Statements - Last 2 months (All accounts)
+✓ Investment Account Statements - Last 2 months
+✓ Retirement Account Statements - Last quarter
+✓ Gift Letter (for $50,000 gift from parents)
+
+Property Documentation:
+✓ Purchase Agreement - Signed
+✓ Property Appraisal - Ordered, pending
+✓ Home Inspection Report - Completed, no major issues
+✓ Title Report - Ordered, pending
+✓ Homeowners Insurance Quote - Provided
+
+Credit Documentation:
+✓ Credit Reports - Pulled and reviewed
+✓ Credit Explanations - Provided for any inquiries or accounts
+
+Other Documentation:
+✓ Rental History - Last 3 years
+✓ Divorce Decree - N/A (not applicable)
+✓ Bankruptcy Discharge - N/A (not applicable)
+
+LOAN APPROVAL STATUS
+--------------------
+Application Status: Under Review
+Underwriter: Michael Chen, Senior Underwriter
+Underwriter ID: UW-456789
+Review Start Date: May 20, 2024
+
+Conditions for Approval:
+1. ✓ Income verification - Complete
+2. ✓ Asset verification - Complete
+3. ✓ Credit check - Complete
+4. ⏳ Property appraisal - Pending (scheduled for May 25, 2024)
+5. ⏳ Title report - Pending (expected May 28, 2024)
+6. ⏳ Final employment verification - Pending (expected May 22, 2024)
+7. ⏳ Final bank statements - Pending (will request updated statements)
+8. ⏳ Homeowners insurance binder - Pending (will be required before closing)
+
+Estimated Approval Date: May 30, 2024
+Estimated Closing Date: June 15, 2024
+
+RISK ASSESSMENT
+---------------
+Loan Risk Level: LOW RISK
+
+Strengths:
+- Excellent credit scores (765 and 752)
+- Strong income ($295K - $315K annually)
+- Low debt-to-income ratios (22.1% front-end, 23.9% back-end)
+- Substantial down payment (20%)
+- Strong asset position ($703,500 total assets)
+- Stable employment history (6+ years at current employers)
+- Good payment history (100% on-time)
+- Property is primary residence
+- Conventional loan (not government-backed, lower risk)
+
+Concerns:
+- None identified at this time
+
+Recommendation: APPROVE (pending completion of remaining conditions)
+
+APPLICANT ACKNOWLEDGMENT
+------------------------
+I/We acknowledge that:
+- All information provided in this application is true and accurate to the best of my/our knowledge
+- I/We understand that false or misleading information may result in denial of the loan
+- I/We authorize First National Home Lending to verify all information provided
+- I/We understand that credit reports will be obtained
+- I/We consent to the use of electronic signatures and electronic delivery of documents
+- I/We have received and reviewed all required disclosures
+
+Primary Applicant Signature: _________________________
+Print Name: Robert James Wilson
+Date: May 15, 2024
+
+Co-Applicant Signature: _________________________
+Print Name: Sarah Elizabeth Wilson
+Date: May 15, 2024
+
+LOAN OFFICER SIGNATURE
+----------------------
+Jennifer Martinez
+Loan Officer
+NMLS ID: 456789
+First National Home Lending
+Date: May 15, 2024
+
+CONFIDENTIALITY NOTICE
+----------------------
+This document contains confidential financial and personal information protected under:
+- Gramm-Leach-Bliley Act (GLBA)
+- Fair Credit Reporting Act (FCRA)
+- California Consumer Privacy Act (CCPA)
+- Other applicable federal and state privacy laws
+
+This information is intended solely for use by First National Home Lending, credit bureaus, appraisers, title companies, and other authorized parties involved in the loan process. Unauthorized access, disclosure, or use is strictly prohibited and may result in legal action.
+
+END OF APPLICATION
+-----------------
+Application ID: APP-2024-789456123
+Version: 1.0
+Last Updated: May 20, 2024
+Updated By: Jennifer Martinez, Loan Officer
+File Location: Secure Loan Origination System
+Access Level: Confidential - Financial Information
+

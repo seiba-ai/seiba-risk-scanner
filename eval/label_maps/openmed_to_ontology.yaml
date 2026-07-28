@@ -1,0 +1,73 @@
+# Maps OpenMed PII model label suffixes (openmed::<suffix>) to Seiba ontology entity_id.
+# Used for cross-backend scoring on unstructured_v2 gold.
+#
+# Labels with no entry are dropped from mapped scoring (e.g. occupation, gender).
+# person_names: adjacent mapped spans may be merged before scoring (see openmed_mapping.py).
+
+person: pii_entity_ontology::person_names
+first_name: pii_entity_ontology::person_names
+last_name: pii_entity_ontology::person_names
+middle_name: pii_entity_ontology::person_names
+prefix: pii_entity_ontology::person_names
+user_name: pii_entity_ontology::person_names
+
+email: pii_entity_ontology::email_address
+phone_number: pii_entity_ontology::phone_number
+fax_number: pii_entity_ontology::fax_number
+
+ssn: pii_entity_ontology::ssn
+
+street_address: pii_entity_ontology::street_address
+building_number: pii_entity_ontology::street_address
+city: pii_entity_ontology::city
+state: pii_entity_ontology::state
+county: pii_entity_ontology::county
+postcode: pii_entity_ontology::zip_code
+ordinal_direction: pii_entity_ontology::street_address
+
+date: pii_entity_ontology::dates
+date_of_birth: pii_entity_ontology::dates
+date_time: pii_entity_ontology::timestamps
+time: pii_entity_ontology::timestamps
+
+age: pii_entity_ontology::age
+
+medical_record_number: phi_entity_ontology::medical_record_number_mrn
+npi: phi_entity_ontology::provider_npi
+health_plan_beneficiary_number: phi_entity_ontology::health_plan_beneficiary_number
+certificate_license_number: phi_entity_ontology::certificate_license_number
+
+account_number: pii_entity_ontology::unique_identifier
+bank_routing_number: fin_entity_ontology::routing_number_aba
+credit_debit_card: fin_entity_ontology::credit_card_number
+cvv: fin_entity_ontology::cvv_code
+iban: fin_entity_ontology::iban
+bic: fin_entity_ontology::swift_bic
+swift_bic: fin_entity_ontology::swift_bic
+bitcoin_address: fin_entity_ontology::crypto_wallet_address
+ethereum_address: fin_entity_ontology::crypto_wallet_address
+litecoin_address: fin_entity_ontology::crypto_wallet_address
+masked_number: fin_entity_ontology::credit_card_number
+
+ipv4: pii_entity_ontology::ip_address
+ipv6: pii_entity_ontology::ip_address
+mac_address: pii_entity_ontology::mac_address
+
+vehicle_identifier: pii_entity_ontology::vehicle_identification_number_vin
+vin: pii_entity_ontology::vehicle_identification_number_vin
+imei: pii_entity_ontology::imei_number
+device_identifier: pii_entity_ontology::device_serial_number
+
+employee_id: pii_entity_ontology::unique_identifier
+customer_id: pii_entity_ontology::unique_identifier
+unique_id: pii_entity_ontology::uuid_guid
+tax_id: pii_entity_ontology::us_ein
+
+url: pii_entity_ontology::web_url
+
+# Weak / contextual — included for recall; may add FPs on company vs hospital.
+company_name: phi_entity_ontology::hospital_names
+organization: phi_entity_ontology::hospital_names
+
+drivers_license_number: pii_entity_ontology::drivers_license_number
+passport_number: pii_entity_ontology::passport_number

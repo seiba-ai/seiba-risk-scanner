@@ -1,0 +1,183 @@
+{"_meta": {"file": "email_thread_pii.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::account_number", "openmed::age", "openmed::city", "openmed::company_name", "openmed::credit_debit_card", "openmed::customer_id", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::employee_id", "openmed::first_name", "openmed::ipv4", "openmed::last_name", "openmed::occupation", "openmed::phone_number", "openmed::postcode", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::time", "openmed::unique_id"]}}
+{"start": 156, "end": 182, "text": "TechSupport Solutions Inc.", "entity_id": "openmed::company_name"}
+{"start": 209, "end": 232, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 240, "end": 257, "text": "1-800-555-SUPPORT", "entity_id": "openmed::phone_number"}
+{"start": 281, "end": 302, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 317, "end": 330, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 460, "end": 467, "text": "Jessica", "entity_id": "openmed::first_name"}
+{"start": 474, "end": 483, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 499, "end": 515, "text": "December 5, 1992", "entity_id": "openmed::date_of_birth"}
+{"start": 521, "end": 523, "text": "31", "entity_id": "openmed::age"}
+{"start": 543, "end": 557, "text": "CUST-456789012", "entity_id": "openmed::customer_id"}
+{"start": 574, "end": 587, "text": "ACC-789456123", "entity_id": "openmed::account_number"}
+{"start": 612, "end": 623, "text": "456-78-9012", "entity_id": "openmed::ssn"}
+{"start": 672, "end": 699, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 717, "end": 746, "text": "jrodriguez.personal@gmail.com", "entity_id": "openmed::email"}
+{"start": 761, "end": 775, "text": "(415) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 790, "end": 804, "text": "1-415-555-7890", "entity_id": "openmed::phone_number"}
+{"start": 817, "end": 831, "text": "(650) 555-1234", "entity_id": "openmed::phone_number"}
+{"start": 850, "end": 882, "text": "1234 Market Street, Apartment 8C", "entity_id": "openmed::street_address"}
+{"start": 883, "end": 896, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 898, "end": 900, "text": "CA", "entity_id": "openmed::state"}
+{"start": 901, "end": 906, "text": "94102", "entity_id": "openmed::postcode"}
+{"start": 984, "end": 1003, "text": "5678 Mission Street", "entity_id": "openmed::street_address"}
+{"start": 1005, "end": 1018, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 1020, "end": 1022, "text": "CA", "entity_id": "openmed::state"}
+{"start": 1023, "end": 1028, "text": "94103", "entity_id": "openmed::postcode"}
+{"start": 1037, "end": 1050, "text": "February 2024", "entity_id": "openmed::date"}
+{"start": 1078, "end": 1085, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 1086, "end": 1095, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 1124, "end": 1138, "text": "(415) 555-4568", "entity_id": "openmed::phone_number"}
+{"start": 1146, "end": 1173, "text": "michael.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 1248, "end": 1271, "text": "Financial Services Corp", "entity_id": "openmed::company_name"}
+{"start": 1282, "end": 1299, "text": "Senior Accountant", "entity_id": "openmed::occupation"}
+{"start": 1313, "end": 1326, "text": "EMP-789456123", "entity_id": "openmed::employee_id"}
+{"start": 1336, "end": 1355, "text": "8901 Business Drive", "entity_id": "openmed::street_address"}
+{"start": 1357, "end": 1370, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 1372, "end": 1374, "text": "CA", "entity_id": "openmed::state"}
+{"start": 1375, "end": 1380, "text": "94105", "entity_id": "openmed::postcode"}
+{"start": 1388, "end": 1402, "text": "(415) 555-2345", "entity_id": "openmed::phone_number"}
+{"start": 1410, "end": 1442, "text": "jrodriguez@financialservices.com", "entity_id": "openmed::email"}
+{"start": 1455, "end": 1460, "text": "David", "entity_id": "openmed::first_name"}
+{"start": 1461, "end": 1469, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 1488, "end": 1519, "text": "dthompson@financialservices.com", "entity_id": "openmed::email"}
+{"start": 1711, "end": 1715, "text": "5678", "entity_id": "openmed::credit_debit_card"}
+{"start": 1725, "end": 1730, "text": "12/26", "entity_id": "openmed::date"}
+{"start": 1828, "end": 1842, "text": "March 15, 2022", "entity_id": "openmed::date"}
+{"start": 1855, "end": 1867, "text": "June 9, 2024", "entity_id": "openmed::date"}
+{"start": 1871, "end": 1878, "text": "3:45 PM", "entity_id": "openmed::time"}
+{"start": 1895, "end": 1907, "text": "192.168.1.45", "entity_id": "openmed::ipv4"}
+{"start": 2007, "end": 2034, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 2039, "end": 2062, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 2121, "end": 2134, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 2135, "end": 2142, "text": "9:15 AM", "entity_id": "openmed::time"}
+{"start": 2316, "end": 2328, "text": "June 8, 2024", "entity_id": "openmed::date"}
+{"start": 2438, "end": 2452, "text": "CUST-456789012", "entity_id": "openmed::customer_id"}
+{"start": 2471, "end": 2484, "text": "ACC-789456123", "entity_id": "openmed::account_number"}
+{"start": 2494, "end": 2521, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 2531, "end": 2545, "text": "(415) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 2576, "end": 2580, "text": "5678", "entity_id": "openmed::credit_debit_card"}
+{"start": 2797, "end": 2811, "text": "(415) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 2850, "end": 2857, "text": "Jessica", "entity_id": "openmed::first_name"}
+{"start": 2858, "end": 2867, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 2891, "end": 2914, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 2919, "end": 2946, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 3004, "end": 3025, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 3033, "end": 3046, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 3047, "end": 3054, "text": "9:32 AM", "entity_id": "openmed::time"}
+{"start": 3084, "end": 3093, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 3201, "end": 3222, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 4546, "end": 4563, "text": "1-800-555-SUPPORT", "entity_id": "openmed::phone_number"}
+{"start": 4603, "end": 4611, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 4612, "end": 4620, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 4621, "end": 4648, "text": "Customer Support Specialist", "entity_id": "openmed::occupation"}
+{"start": 4649, "end": 4675, "text": "TechSupport Solutions Inc.", "entity_id": "openmed::company_name"}
+{"start": 4692, "end": 4713, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 4727, "end": 4741, "text": "(800) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 4749, "end": 4775, "text": "j.martinez@techsupport.com", "entity_id": "openmed::email"}
+{"start": 4799, "end": 4826, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 4831, "end": 4854, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 4912, "end": 4933, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 4941, "end": 4954, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 4955, "end": 4963, "text": "10:45 AM", "entity_id": "openmed::time"}
+{"start": 4987, "end": 4995, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 5109, "end": 5122, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 5200, "end": 5212, "text": "June 8, 2024", "entity_id": "openmed::date"}
+{"start": 5339, "end": 5351, "text": "June 8, 2024", "entity_id": "openmed::date"}
+{"start": 5355, "end": 5362, "text": "2:30 PM", "entity_id": "openmed::time"}
+{"start": 5519, "end": 5546, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 5809, "end": 5825, "text": "December 5, 1992", "entity_id": "openmed::date_of_birth"}
+{"start": 5850, "end": 5854, "text": "9012", "entity_id": "openmed::ssn"}
+{"start": 5874, "end": 5906, "text": "1234 Market Street, Apartment 8C", "entity_id": "openmed::street_address"}
+{"start": 5908, "end": 5921, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 5923, "end": 5925, "text": "CA", "entity_id": "openmed::state"}
+{"start": 5926, "end": 5931, "text": "94102", "entity_id": "openmed::postcode"}
+{"start": 6315, "end": 6329, "text": "(415) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 6379, "end": 6386, "text": "Jessica", "entity_id": "openmed::first_name"}
+{"start": 6387, "end": 6396, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 6420, "end": 6443, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 6448, "end": 6475, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 6533, "end": 6554, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 6585, "end": 6598, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 6599, "end": 6606, "text": "2:15 PM", "entity_id": "openmed::time"}
+{"start": 6636, "end": 6645, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 6892, "end": 6904, "text": "June 8, 2024", "entity_id": "openmed::date"}
+{"start": 6908, "end": 6915, "text": "2:28 PM", "entity_id": "openmed::time"}
+{"start": 6986, "end": 6998, "text": "203.0.113.42", "entity_id": "openmed::ipv4"}
+{"start": 7023, "end": 7025, "text": "CA", "entity_id": "openmed::state"}
+{"start": 7078, "end": 7091, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 7093, "end": 7095, "text": "CA", "entity_id": "openmed::state"}
+{"start": 8865, "end": 8892, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 9217, "end": 9231, "text": "(800) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 9353, "end": 9361, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 9362, "end": 9370, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 9371, "end": 9398, "text": "Customer Support Specialist", "entity_id": "openmed::occupation"}
+{"start": 9399, "end": 9425, "text": "TechSupport Solutions Inc.", "entity_id": "openmed::company_name"}
+{"start": 9442, "end": 9463, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 9477, "end": 9491, "text": "(800) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 9499, "end": 9525, "text": "j.martinez@techsupport.com", "entity_id": "openmed::email"}
+{"start": 9549, "end": 9576, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 9581, "end": 9604, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 9662, "end": 9683, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 9703, "end": 9716, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 9717, "end": 9724, "text": "4:30 PM", "entity_id": "openmed::time"}
+{"start": 9750, "end": 9758, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 10787, "end": 10800, "text": "198.51.100.42", "entity_id": "openmed::ipv4"}
+{"start": 10804, "end": 10816, "text": "June 7, 2024", "entity_id": "openmed::date"}
+{"start": 10974, "end": 10981, "text": "Jessica", "entity_id": "openmed::first_name"}
+{"start": 10982, "end": 10991, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 10999, "end": 11013, "text": "(415) 555-4567", "entity_id": "openmed::phone_number"}
+{"start": 11021, "end": 11048, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 11072, "end": 11095, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 11100, "end": 11127, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 11185, "end": 11206, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 11235, "end": 11248, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 11249, "end": 11256, "text": "5:45 PM", "entity_id": "openmed::time"}
+{"start": 11288, "end": 11297, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 11501, "end": 11513, "text": "203.0.113.42", "entity_id": "openmed::ipv4"}
+{"start": 11994, "end": 12007, "text": "198.51.100.42", "entity_id": "openmed::ipv4"}
+{"start": 12011, "end": 12023, "text": "June 7, 2024", "entity_id": "openmed::date"}
+{"start": 13389, "end": 13397, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 13398, "end": 13406, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 13407, "end": 13434, "text": "Customer Support Specialist", "entity_id": "openmed::occupation"}
+{"start": 13435, "end": 13461, "text": "TechSupport Solutions Inc.", "entity_id": "openmed::company_name"}
+{"start": 13478, "end": 13499, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 13513, "end": 13527, "text": "(800) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 13535, "end": 13561, "text": "j.martinez@techsupport.com", "entity_id": "openmed::email"}
+{"start": 13585, "end": 13612, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 13617, "end": 13640, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 13698, "end": 13719, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 13738, "end": 13751, "text": "June 11, 2024", "entity_id": "openmed::date"}
+{"start": 13752, "end": 13759, "text": "9:00 AM", "entity_id": "openmed::time"}
+{"start": 13785, "end": 13793, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 14375, "end": 14382, "text": "Jessica", "entity_id": "openmed::first_name"}
+{"start": 14383, "end": 14392, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 14416, "end": 14439, "text": "support@techsupport.com", "entity_id": "openmed::email"}
+{"start": 14444, "end": 14471, "text": "jessica.rodriguez@email.com", "entity_id": "openmed::email"}
+{"start": 14529, "end": 14550, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 14574, "end": 14587, "text": "June 11, 2024", "entity_id": "openmed::date"}
+{"start": 14588, "end": 14595, "text": "9:15 AM", "entity_id": "openmed::time"}
+{"start": 14627, "end": 14636, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 14772, "end": 14793, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 15027, "end": 15035, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 15036, "end": 15044, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 15045, "end": 15072, "text": "Customer Support Specialist", "entity_id": "openmed::occupation"}
+{"start": 15073, "end": 15099, "text": "TechSupport Solutions Inc.", "entity_id": "openmed::company_name"}
+{"start": 15116, "end": 15137, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 15160, "end": 15174, "text": "(800) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 15182, "end": 15208, "text": "j.martinez@techsupport.com", "entity_id": "openmed::email"}
+{"start": 15290, "end": 15298, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 15299, "end": 15307, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 15749, "end": 15762, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 16323, "end": 16336, "text": "198.51.100.42", "entity_id": "openmed::ipv4"}
+{"start": 17535, "end": 17555, "text": "EMAIL-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 17572, "end": 17593, "text": "TICKET-2024-789456123", "entity_id": "openmed::unique_id"}
+{"start": 17634, "end": 17647, "text": "June 10, 2024", "entity_id": "openmed::date"}
+{"start": 17648, "end": 17655, "text": "9:15 AM", "entity_id": "openmed::time"}
+{"start": 17675, "end": 17688, "text": "June 11, 2024", "entity_id": "openmed::date"}
+{"start": 17689, "end": 17696, "text": "9:15 AM", "entity_id": "openmed::time"}
+{"start": 17773, "end": 17786, "text": "June 11, 2024", "entity_id": "openmed::date"}
+{"start": 17787, "end": 17794, "text": "9:15 AM", "entity_id": "openmed::time"}
+{"start": 17811, "end": 17819, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 17820, "end": 17828, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 17830, "end": 17857, "text": "Customer Support Specialist", "entity_id": "openmed::occupation"}

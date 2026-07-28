@@ -1,0 +1,62 @@
+name: Entity coverage request
+description: A kind of sensitive data the scanner should detect but does not
+labels: ["enhancement", "ontology"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Coverage usually needs no Python — entities are declared in the ontology YAML
+        (`src/seiba_risk_scanner/classification_engine/ontologies/`). This issue
+        is a good first contribution; see the Contributing section of the Readme.
+
+        **Use fake examples only. Never paste real PII or PHI.**
+
+  - type: input
+    id: entity
+    attributes:
+      label: What kind of data
+      placeholder: "UK driving licence number"
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Fake examples
+      description: A few made-up values in the real format, and the text around them.
+      placeholder: |
+        "Licence No: MORGA657054SM9IJ"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data_class
+    attributes:
+      label: How sensitive is it
+      description: >
+        direct_identifier names a person outright; quasi_identifier is harmless alone but
+        narrows people down in combination; sensitive_attribute is a protected value.
+      options:
+        - direct_identifier
+        - quasi_identifier
+        - sensitive_attribute
+        - financial_data
+        - biometric_identifier
+        - genetic_data
+        - device_identifier
+        - not sure
+    validations:
+      required: true
+
+  - type: input
+    id: validator
+    attributes:
+      label: Does it have a checksum or format rule?
+      description: A validator is what separates a real identifier from a lookalike number.
+      placeholder: "Yes — positions 1-5 are surname-derived; or: No"
+
+  - type: input
+    id: jurisdiction
+    attributes:
+      label: Country / jurisdiction
+      placeholder: "United Kingdom"

@@ -1,0 +1,1695 @@
+# PII (Personally Identifiable Information) Entity Ontology
+# This file defines rules, validators, and classification for PII entities
+
+# default_action — what to DO with each entity when a policy is applied.
+#   DEFAULT            use whatever the chosen policy profile decides (hipaa_safe_harbor, ...)
+#   keep               leave the value untouched
+#   mask / redact      blank it out            -> [ENTITY]
+#   hash               stable token, still joinable
+#   replace            realistic fake value
+#   format_preserve    fake value keeping the original shape
+#   generalize[:level] coarsen instead of destroy. Only for dates, ages, zip codes and
+#                      coordinates. Levels: date month|year|decade, age 5_year_band|
+#                      10_year_band|20_year_band, zip 3_digit|1_digit, coords 1_decimal|integer
+# Edit these freely — this file is the config.
+
+entities:
+  person_names:
+    description: "A person's name"
+    regex_patterns:
+      accepted_patterns: []
+      # Block NER PERSON spans whose text is or contains a month/day name — these are
+      # almost always date fragments that spaCy mislabels as person names.
+      prohibited_patterns:
+        - |-
+          (?i)\b(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - client
+        - dr
+        - rn
+        - md
+        - doctor
+        - nurse
+        - physician
+        - provider
+        - attending
+        - name
+        - full name
+        - employee
+        - applicant
+        - claimant
+        - insured
+        - subscriber
+      # Context gate: bare NER PERSON hits without any of these nearby score below threshold.
+      # "patient" and "pt" intentionally excluded — they trigger on MRN prefixes like PAT-BH-123456.
+      confidence_weight: 0.60
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+        ner_confidence_weight: 0.50
+    de_identifier: PERSON
+    default_action: DEFAULT
+
+  email_address:
+    description: "Email address"
+    regex_patterns:
+      accepted_patterns:
+        # Literal block scalars (|-): regex backslashes are not YAML-escaped.
+        - |-
+          \[?([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})\]?
+        - |-
+          \b([a-zA-Z0-9._%+-]+)\s*\[at\]\s*([a-zA-Z0-9.-]+)\s*\[dot\]\s*([a-zA-Z]{2,})\b
+        - |-
+          \b([a-zA-Z0-9._%+-]+)\s*\(at\)\s*([a-zA-Z0-9.-]+)\s*\(dot\)\s*([a-zA-Z]{2,})\b
+        - |-
+          \b([a-zA-Z0-9._%+-]+)\s*\[at\]\s*([a-zA-Z0-9.-]+)\s*\(dot\)\s*([a-zA-Z]{2,})\b
+        - |-
+          \b([a-zA-Z0-9._%+-]+)\s*\(at\)\s*([a-zA-Z0-9.-]+)\s*\[dot\]\s*([a-zA-Z]{2,})\b
+      prohibited_patterns: []
+      confidence_weight: 0.9
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - email
+        - e-mail
+        - mail
+        - reply to
+        - send to
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: EMAIL
+    default_action: DEFAULT
+
+  phone_number:
+    description: "Telephone number"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          (?:\+1\s*|\+?1[-.\s]?)?(?:\(\d{3}\)|\d{3})[-.\s]?\d{3}[-.\s]?\d{4}\b
+      prohibited_patterns: []
+      confidence_weight: 0.55
+    validators:
+      enum: VALIDATE_PHONE_US
+      primary: true
+      confidence_weight: 0.88
+    contextual_phrases:
+      values:
+        - phone
+        - telephone
+        - tel
+        - mobile
+        - cell
+        - contact number
+        - phone number
+        - call
+        - reach
+        - contact
+      confidence_weight: null
+    prohibited_prefix:
+      values:
+        - account
+        - account number
+        - acct
+        - transfer to account
+        - transfer to
+        - checking account
+        - savings account
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: PHONE
+    default_action: DEFAULT
+
+  fax_number:
+    description: "Fax number"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          (?:\+1\s*|\+?1[-.\s]?)?(?:\(\d{3}\)|\d{3})[-.\s]?\d{3}[-.\s]?\d{4}\b
+      prohibited_patterns: []
+      confidence_weight: 0.55
+    validators:
+      enum: VALIDATE_PHONE_US
+      primary: true
+      confidence_weight: 0.88
+    contextual_phrases:
+      values:
+        - fax
+        - fax number
+        - facsimile
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: PHONE
+    default_action: DEFAULT
+
+  ssn:
+    description: "US Social Security Number"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{3}-\d{2}-\d{4}\b
+      prohibited_patterns: []
+      confidence_weight: 0.85
+    validators:
+      enum: VALIDATE_US_SSN
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - ssn
+        - social security
+        - ss#
+        - social security number
+        - ssn#
+      confidence_weight: null
+    prohibited_prefix:
+      values:
+        - mrn
+        - mrn:
+        - medical record
+        - account
+        - employee
+        - emp
+        - member
+        - customer
+        - license
+      confidence_weight: null
+    prohibited_suffix:
+      values:
+        - digits
+        - digit
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: SSN
+    default_action: DEFAULT
+
+  street_address:
+    description: "Street address"
+    regex_patterns:
+      accepted_patterns:
+        # "123 Main Street", "45 Baker Road", "1600 Pennsylvania Avenue" — global format
+        - |-
+          \b\d+\s+[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)*\s+(?:Street|St|Avenue|Ave|Boulevard|Blvd|Drive|Dr|Road|Rd|Lane|Ln|Court|Ct|Way|Place|Pl|Terrace|Ter|Crescent|Cres|Close|Grove|Mews|Square|Sq|Parkway|Pkwy)\b
+        # Sub-address designators: "Apt 4B", "Suite 200", "Unit 3C", "Floor 12".
+        # The unit must contain a digit: case-insensitivity makes [A-Z0-9] match plain
+        # words too, so without it "Room air", "Building Access" and "building is" all
+        # read as sub-addresses.
+        - |-
+          (?i)\b(?:Apt\.?|Apartment|Suite|Ste\.?|Unit|Fl\.?|Floor|Bldg\.?|Building|Rm\.?|Room)\s+(?=[A-Z0-9-]*\d)[A-Z0-9][A-Z0-9-]*\b
+      prohibited_patterns: []
+      confidence_weight: 0.65
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - address
+        - street
+        - avenue
+        - road
+        - boulevard
+        - lane
+        - drive
+        - court
+        - parkway
+        - place
+        - terrace
+        - close
+        - crescent
+        - grove
+        - mews
+        - square
+        - st
+        - ave
+        - rd
+        - blvd
+        - ln
+        - dr
+        - ct
+        - pkwy
+        - pl
+        - ter
+        - cres
+        - gr
+        - sq
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: STREET_ADDRESS
+    default_action: DEFAULT
+
+  city:
+    description: "City or town name"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      # Also the structured column key (passed as context), which is decisive for bare
+      # cells: NER reads "Austin"/"Denver" as a first_name without them.
+      values:
+        - city
+        - town
+        - municipality
+        - locality
+        - city name
+        - lives in
+        - resides in
+        - based in
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: LOCATION
+    default_action: DEFAULT
+
+  county:
+    description: "County or administrative district name"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-Z][a-zA-Z]+\s+County\b
+      prohibited_patterns: []
+      confidence_weight: 0.6
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - county
+      confidence_weight: 0.4
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: LOCATION
+    default_action: DEFAULT
+
+  state:
+    description: "US state or province"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - state
+        - province
+        - region
+        - state code
+        - state name
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: LOCATION
+    default_action: DEFAULT
+
+  zip_code:
+    description: "Postal/ZIP code"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{5}(?:-\d{4})?\b
+      prohibited_patterns: []
+      confidence_weight: 0.78
+    validators:
+      enum: VALIDATE_POSTAL_CODE_FORMAT
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - zip
+        - postal
+        - zip code
+        - postal code
+        - city
+        - state
+        - suite
+        - address
+        # US state abbreviations — high-signal when they appear directly before a ZIP
+        - al
+        - ak
+        - az
+        - ar
+        - ca
+        - co
+        - ct
+        - de
+        - fl
+        - ga
+        - hi
+        - id
+        - il
+        - in
+        - ia
+        - ks
+        - ky
+        - la
+        - me
+        - md
+        - ma
+        - mi
+        - mn
+        - ms
+        - mo
+        - mt
+        - ne
+        - nv
+        - nh
+        - nj
+        - nm
+        - ny
+        - nc
+        - nd
+        - oh
+        - ok
+        - or
+        - pa
+        - ri
+        - sc
+        - sd
+        - tn
+        - tx
+        - ut
+        - vt
+        - va
+        - wa
+        - wv
+        - wi
+        - wy
+        - dc
+      window_before_chars: 35
+      window_after_chars: 10
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: ZIPCODE
+    default_action: DEFAULT
+
+  po_box:
+    description: "Post office box address"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - p.o. box
+        - po box
+        - post office box
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  latitude_coordinates:
+    description: "Geographic latitude coordinate"
+    regex_patterns:
+      accepted_patterns:
+        # An N/S hemisphere marker makes this a coordinate on its own.
+        - pattern: |-
+            \b-?\d{1,2}(?:\.\d+)?\s*[NS]\b
+          confidence_weight: 0.85
+        # Bare decimal: indistinguishable from any measurement (98.6, 0.7), so it scores
+        # below the fusion floor and only surfaces with geographic context. Mirrors
+        # longitude_coordinates.
+        - pattern: |-
+            \b-?\d{1,2}(?:\.\d+)\b
+          confidence_weight: 0.15
+      prohibited_patterns: []
+      confidence_weight: 0.45
+    validators:
+      enum: VALIDATE_LATITUDE
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - latitude
+        - lat
+        - coordinates
+        - coordinate
+        - location
+        - gps
+        - geo
+      confidence_weight: 0.80
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: GPS_COORDINATES
+    default_action: DEFAULT
+
+  longitude_coordinates:
+    description: "Geographic longitude coordinate"
+    regex_patterns:
+      accepted_patterns:
+        # An E/W hemisphere marker makes this a coordinate on its own.
+        - pattern: |-
+            \b-?\d{1,3}(?:\.\d+)?\s*[EW]\b
+          confidence_weight: 0.85
+        - pattern: |-
+            \b-?\d{1,3}(?:\.\d+)\b
+          confidence_weight: 0.15
+      prohibited_patterns: []
+      # Lowered to prevent bare decimal numbers from firing without geographic context.
+      confidence_weight: 0.15
+    validators:
+      enum: VALIDATE_LONGITUDE
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - longitude
+        - long
+        - lng
+        - coordinates
+        - coordinate
+        - location
+        - gps
+        - geo
+      confidence_weight: 0.80
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: GPS_COORDINATES
+    default_action: DEFAULT
+
+  dates:
+    description: "A calendar date"
+    regex_patterns:
+      accepted_patterns:
+        # ISO date, optionally with time component (e.g. "2024-01-16 at 08:30:15")
+        - |-
+          \b\d{4}-\d{1,2}-\d{1,2}(?:\s+(?:at\s+)?\d{1,2}:\d{2}(?::\d{2})?(?:\s*[AP]M)?(?:\s+[A-Z]{2,4})?)?\b
+        # MM/DD/YYYY or MM/DD/YY  (note: also matches card expiry MM/YY, so card_expiry wins via context)
+        - |-
+          \b\d{1,2}/\d{1,2}/\d{2,4}\b
+        # MM-DD-YYYY
+        - |-
+          \b\d{1,2}-\d{1,2}-\d{2,4}\b
+        # Full month name + day + year, optionally with time/timezone ("June 10, 2024 9:15 AM PST" or "...at 3:45 PM PST")
+        - |-
+          (?i)\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}(?:\s+(?:at\s+)?\d{1,2}:\d{2}(?::\d{2})?(?:\s*[AP]M)?(?:\s+[A-Z]{2,4})?)?\b
+        # Abbreviated month name + day + year, optionally with time
+        - |-
+          (?i)\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.?\s+\d{1,2},?\s+\d{4}(?:\s+(?:at\s+)?\d{1,2}:\d{2}(?::\d{2})?(?:\s*[AP]M)?(?:\s+[A-Z]{2,4})?)?\b
+        # Full month name + ordinal day ("January 15th", "January 14th")
+        - |-
+          (?i)\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}(?:st|nd|rd|th)\b
+        # Month name + year only ("February 2024", "March 2022")
+        - |-
+          (?i)\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}\b
+        # Day of month year ("5th of June 2024")
+        - |-
+          (?i)\b\d{1,2}(?:st|nd|rd|th)?\s+(?:of\s+)?(?:January|February|March|April|May|June|July|August|September|October|November|December),?\s+\d{4}\b
+        # Clock times belong to timestamps, and today/last week to
+        # relative_date_expressions — a calendar date is neither.
+      prohibited_patterns: []
+      confidence_weight: 0.7
+    validators:
+      enum: VALIDATE_DATE
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - date of birth
+        - dob
+        - born
+        - birth date
+        - birthday
+        - age is
+        - aged
+        - born on
+        - born in
+        - date of death
+        - dod
+        - died
+        - deceased
+        - death date
+        - expired
+        - passed away
+        - passed on
+        - death occurred
+        - time of death
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+        ner_confidence_weight: 0.72
+    de_identifier: DATE
+    default_action: DEFAULT
+
+  age:
+    description: "A person's age in years"
+    regex_patterns:
+      accepted_patterns:
+        # "old" is required: a bare "30 years" is a duration (loan term, credit history,
+        # years smoked), not an age.
+        - |-
+          \b\d{1,3}\s*(?:years?|yrs?\.?)\s*old\b
+        - |-
+          \b\d{1,3}\s*y/?o\b
+        # Labelled field: "Age: 47" states whose age it is.
+        - |-
+          (?i)\bAge:\s*\d{1,3}\b
+        # Inline "age 68" is far weaker — it is as often a relative's or a historical
+        # age ("Father, age 68", "MI at age 55") as the subject's, so it needs a
+        # date-of-birth style anchor nearby to clear the floor.
+        - pattern: |-
+            (?i)\bage\s+\d{1,3}\b
+          confidence_weight: 0.25
+      prohibited_patterns: []
+      confidence_weight: 0.75
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      # Anchors that tie an age to the record's subject. Bare "age"/"aged" are deliberately
+      # absent: they appear inside the span itself and in every neighbouring family-history
+      # mention, so they corroborate the very matches this is meant to separate.
+      values:
+        - date of birth
+        - dob
+        - born
+        - patient age
+        - birth date
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+        ner_confidence_weight: 0.60
+    de_identifier: AGE
+    default_action: DEFAULT
+
+  timestamps:
+    description: "A date-time / timestamp"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{10}\b
+        - |-
+          \b\d{13}\b
+        # Clock times ("11:45 PM", "8:30", "3am"). Self-evident as a time of day, so they
+        # carry their own weight rather than the low bare-digit one below, and they are not
+        # unix epochs so the entity validator does not apply to them.
+        - pattern: |-
+            (?i)\b\d{1,2}(?::\d{2})?\s*(?:am|pm)\b
+          confidence_weight: 0.7
+        - pattern: |-
+            \b(?:[01]?\d|2[0-3]):[0-5]\d\b
+          confidence_weight: 0.7
+      prohibited_patterns: []
+      # Lowered so bare 10/13-digit numbers are blocked without contextual corroboration.
+      confidence_weight: 0.15
+    validators:
+      enum: VALIDATE_TIMESTAMP
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - timestamp
+        - unix
+        - epoch
+        - created at
+        - updated at
+        - created_at
+        - updated_at
+        - logged at
+        - recorded at
+      confidence_weight: 0.80
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: TIME
+    default_action: DEFAULT
+
+  relative_date_expressions:
+    description: "Relative date phrase, e.g. 'last Tuesday'"
+    regex_patterns:
+      accepted_patterns:
+        # Bare durations: "8 months", "30 days", "almost 9 years", "30-day"
+        - |-
+          (?i)\b(?:about\s+|almost\s+|approximately\s+|around\s+|over\s+)?\d+\s*[-–]?\s*(?:days?|weeks?|months?|years?)\b
+        # For-durations: "for about 2 years", "for 6 months"
+        - |-
+          (?i)\bfor\s+(?:about\s+|almost\s+|approximately\s+)?\d+\s+(?:days?|weeks?|months?|years?)\b
+        # Time of day anchors: "this morning", "last night", "early afternoon"
+        - |-
+          (?i)\b(?:this|last|early|late)\s+(?:morning|afternoon|evening|night|tonight)\b
+        # "last weekend", "last night"
+        - |-
+          (?i)\blast\s+weekend\b
+        # Deictic references: "today", "yesterday", "last week", "past month". Weak on
+        # their own — they carry no date until resolved against some anchor, and they turn
+        # up constantly in prose — so they need contextual corroboration to clear the
+        # confidence floor, unlike the explicit durations above.
+        - pattern: |-
+            (?i)\b(?:today|yesterday|tomorrow)\b
+          confidence_weight: 0.25
+        - pattern: |-
+            (?i)\b(?:last|next|this|past)\s+(?:week|month|year|quarter|weekend)\b
+          confidence_weight: 0.25
+      prohibited_patterns: []
+      confidence_weight: 0.50
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - ago
+        - since
+        - recently
+        - in the past
+        - for the past
+        - over the past
+        - within
+        - duration
+        - period
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: neutral
+    de_identifier: null
+    default_action: DEFAULT
+
+  device_serial_number:
+    description: "Manufacturer serial number of a device"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        # HIPAA Safe Harbor names device/serial numbers, vehicle identifiers, and IP
+        # addresses as their own enumerated identifiers (same list as SSN) — direct, not
+        # merely quasi. Severity now matches; policy already treated them as direct.
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  imei_number:
+    description: "IMEI - unique mobile device hardware identifier"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{15}\b
+      prohibited_patterns: []
+      confidence_weight: 0.9
+    validators:
+      enum: VALIDATE_IMEI
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        # HIPAA Safe Harbor names device/serial numbers, vehicle identifiers, and IP
+        # addresses as their own enumerated identifiers (same list as SSN) — direct, not
+        # merely quasi. Severity now matches; policy already treated them as direct.
+        data_class: direct_identifier
+    de_identifier: IMEI
+    default_action: DEFAULT
+
+  mac_address:
+    description: "MAC - network hardware address"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b(?:[0-9A-Fa-f]{2}[:-]){5}[0-9A-Fa-f]{2}\b
+      prohibited_patterns: []
+      confidence_weight: 0.9
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        # HIPAA Safe Harbor names device/serial numbers, vehicle identifiers, and IP
+        # addresses as their own enumerated identifiers (same list as SSN) — direct, not
+        # merely quasi. Severity now matches; policy already treated them as direct.
+        data_class: direct_identifier
+    de_identifier: MAC_ADDRESS
+    default_action: DEFAULT
+
+  ip_address:
+    description: "IP address (IPv4/IPv6)"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b
+      prohibited_patterns: []
+      confidence_weight: 0.9
+    validators:
+      enum: VALIDATE_IPV4_RANGE
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        # HIPAA Safe Harbor names device/serial numbers, vehicle identifiers, and IP
+        # addresses as their own enumerated identifiers (same list as SSN) — direct, not
+        # merely quasi. Severity now matches; policy already treated them as direct.
+        data_class: direct_identifier
+    de_identifier: IP_ADDRESS
+    default_action: DEFAULT
+
+  # Employer / company an individual is associated with. No regex: NER-only entity
+  # (arbitrary proper nouns). Quasi-identifier — employer + ZIP + age narrows re-id.
+  # Parent for any named organization. Pattern-less: organizations are detected by NER /
+  # context, not regex. Subtypes (employer, care facility) roll up here via is_a but keep
+  # their finer identity in detected_subtype.
+  organization:
+    description: "Name of an organization or company"
+    regex_patterns:
+      accepted_patterns: []
+      # NER reads document furniture as companies. Acronym orgs (IBM, NASA, HSBC) stay:
+      # the all-caps rule starts at 6 characters, above normal acronym length.
+      prohibited_patterns:
+        # Bare numbers: "401", "500"
+        - |-
+          ^\d+$
+        # ALL-CAPS section headings: "EMPLOYMENT", "INFORMATION", "COMMENTS"
+        - |-
+          ^[A-Z]{6,}$
+        # Prefixed identifiers: "TICKET-2024-789456123"
+        - |-
+          ^[A-Z]+-[A-Z0-9-]+$
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      # Carries the employer/care-facility vocabulary as well as its own: an is_a child
+      # is rolled up to this entity before scoring, so the child's phrases can never
+      # influence the result. Until detected_subtype drives scoring, the parent's list
+      # has to be the union or an "employer"/"facility" column boosts nothing.
+      values:
+        - organization
+        - company
+        - corporation
+        - incorporated
+        - inc
+        - llc
+        - ltd
+        - agency
+        - firm
+        - institution
+        - employer
+        - employed by
+        - works at
+        - works for
+        - facility
+        - hospital
+        - clinic
+        - medical center
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+        # spaCy tags clinical acronyms and field labels (SSN, ECG, NPI, IRB) as ORG —
+        # 412 spans over the sample corpus, mostly junk. Entering below the 0.3 fusion
+        # floor means a bare ORG span is dropped and only surfaces when context or a
+        # column key supports it. Same gating idiom as latitude/longitude_coordinates.
+        ner_confidence_weight: 0.25
+    de_identifier: ORGANIZATION
+    default_action: DEFAULT
+
+  employer_organization:
+    description: "Name of an employer organization"
+    is_a: pii_entity_ontology::organization
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - employer
+        - employed by
+        - works at
+        - works for
+        - company
+        - organization
+        - employer name
+        - place of employment
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: ORGANIZATION
+    default_action: DEFAULT
+
+  web_url:
+    description: "Web URL"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b(?:https?://(?:www\.)?|www\.)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)?
+      prohibited_patterns: []
+      confidence_weight: 0.9
+    validators:
+      enum: VALIDATE_WEB_URL
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: URL
+    default_action: DEFAULT
+
+  uuid_guid:
+    description: "Machine-generated UUID/GUID token"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b
+        - |-
+          \b[0-9a-fA-F]{32}\b
+      prohibited_patterns: []
+      confidence_weight: 0.9
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: neutral
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  vehicle_identification_number_vin:
+    description: "Vehicle Identification Number (VIN)"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-HJ-NPR-Z0-9]{17}\b
+      prohibited_patterns: []
+      confidence_weight: 0.8
+    validators:
+      enum: VALIDATE_VIN
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        # HIPAA Safe Harbor names device/serial numbers, vehicle identifiers, and IP
+        # addresses as their own enumerated identifiers (same list as SSN) — direct, not
+        # merely quasi. Severity now matches; policy already treated them as direct.
+        data_class: direct_identifier
+    de_identifier: VIN
+    default_action: DEFAULT
+
+  passport_number:
+    description: "Passport number (unspecified country)"
+    # Generic context-only fallback for formats not covered by country-specific entities.
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - passport number
+        - passport no
+        - passport id
+        - passport #
+        - passport
+        - travel document
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  us_passport_number:
+    description: "US passport number"
+    # US format: 1 uppercase letter followed by 8 digits (e.g. L12345678)
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-Z][0-9]{8}\b
+      prohibited_patterns: []
+      confidence_weight: 0.10
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - passport
+        - passport number
+        - passport no
+        - travel document
+        - us passport
+        - american passport
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  uk_passport_number:
+    description: "UK passport number"
+    # UK format: 9 digits (machine-readable zone, e.g. 123456789)
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[0-9]{9}\b
+      prohibited_patterns: []
+      # Very broad pattern — requires strong passport context to avoid FPs on phone numbers etc.
+      confidence_weight: 0.05
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - passport
+        - passport number
+        - passport no
+        - travel document
+        - uk passport
+        - british passport
+      confidence_weight: 0.90
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  canadian_passport_number:
+    description: "Canadian passport number"
+    # Canada format: 2 uppercase letters + 6 digits (e.g. AB123456)
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-Z]{2}[0-9]{6}\b
+      prohibited_patterns: []
+      confidence_weight: 0.10
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - passport
+        - passport number
+        - passport no
+        - travel document
+        - canadian passport
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  indian_passport_number:
+    description: "Indian passport number"
+    # India format: 1 uppercase letter + 7 digits (e.g. A1234567)
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-Z][0-9]{7}\b
+      prohibited_patterns: []
+      confidence_weight: 0.10
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - passport
+        - passport number
+        - passport no
+        - travel document
+        - indian passport
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  australian_passport_number:
+    description: "Australian passport number"
+    # Australia format: 1-2 uppercase letters + 7 digits (e.g. N1234567 or PA1234567)
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-Z]{1,2}[0-9]{7}\b
+      prohibited_patterns: []
+      confidence_weight: 0.10
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - passport
+        - passport number
+        - passport no
+        - travel document
+        - australian passport
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  german_passport_number:
+    description: "German passport number"
+    # Germany format: 9 alphanumeric characters from restricted charset (C,F,G,H,J,K,L,M,N,P,R,T,V,W,X,Y,Z + digits)
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[CFGHJKLMNPRTVWXYZ0-9]{9}\b
+      prohibited_patterns: []
+      confidence_weight: 0.10
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - passport
+        - passport number
+        - reisepass
+        - travel document
+        - german passport
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  drivers_license_number:
+    description: "Driver's license number"
+    regex_patterns:
+      accepted_patterns:
+        # Global: starts with letter, 6-15 alphanumeric or hyphen chars (e.g. D123-4567-890123)
+        - |-
+          \b[A-Z][A-Z0-9-]{5,14}\b
+      prohibited_patterns: []
+      # Near-zero base; requires strong contextual corroboration (dl, driver's license, etc.) to pass.
+      confidence_weight: 0.05
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - driver's license
+        - drivers license
+        - dl number
+        - license number
+        - driving license
+        - license id
+        - license no
+        - driver
+        - license
+        - driving
+        - dl
+        - dmv
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  uk_national_insurance_number_nino:
+    description: "UK National Insurance Number (NINo)"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - nino
+        - national insurance
+        - national insurance number
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  uk_nhs_number:
+    description: "UK NHS patient number"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{3}[ -]?\d{3}[ -]?\d{4}\b
+      prohibited_patterns: []
+      # 10-digit; relies on the mod-11 checksum plus NHS context to clear threshold.
+      confidence_weight: 0.05
+    validators:
+      enum: VALIDATE_UK_NHS
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - nhs
+        - nhs number
+        - nhs no
+        - national health service
+      confidence_weight: 0.85
+      rescue_override: true
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  canadian_social_insurance_number_sin:
+    description: "Canadian Social Insurance Number (SIN)"
+    regex_patterns:
+      accepted_patterns:
+        # Require separators between groups (avoids 9-digit runs inside alphanumeric IDs).
+        - |-
+          \b\d{3}[- ]\d{3}[- ]\d{3}\b
+      prohibited_patterns: []
+      confidence_weight: 0.65
+    validators:
+      enum: VALIDATE_CANADIAN_SIN
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - sin
+        - social insurance
+        - social insurance number
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  indian_aadhaar_number:
+    description: "Indian Aadhaar national ID number"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{4}\s?\d{4}\s?\d{4}\b
+      # 12 digits in 4-4-4 grouping (Indian Aadhaar).
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: VALIDATE_INDIAN_AADHAAR
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - aadhaar
+        - aadhar
+        - aadhaar number
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  us_itin:
+    description: "US Individual Taxpayer Identification Number (ITIN)"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b9\d{2}[- ]?\d{2}[- ]?\d{4}\b
+      prohibited_patterns: []
+      confidence_weight: 0.85
+    validators:
+      enum: VALIDATE_US_ITIN
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - itin
+        - individual taxpayer
+        - individual taxpayer identification
+      # Require contextual corroboration — 9xx-xx-xxxx patterns that fail context stay below threshold.
+      confidence_weight: 0.70
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  us_ein:
+    description: "US Employer Identification Number (EIN)"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{2}-\d{7}\b
+      prohibited_patterns: []
+      confidence_weight: 0.5
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - ein
+        - employer identification number
+        - employer identification
+        - employer id
+        - tax id
+        - tax id number
+        - federal tax id
+        - tin
+      confidence_weight: 0.6
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  nationality:
+    description: "A person's nationality or citizenship"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - nationality
+        - citizen
+        - citizen of
+        - citizenship
+        - national of
+      confidence_weight: 0.4
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  religious_affiliation:
+    description: "A person's religion or religious affiliation"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - religion
+        - religious
+        - faith
+        - belief
+        - worship
+        - church
+        - mosque
+        - temple
+        - synagogue
+        - denomination
+      confidence_weight: 0.4
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: sensitive_attribute
+    de_identifier: null
+    default_action: DEFAULT
+
+  # Organization-assigned reference IDs (employee/customer/policy/claim/application/record
+  # numbers). Named unique_identifier, not account_number: these are identifiers, not
+  # financial accounts. A bank account (fin::bank_account_number) is a different concept
+  # that happens to share a digit shape — no is_a between them, exactly as phone_number
+  # and a bare number are not the same thing.
+  account_reference_number:
+    description: "Org-assigned account reference, e.g. ACC-700000"
+    regex_patterns:
+      accepted_patterns:
+        # Split out of unique_identifier: an account reference is HIPAA Safe Harbor
+        # identifier #10, while the generic bucket also holds employee/student/record IDs
+        # that are not account numbers, so one shared entity could not report either honestly.
+        - |-
+          \bACC[-]\w{1,15}\b
+      prohibited_patterns: []
+      confidence_weight: 0.75
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - account
+        - account number
+        - account id
+        - account ref
+        - account reference
+        - billing account
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ACCOUNT_NUMBER
+    default_action: DEFAULT
+
+  unique_identifier:
+    description: "Org-assigned ID for a person/account, e.g. EMP-789"
+    regex_patterns:
+      accepted_patterns:
+        # Prefixed customer/record/policy IDs: CUST-001234, RES-456789012.
+        # ACC- is deliberately absent: it has its own entity so the HIPAA checklist can
+        # report it under 'account number' rather than the catch-all 'other unique id'.
+        - |-
+          \b(?:CUST|RES|POL|CLM|MEM|SUB)[-]\w{1,15}\b
+        # Any short uppercase prefix over digit groups: EMP-789456123, LO-789456,
+        # CLM-2024-789456123. Held below the confidence floor because the shape alone is
+        # just as often an asset tag ("ASSET-789456123") or a report number
+        # ("CR-789456123"), so a nearby ID label has to corroborate it.
+        - pattern: |-
+            \b[A-Z]{2,6}-\d{3,}(?:-\d{2,})*\b
+          confidence_weight: 0.25
+      prohibited_patterns: []
+      confidence_weight: 0.75
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - account
+        - account number
+        - account id
+        - customer id
+        - member id
+        - policy number
+        - reference number
+        - customer number
+        - employee id
+        - manager id
+        - student id
+        - adjuster id
+        - officer id
+        - application id
+        - application number
+        - claim number
+        - subscriber id
+        - record id
+        - record number
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: direct_identifier
+    de_identifier: ACCOUNT_NUMBER
+    default_action: DEFAULT
+
+# certificate_license_number lives only in the PHI ontology now. Keeping a PII copy split
+# the same concept across two categories, so the same license could score as either
+# depending on which fired. Detection is unchanged: it is pattern-less and judged by NER +
+# proximity (see phi_entity_ontology::certificate_license_number).

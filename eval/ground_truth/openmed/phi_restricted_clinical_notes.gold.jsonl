@@ -1,0 +1,26 @@
+{"_meta": {"file": "phi_restricted_clinical_notes.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::age", "openmed::city", "openmed::company_name", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::first_name", "openmed::health_plan_beneficiary_number", "openmed::last_name", "openmed::medical_record_number", "openmed::phone_number", "openmed::postcode", "openmed::ssn", "openmed::state", "openmed::street_address"], "clinical_label_set": "disease_detection_superclinical", "clinical_allowed_entity_ids": ["openmed::CONDITION", "openmed::DISEASE", "openmed::PATHOLOGY"], "clinical_annotation_notes": "Patient-specific disease/condition/pathology spans for OpenMed disease_detection_superclinical. Family-history-only mentions and negated conditions are excluded."}}
+{"start": 21, "end": 29, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 32, "end": 42, "text": "2024-01-22", "entity_id": "openmed::date"}
+{"start": 44, "end": 49, "text": "Maria", "entity_id": "openmed::first_name"}
+{"start": 50, "end": 59, "text": "Rodriguez", "entity_id": "openmed::last_name"}
+{"start": 128, "end": 142, "text": "PHI-MRN-123456", "entity_id": "openmed::medical_record_number"}
+{"start": 155, "end": 168, "text": "PAT-789012345", "entity_id": "openmed::medical_record_number"}
+{"start": 175, "end": 185, "text": "11/30/1992", "entity_id": "openmed::date_of_birth"}
+{"start": 196, "end": 198, "text": "31", "entity_id": "openmed::age"}
+{"start": 208, "end": 219, "text": "456-78-9012", "entity_id": "openmed::ssn"}
+{"start": 230, "end": 244, "text": "789 Elm Avenue", "entity_id": "openmed::street_address"}
+{"start": 246, "end": 253, "text": "Chicago", "entity_id": "openmed::city"}
+{"start": 255, "end": 257, "text": "IL", "entity_id": "openmed::state"}
+{"start": 258, "end": 263, "text": "60601", "entity_id": "openmed::postcode"}
+{"start": 271, "end": 285, "text": "(312) 555-1234", "entity_id": "openmed::phone_number"}
+{"start": 293, "end": 323, "text": "maria.rodriguez@healthmail.com", "entity_id": "openmed::email"}
+{"start": 373, "end": 383, "text": "March 2019", "entity_id": "openmed::date"}
+{"start": 474, "end": 479, "text": "Maria", "entity_id": "openmed::first_name"}
+{"start": 1400, "end": 1405, "text": "Aetna", "entity_id": "openmed::company_name"}
+{"start": 1414, "end": 1427, "text": "AET-123456789", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 1435, "end": 1442, "text": "GRP-456", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 1738, "end": 1748, "text": "2024-02-20", "entity_id": "openmed::date"}
+{"start": 1890, "end": 1894, "text": "June", "entity_id": "openmed::date"}
+{"start": 2491, "end": 2496, "text": "Maria", "entity_id": "openmed::first_name"}
+{"start": 349, "end": 364, "text": "Type 2 Diabetes", "entity_id": "openmed::DISEASE"}
+{"start": 1680, "end": 1700, "text": "diabetic retinopathy", "entity_id": "openmed::PATHOLOGY"}

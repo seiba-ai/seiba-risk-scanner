@@ -1,0 +1,16 @@
+{"_meta": {"file": "phi_restricted_clinical_notes.txt", "version": 2, "ontology_set": "bundled", "allowed_entity_ids": ["phi_entity_ontology::date_of_birth", "pii_entity_ontology::dates", "pii_entity_ontology::email_address", "pii_entity_ontology::phone_number", "pii_entity_ontology::ssn", "pii_entity_ontology::zip_code"]}}
+{"start": 32, "end": 42, "text": "2024-01-22", "entity_id": "pii_entity_ontology::dates"}
+{"start": 68, "end": 73, "text": "today", "entity_id": "pii_entity_ontology::dates"}
+{"start": 105, "end": 118, "text": "about 5 years", "entity_id": "pii_entity_ontology::dates"}
+{"start": 175, "end": 185, "text": "11/30/1992", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 208, "end": 219, "text": "456-78-9012", "entity_id": "pii_entity_ontology::ssn"}
+{"start": 258, "end": 263, "text": "60601", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 271, "end": 285, "text": "(312) 555-1234", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 293, "end": 323, "text": "maria.rodriguez@healthmail.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 373, "end": 383, "text": "March 2019", "entity_id": "pii_entity_ontology::dates"}
+{"start": 685, "end": 706, "text": "for about 2 years now", "entity_id": "pii_entity_ontology::dates"}
+{"start": 765, "end": 774, "text": "last week", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1668, "end": 1678, "text": "next month", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1738, "end": 1748, "text": "2024-02-20", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1879, "end": 1894, "text": "married in June", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1946, "end": 1955, "text": "last week", "entity_id": "pii_entity_ontology::dates"}

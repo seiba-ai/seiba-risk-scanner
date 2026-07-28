@@ -1,0 +1,118 @@
+{"_meta": {"file": "comprehensive_medical_report.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::age", "openmed::certificate_license_number", "openmed::city", "openmed::company_name", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::employee_id", "openmed::first_name", "openmed::gender", "openmed::health_plan_beneficiary_number", "openmed::last_name", "openmed::medical_record_number", "openmed::npi", "openmed::occupation", "openmed::phone_number", "openmed::postcode", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::unique_id"], "clinical_label_set": "disease_detection_superclinical", "clinical_allowed_entity_ids": ["openmed::CONDITION", "openmed::DISEASE", "openmed::PATHOLOGY"], "clinical_annotation_notes": "Patient-specific disease/condition/pathology spans for OpenMed disease_detection_superclinical. Family-history-only mentions and negated conditions are excluded."}}
+{"start": 109, "end": 138, "text": "Metropolitan General Hospital", "entity_id": "openmed::company_name"}
+{"start": 182, "end": 196, "text": "March 15, 2024", "entity_id": "openmed::date"}
+{"start": 222, "end": 227, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 238, "end": 242, "text": "Chen", "entity_id": "openmed::last_name"}
+{"start": 270, "end": 282, "text": "MD-789456123", "entity_id": "openmed::certificate_license_number"}
+{"start": 295, "end": 305, "text": "1234567890", "entity_id": "openmed::npi"}
+{"start": 358, "end": 363, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 364, "end": 371, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 372, "end": 380, "text": "O'Connor", "entity_id": "openmed::last_name"}
+{"start": 396, "end": 411, "text": "August 14, 1983", "entity_id": "openmed::date_of_birth"}
+{"start": 417, "end": 419, "text": "40", "entity_id": "openmed::age"}
+{"start": 434, "end": 438, "text": "Male", "entity_id": "openmed::gender"}
+{"start": 462, "end": 475, "text": "MRN-987654321", "entity_id": "openmed::medical_record_number"}
+{"start": 488, "end": 501, "text": "PAT-456789012", "entity_id": "openmed::medical_record_number"}
+{"start": 526, "end": 537, "text": "234-56-7890", "entity_id": "openmed::ssn"}
+{"start": 552, "end": 565, "text": "INS-789456123", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 605, "end": 642, "text": "2847 Willowbrook Drive, Apartment 12C", "entity_id": "openmed::street_address"}
+{"start": 644, "end": 657, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 659, "end": 661, "text": "CA", "entity_id": "openmed::state"}
+{"start": 662, "end": 667, "text": "94102", "entity_id": "openmed::postcode"}
+{"start": 687, "end": 717, "text": "1523 Pacific Heights Boulevard", "entity_id": "openmed::street_address"}
+{"start": 719, "end": 732, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 734, "end": 736, "text": "CA", "entity_id": "openmed::state"}
+{"start": 737, "end": 742, "text": "94109", "entity_id": "openmed::postcode"}
+{"start": 758, "end": 772, "text": "(415) 555-2847", "entity_id": "openmed::phone_number"}
+{"start": 790, "end": 802, "text": "415-555-9123", "entity_id": "openmed::phone_number"}
+{"start": 817, "end": 831, "text": "1-415-555-4567", "entity_id": "openmed::phone_number"}
+{"start": 847, "end": 879, "text": "james.oconnor.personal@gmail.com", "entity_id": "openmed::email"}
+{"start": 892, "end": 913, "text": "joconnor@techcorp.com", "entity_id": "openmed::email"}
+{"start": 940, "end": 948, "text": "Patricia", "entity_id": "openmed::first_name"}
+{"start": 949, "end": 957, "text": "O'Connor", "entity_id": "openmed::last_name"}
+{"start": 993, "end": 1007, "text": "(415) 555-2848", "entity_id": "openmed::phone_number"}
+{"start": 1084, "end": 1120, "text": "Blue Cross Blue Shield of California", "entity_id": "openmed::company_name"}
+{"start": 1136, "end": 1153, "text": "BCBS-CA-456789012", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 1141, "end": 1143, "text": "CA", "entity_id": "openmed::state"}
+{"start": 1168, "end": 1178, "text": "GRP-789456", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 1194, "end": 1207, "text": "SUB-123456789", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 1224, "end": 1239, "text": "January 1, 2024", "entity_id": "openmed::date"}
+{"start": 1257, "end": 1274, "text": "December 31, 2024", "entity_id": "openmed::date"}
+{"start": 1641, "end": 1649, "text": "O'Connor", "entity_id": "openmed::last_name"}
+{"start": 2764, "end": 2783, "text": "TechCorp Industries", "entity_id": "openmed::company_name"}
+{"start": 4165, "end": 4172, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 4173, "end": 4181, "text": "O'Connor", "entity_id": "openmed::last_name"}
+{"start": 4312, "end": 4320, "text": "Margaret", "entity_id": "openmed::first_name"}
+{"start": 4321, "end": 4329, "text": "O'Connor", "entity_id": "openmed::last_name"}
+{"start": 4714, "end": 4720, "text": "Thomas", "entity_id": "openmed::first_name"}
+{"start": 4721, "end": 4729, "text": "O'Connor", "entity_id": "openmed::last_name"}
+{"start": 4778, "end": 4787, "text": "Catherine", "entity_id": "openmed::first_name"}
+{"start": 4788, "end": 4796, "text": "O'Connor", "entity_id": "openmed::last_name"}
+{"start": 5422, "end": 5446, "text": "Senior Software Engineer", "entity_id": "openmed::occupation"}
+{"start": 5450, "end": 5469, "text": "TechCorp Industries", "entity_id": "openmed::company_name"}
+{"start": 5471, "end": 5492, "text": "1234 Innovation Drive", "entity_id": "openmed::street_address"}
+{"start": 5494, "end": 5507, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 5509, "end": 5511, "text": "CA", "entity_id": "openmed::state"}
+{"start": 5512, "end": 5517, "text": "94105", "entity_id": "openmed::postcode"}
+{"start": 5532, "end": 5545, "text": "EMP-789456123", "entity_id": "openmed::employee_id"}
+{"start": 8843, "end": 8857, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 9102, "end": 9116, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 9459, "end": 9473, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 9759, "end": 9773, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 10035, "end": 10049, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 10203, "end": 10217, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 10281, "end": 10295, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 10391, "end": 10405, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 10618, "end": 10632, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 11009, "end": 11023, "text": "March 14, 2024", "entity_id": "openmed::date"}
+{"start": 12927, "end": 12933, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 12934, "end": 12937, "text": "Kim", "entity_id": "openmed::last_name"}
+{"start": 12949, "end": 12970, "text": "Cardiology Associates", "entity_id": "openmed::company_name"}
+{"start": 12972, "end": 13008, "text": "5678 Medical Center Drive, Suite 200", "entity_id": "openmed::street_address"}
+{"start": 13010, "end": 13023, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 13025, "end": 13027, "text": "CA", "entity_id": "openmed::state"}
+{"start": 13028, "end": 13033, "text": "94115", "entity_id": "openmed::postcode"}
+{"start": 13042, "end": 13056, "text": "(415) 555-5678", "entity_id": "openmed::phone_number"}
+{"start": 13063, "end": 13073, "text": "9876543210", "entity_id": "openmed::npi"}
+{"start": 14477, "end": 14491, "text": "March 22, 2024", "entity_id": "openmed::date"}
+{"start": 14554, "end": 14568, "text": "(415) 555-9999", "entity_id": "openmed::phone_number"}
+{"start": 15619, "end": 15638, "text": "TechCorp Industries", "entity_id": "openmed::company_name"}
+{"start": 15779, "end": 15784, "text": "Maria", "entity_id": "openmed::first_name"}
+{"start": 15785, "end": 15791, "text": "Santos", "entity_id": "openmed::last_name"}
+{"start": 15799, "end": 15813, "text": "(415) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 15821, "end": 15841, "text": "msantos@techcorp.com", "entity_id": "openmed::email"}
+{"start": 16001, "end": 16013, "text": "PA-456789012", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 16061, "end": 16066, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 16077, "end": 16081, "text": "Chen", "entity_id": "openmed::last_name"}
+{"start": 16119, "end": 16131, "text": "MD-789456123", "entity_id": "openmed::certificate_license_number"}
+{"start": 16137, "end": 16147, "text": "1234567890", "entity_id": "openmed::npi"}
+{"start": 16154, "end": 16168, "text": "March 15, 2024", "entity_id": "openmed::date"}
+{"start": 16191, "end": 16214, "text": "SEC-2024-03-15-14:32:18", "entity_id": "openmed::unique_id"}
+{"start": 16269, "end": 16276, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 16277, "end": 16281, "text": "Park", "entity_id": "openmed::last_name"}
+{"start": 16292, "end": 16302, "text": "1122334455", "entity_id": "openmed::npi"}
+{"start": 16322, "end": 16328, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 16329, "end": 16332, "text": "Kim", "entity_id": "openmed::last_name"}
+{"start": 16349, "end": 16359, "text": "9876543210", "entity_id": "openmed::npi"}
+{"start": 16415, "end": 16451, "text": "Blue Cross Blue Shield of California", "entity_id": "openmed::company_name"}
+{"start": 16461, "end": 16478, "text": "BCBS-CA-456789012", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 16466, "end": 16468, "text": "CA", "entity_id": "openmed::state"}
+{"start": 3397, "end": 3409, "text": "Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 3459, "end": 3473, "text": "Hyperlipidemia", "entity_id": "openmed::DISEASE"}
+{"start": 3511, "end": 3549, "text": "Gastroesophageal Reflux Disease (GERD)", "entity_id": "openmed::DISEASE"}
+{"start": 3591, "end": 3609, "text": "Seasonal Allergies", "entity_id": "openmed::CONDITION"}
+{"start": 10827, "end": 10856, "text": "Moderate mitral regurgitation", "entity_id": "openmed::PATHOLOGY"}
+{"start": 11072, "end": 11103, "text": "Left bundle branch block (LBBB)", "entity_id": "openmed::PATHOLOGY"}
+{"start": 11255, "end": 11307, "text": "Heart Failure with Reduced Ejection Fraction (HFrEF)", "entity_id": "openmed::CONDITION"}
+{"start": 11365, "end": 11378, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 11703, "end": 11716, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 11741, "end": 11768, "text": "non-ischemic cardiomyopathy", "entity_id": "openmed::DISEASE"}
+{"start": 11879, "end": 11891, "text": "Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 12055, "end": 12068, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 12085, "end": 12099, "text": "Hyperlipidemia", "entity_id": "openmed::DISEASE"}
+{"start": 12415, "end": 12428, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 12564, "end": 12577, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 13883, "end": 13896, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 13948, "end": 13961, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 14899, "end": 14912, "text": "heart failure", "entity_id": "openmed::CONDITION"}
+{"start": 15359, "end": 15372, "text": "heart failure", "entity_id": "openmed::CONDITION"}

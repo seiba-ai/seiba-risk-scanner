@@ -1,0 +1,205 @@
+name: Release
+
+# Publishing is driven by an annotated tag: `git tag -a v0.1.0 -m "v0.1.0" && git push --tags`.
+#
+# Authentication uses PyPI Trusted Publishing (OIDC) — there are no API tokens in repository
+# secrets. Before the first release, register this repository as a trusted publisher for the
+# project on both https://test.pypi.org/manage/account/publishing/ and
+# https://pypi.org/manage/account/publishing/ (workflow name: `release.yml`).
+#
+# The `pypi` environment must have a required reviewer configured, which is what makes the
+# TestPyPI -> approval -> PyPI sequence an actual gate rather than a formality.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  HF_HOME: ${{ github.workspace }}/.hf-cache
+
+jobs:
+  # A tag is not a promise that the tree is good — re-run the gates before publishing
+  # anything, because a PyPI version number can never be reused.
+  verify:
+    name: Verify before publishing
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Cache HuggingFace models
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.HF_HOME }}
+          key: hf-${{ runner.os }}-openmed-pii-superclinical-small-44m-v1
+          restore-keys: hf-${{ runner.os }}-
+      - run: pip install -e ".[dev]"
+      - name: Correctness lint
+        run: ruff check --select E9,F .
+      - name: Full test suite (including eval gates)
+        run: pytest -q
+
+      - name: Tag must match the version in pyproject.toml
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          python - <<'PY'
+          import os, sys, tomllib, pathlib
+          tag = os.environ["GITHUB_REF_NAME"].lstrip("v")
+          version = tomllib.loads(pathlib.Path("pyproject.toml").read_text())["project"]["version"]
+          if tag != version:
+              sys.exit(f"FAIL: tag v{tag} does not match pyproject version {version}")
+          print(f"OK: tag and pyproject agree on {version}")
+          PY
+
+  build:
+    name: Build distributions
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build twine
+      - run: python -m build
+      - run: twine check dist/*
+
+      - name: Assert the gazetteer ships and raw dumps do not
+        run: |
+          python - <<'PY'
+          import glob, sys, zipfile, tarfile
+          wheel = glob.glob("dist/*.whl")[0]
+          names = zipfile.ZipFile(wheel).namelist()
+          if not any(n.endswith("cleaned/medical_terms_gazetteer.json") for n in names):
+              sys.exit("FAIL: gazetteer artifact missing from wheel")
+          forbidden = ("RXNCONSO.RRF", "MONDO.csv", "CHV_concepts_terms_flatfile")
+          bad = [n for n in names if any(f in n for f in forbidden)]
+          for sd in glob.glob("dist/*.tar.gz"):
+              bad += [n for n in tarfile.open(sd).getnames() if any(f in n for f in forbidden)]
+          if bad:
+              sys.exit(f"FAIL: raw vocabulary dumps must not be redistributed: {bad}")
+          print("OK: wheel contents verified")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  testpypi:
+    name: Publish to TestPyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/seiba-risk-scanner
+    permissions:
+      id-token: write        # required for Trusted Publishing
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          # A re-run of the same tag should not hard-fail on an already-published file.
+          skip-existing: true
+
+  # Installs from TestPyPI exactly as a user would, so a broken package is caught before
+  # it reaches the index that cannot be undone.
+  verify-testpypi:
+    name: Install from TestPyPI
+    needs: testpypi
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # TestPyPI's index can lag a few seconds behind an upload, so retry rather than
+      # failing the release on a propagation delay. Dependencies resolve from real PyPI.
+      - name: Install the published artifact
+        run: |
+          for attempt in 1 2 3 4 5; do
+            if pip install \
+                 --index-url https://test.pypi.org/simple/ \
+                 --extra-index-url https://pypi.org/simple/ \
+                 "seiba-risk-scanner==${GITHUB_REF_NAME#v}"; then
+              exit 0
+            fi
+            echo "attempt $attempt failed; waiting for the index to catch up"
+            sleep 20
+          done
+          echo "FAIL: could not install from TestPyPI after 5 attempts"
+          exit 1
+      - name: Smoke test
+        run: |
+          python - <<'PY'
+          from seiba_risk_scanner import SeibaScanner, load_entity_configs
+          from seiba_risk_scanner.classification_engine.ontologies.gazetteer import (
+              get_default_index,
+          )
+          assert load_entity_configs(), "ontologies missing"
+          assert len(get_default_index()._terms) > 0, "gazetteer missing"
+          r = SeibaScanner(skip_ner=True).classify_text("jane@example.com, 555-123-4567")
+          assert "email_address" in {d.entity for d in r.detections}
+          print("OK: TestPyPI artifact installs and scans")
+          PY
+
+  pypi:
+    name: Publish to PyPI (manual approval)
+    needs: verify-testpypi
+    runs-on: ubuntu-latest
+    environment:
+      # Configure a required reviewer on this environment — that is the approval gate.
+      name: pypi
+      url: https://pypi.org/p/seiba-risk-scanner
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+
+  github-release:
+    name: Create GitHub Release
+    needs: pypi
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Extract this version's section from the changelog
+        run: |
+          python - <<'PY'
+          import os, pathlib, re
+          version = os.environ["GITHUB_REF_NAME"].lstrip("v")
+          text = pathlib.Path("CHANGELOG.md").read_text(encoding="utf-8")
+          match = re.search(
+              rf"^## \[{re.escape(version)}\].*?$(.*?)(?=^## \[|\Z)",
+              text, re.M | re.S,
+          )
+          body = match.group(1).strip() if match else f"See CHANGELOG.md for {version}."
+          pathlib.Path("RELEASE_NOTES.md").write_text(body, encoding="utf-8")
+          print(body[:400])
+          PY
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          body_path: RELEASE_NOTES.md
+          files: dist/*
+          draft: false
+          prerelease: ${{ contains(github.ref_name, 'a') || contains(github.ref_name, 'b') || contains(github.ref_name, 'rc') }}

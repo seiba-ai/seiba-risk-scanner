@@ -1,0 +1,37 @@
+{"_meta": {"file": "financial_confidential_banking.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::account_number", "openmed::bank_routing_number", "openmed::certificate_license_number", "openmed::city", "openmed::company_name", "openmed::credit_debit_card", "openmed::cvv", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::first_name", "openmed::ipv4", "openmed::last_name", "openmed::occupation", "openmed::phone_number", "openmed::postcode", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::time"]}}
+{"start": 63, "end": 73, "text": "2024-01-16", "entity_id": "openmed::date"}
+{"start": 84, "end": 88, "text": "Lisa", "entity_id": "openmed::first_name"}
+{"start": 89, "end": 97, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 99, "end": 119, "text": "Senior Fraud Analyst", "entity_id": "openmed::occupation"}
+{"start": 152, "end": 162, "text": "1234567890", "entity_id": "openmed::account_number"}
+{"start": 172, "end": 181, "text": "021000021", "entity_id": "openmed::bank_routing_number"}
+{"start": 201, "end": 206, "text": "David", "entity_id": "openmed::first_name"}
+{"start": 207, "end": 215, "text": "Thompson", "entity_id": "openmed::last_name"}
+{"start": 221, "end": 232, "text": "345-67-8901", "entity_id": "openmed::ssn"}
+{"start": 238, "end": 248, "text": "12/05/1975", "entity_id": "openmed::date_of_birth"}
+{"start": 256, "end": 283, "text": "david.thompson@bankmail.com", "entity_id": "openmed::email"}
+{"start": 291, "end": 305, "text": "1-800-555-3456", "entity_id": "openmed::phone_number"}
+{"start": 324, "end": 354, "text": "890 Financial Plaza, Suite 500", "entity_id": "openmed::street_address"}
+{"start": 356, "end": 361, "text": "Miami", "entity_id": "openmed::city"}
+{"start": 363, "end": 365, "text": "FL", "entity_id": "openmed::state"}
+{"start": 366, "end": 371, "text": "33101", "entity_id": "openmed::postcode"}
+{"start": 476, "end": 490, "text": "March 20, 2015", "entity_id": "openmed::date"}
+{"start": 620, "end": 632, "text": "January 15th", "entity_id": "openmed::date"}
+{"start": 654, "end": 664, "text": "AMAZON.COM", "entity_id": "openmed::company_name"}
+{"start": 862, "end": 874, "text": "January 14th", "entity_id": "openmed::date"}
+{"start": 1042, "end": 1054, "text": "January 13th", "entity_id": "openmed::date"}
+{"start": 1073, "end": 1084, "text": "APPLE STORE", "entity_id": "openmed::company_name"}
+{"start": 1165, "end": 1177, "text": "January 12th", "entity_id": "openmed::date"}
+{"start": 1208, "end": 1218, "text": "0987654321", "entity_id": "openmed::account_number"}
+{"start": 1433, "end": 1452, "text": "4111-1111-1111-1111", "entity_id": "openmed::credit_debit_card"}
+{"start": 1462, "end": 1467, "text": "09/27", "entity_id": "openmed::date"}
+{"start": 1473, "end": 1476, "text": "789", "entity_id": "openmed::cvv"}
+{"start": 1494, "end": 1499, "text": "DAVID", "entity_id": "openmed::first_name"}
+{"start": 1500, "end": 1508, "text": "THOMPSON", "entity_id": "openmed::last_name"}
+{"start": 1616, "end": 1629, "text": "198.51.100.42", "entity_id": "openmed::ipv4"}
+{"start": 1640, "end": 1645, "text": "Miami", "entity_id": "openmed::city"}
+{"start": 1647, "end": 1649, "text": "FL", "entity_id": "openmed::state"}
+{"start": 1654, "end": 1664, "text": "2024-01-16", "entity_id": "openmed::date"}
+{"start": 1668, "end": 1676, "text": "08:30:15", "entity_id": "openmed::time"}
+{"start": 1848, "end": 1866, "text": "FL-D789-456-123-45", "entity_id": "openmed::certificate_license_number"}
+{"start": 2195, "end": 2205, "text": "0987654321", "entity_id": "openmed::account_number"}

@@ -1,0 +1,24 @@
+{"_meta": {"file": "financial_confidential_banking.txt", "version": 2, "ontology_set": "bundled", "allowed_entity_ids": ["fin_entity_ontology::bank_account_number", "fin_entity_ontology::card_expiry_date", "fin_entity_ontology::credit_card_number", "fin_entity_ontology::cvv_code", "fin_entity_ontology::routing_number_aba", "phi_entity_ontology::date_of_birth", "pii_entity_ontology::dates", "pii_entity_ontology::email_address", "pii_entity_ontology::ip_address", "pii_entity_ontology::phone_number", "pii_entity_ontology::ssn", "pii_entity_ontology::zip_code"]}}
+{"start": 63, "end": 73, "text": "2024-01-16", "entity_id": "pii_entity_ontology::dates"}
+{"start": 152, "end": 162, "text": "1234567890", "entity_id": "fin_entity_ontology::bank_account_number"}
+{"start": 172, "end": 181, "text": "021000021", "entity_id": "fin_entity_ontology::routing_number_aba"}
+{"start": 221, "end": 232, "text": "345-67-8901", "entity_id": "pii_entity_ontology::ssn"}
+{"start": 238, "end": 248, "text": "12/05/1975", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 256, "end": 283, "text": "david.thompson@bankmail.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 291, "end": 305, "text": "1-800-555-3456", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 366, "end": 371, "text": "33101", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 476, "end": 490, "text": "March 20, 2015", "entity_id": "pii_entity_ontology::dates"}
+{"start": 520, "end": 534, "text": "almost 9 years", "entity_id": "pii_entity_ontology::dates"}
+{"start": 620, "end": 632, "text": "January 15th", "entity_id": "pii_entity_ontology::dates"}
+{"start": 862, "end": 874, "text": "January 14th", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1042, "end": 1054, "text": "January 13th", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1165, "end": 1177, "text": "January 12th", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1208, "end": 1218, "text": "0987654321", "entity_id": "fin_entity_ontology::bank_account_number"}
+{"start": 1433, "end": 1452, "text": "4111-1111-1111-1111", "entity_id": "fin_entity_ontology::credit_card_number"}
+{"start": 1462, "end": 1467, "text": "09/27", "entity_id": "fin_entity_ontology::card_expiry_date"}
+{"start": 1473, "end": 1476, "text": "789", "entity_id": "fin_entity_ontology::cvv_code"}
+{"start": 1616, "end": 1629, "text": "198.51.100.42", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 1654, "end": 1676, "text": "2024-01-16 at 08:30:15", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1927, "end": 1932, "text": "today", "entity_id": "pii_entity_ontology::dates"}
+{"start": 2195, "end": 2205, "text": "0987654321", "entity_id": "fin_entity_ontology::bank_account_number"}
+{"start": 2846, "end": 2851, "text": "today", "entity_id": "pii_entity_ontology::dates"}

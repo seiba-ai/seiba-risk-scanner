@@ -1,0 +1,97 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seiba-risk-scanner"
+version = "0.1.0"
+description = "Ontology-driven PII/PHI/financial sensitive data detection SDK"
+readme = "Readme.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+  { name = "Seiba AI" },
+]
+maintainers = [
+  { name = "Seiba AI" },
+]
+keywords = [
+  "pii",
+  "phi",
+  "sensitive-data",
+  "de-identification",
+  "nlp",
+  "sdk",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+dependencies = [
+  "pydantic>=2",
+  "PyYAML>=6",
+  "pandas>=2",
+  "phonenumbers>=8",
+  "python-dateutil>=2.8",
+  "requests>=2.28",
+  "openmed[hf]",
+]
+
+[project.urls]
+Homepage = "https://github.com/seiba-ai/seiba-risk-scanner"
+Repository = "https://github.com/seiba-ai/seiba-risk-scanner"
+Issues = "https://github.com/seiba-ai/seiba-risk-scanner/issues"
+
+[project.optional-dependencies]
+ner-spacy = ["spacy", "medspacy"]
+ner-hf = ["transformers"]
+llm = ["openai", "transformers", "accelerate"]
+dev = ["pytest>=7", "mypy>=1.8", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+# The gazetteer artifact is a runtime dependency of detection, not a build input: without
+# it get_default_index() falls back to an empty index and medical-term detection silently
+# disables. Raw source dumps (MONDO/RxNorm/CHV) are deliberately NOT shipped — see NOTICE.
+"seiba_risk_scanner.classification_engine.ontologies" = [
+  "*.yaml",
+  "med_ontology_sources/cleaned/medical_terms_gazetteer.json",
+]
+"seiba_risk_scanner.classification_engine.llm" = ["label_maps/*.yaml"]
+"seiba_risk_scanner.classification_engine.ner" = ["label_maps/*.yaml"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+check_untyped_defs = true
+files = ["src/seiba_risk_scanner"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+markers = [
+  # The four eval-harness tests are ~88% of total suite runtime (244s of 277s). CI runs
+  # them as their own job so a broken unit test surfaces in minutes, not after the full
+  # eval. `pytest` with no arguments still runs everything.
+  "slow: runs the full eval harness over the gold corpus (tens of seconds each)",
+]

@@ -1,0 +1,31 @@
+Research Log Entry - Genetic Study GEN-STUDY-2024-001
+Principal Investigator: Dr. Sarah Kim
+Date: 2024-01-18
+
+Subject ID: GEN-SUBJ-001
+Participant: James Wilson
+DOB: 05/18/1980 (age 43)
+SSN: 789-12-3456
+Research ID: RES-456789012
+
+Contact info: james.wilson@research.org, phone (415) 555-9876. Address: 321 Research Drive, San Francisco, CA 94102.
+
+So we got the sequencing results back from the lab today. This is interesting - James is BRCA1 positive, which we expected given the family history, but BRCA2 is negative. That's actually somewhat unusual in our cohort. Most of our subjects with strong family history have mutations in both genes, but not always.
+
+APOE genotype came back as E3/E4. That's the heterozygous variant associated with increased Alzheimer's risk. Not what we were looking for in this study, but good to know. MTHFR C677T is also heterozygous, which can affect folate metabolism. Might be relevant for future studies.
+
+Family history is significant. Mother had breast cancer at age 52, BRCA1 positive. Sister had ovarian cancer at age 48, also BRCA1 positive. Father has no known mutations. Classic hereditary pattern. James is understandably concerned about his own risk, especially for prostate cancer which can be associated with BRCA mutations in men.
+
+Sequencing was done on Illumina NovaSeq 6000, 30x coverage, VCF 4.3 format. Total variants called: 4,523,891. That's a lot of data to sift through. The bioinformatics team is still analyzing the full dataset, but the key variants are confirmed.
+
+James mentioned he's been thinking about getting genetic counseling for his kids. They're teenagers now, old enough to understand the implications. He's worried about passing this on. It's a tough conversation to have with family.
+
+Access log shows the data was last accessed from IP 10.0.0.45 on 2024-01-18 at 09:15:23. That's our secure research server, so that's expected. All access is logged and monitored per IRB protocol.
+
+Random note: The coffee machine in the lab broke again today. Third time this month. Someone keeps putting the wrong type of pods in it. Also, there's construction going on in the building next door and it's really loud. Makes it hard to concentrate sometimes.
+
+We're planning to present some preliminary findings at the ASCO conference in June. James has consented to have his case (anonymized of course) included in the presentation. He seemed okay with that when we discussed it.
+
+Next steps: Schedule follow-up genetic counseling session. Discuss surveillance recommendations. Consider prophylactic options if he's interested. Also need to coordinate with his primary care physician - he mentioned his PCP doesn't know much about BRCA mutations, so we'll need to provide education there too.
+
+The weather has been really nice in San Francisco lately. Sunny, not too foggy. James mentioned he went hiking last weekend, which is good. Exercise is important. Not directly related to the research but it's good to see participants taking care of themselves.

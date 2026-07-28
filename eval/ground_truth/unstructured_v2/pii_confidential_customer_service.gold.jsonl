@@ -1,0 +1,30 @@
+{"_meta": {"ontology_set": "bundled", "allowed_entity_ids": ["fin_entity_ontology::account_number", "fin_entity_ontology::bank_account_number", "fin_entity_ontology::card_expiry_date", "fin_entity_ontology::credit_card_number", "fin_entity_ontology::crypto_wallet_address", "fin_entity_ontology::cvv_code", "fin_entity_ontology::iban", "fin_entity_ontology::payment_transaction_id", "fin_entity_ontology::routing_number_aba", "phi_entity_ontology::authorization_precertification_code", "phi_entity_ontology::certificate_license_number", "phi_entity_ontology::claim_control_number", "phi_entity_ontology::cpt_procedure_codes", "phi_entity_ontology::date_of_birth", "phi_entity_ontology::dates", "phi_entity_ontology::dna_sequences", "phi_entity_ontology::facial_photographs", "phi_entity_ontology::fingerprints", "phi_entity_ontology::genomic_variants", "phi_entity_ontology::hcpcs_codes", "phi_entity_ontology::health_plan_beneficiary_number", "phi_entity_ontology::hospital_abbreviations", "phi_entity_ontology::hospital_names", "phi_entity_ontology::icd10_diagnosis_codes", "phi_entity_ontology::lab_results", "phi_entity_ontology::measurement_units", "phi_entity_ontology::medical_record_number_mrn", "phi_entity_ontology::medication_dosage", "phi_entity_ontology::ndc_codes", "phi_entity_ontology::physician_names", "phi_entity_ontology::provider_npi", "phi_entity_ontology::provider_tax_id_ein", "phi_entity_ontology::relative_date_expressions", "phi_entity_ontology::retinal_scans", "phi_entity_ontology::timestamps", "phi_entity_ontology::vital_signs", "phi_entity_ontology::voiceprints", "pii_entity_ontology::age", "pii_entity_ontology::canadian_social_insurance_number_sin", "pii_entity_ontology::city", "pii_entity_ontology::county", "pii_entity_ontology::dates", "pii_entity_ontology::device_serial_number", "pii_entity_ontology::drivers_license_number", "pii_entity_ontology::email_address", "pii_entity_ontology::fax_number", "pii_entity_ontology::imei_number", "pii_entity_ontology::indian_aadhaar_number", "pii_entity_ontology::ip_address", "pii_entity_ontology::latitude_coordinates", "pii_entity_ontology::longitude_coordinates", "pii_entity_ontology::mac_address", "pii_entity_ontology::nationality", "pii_entity_ontology::passport_number", "pii_entity_ontology::person_names", "pii_entity_ontology::phone_number", "pii_entity_ontology::po_box", "pii_entity_ontology::relative_date_expressions", "pii_entity_ontology::religious_affiliation", "pii_entity_ontology::ssn", "pii_entity_ontology::state", "pii_entity_ontology::street_address", "pii_entity_ontology::timestamps", "pii_entity_ontology::uk_national_insurance_number_nino", "pii_entity_ontology::uk_nhs_number", "pii_entity_ontology::unique_identifier", "pii_entity_ontology::us_ein", "pii_entity_ontology::us_itin", "pii_entity_ontology::uuid_guid", "pii_entity_ontology::vehicle_identification_number_vin", "pii_entity_ontology::visa_number", "pii_entity_ontology::web_url", "pii_entity_ontology::zip_code"], "file": "pii_confidential_customer_service.txt", "version": 1}}
+{"start": 98, "end": 106, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 179, "end": 190, "text": "Robert Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 204, "end": 227, "text": "robert.chen@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 235, "end": 249, "text": "1-555-987-6543", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 386, "end": 400, "text": "CUST-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 422, "end": 432, "text": "07/22/1978", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 438, "end": 449, "text": "987-65-4321", "entity_id": "pii_entity_ontology::ssn"}
+{"start": 560, "end": 575, "text": "123 Main Street", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 577, "end": 583, "text": "Apt 4B", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 585, "end": 593, "text": "New York", "entity_id": "pii_entity_ontology::city"}
+{"start": 595, "end": 597, "text": "NY", "entity_id": "pii_entity_ontology::state"}
+{"start": 598, "end": 603, "text": "10001", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 714, "end": 731, "text": "456 Commerce Blvd", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 733, "end": 742, "text": "Suite 200", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 744, "end": 752, "text": "Brooklyn", "entity_id": "pii_entity_ontology::city"}
+{"start": 754, "end": 756, "text": "NY", "entity_id": "pii_entity_ontology::state"}
+{"start": 757, "end": 762, "text": "11201", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 927, "end": 939, "text": "January 10th", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1035, "end": 1048, "text": "ACC-456789012", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 1106, "end": 1110, "text": "2222", "entity_id": "fin_entity_ontology::credit_card_number"}
+{"start": 1120, "end": 1125, "text": "06/26", "entity_id": "fin_entity_ontology::card_expiry_date"}
+{"start": 1141, "end": 1144, "text": "456", "entity_id": "fin_entity_ontology::cvv_code"}
+{"start": 1259, "end": 1269, "text": "2024-01-10", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1760, "end": 1774, "text": "1-555-987-6543", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1791, "end": 1814, "text": "robert.chen@example.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 1919, "end": 1935, "text": "D123-4567-890123", "entity_id": "pii_entity_ontology::drivers_license_number"}
+{"start": 1949, "end": 1960, "text": "US123456789", "entity_id": "pii_entity_ontology::passport_number"}
+{"start": 2328, "end": 2340, "text": "203.0.113.42", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 3139, "end": 3149, "text": "INV-789456", "entity_id": "fin_entity_ontology::payment_transaction_id"}

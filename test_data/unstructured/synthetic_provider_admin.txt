@@ -1,0 +1,29 @@
+Mercy Health Group — Provider and Patient Administration Record
+Internal Use Only | Packet MHG-ADM-2024-08821
+
+This packet consolidates credentialing and demographic verification for a
+cross-border referral received on 14 March 2024. Billing routed through
+Mercy Health Group's Lowell clinic; correspondence should go to the main
+administration fax at (617) 555-0148 unless the secure portal is down.
+A secondary intake line, 617.555.0199, rings to the same queue after hours.
+
+Dr. Anika Desai signed the attestation bundle. Credentialing re-checked her
+NPI 1234567893 against NPPES on 3/28/2024; the prior rendering provider
+8800123456 was deactivated last year and should not be used on claims. Tax
+operations attached a W-9 where employer identification 12-3456789 appears
+next to the Lowell clinic letterhead.
+
+The beneficiary currently resides in Middlesex County per the intake
+address block, although an older intake PDF still shows Suffolk County from
+a temporary housing stay. Immigration counsel supplied Form I-9 support where
+912-78-4567 is recorded as the individual taxpayer identification number for
+the patient; payroll flagged this separately from SSN collection.
+
+For India-origin identity verification, enrollment ops forwarded Aadhaar
+documentation — the UID on the card scan reads 3675 9834 6012 (last cluster
+is blurry). A parallel Canadian file includes CRA social insurance number
+046 454 286 tied to the patient's short-term Toronto assignment.
+
+Unrelated reference numbers in this packet (do not use for billing):
+prior authorization ref AUTH-9920147, legacy member token MBR-88001234,
+and imaging accession ACC-2024-88765.

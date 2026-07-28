@@ -1,0 +1,157 @@
+{"_meta": {"file": "insurance_claim_detailed.txt", "version": 1, "ontology_set": "bundled", "allowed_entity_ids": ["fin_entity_ontology::routing_number_aba", "phi_entity_ontology::certificate_license_number", "phi_entity_ontology::date_of_birth", "phi_entity_ontology::health_plan_beneficiary_number", "phi_entity_ontology::medical_record_number_mrn", "phi_entity_ontology::provider_npi", "pii_entity_ontology::age", "pii_entity_ontology::city", "pii_entity_ontology::dates", "pii_entity_ontology::email_address", "pii_entity_ontology::person_names", "pii_entity_ontology::phone_number", "pii_entity_ontology::ssn", "pii_entity_ontology::state", "pii_entity_ontology::street_address", "pii_entity_ontology::timestamps", "pii_entity_ontology::unique_identifier", "pii_entity_ontology::vehicle_identification_number_vin", "pii_entity_ontology::zip_code"]}}
+{"start": 148, "end": 166, "text": "CLM-2024-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 182, "end": 195, "text": "POL-456789012", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 210, "end": 227, "text": "February 28, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 256, "end": 263, "text": "3:45 PM", "entity_id": "pii_entity_ontology::timestamps"}
+{"start": 281, "end": 294, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 339, "end": 347, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 348, "end": 356, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 394, "end": 404, "text": "ADJ-789456", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 421, "end": 438, "text": "INS-ADJ-CA-123456", "entity_id": "phi_entity_ontology::certificate_license_number"}
+{"start": 429, "end": 431, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 446, "end": 460, "text": "(800) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 468, "end": 498, "text": "j.martinez@secureguard-ins.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 562, "end": 568, "text": "Amanda", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 578, "end": 586, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 602, "end": 618, "text": "November 7, 1989", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 624, "end": 626, "text": "34", "entity_id": "pii_entity_ontology::age"}
+{"start": 657, "end": 668, "text": "567-89-0123", "entity_id": "pii_entity_ontology::ssn"}
+{"start": 694, "end": 696, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 694, "end": 712, "text": "CA-D789-456-789-01", "entity_id": "phi_entity_ontology::certificate_license_number"}
+{"start": 826, "end": 856, "text": "4521 Sunset Boulevard, Unit 8B", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 858, "end": 869, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 871, "end": 873, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 874, "end": 879, "text": "90027", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 891, "end": 917, "text": "7892 Hollywood Hills Drive", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 919, "end": 930, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 932, "end": 934, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 935, "end": 940, "text": "90046", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 975, "end": 989, "text": "(323) 555-4521", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1004, "end": 1018, "text": "1-323-555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1031, "end": 1045, "text": "(310) 555-1234", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1053, "end": 1087, "text": "amanda.williams.personal@gmail.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 1100, "end": 1133, "text": "awilliams@entertainmentstudio.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 1160, "end": 1167, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1168, "end": 1176, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1216, "end": 1230, "text": "(323) 555-4522", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1240, "end": 1256, "text": "1234 Vine Street", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 1258, "end": 1269, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 1271, "end": 1273, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 1274, "end": 1279, "text": "90028", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 1395, "end": 1410, "text": "January 1, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1413, "end": 1430, "text": "December 31, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1446, "end": 1459, "text": "POL-456789012", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 1474, "end": 1484, "text": "GRP-789456", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 1609, "end": 1618, "text": "121000248", "entity_id": "fin_entity_ontology::routing_number_aba"}
+{"start": 1637, "end": 1649, "text": "July 1, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 2155, "end": 2172, "text": "5YJ3E1EA8NF123456", "entity_id": "pii_entity_ontology::vehicle_identification_number_vin"}
+{"start": 2188, "end": 2190, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 2220, "end": 2233, "text": "REG-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 2514, "end": 2528, "text": "LOAN-456789012", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 2618, "end": 2635, "text": "February 28, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 2656, "end": 2663, "text": "3:45 PM", "entity_id": "pii_entity_ontology::timestamps"}
+{"start": 2739, "end": 2750, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 2752, "end": 2754, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 2755, "end": 2760, "text": "90048", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 2964, "end": 2972, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 3452, "end": 3460, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 3811, "end": 3819, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4126, "end": 4134, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4457, "end": 4465, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4783, "end": 4800, "text": "February 28, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 4804, "end": 4811, "text": "4:30 PM", "entity_id": "pii_entity_ontology::timestamps"}
+{"start": 4850, "end": 4858, "text": "Jonathan", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4859, "end": 4863, "text": "Park", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4893, "end": 4906, "text": "MRN-ED-456789", "entity_id": "phi_entity_ontology::medical_record_number_mrn"}
+{"start": 5358, "end": 5363, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5364, "end": 5372, "text": "Mitchell", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5426, "end": 5437, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 5439, "end": 5441, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 5442, "end": 5447, "text": "90048", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 5457, "end": 5471, "text": "(310) 555-5678", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 5479, "end": 5489, "text": "2345678901", "entity_id": "phi_entity_ontology::provider_npi"}
+{"start": 5518, "end": 5531, "text": "March 5, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 5739, "end": 5750, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 5752, "end": 5754, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 5755, "end": 5760, "text": "90048", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 5770, "end": 5784, "text": "(310) 555-9012", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 5961, "end": 5969, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 6049, "end": 6070, "text": "8901 Sunset Boulevard", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 6072, "end": 6083, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 6085, "end": 6087, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 6088, "end": 6093, "text": "90069", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 6108, "end": 6121, "text": "EMP-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 6287, "end": 6300, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 6494, "end": 6500, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 6501, "end": 6505, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 6543, "end": 6553, "text": "APP-456789", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 6632, "end": 6643, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 6645, "end": 6647, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 6648, "end": 6653, "text": "90025", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 8075, "end": 8086, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 8088, "end": 8090, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 8091, "end": 8096, "text": "90025", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 8106, "end": 8120, "text": "(310) 555-3456", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 8172, "end": 8174, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 8172, "end": 8186, "text": "CA-AUTO-789456", "entity_id": "phi_entity_ontology::certificate_license_number"}
+{"start": 8850, "end": 8861, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 8863, "end": 8865, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 8866, "end": 8871, "text": "90025", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 8879, "end": 8893, "text": "(310) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 8919, "end": 8933, "text": "RENT-456789012", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 9004, "end": 9006, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 9261, "end": 9266, "text": "David", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 9267, "end": 9275, "text": "Thompson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 9324, "end": 9335, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 9337, "end": 9339, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 9340, "end": 9345, "text": "90048", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 9353, "end": 9367, "text": "(323) 555-2345", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 9375, "end": 9394, "text": "dthompson@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 9647, "end": 9652, "text": "Maria", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 9653, "end": 9662, "text": "Rodriguez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 9699, "end": 9710, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 9712, "end": 9714, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 9715, "end": 9720, "text": "90048", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 9728, "end": 9742, "text": "(323) 555-6789", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 10076, "end": 10087, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 10137, "end": 10154, "text": "LAPD-2024-0456789", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 10172, "end": 10177, "text": "James", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 10178, "end": 10186, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 10216, "end": 10233, "text": "February 28, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10250, "end": 10257, "text": "4:15 PM", "entity_id": "pii_entity_ontology::timestamps"}
+{"start": 10276, "end": 10284, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 10856, "end": 10864, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 10865, "end": 10873, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 10915, "end": 10928, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10932, "end": 10940, "text": "10:00 AM", "entity_id": "pii_entity_ontology::timestamps"}
+{"start": 11302, "end": 11313, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 13556, "end": 13562, "text": "Amanda", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13572, "end": 13580, "text": "Williams", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13588, "end": 13602, "text": "(323) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 13610, "end": 13644, "text": "amanda.williams.personal@gmail.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 13663, "end": 13671, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13672, "end": 13680, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13688, "end": 13702, "text": "(800) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 13710, "end": 13740, "text": "j.martinez@secureguard-ins.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 13894, "end": 13905, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 13907, "end": 13909, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 13910, "end": 13915, "text": "90025", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 13923, "end": 13937, "text": "(800) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 13943, "end": 13957, "text": "(310) 555-4568", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 13965, "end": 13991, "text": "claims@secureguard-ins.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 14017, "end": 14031, "text": "(800) 555-9999", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 14126, "end": 14132, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 14133, "end": 14136, "text": "Kim", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 14153, "end": 14156, "text": "Kim", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 14229, "end": 14240, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
+{"start": 14242, "end": 14244, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 14245, "end": 14250, "text": "90025", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 14258, "end": 14272, "text": "(310) 555-5678", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 14280, "end": 14295, "text": "rkim@kimlaw.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 14308, "end": 14310, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 14308, "end": 14321, "text": "CA-BAR-123456", "entity_id": "phi_entity_ontology::certificate_license_number"}
+{"start": 15019, "end": 15027, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 15028, "end": 15036, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 15067, "end": 15080, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 15087, "end": 15094, "text": "4:30 PM", "entity_id": "pii_entity_ontology::timestamps"}
+{"start": 15110, "end": 15128, "text": "RPT-2024-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}

@@ -1,0 +1,90 @@
+{"_meta": {"file": "comprehensive_medical_report.txt", "version": 1, "ontology_set": "bundled", "allowed_entity_ids": ["phi_entity_ontology::certificate_license_number", "phi_entity_ontology::date_of_birth", "phi_entity_ontology::health_plan_beneficiary_number", "phi_entity_ontology::medical_record_number_mrn", "phi_entity_ontology::provider_npi", "pii_entity_ontology::age", "pii_entity_ontology::city", "pii_entity_ontology::dates", "pii_entity_ontology::email_address", "pii_entity_ontology::person_names", "pii_entity_ontology::phone_number", "pii_entity_ontology::ssn", "pii_entity_ontology::state", "pii_entity_ontology::street_address", "pii_entity_ontology::unique_identifier", "pii_entity_ontology::zip_code"]}}
+{"start": 182, "end": 196, "text": "March 15, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 222, "end": 227, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 238, "end": 242, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 270, "end": 282, "text": "MD-789456123", "entity_id": "phi_entity_ontology::certificate_license_number"}
+{"start": 295, "end": 305, "text": "1234567890", "entity_id": "phi_entity_ontology::provider_npi"}
+{"start": 358, "end": 363, "text": "James", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 364, "end": 371, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 372, "end": 380, "text": "O'Connor", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 396, "end": 411, "text": "August 14, 1983", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 417, "end": 419, "text": "40", "entity_id": "pii_entity_ontology::age"}
+{"start": 462, "end": 475, "text": "MRN-987654321", "entity_id": "phi_entity_ontology::medical_record_number_mrn"}
+{"start": 488, "end": 501, "text": "PAT-456789012", "entity_id": "phi_entity_ontology::medical_record_number_mrn"}
+{"start": 526, "end": 537, "text": "234-56-7890", "entity_id": "pii_entity_ontology::ssn"}
+{"start": 552, "end": 565, "text": "INS-789456123", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 605, "end": 642, "text": "2847 Willowbrook Drive, Apartment 12C", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 644, "end": 657, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
+{"start": 659, "end": 661, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 662, "end": 667, "text": "94102", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 687, "end": 717, "text": "1523 Pacific Heights Boulevard", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 719, "end": 732, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
+{"start": 734, "end": 736, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 737, "end": 742, "text": "94109", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 758, "end": 772, "text": "(415) 555-2847", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 790, "end": 802, "text": "415-555-9123", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 817, "end": 831, "text": "1-415-555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 847, "end": 879, "text": "james.oconnor.personal@gmail.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 892, "end": 913, "text": "joconnor@techcorp.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 940, "end": 948, "text": "Patricia", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 949, "end": 957, "text": "O'Connor", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 993, "end": 1007, "text": "(415) 555-2848", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1136, "end": 1153, "text": "BCBS-CA-456789012", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 1141, "end": 1143, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 1168, "end": 1178, "text": "GRP-789456", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 1194, "end": 1207, "text": "SUB-123456789", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 1224, "end": 1239, "text": "January 1, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1257, "end": 1274, "text": "December 31, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1641, "end": 1649, "text": "O'Connor", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4165, "end": 4172, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4173, "end": 4181, "text": "O'Connor", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4312, "end": 4320, "text": "Margaret", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4321, "end": 4329, "text": "O'Connor", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4714, "end": 4720, "text": "Thomas", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4721, "end": 4729, "text": "O'Connor", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4778, "end": 4787, "text": "Catherine", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4788, "end": 4796, "text": "O'Connor", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5471, "end": 5492, "text": "1234 Innovation Drive", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 5494, "end": 5507, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
+{"start": 5509, "end": 5511, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 5512, "end": 5517, "text": "94105", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 5532, "end": 5545, "text": "EMP-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 8843, "end": 8857, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 9102, "end": 9116, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 9459, "end": 9473, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 9759, "end": 9773, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10035, "end": 10049, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10203, "end": 10217, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10281, "end": 10295, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10391, "end": 10405, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10618, "end": 10632, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 11009, "end": 11023, "text": "March 14, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 12927, "end": 12933, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12934, "end": 12937, "text": "Kim", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12972, "end": 13008, "text": "5678 Medical Center Drive, Suite 200", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 13010, "end": 13023, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
+{"start": 13025, "end": 13027, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 13028, "end": 13033, "text": "94115", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 13042, "end": 13056, "text": "(415) 555-5678", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 13063, "end": 13073, "text": "9876543210", "entity_id": "phi_entity_ontology::provider_npi"}
+{"start": 14477, "end": 14491, "text": "March 22, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 14554, "end": 14568, "text": "(415) 555-9999", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 15779, "end": 15784, "text": "Maria", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 15785, "end": 15791, "text": "Santos", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 15799, "end": 15813, "text": "(415) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 15821, "end": 15841, "text": "msantos@techcorp.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 16001, "end": 16013, "text": "PA-456789012", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 16061, "end": 16066, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 16077, "end": 16081, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 16119, "end": 16131, "text": "MD-789456123", "entity_id": "phi_entity_ontology::certificate_license_number"}
+{"start": 16137, "end": 16147, "text": "1234567890", "entity_id": "phi_entity_ontology::provider_npi"}
+{"start": 16154, "end": 16168, "text": "March 15, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 16191, "end": 16214, "text": "SEC-2024-03-15-14:32:18", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 16269, "end": 16276, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 16277, "end": 16281, "text": "Park", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 16292, "end": 16302, "text": "1122334455", "entity_id": "phi_entity_ontology::provider_npi"}
+{"start": 16322, "end": 16328, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 16329, "end": 16332, "text": "Kim", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 16349, "end": 16359, "text": "9876543210", "entity_id": "phi_entity_ontology::provider_npi"}
+{"start": 16461, "end": 16478, "text": "BCBS-CA-456789012", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
+{"start": 16466, "end": 16468, "text": "CA", "entity_id": "pii_entity_ontology::state"}

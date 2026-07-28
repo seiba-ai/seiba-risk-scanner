@@ -1,0 +1,20 @@
+# Maps spaCy / MedspaCy NER span labels to ontology entity_id values.
+# Extend as you add entities or custom models.
+mappings:
+  PERSON: pii_entity_ontology::person_names
+  PER: pii_entity_ontology::person_names
+  GPE: pii_entity_ontology::city
+  # ORG is deliberately unmapped. spaCy tags section headings, ticket ids and product
+  # names as ORG, and an organization span is pattern-less, so there is no shape guard to
+  # reject them — they survive to compete with real detections and cost ~0.011 micro F1.
+  # Lowering ner_confidence_weight does not help: a low weight is a demotion that invites
+  # relabeling, not a suppressor. To reject a junk span, stop it existing.
+  LOC: pii_entity_ontology::street_address
+  FAC: pii_entity_ontology::street_address
+  DATE: pii_entity_ontology::dates
+  TIME: pii_entity_ontology::timestamps
+  # NORP = nationalities, religious and political groups. spaCy can't tell them apart,
+  # so emit both and let contextual phrases disambiguate (defaults to nationality).
+  NORP:
+    - pii_entity_ontology::nationality
+    - pii_entity_ontology::religious_affiliation

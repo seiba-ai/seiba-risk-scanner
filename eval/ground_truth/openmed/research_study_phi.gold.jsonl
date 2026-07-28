@@ -1,0 +1,115 @@
+{"_meta": {"file": "research_study_phi.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::account_number", "openmed::age", "openmed::certificate_license_number", "openmed::city", "openmed::company_name", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::employee_id", "openmed::first_name", "openmed::gender", "openmed::last_name", "openmed::medical_record_number", "openmed::npi", "openmed::occupation", "openmed::phone_number", "openmed::postcode", "openmed::race_ethnicity", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::time", "openmed::unique_id"], "clinical_label_set": "disease_detection_superclinical", "clinical_allowed_entity_ids": ["openmed::CONDITION", "openmed::DISEASE", "openmed::PATHOLOGY"], "clinical_annotation_notes": "Patient-specific disease/condition/pathology spans for OpenMed disease_detection_superclinical. Family-history-only mentions and negated conditions are excluded."}}
+{"start": 381, "end": 399, "text": "PROTO-2024-HTN-456", "entity_id": "openmed::unique_id"}
+{"start": 421, "end": 434, "text": "IRB-789456123", "entity_id": "openmed::unique_id"}
+{"start": 451, "end": 461, "text": "IND-123456", "entity_id": "openmed::unique_id"}
+{"start": 471, "end": 497, "text": "PharmaResearch Corporation", "entity_id": "openmed::company_name"}
+{"start": 526, "end": 531, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 542, "end": 550, "text": "Mitchell", "entity_id": "openmed::last_name"}
+{"start": 587, "end": 593, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 600, "end": 603, "text": "Kim", "entity_id": "openmed::last_name"}
+{"start": 633, "end": 641, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 642, "end": 650, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 680, "end": 724, "text": "University Medical Center Research Institute", "entity_id": "openmed::company_name"}
+{"start": 734, "end": 780, "text": "1234 Research Boulevard, Building A, Suite 500", "entity_id": "openmed::street_address"}
+{"start": 782, "end": 795, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 797, "end": 799, "text": "CA", "entity_id": "openmed::state"}
+{"start": 800, "end": 805, "text": "94102", "entity_id": "openmed::postcode"}
+{"start": 813, "end": 827, "text": "(415) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 833, "end": 847, "text": "(415) 555-7891", "entity_id": "openmed::phone_number"}
+{"start": 855, "end": 871, "text": "research@umc.edu", "entity_id": "openmed::email"}
+{"start": 884, "end": 898, "text": "(415) 555-7892", "entity_id": "openmed::phone_number"}
+{"start": 910, "end": 921, "text": "irb@umc.edu", "entity_id": "openmed::email"}
+{"start": 994, "end": 1010, "text": "SUBJ-2024-456789", "entity_id": "openmed::unique_id"}
+{"start": 1029, "end": 1039, "text": "SCR-789456", "entity_id": "openmed::unique_id"}
+{"start": 1062, "end": 1073, "text": "RAND-456789", "entity_id": "openmed::unique_id"}
+{"start": 1190, "end": 1196, "text": "Daniel", "entity_id": "openmed::first_name"}
+{"start": 1197, "end": 1204, "text": "Patrick", "entity_id": "openmed::first_name"}
+{"start": 1205, "end": 1212, "text": "O'Brien", "entity_id": "openmed::last_name"}
+{"start": 1228, "end": 1242, "text": "April 12, 1978", "entity_id": "openmed::date"}
+{"start": 1228, "end": 1242, "text": "April 12, 1978", "entity_id": "openmed::date_of_birth"}
+{"start": 1248, "end": 1250, "text": "46", "entity_id": "openmed::age"}
+{"start": 1265, "end": 1269, "text": "Male", "entity_id": "openmed::gender"}
+{"start": 1286, "end": 1309, "text": "Caucasian, Non-Hispanic", "entity_id": "openmed::race_ethnicity"}
+{"start": 1334, "end": 1345, "text": "890-12-3456", "entity_id": "openmed::ssn"}
+{"start": 1369, "end": 1382, "text": "MRN-789456123", "entity_id": "openmed::medical_record_number"}
+{"start": 1408, "end": 1422, "text": "ACCT-456789012", "entity_id": "openmed::account_number"}
+{"start": 1481, "end": 1519, "text": "7890 Research Park Drive, Apartment 8B", "entity_id": "openmed::street_address"}
+{"start": 1520, "end": 1533, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 1535, "end": 1537, "text": "CA", "entity_id": "openmed::state"}
+{"start": 1538, "end": 1543, "text": "94102", "entity_id": "openmed::postcode"}
+{"start": 1629, "end": 1643, "text": "(415) 555-7890", "entity_id": "openmed::phone_number"}
+{"start": 1658, "end": 1672, "text": "1-415-555-1234", "entity_id": "openmed::phone_number"}
+{"start": 1685, "end": 1699, "text": "(415) 555-5678", "entity_id": "openmed::phone_number"}
+{"start": 1725, "end": 1739, "text": "(415) 555-9012", "entity_id": "openmed::phone_number"}
+{"start": 1768, "end": 1791, "text": "daniel.obrien@email.com", "entity_id": "openmed::email"}
+{"start": 1798, "end": 1821, "text": "dobrien@corporation.com", "entity_id": "openmed::email"}
+{"start": 1833, "end": 1856, "text": "dpobrien@protonmail.com", "entity_id": "openmed::email"}
+{"start": 1892, "end": 1900, "text": "Patricia", "entity_id": "openmed::first_name"}
+{"start": 1901, "end": 1908, "text": "O'Brien", "entity_id": "openmed::last_name"}
+{"start": 1937, "end": 1951, "text": "(415) 555-9012", "entity_id": "openmed::phone_number"}
+{"start": 1996, "end": 2021, "text": "patricia.obrien@email.com", "entity_id": "openmed::email"}
+{"start": 2040, "end": 2047, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 2048, "end": 2055, "text": "O'Brien", "entity_id": "openmed::last_name"}
+{"start": 2085, "end": 2099, "text": "(650) 555-3456", "entity_id": "openmed::phone_number"}
+{"start": 2109, "end": 2125, "text": "1234 Family Lane", "entity_id": "openmed::street_address"}
+{"start": 2127, "end": 2136, "text": "Palo Alto", "entity_id": "openmed::city"}
+{"start": 2138, "end": 2140, "text": "CA", "entity_id": "openmed::state"}
+{"start": 2141, "end": 2146, "text": "94301", "entity_id": "openmed::postcode"}
+{"start": 2154, "end": 2178, "text": "michael.obrien@email.com", "entity_id": "openmed::email"}
+{"start": 2270, "end": 2286, "text": "January 15, 2023", "entity_id": "openmed::date"}
+{"start": 2313, "end": 2318, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 2319, "end": 2327, "text": "Mitchell", "entity_id": "openmed::last_name"}
+{"start": 2352, "end": 2362, "text": "1234567890", "entity_id": "openmed::npi"}
+{"start": 3087, "end": 3094, "text": "Patrick", "entity_id": "openmed::first_name"}
+{"start": 3095, "end": 3102, "text": "O'Brien", "entity_id": "openmed::last_name"}
+{"start": 3210, "end": 3218, "text": "Margaret", "entity_id": "openmed::first_name"}
+{"start": 3219, "end": 3226, "text": "O'Brien", "entity_id": "openmed::last_name"}
+{"start": 3578, "end": 3585, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 3586, "end": 3593, "text": "O'Brien", "entity_id": "openmed::last_name"}
+{"start": 4029, "end": 4046, "text": "Software Engineer", "entity_id": "openmed::occupation"}
+{"start": 4050, "end": 4063, "text": "TechCorp Inc.", "entity_id": "openmed::company_name"}
+{"start": 4065, "end": 4080, "text": "4567 Tech Drive", "entity_id": "openmed::street_address"}
+{"start": 4082, "end": 4095, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 4097, "end": 4099, "text": "CA", "entity_id": "openmed::state"}
+{"start": 4100, "end": 4105, "text": "94105", "entity_id": "openmed::postcode"}
+{"start": 4120, "end": 4133, "text": "EMP-789456123", "entity_id": "openmed::employee_id"}
+{"start": 5919, "end": 5932, "text": "March 1, 2024", "entity_id": "openmed::date"}
+{"start": 5947, "end": 5954, "text": "2:30 PM", "entity_id": "openmed::time"}
+{"start": 5976, "end": 5984, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 5985, "end": 5993, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 6038, "end": 6043, "text": "Maria", "entity_id": "openmed::first_name"}
+{"start": 6044, "end": 6050, "text": "Santos", "entity_id": "openmed::last_name"}
+{"start": 6875, "end": 6888, "text": "March 1, 2024", "entity_id": "openmed::date"}
+{"start": 7447, "end": 7460, "text": "March 8, 2024", "entity_id": "openmed::date"}
+{"start": 7665, "end": 7679, "text": "March 29, 2024", "entity_id": "openmed::date"}
+{"start": 9228, "end": 9243, "text": "August 16, 2024", "entity_id": "openmed::date"}
+{"start": 10383, "end": 10396, "text": "March 1, 2024", "entity_id": "openmed::date"}
+{"start": 11100, "end": 11115, "text": "August 16, 2024", "entity_id": "openmed::date"}
+{"start": 12074, "end": 12087, "text": "March 1, 2024", "entity_id": "openmed::date"}
+{"start": 12111, "end": 12125, "text": "March 29, 2024", "entity_id": "openmed::date"}
+{"start": 12410, "end": 12425, "text": "August 16, 2024", "entity_id": "openmed::date"}
+{"start": 12690, "end": 12705, "text": "August 16, 2024", "entity_id": "openmed::date"}
+{"start": 13374, "end": 13379, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 13380, "end": 13388, "text": "Mitchell", "entity_id": "openmed::last_name"}
+{"start": 13770, "end": 13788, "text": "PROTO-2024-HTN-456", "entity_id": "openmed::unique_id"}
+{"start": 14817, "end": 14822, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 14833, "end": 14841, "text": "Mitchell", "entity_id": "openmed::last_name"}
+{"start": 14889, "end": 14901, "text": "MD-789456123", "entity_id": "openmed::certificate_license_number"}
+{"start": 14907, "end": 14917, "text": "1234567890", "entity_id": "openmed::npi"}
+{"start": 14924, "end": 14939, "text": "August 16, 2024", "entity_id": "openmed::date"}
+{"start": 14997, "end": 15005, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 15006, "end": 15014, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 15057, "end": 15066, "text": "RN-456789", "entity_id": "openmed::certificate_license_number"}
+{"start": 15073, "end": 15088, "text": "August 16, 2024", "entity_id": "openmed::date"}
+{"start": 15760, "end": 15775, "text": "RES-2024-456789", "entity_id": "openmed::unique_id"}
+{"start": 15803, "end": 15818, "text": "August 16, 2024", "entity_id": "openmed::date"}
+{"start": 15831, "end": 15839, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 15840, "end": 15848, "text": "Martinez", "entity_id": "openmed::last_name"}
+{"start": 266, "end": 288, "text": "Resistant Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 276, "end": 288, "text": "Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 2231, "end": 2253, "text": "Resistant Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 2241, "end": 2253, "text": "Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 2388, "end": 2400, "text": "Hypertension", "entity_id": "openmed::DISEASE"}
+{"start": 2519, "end": 2543, "text": "Type 2 Diabetes Mellitus", "entity_id": "openmed::DISEASE"}
+{"start": 2632, "end": 2655, "text": "Obstructive Sleep Apnea", "entity_id": "openmed::CONDITION"}
+{"start": 2694, "end": 2725, "text": "Chronic Kidney Disease, Stage 2", "entity_id": "openmed::DISEASE"}

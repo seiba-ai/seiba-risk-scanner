@@ -1,0 +1,474 @@
+HOSPITAL DISCHARGE SUMMARY - PROTECTED HEALTH INFORMATION
+==========================================================
+CONFIDENTIAL - HIPAA PROTECTED
+
+Hospital: Memorial Regional Medical Center
+Department: Cardiology / Internal Medicine
+Discharge Date: April 3, 2024
+Admission Date: March 28, 2024
+Length of Stay: 6 days
+Attending Physician: Dr. Michael Robert Park, MD, FACC
+Physician License: MD-456789123
+NPI Number: 9876543210
+Physician Phone: (650) 555-4567
+Physician Email: mpark@memorialregional.com
+
+PATIENT DEMOGRAPHICS
+--------------------
+Full Name: Emily Rose Thompson
+Date of Birth: September 15, 1976
+Age: 47 years
+Gender: Female
+Medical Record Number: MRN-456789012
+Patient Account Number: ACCT-789456123
+Social Security Number: 678-90-1234
+Race/Ethnicity: Caucasian, Non-Hispanic
+Preferred Language: English
+Marital Status: Married
+Occupation: High School Principal
+
+ADMISSION INFORMATION
+----------------------
+Admitting Diagnosis: Chest pain, rule out acute coronary syndrome
+Admission Type: Emergency
+Admission Source: Emergency Department
+Admitting Physician: Dr. Michael Park, MD, FACC
+Date/Time of Admission: March 28, 2024 at 11:45 PM
+Room Number: 4-West, Room 412, Bed A
+
+CONTACT INFORMATION
+-------------------
+Home Address:
+4567 Oak Street, San Mateo, CA 94403
+
+Mailing Address (if different):
+Same as home address
+
+Phone Numbers:
+Home Phone: (650) 555-4567
+Mobile Phone: 1-650-555-7890
+Work Phone: (650) 555-1234
+Spouse Phone: (650) 555-4568
+
+Email Addresses:
+Personal: emily.thompson@email.com
+Work: ethompson@schooldistrict.edu
+
+Emergency Contacts:
+Primary:
+Name: David Thompson
+Relationship: Husband
+Phone: (650) 555-4568
+Address: Same as patient address
+Email: david.thompson@email.com
+
+Secondary:
+Name: Margaret Thompson
+Relationship: Mother
+Phone: (415) 555-2345
+Address: 1234 Elder Care Lane, San Francisco, CA 94102
+Email: margaret.thompson@email.com
+
+INSURANCE INFORMATION
+---------------------
+Primary Insurance:
+Insurance Company: UnitedHealthcare
+Policy Number: UHC-789456123
+Group Number: GRP-EDU-456
+Subscriber Name: Emily Thompson (Self)
+Subscriber ID: SUB-456789012
+Effective Date: January 1, 2024
+Expiration Date: December 31, 2024
+Authorization Number: AUTH-789456123
+Copay: $50 per hospital admission
+Deductible: $2,000 (met for 2024)
+Out-of-Pocket Maximum: $5,000 (remaining: $1,500)
+
+Secondary Insurance:
+None
+
+CHIEF COMPLAINT
+---------------
+"Chest pain and shortness of breath for the past 3 hours."
+
+HISTORY OF PRESENT ILLNESS
+--------------------------
+Ms. Thompson is a 47-year-old high school principal who presented to the Emergency Department on March 28, 2024 at approximately 11:00 PM with a 3-hour history of severe chest pain and shortness of breath.
+
+She describes the chest pain as severe, 8/10 in intensity, located in the substernal region with radiation to the left arm and jaw. The pain began suddenly at approximately 8:00 PM while she was at home watching television. It was not associated with exertion, emotional stress, or any specific activity. The pain was described as "pressure" and "squeezing" and was not relieved by rest or over-the-counter antacids.
+
+She developed shortness of breath shortly after the onset of chest pain. She denies any associated nausea, vomiting, diaphoresis, dizziness, or syncope. She did not take any nitroglycerin as she does not have a prescription for it.
+
+Emergency Medical Services (EMS) were called by her husband. Paramedics arrived at the scene and found her in moderate distress. They obtained an electrocardiogram (ECG) in the field which showed ST-segment elevation in leads II, III, and aVF, consistent with an acute inferior ST-elevation myocardial infarction (STEMI).
+
+She was immediately transported to Memorial Regional Medical Center with a "Code STEMI" activation. The cardiac catheterization lab was activated en route, and she was taken directly to the cardiac catheterization laboratory upon arrival at the hospital.
+
+PAST MEDICAL HISTORY
+--------------------
+- Hypertension: Diagnosed 2018, well-controlled on medication
+- Hyperlipidemia: Diagnosed 2019, on statin therapy
+- Obesity: Body Mass Index 32 kg/m²
+- Migraine headaches: Since age 25, well-controlled with medication
+- Seasonal allergies
+- No history of diabetes mellitus
+- No history of coronary artery disease
+- No history of stroke or transient ischemic attack
+- No history of deep vein thrombosis or pulmonary embolism
+- No history of asthma or chronic obstructive pulmonary disease
+- No history of kidney disease
+- No history of liver disease
+- No history of cancer
+- No history of psychiatric conditions
+- No known drug allergies
+
+SURGICAL HISTORY
+----------------
+- Cholecystectomy: 2005 (age 29)
+- Hysterectomy: 2015 (age 39) - total abdominal hysterectomy for uterine fibroids
+- Appendectomy: 1988 (age 12)
+- Wisdom teeth extraction: 1995 (age 19)
+
+FAMILY HISTORY
+--------------
+Father: Robert Thompson, age 72, alive, history of coronary artery disease (triple bypass surgery at age 58), hypertension, hyperlipidemia, type 2 diabetes mellitus
+Mother: Margaret Thompson, age 70, alive, history of hypertension, osteoporosis, breast cancer (diagnosed age 65, treated with surgery and radiation, currently in remission)
+Paternal Grandfather: Died at age 68 from myocardial infarction
+Paternal Grandmother: Died at age 75 from complications of diabetes
+Maternal Grandfather: Died at age 80 from stroke
+Maternal Grandmother: Died at age 85 from natural causes
+Brother: James Thompson, age 45, alive, history of hypertension, hyperlipidemia
+Sister: Sarah Thompson, age 42, alive, no significant medical history
+
+SOCIAL HISTORY
+--------------
+Tobacco: Never smoker
+Alcohol: Social drinker, 1-2 glasses of wine per week, typically on weekends. Denies binge drinking.
+Recreational Drugs: Denies current or past use of illicit substances.
+Exercise: Sedentary lifestyle. Previously active but has been unable to exercise regularly for past 2 years due to work demands and fatigue.
+Diet: Admits to poor dietary habits, frequent fast food meals due to busy work schedule. High sodium intake.
+Occupation: High School Principal at Lincoln High School, 1234 Education Drive, San Mateo, CA 94403. Phone: (650) 555-1234. High-stress position with long hours (typically 60+ hours per week).
+Travel: No recent travel outside of California in past 6 months.
+
+CURRENT MEDICATIONS (PRE-ADMISSION)
+-----------------------------------
+1. Lisinopril 10mg, one tablet by mouth daily (for hypertension)
+2. Atorvastatin 20mg, one tablet by mouth daily (for hyperlipidemia)
+3. Sumatriptan 50mg, one tablet by mouth as needed for migraines (typically 2-3 times per month)
+4. Loratadine 10mg, one tablet by mouth daily as needed (for seasonal allergies)
+5. Multivitamin, one tablet by mouth daily
+6. No known drug allergies
+
+HOSPITAL COURSE
+---------------
+Day 1 (March 28, 2024):
+The patient arrived at the Emergency Department at 11:00 PM via ambulance with ongoing chest pain and ECG evidence of acute inferior STEMI. The cardiac catheterization laboratory was already activated, and she was taken directly to the cardiac catheterization lab.
+
+Cardiac Catheterization was performed by Dr. Robert Kim, MD, FACC (Interventional Cardiologist, NPI: 8765432109) at 11:30 PM. Findings:
+- 100% occlusion of the right coronary artery (RCA) - the culprit lesion
+- 70% stenosis of the left anterior descending (LAD) artery
+- 60% stenosis of the left circumflex (LCx) artery
+- Left ventricular ejection fraction (LVEF): 45% (moderately reduced)
+- No significant valvular disease
+
+Primary Percutaneous Coronary Intervention (PCI) was performed:
+- Successful placement of a drug-eluting stent (DES) in the right coronary artery
+- Stent: Xience Xpedition 3.5mm x 28mm
+- Post-procedure TIMI flow: Grade 3 (normal flow)
+- Residual stenosis: 0%
+
+The procedure was successful, and the patient's chest pain resolved immediately following the intervention. She was transferred to the Cardiac Care Unit (CCU) for monitoring.
+
+Medications initiated:
+- Aspirin 81mg daily (lifelong)
+- Clopidogrel 75mg daily (for 12 months)
+- Atorvastatin 80mg daily (high-intensity statin therapy)
+- Metoprolol 25mg twice daily (beta-blocker)
+- Lisinopril 10mg daily (ACE inhibitor)
+- Pantoprazole 40mg daily (proton pump inhibitor for GI protection)
+
+Day 2 (March 29, 2024):
+The patient remained stable in the CCU. Her chest pain did not recur. Vital signs were stable. Cardiac enzymes (troponin) peaked at 45.2 ng/mL (normal <0.04), confirming the diagnosis of acute myocardial infarction.
+
+Echocardiogram performed:
+- Left ventricular ejection fraction: 45% (moderately reduced)
+- Inferior wall hypokinesis
+- Mild mitral regurgitation
+- No pericardial effusion
+- Estimated right ventricular systolic pressure: Normal
+
+The patient was transferred from CCU to the cardiac step-down unit (4-West) for continued monitoring and cardiac rehabilitation.
+
+Day 3 (March 30, 2024):
+Continued improvement. Patient was ambulating in the hallway with physical therapy. No chest pain or shortness of breath. Vital signs stable. Started on cardiac diet (low sodium, low cholesterol).
+
+Cardiac rehabilitation consultation completed. Patient educated about cardiac rehabilitation program, which will begin as outpatient in 2-3 weeks.
+
+Day 4 (March 31, 2024):
+Patient doing well. Tolerating regular diet. Ambulating independently. No complications. Discharge planning initiated.
+
+Day 5 (April 1, 2024):
+Continued improvement. Patient and family received extensive education regarding:
+- Heart attack and coronary artery disease
+- Medications and importance of compliance
+- Dietary modifications (cardiac diet, low sodium)
+- Exercise recommendations
+- Cardiac rehabilitation program
+- Warning signs and symptoms requiring immediate medical attention
+- Lifestyle modifications (stress management, weight loss)
+
+Day 6 (April 2, 2024):
+Final day of hospitalization. Patient stable and ready for discharge. All discharge medications reviewed. Follow-up appointments scheduled.
+
+PHYSICAL EXAMINATION (ON DISCHARGE)
+------------------------------------
+Vital Signs:
+- Blood Pressure: 128/78 mmHg
+- Heart Rate: 68 beats per minute, regular rhythm
+- Respiratory Rate: 16 breaths per minute
+- Temperature: 98.4°F (36.9°C)
+- Oxygen Saturation: 98% on room air
+- Weight: 185 pounds (84 kg)
+- Height: 5 feet 6 inches (168 cm)
+- Body Mass Index: 29.8 kg/m² (overweight, improved from 32 kg/m² on admission)
+
+General Appearance: Well-appearing female in no acute distress. Comfortable at rest.
+
+Cardiovascular: Regular rate and rhythm. S1 and S2 present. No murmurs, rubs, or gallops. No jugular venous distension. No peripheral edema.
+
+Pulmonary: Clear to auscultation bilaterally. No wheezing, rales, or rhonchi.
+
+Abdomen: Soft, non-tender, non-distended. Bowel sounds present.
+
+Extremities: No edema. Pulses intact and symmetric. No clubbing or cyanosis.
+
+Neurological: Alert and oriented to person, place, and time. Cranial nerves intact. Motor strength 5/5 in all extremities.
+
+LABORATORY RESULTS (FINAL)
+---------------------------
+Complete Blood Count - April 2, 2024:
+- White Blood Cell Count: 8,100/μL (normal)
+- Hemoglobin: 13.8 g/dL (normal)
+- Hematocrit: 41.2% (normal)
+- Platelet Count: 285,000/μL (normal)
+
+Basic Metabolic Panel - April 2, 2024:
+- Sodium: 139 mEq/L (normal)
+- Potassium: 4.1 mEq/L (normal)
+- Chloride: 103 mEq/L (normal)
+- Bicarbonate: 25 mEq/L (normal)
+- Blood Urea Nitrogen: 16 mg/dL (normal)
+- Creatinine: 0.9 mg/dL (normal)
+- Glucose: 98 mg/dL (normal)
+
+Lipid Panel - April 2, 2024:
+- Total Cholesterol: 165 mg/dL (improved from 220 on admission)
+- Low-Density Lipoprotein (LDL): 95 mg/dL (improved from 145 on admission)
+- High-Density Lipoprotein (HDL): 52 mg/dL (normal)
+- Triglycerides: 90 mg/dL (normal)
+
+Liver Function Tests - April 2, 2024:
+- All within normal limits
+
+Troponin I - April 2, 2024:
+- 2.1 ng/mL (decreasing trend, peak was 45.2 ng/mL on Day 2)
+
+IMAGING STUDIES
+---------------
+Chest X-Ray - April 2, 2024:
+- No acute cardiopulmonary abnormalities
+- Heart size normal
+- No pleural effusions
+- No pulmonary infiltrates
+
+Echocardiogram - March 29, 2024:
+- Left ventricular ejection fraction: 45% (moderately reduced)
+- Inferior wall hypokinesis
+- Mild mitral regurgitation
+- No pericardial effusion
+
+DISCHARGE DIAGNOSES
+-------------------
+1. Acute ST-elevation myocardial infarction (STEMI), inferior wall
+2. Status post primary percutaneous coronary intervention (PCI) with drug-eluting stent to right coronary artery
+3. Coronary artery disease, multi-vessel (RCA 100% occluded, now stented; LAD 70% stenosis; LCx 60% stenosis)
+4. Left ventricular systolic dysfunction, moderate (ejection fraction 45%)
+5. Hypertension
+6. Hyperlipidemia
+7. Obesity
+
+DISCHARGE MEDICATIONS
+---------------------
+1. Aspirin 81mg, one tablet by mouth daily - LIFELONG (for prevention of future cardiac events)
+2. Clopidogrel 75mg, one tablet by mouth daily - Continue for 12 months (dual antiplatelet therapy)
+3. Atorvastatin 80mg, one tablet by mouth daily (high-intensity statin therapy for cholesterol management)
+4. Metoprolol 25mg, one tablet by mouth twice daily (beta-blocker for heart protection)
+5. Lisinopril 10mg, one tablet by mouth daily (ACE inhibitor for heart protection and blood pressure)
+6. Pantoprazole 40mg, one tablet by mouth daily (for GI protection with dual antiplatelet therapy)
+7. Continue Sumatriptan 50mg as needed for migraines
+8. Continue Loratadine 10mg as needed for allergies
+9. Continue Multivitamin daily
+
+IMPORTANT MEDICATION NOTES:
+- Do NOT stop aspirin or clopidogrel without consulting your cardiologist
+- These medications are critical for preventing blood clots in your stent
+- If you need any procedures or surgeries, inform all doctors that you are on these medications
+- Take all medications exactly as prescribed
+- Do not skip doses
+- Refill medications before they run out
+
+DISCHARGE INSTRUCTIONS
+----------------------
+Activity:
+- May resume normal daily activities as tolerated
+- Avoid heavy lifting (more than 10 pounds) for 1 week
+- Avoid driving for 1 week (or until cleared by cardiologist)
+- May return to work in 2-3 weeks (discuss with cardiologist at follow-up)
+- Begin cardiac rehabilitation program in 2-3 weeks
+- Start with light walking, gradually increase as tolerated
+- Stop any activity if you experience chest pain, shortness of breath, dizziness, or excessive fatigue
+
+Diet:
+- Cardiac diet: Low sodium (<2 grams per day), low cholesterol, low saturated fat
+- Increase fruits and vegetables
+- Limit processed foods
+- Avoid added salt
+- Limit alcohol (if any, 1 drink per day maximum for women)
+- Work with nutritionist/dietitian for meal planning
+- Goal: Weight loss of 1-2 pounds per week
+
+Lifestyle Modifications:
+- Smoking: Continue to avoid (never smoker, good)
+- Stress management: Important for heart health
+- Consider stress reduction techniques (meditation, yoga, counseling if needed)
+- Adequate sleep: 7-9 hours per night
+- Regular exercise: As tolerated, gradually increasing
+
+Warning Signs - Call 911 or go to Emergency Department immediately if you experience:
+- Chest pain or pressure (especially if similar to your heart attack)
+- Severe shortness of breath
+- Dizziness or fainting
+- Rapid or irregular heartbeat
+- Severe nausea or vomiting
+- Signs of bleeding (unusual bruising, bleeding from gums, blood in urine or stool)
+
+FOLLOW-UP APPOINTMENTS
+----------------------
+1. Cardiology Follow-up:
+   - Provider: Dr. Michael Park, MD, FACC
+   - Office: Memorial Regional Cardiology Associates
+   - Address: 5678 Medical Plaza, Suite 200, San Mateo, CA 94403
+   - Phone: (650) 555-4567
+   - Appointment Date: April 10, 2024 at 2:00 PM
+   - Appointment ID: APPT-789456123
+
+2. Primary Care Physician:
+   - Provider: Dr. Sarah Chen, MD
+   - Office: Family Medicine Associates
+   - Address: 1234 Health Center Drive, San Mateo, CA 94403
+   - Phone: (650) 555-2345
+   - Appointment Date: April 15, 2024 at 10:00 AM
+   - Appointment ID: APPT-789456124
+
+3. Cardiac Rehabilitation:
+   - Program: Memorial Regional Cardiac Rehabilitation
+   - Address: 5678 Medical Plaza, Suite 100, San Mateo, CA 94403
+   - Phone: (650) 555-5678
+   - Initial Evaluation: April 17, 2024 at 9:00 AM
+   - Program: 12 weeks, 3 times per week
+   - Referral Number: REF-789456123
+
+4. Nutrition Consultation:
+   - Provider: Registered Dietitian - Jennifer Martinez, RD
+   - Office: Memorial Regional Nutrition Services
+   - Address: 5678 Medical Plaza, Suite 150, San Mateo, CA 94403
+   - Phone: (650) 555-6789
+   - Appointment Date: April 12, 2024 at 11:00 AM
+   - Appointment ID: APPT-789456125
+
+PROGNOSIS
+---------
+The patient's prognosis is good with appropriate medical management and lifestyle modifications. The successful primary PCI with stent placement has restored blood flow to the heart. With medication compliance, cardiac rehabilitation, dietary modifications, and lifestyle changes, the patient can expect to recover well and reduce the risk of future cardiac events.
+
+However, this is a serious condition requiring lifelong management. The patient has multi-vessel coronary artery disease, and the other blockages (LAD 70%, LCx 60%) will need to be monitored. Future interventions may be necessary depending on symptoms and follow-up testing.
+
+The patient's left ventricular function (ejection fraction 45%) is moderately reduced but may improve with time and appropriate medical therapy. A repeat echocardiogram will be performed in 3 months to assess for improvement.
+
+EDUCATION PROVIDED
+------------------
+Extensive patient and family education was provided throughout the hospitalization, including:
+- Understanding of heart attack and coronary artery disease
+- Importance of medication compliance (especially dual antiplatelet therapy)
+- Dietary modifications and cardiac diet
+- Exercise recommendations and cardiac rehabilitation
+- Warning signs and symptoms requiring immediate medical attention
+- Lifestyle modifications (stress management, weight loss)
+- Smoking cessation (not applicable, never smoker)
+- When to call 911 vs. when to call the doctor's office
+- Importance of follow-up appointments
+
+Patient and family verbalized understanding of all instructions and agreed to follow-up plan.
+
+SOCIAL WORK CONSULTATION
+-------------------------
+Social work was consulted to assist with:
+- Discharge planning
+- Insurance authorization for cardiac rehabilitation
+- Home health services (not needed, patient independent)
+- Emotional support and counseling resources
+- Work-related concerns and disability paperwork (if needed)
+
+Social Worker: Maria Santos, LCSW
+Contact: (650) 555-3456
+Notes: Patient is well-supported by family. No significant social barriers to care identified. Patient has good insurance coverage. Emotional support provided, patient coping well.
+
+DISCHARGE DISPOSITION
+---------------------
+Discharged to: Home
+Discharge Time: 11:00 AM
+Transportation: Private vehicle (husband)
+Discharge Condition: Stable, improved
+Discharge Status: To home with self-care
+
+PATIENT ACKNOWLEDGMENT
+----------------------
+I acknowledge that I have received and understand the discharge instructions, medications, follow-up appointments, and warning signs. I understand the importance of taking my medications as prescribed and following up with my doctors.
+
+Patient Signature: _________________________
+Date: April 3, 2024
+Time: 11:00 AM
+
+Witness: _________________________
+(Print Name: David Thompson, Husband)
+
+PHYSICIAN SIGNATURE
+-------------------
+Michael Robert Park, MD, FACC
+Cardiology / Internal Medicine
+License: MD-456789123
+NPI: 9876543210
+Date: April 3, 2024
+Time: 11:15 AM
+Electronic Signature: MRP-2024-04-03-11:15:00
+
+REPORT DISTRIBUTION
+-------------------
+- Primary Care Physician: Dr. Sarah Chen, MD (NPI: 1122334455)
+- Cardiology: Dr. Robert Kim, MD, FACC (NPI: 8765432109) - Interventional Cardiologist
+- Cardiac Rehabilitation: Memorial Regional Cardiac Rehabilitation
+- Patient Portal: Secure access provided
+- Insurance: UnitedHealthcare (Policy: UHC-789456123)
+
+CONFIDENTIALITY NOTICE
+----------------------
+This document contains protected health information (PHI) and is subject to the Health Insurance Portability and Accountability Act (HIPAA) regulations. Unauthorized disclosure is prohibited and may result in civil and criminal penalties.
+
+This information is confidential and is intended solely for the use of authorized healthcare providers involved in the patient's care, the patient, and authorized parties. Any unauthorized access, use, or disclosure is strictly prohibited.
+
+END OF REPORT
+-------------
+Report ID: DIS-2024-456789012
+Version: 1.0
+Generated: April 3, 2024 11:20 AM PST
+System: Epic Electronic Health Record
+User: mpark-md (Dr. Michael Park)
+

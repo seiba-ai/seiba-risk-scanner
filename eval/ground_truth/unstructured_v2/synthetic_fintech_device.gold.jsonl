@@ -1,0 +1,9 @@
+{"_meta": {"file": "synthetic_fintech_device.txt", "version": 2, "ontology_set": "bundled", "allowed_entity_ids": ["fin_entity_ontology::crypto_wallet_address", "fin_entity_ontology::iban", "fin_entity_ontology::swift_bic", "pii_entity_ontology::imei_number", "pii_entity_ontology::mac_address", "pii_entity_ontology::uuid_guid", "pii_entity_ontology::vehicle_identification_number_vin"]}}
+{"start": 196, "end": 218, "text": "DE89370400440532013000", "entity_id": "fin_entity_ontology::iban"}
+{"start": 300, "end": 311, "text": "DEUTDEFF500", "entity_id": "fin_entity_ontology::swift_bic"}
+{"start": 515, "end": 557, "text": "0x52908400098527886E0F7030069857D2E4169EE7", "entity_id": "fin_entity_ontology::crypto_wallet_address"}
+{"start": 588, "end": 630, "text": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq", "entity_id": "fin_entity_ontology::crypto_wallet_address"}
+{"start": 772, "end": 789, "text": "00-1A-2B-3C-4D-5E", "entity_id": "pii_entity_ontology::mac_address"}
+{"start": 827, "end": 863, "text": "550e8400-e29b-41d4-a716-446655440000", "entity_id": "pii_entity_ontology::uuid_guid"}
+{"start": 922, "end": 939, "text": "1HGCM82633A004352", "entity_id": "pii_entity_ontology::vehicle_identification_number_vin"}
+{"start": 984, "end": 999, "text": "490154203237518", "entity_id": "pii_entity_ontology::imei_number"}

@@ -1,0 +1,1181 @@
+# PHI (Protected Health Information) Entity Ontology
+# This file defines rules, validators, and classification for PHI entities
+
+# default_action — what to DO with each entity when a policy is applied.
+#   DEFAULT            use whatever the chosen policy profile decides (hipaa_safe_harbor, ...)
+#   keep               leave the value untouched
+#   mask / redact      blank it out            -> [ENTITY]
+#   hash               stable token, still joinable
+#   replace            realistic fake value
+#   format_preserve    fake value keeping the original shape
+#   generalize[:level] coarsen instead of destroy. Only for dates, ages, zip codes and
+#                      coordinates. Levels: date month|year|decade, age 5_year_band|
+#                      10_year_band|20_year_band, zip 3_digit|1_digit, coords 1_decimal|integer
+# Edit these freely — this file is the config.
+
+entities:
+  medical_record_number_mrn:
+    description: "Medical Record Number (MRN)"
+    regex_patterns:
+      accepted_patterns:
+        # Bare patient ID digits — near-zero base, context-gated so only MRN-labelled spans win.
+        - |-
+          \b\d{5,10}\b
+        # Prefixed MRN formats: "MRN: 789456", "MRN-456", "PAT-12345", "BH-MRN-789"
+        # Lookahead (?=[\w-]*\d) ensures the suffix contains at least one digit — blocks
+        # prefix-only spans like "MRN: BH-MRN-" that have no trailing numeric ID.
+        - |-
+          \b(?:MRN|PAT|BH-MRN|PTID)[-:\s]\s*(?=[\w-]*\d)[\w-]{4,12}\b
+        # Research / genomic study subject IDs: "GEN-SUBJ-001", "SUBJ-042", "RES-001"
+        - |-
+          \b(?:GEN|SUBJ|RES|SUB)[-:\s]\s*(?=[\w-]*\d)[\w-]{1,12}\b
+      prohibited_patterns: []
+      # Near-zero base; requires strong MRN-specific context to clear min_fused_confidence.
+      confidence_weight: 0.05
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - mrn
+        - medical record number
+        - medical record
+        - patient id
+        - patient identifier
+        - record number
+        - patient number
+        - chart number
+        - case number
+        - patient
+        - admission
+        - discharge
+        - encounter
+        - visit
+        - chart
+        - subject
+        - subject id
+        - research subject
+        - study subject
+        - participant
+        - participant id
+        - study id
+        - cohort
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values:
+        - ssn
+        - ssn:
+        - social security
+      # Avoid tagging SSN-style labels as MRN.
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  health_plan_beneficiary_number:
+    description: "Health plan beneficiary number"
+    regex_patterns:
+      accepted_patterns:
+        # Prefixed insurance identifiers: INS-456789012, GRP-789, MEM-12345, BEN-XY123
+        - |-
+          \b(?:INS|GRP|MEM|PLN|BEN|HPB)[-]\w{1,15}\b
+        # Major insurer member/policy IDs: UHC-987654321, BCBS-12345, AET-XY789, HUM-001234
+        - |-
+          \b(?:UHC|BCBS|BCB|AET|HUM|CIG|ANT|KSR|MOL|CVH|WLP|SHP)[-]\w{1,15}\b
+      prohibited_patterns: []
+      confidence_weight: 0.70
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - health plan
+        - beneficiary
+        - insurance
+        - policy
+        - member id
+        - health plan beneficiary
+        - beneficiary id
+        - beneficiary number
+        - hpb id
+        - hpb number
+        - medicare beneficiary
+        - beneficiary identifier
+        - plan beneficiary
+        - medicare
+        - medicaid
+        - hpb
+        - unitedhealthcare
+        - uhc
+        - bluecross
+        - blueshield
+        - aetna
+        - humana
+        - cigna
+        - anthem
+        - kaiser
+        - molina
+        - coverage
+        - plan number
+        - policy number
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  # insurance_policy_subscriber_id: (disabled — too broad; re-enable with tighter patterns)
+  #   regex_patterns:
+  #     accepted_patterns:
+  #       # At least one letter (avoids phones, SSN-shaped digits, ISO dates).
+  #       - |-
+  #         \b(?=[A-Za-z0-9_-]{8,15}\b)(?=[A-Za-z0-9_-]*[A-Za-z])[A-Za-z0-9_-]+\b
+  #     prohibited_patterns: []
+  #     confidence_weight: 0.4
+  #   validators:
+  #     enum: VALIDATE_INSURANCE_ID
+  #     confidence_weight: null
+  #   contextual_phrases:
+  #     values:
+  #       - insurance id
+  #       - insurance number
+  #       - policy number
+  #       - member id
+  #       - subscriber id
+  #       - subscriber number
+  #       - group number
+  #       - insurance policy
+  #       - coverage id
+  #       - insurance
+  #       - policy
+  #       - coverage
+  #       - member
+  #       - subscriber
+  #       - beneficiary
+  #     confidence_weight: null
+  #   prohibited_prefix:
+  #     values: []
+  #     confidence_weight: null
+  #   prohibited_suffix:
+  #     values: []
+  #     confidence_weight: null
+  #   classification:
+  #       category: PHI
+  #       sensitivity: High
+  #   de_identifier: null
+
+  claim_control_number:
+    description: "Insurance claim control number"
+    regex_patterns:
+      accepted_patterns:
+        # GEN-STUDY-2024-001, CLM-789, CCN-ABC123, AUTH-2024-XYZ
+        - |-
+          \b(?:GEN-STUDY|CLM|CCN|AUTH|STUDY)[-][\w-]{1,25}\b
+      prohibited_patterns: []
+      confidence_weight: 0.75
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - claim
+        - claim number
+        - claim control
+        - authorization
+        - study
+        - study id
+        - control number
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  authorization_precertification_code:
+    description: "Insurance authorization / pre-certification code"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  icd10_diagnosis_codes:
+    description: "ICD-10 diagnosis code"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-TV-Z][0-9][0-9A-Z](?:\.[0-9A-Z]{1,4})?\b
+      prohibited_patterns: []
+      # Short alnum tokens (e.g. "A1C") match the ICD-10 shape; near-zero base keeps them
+      # below threshold unless diagnosis context is present.
+      confidence_weight: 0.05
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - icd
+        - icd-10
+        - icd10
+        - diagnosis
+        - diagnosis code
+        - diagnosed with
+        - dx
+        - assessment
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: CONDITION
+    default_action: DEFAULT
+
+  cpt_procedure_codes:
+    description: "CPT medical procedure code"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{5}\b
+      prohibited_patterns: []
+      # A bare 5-digit run is not a CPT code without procedure context; near-zero base
+      # keeps unlabelled numbers below threshold while labelled codes are rescued by context.
+      confidence_weight: 0.05
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - cpt
+        - cpt code
+        - procedure code
+        - procedure
+        - hcpcs
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: PROCEDURE
+    default_action: DEFAULT
+
+  hcpcs_codes:
+    description: "HCPCS healthcare procedure/supply code"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: PROCEDURE
+    default_action: DEFAULT
+
+  ndc_codes:
+    description: "National Drug Code (NDC)"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: MEDICATION
+    default_action: DEFAULT
+
+  lab_results:
+    description: "Laboratory test result value"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: LAB_TEST
+    default_action: DEFAULT
+
+  medication_dosage:
+    description: "Medication name and/or dosage"
+    regex_patterns:
+      accepted_patterns:
+        # Standard dose: 500mg, 10mcg, 2.5ml, 1g, 250IU
+        - |-
+          \b\d+(?:\.\d+)?\s*(?:mg|mcg|ml|mL|g|kg|μg|IU|units?|tablet|tablets?|cap|caps|capsule|capsules?)\b
+        # Weight-based: 5mg/kg, 10mcg/day, 2ml/hr
+        - |-
+          \b\d+(?:\.\d+)?\s*(?:mg|mcg|ml|mL|g|μg)\s*/\s*(?:kg|day|hr|hour|dose|min|kg/day)\b
+        # Frequency-dosed: 2x daily, twice daily, 3 times/day
+        - |-
+          (?i)\b(?:\d+\s*(?:x|times?)\s+(?:daily|per\s+day|a\s+day)|(?:once|twice|thrice)\s+(?:daily|a\s+day|per\s+day))\b
+      prohibited_patterns: []
+      confidence_weight: 0.70
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - dose
+        - dosage
+        - medication
+        - drug
+        - prescription
+        - prescribed
+        - administered
+        - mg
+        - mcg
+        - tablet
+        - capsule
+        - oral
+        - iv
+        - infusion
+        - injection
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: null
+    default_action: DEFAULT
+
+  medical_condition:
+    description: "Disease, disorder, or diagnosis name (gazetteer-detected: MONDO/CHV)"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      # Also the structured column key (diagnosis/condition), which boosts bare cells.
+      values:
+        - diagnosis
+        - diagnosed
+        - condition
+        - disease
+        - disorder
+        - history of
+        - presents with
+        - dx
+        - comorbidity
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: CONDITION
+    default_action: DEFAULT
+
+  medication_name:
+    description: "Medication or drug name (gazetteer-detected: RxNorm/CHV)"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - medication
+        - drug
+        - prescribed
+        - prescription
+        - rx
+        - taking
+        - administered
+        - dose
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: MEDICATION
+    default_action: DEFAULT
+
+  vital_signs:
+    description: "Vital sign measurement (BP, HR, temp)"
+    regex_patterns:
+      accepted_patterns:
+        # Blood pressure: 140/90, 120/80 — prohibited_suffix "/" blocks MM/DD/YYYY date overlap
+        - |-
+          \b\d{2,3}\/\d{2,3}\b
+        # Heart rate / pulse: 72 bpm, 110bpm
+        - |-
+          \b\d{2,3}\s*bpm\b
+        # Temperature: 98.6°F, 37.2°C, 38.5 C
+        - |-
+          \b\d{2,3}(?:\.\d)?\s*°?\s*[CF]\b
+        # SpO2 / oxygen saturation: 98%, 95%
+        - |-
+          \b(?:9[0-9]|100)\s*%\s*(?:O2|SpO2|sat|oxygen)?\b
+        # Respiratory rate: 16 breaths/min, 20 br/min
+        - |-
+          \b\d{1,2}\s*(?:breaths?|br)[\s/](?:min|minute)\b
+      prohibited_patterns: []
+      confidence_weight: 0.65
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - blood pressure
+        - bp
+        - systolic
+        - diastolic
+        - mmhg
+        - heart rate
+        - pulse
+        - temperature
+        - temp
+        - oxygen saturation
+        - spo2
+        - o2 sat
+        - respiratory rate
+        - rr
+        - vital signs
+        - vitals
+      confidence_weight: null
+    prohibited_prefix:
+      # Prevents BP pattern \d{2,3}/\d{2,3} from matching card expiry dates like "expires 06/26"
+      values:
+        - expires
+        - exp
+        - expiry
+        - expiration
+        - valid thru
+        - valid through
+        - valid until
+      confidence_weight: null
+    prohibited_suffix:
+      # Blocks "140/90/..." from matching inside a full date like "14/09/2024"
+      values:
+        - /
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: sensitive_attribute
+    de_identifier: null
+    default_action: DEFAULT
+
+  measurement_units:
+    description: "Unit of measurement, e.g. mg, mmHg"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: neutral
+    de_identifier: null
+    default_action: DEFAULT
+
+  physician_names:
+    description: "A physician's or provider's name"
+    # A physician is a person. The clinical context below still does the detecting, but the
+    # span is reported as person_names: whether a name belongs to the treating doctor or to
+    # a patient who happens to hold a doctorate is a judgement call, and getting it wrong
+    # must not decide whether the name is treated as a name at all.
+    is_a: pii_entity_ontology::person_names
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns:
+        # Block credential abbreviations that NER may pick up as names: "LCSW", "LMFT", etc.
+        - |-
+          \b(?:LCSW|LMFT|LMSW|MSW|LPC|APRN|CRNA|CNM|CNA|EMT|NP|PA-C)\b
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - dr
+        - dr.
+        - doctor
+        - rn
+        - md
+        - m.d.
+        - d.o.
+        - nurse
+        - physician
+        - provider
+        - attending
+        - referring physician
+        - prescriber
+        - np
+        - pa
+        - nurse practitioner
+        - physician assistant
+        - surgeon
+        - specialist
+      # High weight so NER PERSON spans near clinical titles get promoted to physician_names via rescue.
+      confidence_weight: 0.80
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: quasi_identifier
+    de_identifier: PERSON
+    default_action: DEFAULT
+
+  hospital_names:
+    description: "Hospital or healthcare facility name"
+    is_a: pii_entity_ontology::organization
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: quasi_identifier
+    de_identifier: ORGANIZATION
+    default_action: DEFAULT
+
+  hospital_abbreviations:
+    description: "Abbreviated hospital/facility name"
+    is_a: pii_entity_ontology::organization
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: quasi_identifier
+    de_identifier: ORGANIZATION
+    default_action: DEFAULT
+
+  provider_npi:
+    description: "National Provider Identifier (NPI)"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{10}\b
+      prohibited_patterns: []
+      # Near-zero base; 10-digit runs are ambiguous, so an NPI needs its checksum
+      # plus provider context to clear min_fused_confidence.
+      confidence_weight: 0.05
+    validators:
+      enum: VALIDATE_NPI
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - npi
+        - national provider identifier
+        - provider id
+        - provider number
+        - rendering provider
+        - billing provider
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  provider_tax_id_ein:
+    description: "Healthcare provider tax ID / EIN"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT
+
+  dates:
+    description: "A calendar date"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{4}-\d{1,2}-\d{1,2}\b
+        - |-
+          \b\d{1,2}/\d{1,2}/\d{2,4}\b
+        - |-
+          \b\d{1,2}-\d{1,2}-\d{2,4}\b
+        - |-
+          (?i)\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}\b
+        - |-
+          (?i)\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.?\s+\d{1,2},?\s+\d{4}\b
+      prohibited_patterns: []
+      confidence_weight: 0.5
+    validators:
+      enum: VALIDATE_DATE
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - date of birth
+        - dob
+        - born
+        - birth date
+        - birthday
+        - age is
+        - aged
+        - born on
+        - born in
+        - date of death
+        - dod
+        - died
+        - deceased
+        - death date
+        - expired
+        - passed away
+        - passed on
+        - death occurred
+        - time of death
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: quasi_identifier
+    de_identifier: DATE
+    default_action: DEFAULT
+
+  # Birth and death dates are stronger identifiers than an arbitrary date (a DOB is one
+  # of the HIPAA Safe Harbor 18; a visit date is not), so they are their own High-severity
+  # entities rather than being folded into dates. Pattern-less: the same digits are just a
+  # date until proximity ("DOB", "deceased") says otherwise, so they are judged by context
+  # and by NER (OpenMed emits a distinct date_of_birth label). High ner weight so the
+  # specific label wins over a generic deterministic dates hit at the same span.
+  date_of_birth:
+    description: "Date of birth"
+    regex_patterns:
+      # Pattern-less on purpose: patterns would collide with dates in the deterministic
+      # slot. The validator below gates the context override to spans that really are
+      # dates, so a name sitting next to "DOB" is not misgrabbed.
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: VALIDATE_DATE
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - date of birth
+        - dob
+        - born
+        - born on
+        - born in
+        - birth date
+        - birthday
+      confidence_weight: 0.8
+      # A date carrying birth context is reclaimed from generic dates even when the dates
+      # hit is confident — the same override uk_nhs_number uses to beat phone/fax.
+      rescue_override: true
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+        ner_confidence_weight: 0.9
+    de_identifier: DATE_OF_BIRTH
+    default_action: DEFAULT
+
+  date_of_death:
+    description: "Date of death"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: VALIDATE_DATE
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - date of death
+        - dod
+        - died
+        - died on
+        - deceased
+        - death date
+        - expired
+        - passed away
+        - passed on
+        - time of death
+        - date of expiration
+      confidence_weight: 0.8
+      rescue_override: true
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+        ner_confidence_weight: 0.9
+    de_identifier: DATE
+    default_action: DEFAULT
+
+  timestamps:
+    description: "A date-time / timestamp"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{10}\b
+        - |-
+          \b\d{13}\b
+      prohibited_patterns: []
+      confidence_weight: 0.5
+    validators:
+      enum: VALIDATE_UNIX_TIMESTAMP
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: quasi_identifier
+    de_identifier: TIME
+    default_action: DEFAULT
+
+  relative_date_expressions:
+    description: "Relative date phrase, e.g. 'last Tuesday'"
+    regex_patterns:
+      accepted_patterns:
+        # Standalone today / yesterday / tomorrow
+        - |-
+          (?i)\btoday\b
+        - |-
+          (?i)\b(?:yesterday|tomorrow)\b
+        # last/next/this + concrete time unit
+        - |-
+          (?i)\b(?:last|next|this|past)\s+(?:week|month|year|quarter|weekend|morning|afternoon|evening|few\s+weeks?|few\s+months?|few\s+days?)\b
+        # N units ago or from now
+        - |-
+          (?i)\b\d+\s+(?:days?|weeks?|months?|years?)\s+(?:ago|from\s+now|earlier|later)\b
+        # Clinical multi-word anchors: "from the lab today", "from the clinic today"
+        - |-
+          (?i)\bfrom\s+(?:the\s+)?\w+\s+today\b
+      prohibited_patterns: []
+      # Low base weight — only fires confidently when clinical context phrases are present
+      confidence_weight: 0.15
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      # High weight so standalone "today/yesterday" only score high in clinical contexts
+      values:
+        - patient
+        - session
+        - treatment
+        - appointment
+        - symptom
+        - onset
+        - diagnosis
+        - discharge
+        - follow-up
+        - followup
+        - therapy
+        - clinical
+        - clinic
+        - presents
+        - visit
+        - came in
+        - lab
+        - results
+        - research
+        - study
+        - participant
+        - sequencing
+        - specimen
+      confidence_weight: 0.80
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: neutral
+    de_identifier: null
+    default_action: DEFAULT
+
+  fingerprints:
+    description: "Fingerprint biometric reference"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: biometric_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  retinal_scans:
+    description: "Retinal scan biometric reference"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: biometric_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  voiceprints:
+    description: "Voiceprint biometric reference"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: biometric_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  facial_photographs:
+    description: "Full-face photograph reference"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: biometric_identifier
+    de_identifier: null
+    default_action: DEFAULT
+
+  dna_sequences:
+    description: "Raw DNA/nucleotide sequence"
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: genetic_data
+    de_identifier: null
+    default_action: DEFAULT
+
+  genomic_variants:
+    description: "Genomic variant notation (rsID, mutation)"
+    regex_patterns:
+      accepted_patterns:
+        # Named genes: BRCA1, BRCA2, APOE, MTHFR, TP53, EGFR, KRAS, BRAF, etc.
+        - |-
+          \b(?:BRCA[12]|APOE|MTHFR|TP53|EGFR|KRAS|BRAF|MLH1|MSH[26]|APC|PTEN|ATM|CHEK2|PALB2|RAD51[CD]?|STK11|CDH1|NBN|NF[12]|VHL|RET|MEN1|MUTYH|SMAD4|BMPR1A|EPCAM)\b
+        # HGVS coding/genomic notation: c.1234A>G, g.456789T>C
+        - |-
+          \b[cgnmr]\.\d+(?:[+-]\d+)?[ACGT]?>[ACGT]\b
+        # HGVS protein notation: p.Arg248Trp, p.Lys711*, p.Val600Glu
+        - |-
+          \bp\.[A-Z][a-z]{2}\d+(?:[A-Z][a-z]{2}|[*?])\b
+        # Variant IDs with allele notation: C677T, rs numbers
+        - |-
+          \b(?:[A-Z]\d+[A-Z]|rs\d{5,})\b
+        # Allele pair notation: E3/E4, E2/E3, A1/A2
+        - |-
+          \b[A-Z][0-9]+\/[A-Z][0-9]+\b
+      prohibited_patterns: []
+      confidence_weight: 0.75
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - variant
+        - mutation
+        - genotype
+        - sequencing
+        - allele
+        - snp
+        - pathogenic
+        - likely pathogenic
+        - benign
+        - vus
+        - variant of uncertain significance
+        - heterozygous
+        - homozygous
+        - gene
+        - genetic
+        - genome
+        - genomic
+        - locus
+        - exome
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: genetic_data
+    de_identifier: null
+    default_action: DEFAULT
+
+  certificate_license_number:
+    description: "Professional certificate or license number"
+    # Pattern-less: license/certificate numbers have no single format, so they are judged
+    # by proximity (the phrases below) and by NER, not regex. NPI, which does have a
+    # checksum, stays its own validated entity (provider_npi).
+    regex_patterns:
+      accepted_patterns: []
+      prohibited_patterns: []
+      confidence_weight: null
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - license
+        - license number
+        - license no
+        - licence
+        - certificate
+        - certification
+        - certified
+        - credential
+        - registration number
+        - board certified
+        - accreditation
+        - permit number
+      confidence_weight: 0.6
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PHI
+        data_class: direct_identifier
+    de_identifier: ID_NUM
+    default_action: DEFAULT

@@ -1,0 +1,25 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      # One PR for routine bumps instead of five; anything that breaks shows up in CI.
+      python-dependencies:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+    ignore:
+      # torch and transformers arrive transitively via openmed[hf]; let OpenMed own those
+      # version constraints rather than fighting it from here.
+      - dependency-name: torch
+      - dependency-name: transformers
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns: ["*"]

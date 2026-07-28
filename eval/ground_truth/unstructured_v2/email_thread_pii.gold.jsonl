@@ -1,0 +1,88 @@
+{"_meta": {"file": "email_thread_pii.txt", "version": 3, "ontology_set": "bundled", "allowed_entity_ids": ["fin_entity_ontology::card_expiry_date", "phi_entity_ontology::date_of_birth", "pii_entity_ontology::dates", "pii_entity_ontology::email_address", "pii_entity_ontology::ip_address", "pii_entity_ontology::phone_number", "pii_entity_ontology::ssn", "pii_entity_ontology::zip_code"]}}
+{"start": 209, "end": 232, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 317, "end": 330, "text": "June 10, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 499, "end": 515, "text": "December 5, 1992", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 612, "end": 623, "text": "456-78-9012", "entity_id": "pii_entity_ontology::ssn"}
+{"start": 672, "end": 699, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 717, "end": 746, "text": "jrodriguez.personal@gmail.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 761, "end": 775, "text": "(415) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 790, "end": 804, "text": "1-415-555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 817, "end": 831, "text": "(650) 555-1234", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 901, "end": 906, "text": "94102", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 1023, "end": 1028, "text": "94103", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 1037, "end": 1050, "text": "February 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1124, "end": 1138, "text": "(415) 555-4568", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1146, "end": 1173, "text": "michael.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 1375, "end": 1380, "text": "94105", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 1388, "end": 1402, "text": "(415) 555-2345", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 1410, "end": 1442, "text": "jrodriguez@financialservices.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 1488, "end": 1519, "text": "dthompson@financialservices.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 1725, "end": 1730, "text": "12/26", "entity_id": "fin_entity_ontology::card_expiry_date"}
+{"start": 1828, "end": 1842, "text": "March 15, 2022", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1855, "end": 1882, "text": "June 9, 2024 at 3:45 PM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 1895, "end": 1907, "text": "192.168.1.45", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 2007, "end": 2034, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 2039, "end": 2062, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 2121, "end": 2146, "text": "June 10, 2024 9:15 AM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 2316, "end": 2328, "text": "June 8, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 2494, "end": 2521, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 2531, "end": 2545, "text": "(415) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 2797, "end": 2811, "text": "(415) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 2891, "end": 2914, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 2919, "end": 2946, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 3033, "end": 3058, "text": "June 10, 2024 9:32 AM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 4727, "end": 4741, "text": "(800) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 4749, "end": 4775, "text": "j.martinez@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 4799, "end": 4826, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 4831, "end": 4854, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 4941, "end": 4967, "text": "June 10, 2024 10:45 AM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 5109, "end": 5122, "text": "June 10, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 5200, "end": 5212, "text": "June 8, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 5339, "end": 5362, "text": "June 8, 2024 at 2:30 PM", "entity_id": "pii_entity_ontology::dates"}
+{"start": 5519, "end": 5546, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 5809, "end": 5825, "text": "December 5, 1992", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 5926, "end": 5931, "text": "94102", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 6315, "end": 6329, "text": "(415) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 6420, "end": 6443, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 6448, "end": 6475, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 6585, "end": 6610, "text": "June 10, 2024 2:15 PM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 6892, "end": 6919, "text": "June 8, 2024 at 2:28 PM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 6986, "end": 6998, "text": "203.0.113.42", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 8696, "end": 8703, "text": "30 days", "entity_id": "pii_entity_ontology::dates"}
+{"start": 8761, "end": 8769, "text": "6 months", "entity_id": "pii_entity_ontology::dates"}
+{"start": 8865, "end": 8892, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 9217, "end": 9231, "text": "(800) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 9477, "end": 9491, "text": "(800) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 9499, "end": 9525, "text": "j.martinez@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 9549, "end": 9576, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 9581, "end": 9604, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 9703, "end": 9728, "text": "June 10, 2024 4:30 PM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10787, "end": 10800, "text": "198.51.100.42", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 10804, "end": 10816, "text": "June 7, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 10999, "end": 11013, "text": "(415) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 11021, "end": 11048, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 11072, "end": 11095, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 11100, "end": 11127, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 11235, "end": 11260, "text": "June 10, 2024 5:45 PM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 11501, "end": 11513, "text": "203.0.113.42", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 11994, "end": 12007, "text": "198.51.100.42", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 12011, "end": 12023, "text": "June 7, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 13513, "end": 13527, "text": "(800) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 13535, "end": 13561, "text": "j.martinez@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 13585, "end": 13612, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 13617, "end": 13640, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 13738, "end": 13763, "text": "June 11, 2024 9:00 AM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 14416, "end": 14439, "text": "support@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 14444, "end": 14471, "text": "jessica.rodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 14574, "end": 14599, "text": "June 11, 2024 9:15 AM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 15160, "end": 15174, "text": "(800) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 15182, "end": 15208, "text": "j.martinez@techsupport.com", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 15654, "end": 15664, "text": "March 2022", "entity_id": "pii_entity_ontology::dates"}
+{"start": 15749, "end": 15762, "text": "June 10, 2024", "entity_id": "pii_entity_ontology::dates"}
+{"start": 16323, "end": 16336, "text": "198.51.100.42", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 16526, "end": 16533, "text": "1 month", "entity_id": "pii_entity_ontology::dates"}
+{"start": 16549, "end": 16555, "text": "30-day", "entity_id": "pii_entity_ontology::dates"}
+{"start": 16568, "end": 16576, "text": "6 months", "entity_id": "pii_entity_ontology::dates"}
+{"start": 17634, "end": 17659, "text": "June 10, 2024 9:15 AM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 17675, "end": 17700, "text": "June 11, 2024 9:15 AM PST", "entity_id": "pii_entity_ontology::dates"}
+{"start": 17773, "end": 17798, "text": "June 11, 2024 9:15 AM PST", "entity_id": "pii_entity_ontology::dates"}

@@ -1,0 +1,9 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/seiba-ai/seiba-risk-scanner/security/advisories/new
+    about: >
+      Please report privately rather than opening a public issue. See SECURITY.md.
+  - name: Question or usage help
+    url: https://github.com/seiba-ai/seiba-risk-scanner/discussions
+    about: Ask about installation, configuration, or how to interpret a report.

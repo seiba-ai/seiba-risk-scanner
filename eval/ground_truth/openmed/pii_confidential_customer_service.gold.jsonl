@@ -1,0 +1,29 @@
+{"_meta": {"file": "pii_confidential_customer_service.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::account_number", "openmed::certificate_license_number", "openmed::city", "openmed::credit_debit_card", "openmed::customer_id", "openmed::cvv", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::first_name", "openmed::ipv4", "openmed::last_name", "openmed::phone_number", "openmed::postcode", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::unique_id"]}}
+{"start": 98, "end": 106, "text": "Jennifer", "entity_id": "openmed::first_name"}
+{"start": 179, "end": 185, "text": "Robert", "entity_id": "openmed::first_name"}
+{"start": 186, "end": 190, "text": "Chen", "entity_id": "openmed::last_name"}
+{"start": 204, "end": 227, "text": "robert.chen@example.com", "entity_id": "openmed::email"}
+{"start": 235, "end": 249, "text": "1-555-987-6543", "entity_id": "openmed::phone_number"}
+{"start": 386, "end": 400, "text": "CUST-789456123", "entity_id": "openmed::customer_id"}
+{"start": 422, "end": 432, "text": "07/22/1978", "entity_id": "openmed::date_of_birth"}
+{"start": 438, "end": 449, "text": "987-65-4321", "entity_id": "openmed::ssn"}
+{"start": 560, "end": 583, "text": "123 Main Street, Apt 4B", "entity_id": "openmed::street_address"}
+{"start": 585, "end": 593, "text": "New York", "entity_id": "openmed::city"}
+{"start": 595, "end": 597, "text": "NY", "entity_id": "openmed::state"}
+{"start": 598, "end": 603, "text": "10001", "entity_id": "openmed::postcode"}
+{"start": 714, "end": 742, "text": "456 Commerce Blvd, Suite 200", "entity_id": "openmed::street_address"}
+{"start": 744, "end": 752, "text": "Brooklyn", "entity_id": "openmed::city"}
+{"start": 754, "end": 756, "text": "NY", "entity_id": "openmed::state"}
+{"start": 757, "end": 762, "text": "11201", "entity_id": "openmed::postcode"}
+{"start": 927, "end": 939, "text": "January 10th", "entity_id": "openmed::date"}
+{"start": 1035, "end": 1048, "text": "ACC-456789012", "entity_id": "openmed::account_number"}
+{"start": 1106, "end": 1110, "text": "2222", "entity_id": "openmed::credit_debit_card"}
+{"start": 1120, "end": 1125, "text": "06/26", "entity_id": "openmed::date"}
+{"start": 1141, "end": 1144, "text": "456", "entity_id": "openmed::cvv"}
+{"start": 1259, "end": 1269, "text": "2024-01-10", "entity_id": "openmed::date"}
+{"start": 1760, "end": 1774, "text": "1-555-987-6543", "entity_id": "openmed::phone_number"}
+{"start": 1791, "end": 1814, "text": "robert.chen@example.com", "entity_id": "openmed::email"}
+{"start": 1919, "end": 1935, "text": "D123-4567-890123", "entity_id": "openmed::certificate_license_number"}
+{"start": 1949, "end": 1960, "text": "US123456789", "entity_id": "openmed::unique_id"}
+{"start": 2328, "end": 2340, "text": "203.0.113.42", "entity_id": "openmed::ipv4"}
+{"start": 3139, "end": 3149, "text": "INV-789456", "entity_id": "openmed::unique_id"}

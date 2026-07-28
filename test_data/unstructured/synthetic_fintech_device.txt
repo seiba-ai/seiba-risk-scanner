@@ -1,0 +1,25 @@
+FinEdge Customer Onboarding Record
+Case opened: 2024-11-02 | Analyst: portfolio ops
+
+Customer completed mobile KYC yesterday evening. Funding instructions
+reference a German correspondent account DE89370400440532013000 (settlement
+memo INV-7782-EU). The receiving institution's SWIFT lookup returned
+DEUTDEFF500 as the active BIC for credit transfers; a stale correspondent
+token CHASUS33XXX was struck from the worksheet.
+
+Digital asset custody is split across two wallets: ethereum holdings
+should be credited to 0x52908400098527886E0F7030069857D2E4169EE7, while
+bitcoin deposits go to bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq.
+Ops noted both addresses were pasted from the customer's PDF and may
+need whitespace normalization.
+
+Hardware profiling captured device MAC 00-1A-2B-3C-4D-5E during the app
+install session (uuid 550e8400-e29b-41d4-a716-446655440000 in the
+telemetry export). Fleet logistics also logged VIN 1HGCM82633A004352 for
+the collateral vehicle and handset IMEI 490154203237518 on the trade-in
+unit. A lab fixture MAC aa:bb:cc:dd:ee:ff and placeholder VIN
+JH4DB7650NS000000 appear in the same export and were manually cleared.
+
+False-positive watchlist items from the same export: batch id BATCH-990012,
+order token ORD-EU-44102, and duplicate IMEI candidate 356938035643809 on
+the staging handset inventory.

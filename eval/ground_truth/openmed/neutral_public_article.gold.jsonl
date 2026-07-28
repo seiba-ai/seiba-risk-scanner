@@ -1,0 +1,2 @@
+{"_meta": {"file": "neutral_public_article.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::url"]}}
+{"start": 1940, "end": 1955, "text": "www.example.com", "entity_id": "openmed::url"}

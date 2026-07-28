@@ -1,0 +1,9 @@
+{"_meta": {"file": "synthetic_fintech_device.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::account_number", "openmed::device_identifier", "openmed::mac_address", "openmed::swift_bic", "openmed::unique_id", "openmed::vehicle_identifier"]}}
+{"start": 196, "end": 218, "text": "DE89370400440532013000", "entity_id": "openmed::account_number"}
+{"start": 300, "end": 311, "text": "DEUTDEFF500", "entity_id": "openmed::swift_bic"}
+{"start": 515, "end": 557, "text": "0x52908400098527886E0F7030069857D2E4169EE7", "entity_id": "openmed::account_number"}
+{"start": 588, "end": 630, "text": "bc1qar0srrr7xfkvy5l643lydnw9re59gtzzwf5mdq", "entity_id": "openmed::account_number"}
+{"start": 772, "end": 789, "text": "00-1A-2B-3C-4D-5E", "entity_id": "openmed::mac_address"}
+{"start": 827, "end": 863, "text": "550e8400-e29b-41d4-a716-446655440000", "entity_id": "openmed::unique_id"}
+{"start": 922, "end": 939, "text": "1HGCM82633A004352", "entity_id": "openmed::vehicle_identifier"}
+{"start": 984, "end": 999, "text": "490154203237518", "entity_id": "openmed::device_identifier"}

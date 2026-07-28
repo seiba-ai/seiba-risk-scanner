@@ -1,0 +1,8 @@
+{"_meta": {"file": "synthetic_provider_admin.txt", "version": 2, "ontology_set": "bundled", "allowed_entity_ids": ["phi_entity_ontology::provider_npi", "pii_entity_ontology::canadian_social_insurance_number_sin", "pii_entity_ontology::county", "pii_entity_ontology::indian_aadhaar_number", "pii_entity_ontology::phone_number", "pii_entity_ontology::us_ein", "pii_entity_ontology::us_itin"]}}
+{"start": 558, "end": 568, "text": "1234567893", "entity_id": "phi_entity_ontology::provider_npi"}
+{"start": 757, "end": 767, "text": "12-3456789", "entity_id": "pii_entity_ontology::us_ein"}
+{"start": 352, "end": 366, "text": "(617) 555-0148", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 852, "end": 868, "text": "Middlesex County", "entity_id": "pii_entity_ontology::county"}
+{"start": 1038, "end": 1049, "text": "912-78-4567", "entity_id": "pii_entity_ontology::us_itin"}
+{"start": 1302, "end": 1316, "text": "3675 9834 6012", "entity_id": "pii_entity_ontology::indian_aadhaar_number"}
+{"start": 1405, "end": 1416, "text": "046 454 286", "entity_id": "pii_entity_ontology::canadian_social_insurance_number_sin"}

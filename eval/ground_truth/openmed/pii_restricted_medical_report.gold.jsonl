@@ -1,0 +1,32 @@
+{"_meta": {"file": "pii_restricted_medical_report.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::city", "openmed::company_name", "openmed::credit_debit_card", "openmed::cvv", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::first_name", "openmed::health_plan_beneficiary_number", "openmed::ipv4", "openmed::last_name", "openmed::medical_record_number", "openmed::phone_number", "openmed::postcode", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::time"], "clinical_label_set": "disease_detection_superclinical", "clinical_allowed_entity_ids": ["openmed::CONDITION", "openmed::DISEASE", "openmed::PATHOLOGY"], "clinical_annotation_notes": "Patient-specific disease/condition/pathology spans for OpenMed disease_detection_superclinical. Family-history-only mentions and negated conditions are excluded."}}
+{"start": 33, "end": 38, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 39, "end": 46, "text": "Johnson", "entity_id": "openmed::last_name"}
+{"start": 165, "end": 169, "text": "8:30", "entity_id": "openmed::time"}
+{"start": 365, "end": 370, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 371, "end": 378, "text": "Johnson", "entity_id": "openmed::last_name"}
+{"start": 385, "end": 395, "text": "03/15/1985", "entity_id": "openmed::date_of_birth"}
+{"start": 404, "end": 415, "text": "123-45-6789", "entity_id": "openmed::ssn"}
+{"start": 426, "end": 441, "text": "1234 Oak Street", "entity_id": "openmed::street_address"}
+{"start": 445, "end": 456, "text": "Springfield", "entity_id": "openmed::city"}
+{"start": 458, "end": 460, "text": "IL", "entity_id": "openmed::state"}
+{"start": 461, "end": 466, "text": "62701", "entity_id": "openmed::postcode"}
+{"start": 481, "end": 504, "text": "sarah.johnson@email.com", "entity_id": "openmed::email"}
+{"start": 525, "end": 539, "text": "(555) 123-4567", "entity_id": "openmed::phone_number"}
+{"start": 563, "end": 576, "text": "MRN-987654321", "entity_id": "openmed::medical_record_number"}
+{"start": 606, "end": 613, "text": "Michael", "entity_id": "openmed::first_name"}
+{"start": 614, "end": 621, "text": "Johnson", "entity_id": "openmed::last_name"}
+{"start": 629, "end": 643, "text": "(555) 123-4568", "entity_id": "openmed::phone_number"}
+{"start": 651, "end": 670, "text": "michael.j@email.com", "entity_id": "openmed::email"}
+{"start": 846, "end": 866, "text": "BlueCross BlueShield", "entity_id": "openmed::company_name"}
+{"start": 882, "end": 895, "text": "INS-456789012", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 903, "end": 910, "text": "GRP-789", "entity_id": "openmed::health_plan_beneficiary_number"}
+{"start": 1569, "end": 1588, "text": "4532-1234-5678-9010", "entity_id": "openmed::credit_debit_card"}
+{"start": 1598, "end": 1603, "text": "12/25", "entity_id": "openmed::date"}
+{"start": 1609, "end": 1612, "text": "123", "entity_id": "openmed::cvv"}
+{"start": 1709, "end": 1722, "text": "192.168.1.100", "entity_id": "openmed::ipv4"}
+{"start": 1726, "end": 1736, "text": "2024-01-15", "entity_id": "openmed::date"}
+{"start": 1740, "end": 1748, "text": "14:30:00", "entity_id": "openmed::time"}
+{"start": 2207, "end": 2220, "text": "February 15th", "entity_id": "openmed::date"}
+{"start": 111, "end": 120, "text": "headaches", "entity_id": "openmed::CONDITION"}
+{"start": 1021, "end": 1030, "text": "headaches", "entity_id": "openmed::CONDITION"}
+{"start": 1210, "end": 1222, "text": "hypertension", "entity_id": "openmed::DISEASE"}

@@ -1,0 +1,81 @@
+name: Bug report
+description: Something detected wrongly, scored wrongly, or crashed
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste real PII or PHI into a public issue.** Replace any sensitive value
+        with realistic fake data that reproduces the same behaviour — if it only
+        reproduces with real data, say so and we will arrange a private channel.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did the scanner do, and what did you expect instead?
+      placeholder: |
+        `Austin` in a `city` column was reported as person_names, expected city.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: The smallest snippet that shows the problem. Use fake data.
+      render: python
+      placeholder: |
+        from seiba_risk_scanner import SeibaScanner
+        r = SeibaScanner().classify_text("Patient Jane Doe, MRN 789456")
+        print([(d.entity_id, d.text, d.confidence) for d in r.detections])
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part
+      options:
+        - Detection (wrong entity, missed span, false positive)
+        - Severity / exposure scoring
+        - Policy / de-identification
+        - Report output
+        - Packaging / installation
+        - Evaluation harness
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: "`pip show seiba-risk-scanner`, or the commit SHA"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Python and OS
+      placeholder: "Python 3.12, macOS 14 / Ubuntu 22.04"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: backend
+    attributes:
+      label: NER backend
+      options: ["openmed (default)", "spacy", "custom / bring-your-own", "skip_ner=True"]
+    validations:
+      required: true
+
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Finding provenance (very helpful for detection bugs)
+      description: >
+        Every finding records which stage won and each source's confidence. Paste
+        `winner_kind`, `confidence_deterministic`, `confidence_ner`,
+        `confidence_contextual` and `rescue_applied` for the span in question.
+      render: text

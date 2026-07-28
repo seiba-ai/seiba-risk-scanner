@@ -1,0 +1,6 @@
+{"_meta": {"file": "internal_public_company_memo.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::date", "openmed::email"]}}
+{"start": 56, "end": 72, "text": "January 20, 2024", "entity_id": "openmed::date"}
+{"start": 426, "end": 438, "text": "February 1st", "entity_id": "openmed::date"}
+{"start": 468, "end": 481, "text": "February 15th", "entity_id": "openmed::date"}
+{"start": 531, "end": 540, "text": "March 1st", "entity_id": "openmed::date"}
+{"start": 1484, "end": 1498, "text": "hr@company.com", "entity_id": "openmed::email"}

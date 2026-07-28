@@ -1,0 +1,437 @@
+CLINICAL RESEARCH STUDY - PARTICIPANT RECORD
+=============================================
+CONFIDENTIAL - PROTECTED HEALTH INFORMATION (PHI)
+HIPAA COMPLIANT - RESEARCH PROTOCOL
+
+Study Title: "Efficacy and Safety of Novel Antihypertensive Medication in Patients with Resistant Hypertension: A Randomized, Double-Blind, Placebo-Controlled Phase III Clinical Trial"
+
+Protocol Number: PROTO-2024-HTN-456
+IRB Approval Number: IRB-789456123
+FDA IND Number: IND-123456
+Sponsor: PharmaResearch Corporation
+Principal Investigator: Dr. Sarah Elizabeth Mitchell, MD, PhD, FACP
+Co-Investigator: Dr. Robert James Kim, MD, FACC
+Study Coordinator: Jennifer Martinez, RN, BSN, CCRC
+
+Institution: University Medical Center Research Institute
+Address: 1234 Research Boulevard, Building A, Suite 500, San Francisco, CA 94102
+Phone: (415) 555-7890
+Fax: (415) 555-7891
+Email: research@umc.edu
+IRB Office: (415) 555-7892
+IRB Email: irb@umc.edu
+
+PARTICIPANT INFORMATION
+------------------------
+Study Participant ID: SUBJ-2024-456789
+Screening Number: SCR-789456
+Randomization Number: RAND-456789
+Treatment Arm: Active Drug (Group A)
+Blinding Status: Double-Blind (Participant and Investigator)
+
+Full Legal Name: Daniel Patrick O'Brien
+Date of Birth: April 12, 1978
+Age: 46 years
+Gender: Male
+Race/Ethnicity: Caucasian, Non-Hispanic
+Social Security Number: 890-12-3456
+Medical Record Number: MRN-789456123
+Hospital Account Number: ACCT-456789012
+
+CONTACT INFORMATION
+-------------------
+Primary Address:
+7890 Research Park Drive, Apartment 8B
+San Francisco, CA 94102
+
+Mailing Address (if different):
+Same as primary address
+
+Phone Numbers:
+Home Phone: (415) 555-7890
+Mobile Phone: 1-415-555-1234
+Work Phone: (415) 555-5678
+Emergency Contact Phone: (415) 555-9012
+
+Email Addresses:
+Personal: daniel.obrien@email.com
+Work: dobrien@corporation.com
+Alternate: dpobrien@protonmail.com
+
+Emergency Contact:
+Primary:
+Name: Patricia O'Brien
+Relationship: Spouse
+Phone: (415) 555-9012
+Address: Same as participant address
+Email: patricia.obrien@email.com
+
+Secondary:
+Name: Michael O'Brien
+Relationship: Brother
+Phone: (650) 555-3456
+Address: 1234 Family Lane, Palo Alto, CA 94301
+Email: michael.obrien@email.com
+
+MEDICAL HISTORY
+---------------
+Primary Diagnosis: Resistant Hypertension
+Diagnosis Date: January 15, 2023
+Diagnosing Physician: Dr. Sarah Mitchell, MD, PhD
+Physician NPI: 1234567890
+
+Past Medical History:
+- Hypertension: Diagnosed 2015, poorly controlled despite multiple medications
+- Hyperlipidemia: Diagnosed 2016, on statin therapy
+- Type 2 Diabetes Mellitus: Diagnosed 2018, well-controlled with metformin
+- Obesity: Body Mass Index 31.2 kg/m²
+- Obstructive Sleep Apnea: Diagnosed 2020, using CPAP machine
+- Chronic Kidney Disease, Stage 2: Diagnosed 2021, eGFR 68 mL/min/1.73m²
+- No history of coronary artery disease
+- No history of stroke or transient ischemic attack
+- No history of heart failure
+- No history of cancer
+- No history of psychiatric conditions
+
+Surgical History:
+- Appendectomy: 1995 (age 17)
+- Wisdom teeth extraction: 2000 (age 22)
+- No other surgeries
+
+Family History:
+- Father: Patrick O'Brien, age 72, alive, history of hypertension, coronary artery disease (MI at age 58), type 2 diabetes
+- Mother: Margaret O'Brien, age 70, alive, history of hypertension, hyperlipidemia, breast cancer (age 65, in remission)
+- Paternal Grandfather: Died at age 68 from myocardial infarction
+- Paternal Grandmother: Died at age 75 from complications of diabetes
+- Maternal Grandfather: Died at age 80 from stroke
+- Maternal Grandmother: Died at age 85 from natural causes
+- Brother: Michael O'Brien, age 44, alive, history of hypertension
+
+Social History:
+- Tobacco: Former smoker, quit 2010. Smoked 1 pack per day for 12 years (1998-2010). Total pack-years: 12.
+- Alcohol: Social drinker, 2-3 drinks per week, typically beer or wine
+- Recreational Drugs: Denies current or past use
+- Exercise: Sedentary lifestyle, minimal physical activity
+- Diet: Admits to poor dietary habits, high sodium intake, frequent fast food
+- Occupation: Software Engineer at TechCorp Inc., 4567 Tech Drive, San Francisco, CA 94105. Employee ID: EMP-789456123. High-stress position.
+
+CURRENT MEDICATIONS (PRE-STUDY)
+--------------------------------
+1. Lisinopril 20mg, one tablet by mouth twice daily (ACE inhibitor)
+2. Amlodipine 10mg, one tablet by mouth daily (calcium channel blocker)
+3. Hydrochlorothiazide 25mg, one tablet by mouth daily (diuretic)
+4. Metoprolol 50mg, one tablet by mouth twice daily (beta-blocker)
+5. Spironolactone 25mg, one tablet by mouth daily (aldosterone antagonist)
+6. Atorvastatin 40mg, one tablet by mouth daily (for hyperlipidemia)
+7. Metformin 1000mg, one tablet by mouth twice daily (for diabetes)
+8. Aspirin 81mg, one tablet by mouth daily
+9. No known drug allergies
+
+STUDY ELIGIBILITY CRITERIA
+---------------------------
+Inclusion Criteria (All Met):
+✓ Age 18-75 years (Participant is 46 years)
+✓ Diagnosis of resistant hypertension (blood pressure ≥140/90 mmHg despite 3 or more antihypertensive medications)
+✓ Currently taking at least 3 antihypertensive medications at maximally tolerated doses
+✓ Willing and able to provide informed consent
+✓ Willing to comply with study procedures and follow-up visits
+✓ Women of childbearing potential must use effective contraception (N/A - male participant)
+
+Exclusion Criteria (None Met):
+✗ Pregnancy or breastfeeding (N/A - male)
+✗ Severe renal impairment (eGFR <30 mL/min/1.73m²) - Participant's eGFR is 68
+✗ Severe hepatic impairment
+✗ History of angioedema
+✗ Known hypersensitivity to study medication or components
+✗ Participation in another clinical trial within 30 days
+✗ Uncontrolled diabetes (HbA1c >10%) - Participant's HbA1c is 7.2%
+✗ History of myocardial infarction or stroke within 6 months
+✗ Heart failure (NYHA Class III or IV)
+✗ Life expectancy <12 months
+
+Eligibility Status: ELIGIBLE - Enrolled
+
+INFORMED CONSENT
+----------------
+Consent Date: March 1, 2024
+Consent Time: 2:30 PM
+Consent Obtained By: Jennifer Martinez, RN, BSN, CCRC (Study Coordinator)
+Witness: Maria Santos, RN (Research Nurse)
+
+Consent Process:
+- Participant was provided with written informed consent document (Version 3.0, dated February 15, 2024)
+- Consent document was reviewed in detail with participant
+- All questions were answered to participant's satisfaction
+- Participant was given adequate time to review and consider participation
+- Participant was informed of right to withdraw at any time
+- Participant was informed of risks, benefits, and alternatives
+- Participant was informed that participation is voluntary
+- Participant signed and dated consent form
+- Witness signed and dated consent form
+- Copy of signed consent provided to participant
+
+Consent Document Location: Secure research file, IRB-approved version on file.
+
+STUDY PROCEDURES AND TIMELINE
+------------------------------
+Screening Visit (Visit 1) - March 1, 2024:
+- Informed consent obtained
+- Medical history reviewed
+- Physical examination performed
+- Vital signs measured (BP: 158/102 mmHg, HR: 82 bpm)
+- Laboratory tests: Complete blood count, comprehensive metabolic panel, lipid panel, liver function tests, HbA1c, urinalysis, pregnancy test (N/A - male)
+- Electrocardiogram (ECG) performed - Normal sinus rhythm, no acute changes
+- Eligibility confirmed
+- Randomization performed (Treatment Arm: Active Drug, Group A)
+- Study medication dispensed (Week 1 supply)
+- Next visit scheduled
+
+Baseline Visit (Visit 2) - March 8, 2024:
+- Vital signs: BP 156/100 mmHg, HR 80 bpm
+- Review of adverse events (none reported)
+- Medication compliance check (100% compliant)
+- Study medication dispensed (Week 2 supply)
+
+Week 4 Visit (Visit 3) - March 29, 2024:
+- Vital signs: BP 148/96 mmHg, HR 78 bpm
+- Review of adverse events (mild headache reported, resolved with over-the-counter medication)
+- Medication compliance check (100% compliant)
+- Laboratory tests: Comprehensive metabolic panel, liver function tests
+- Study medication dispensed (Week 3-4 supply)
+
+Week 8 Visit (Visit 4) - April 26, 2024:
+- Vital signs: BP 142/92 mmHg, HR 76 bpm
+- Review of adverse events (none reported)
+- Medication compliance check (98% compliant - missed 1 dose)
+- Study medication dispensed (Week 5-8 supply)
+
+Week 12 Visit (Visit 5) - May 24, 2024:
+- Vital signs: BP 138/88 mmHg, HR 74 bpm
+- Review of adverse events (none reported)
+- Medication compliance check (100% compliant)
+- Laboratory tests: Complete blood count, comprehensive metabolic panel, lipid panel, liver function tests, HbA1c
+- Electrocardiogram (ECG) performed - Normal sinus rhythm, no changes from baseline
+- Study medication dispensed (Week 9-12 supply)
+
+Week 16 Visit (Visit 6) - June 21, 2024:
+- Vital signs: BP 136/86 mmHg, HR 72 bpm
+- Review of adverse events (none reported)
+- Medication compliance check (100% compliant)
+- Study medication dispensed (Week 13-16 supply)
+
+Week 20 Visit (Visit 7) - July 19, 2024:
+- Vital signs: BP 134/84 mmHg, HR 70 bpm
+- Review of adverse events (mild dizziness reported on 2 occasions, resolved spontaneously)
+- Medication compliance check (100% compliant)
+- Laboratory tests: Comprehensive metabolic panel, liver function tests
+- Study medication dispensed (Week 17-20 supply)
+
+Week 24 Visit (Visit 8) - August 16, 2024 (FINAL VISIT):
+- Vital signs: BP 132/82 mmHg, HR 70 bpm
+- Review of adverse events (none reported)
+- Medication compliance check (100% compliant)
+- Final laboratory tests: Complete blood count, comprehensive metabolic panel, lipid panel, liver function tests, HbA1c, urinalysis
+- Final electrocardiogram (ECG) - Normal sinus rhythm, no changes from baseline
+- End of study procedures completed
+- Study medication returned (unused medication counted and documented)
+
+STUDY MEDICATION
+----------------
+Study Drug: HTN-2024 (Active) or Placebo
+Dosage: 10mg once daily by mouth
+Dosage Form: Tablet
+Route of Administration: Oral
+Dispensing: Weekly for first 2 weeks, then monthly
+Compliance Monitoring: Pill count and participant diary
+
+Medication Compliance:
+- Visit 2: 100% (14/14 doses taken)
+- Visit 3: 100% (28/28 doses taken)
+- Visit 4: 98% (55/56 doses taken - 1 missed dose documented)
+- Visit 5: 100% (84/84 doses taken)
+- Visit 6: 100% (112/112 doses taken)
+- Visit 7: 100% (140/140 doses taken)
+- Visit 8: 100% (168/168 doses taken)
+- Overall Compliance: 99.7% (601/602 doses taken)
+
+LABORATORY RESULTS
+-------------------
+Baseline (March 1, 2024):
+- Hemoglobin: 14.5 g/dL
+- Hematocrit: 43.2%
+- White Blood Cell Count: 7,800/μL
+- Platelet Count: 245,000/μL
+- Sodium: 140 mEq/L
+- Potassium: 4.3 mEq/L
+- Creatinine: 1.1 mg/dL
+- eGFR: 68 mL/min/1.73m²
+- Total Cholesterol: 195 mg/dL
+- LDL: 125 mg/dL
+- HDL: 48 mg/dL
+- Triglycerides: 110 mg/dL
+- HbA1c: 7.2%
+- ALT: 32 U/L
+- AST: 28 U/L
+
+Week 12 (May 24, 2024):
+- Hemoglobin: 14.3 g/dL
+- Hematocrit: 42.8%
+- White Blood Cell Count: 7,600/μL
+- Platelet Count: 248,000/μL
+- Sodium: 139 mEq/L
+- Potassium: 4.2 mEq/L
+- Creatinine: 1.0 mg/dL
+- eGFR: 70 mL/min/1.73m²
+- Total Cholesterol: 185 mg/dL
+- LDL: 115 mg/dL
+- HDL: 50 mg/dL
+- Triglycerides: 100 mg/dL
+- HbA1c: 7.0%
+- ALT: 30 U/L
+- AST: 26 U/L
+
+Week 24 (August 16, 2024):
+- Hemoglobin: 14.4 g/dL
+- Hematocrit: 43.0%
+- White Blood Cell Count: 7,700/μL
+- Platelet Count: 250,000/μL
+- Sodium: 140 mEq/L
+- Potassium: 4.1 mEq/L
+- Creatinine: 1.0 mg/dL
+- eGFR: 70 mL/min/1.73m²
+- Total Cholesterol: 180 mg/dL
+- LDL: 110 mg/dL
+- HDL: 52 mg/dL
+- Triglycerides: 90 mg/dL
+- HbA1c: 6.9%
+- ALT: 29 U/L
+- AST: 25 U/L
+
+ADVERSE EVENTS
+--------------
+Adverse Event 1:
+- Date: March 15, 2024
+- Description: Mild headache
+- Severity: Mild
+- Relationship to Study Drug: Possibly related
+- Action Taken: Over-the-counter ibuprofen, resolved within 24 hours
+- Outcome: Resolved
+- Serious: No
+
+Adverse Event 2:
+- Date: July 10, 2024 and July 15, 2024
+- Description: Mild dizziness (2 episodes)
+- Severity: Mild
+- Relationship to Study Drug: Possibly related
+- Action Taken: None required, resolved spontaneously
+- Outcome: Resolved
+- Serious: No
+
+Serious Adverse Events: None
+
+EFFICACY RESULTS
+----------------
+Blood Pressure Measurements:
+Baseline (March 1, 2024): 158/102 mmHg
+Week 4 (March 29, 2024): 148/96 mmHg (Change: -10/-6 mmHg)
+Week 8 (April 26, 2024): 142/92 mmHg (Change: -16/-10 mmHg)
+Week 12 (May 24, 2024): 138/88 mmHg (Change: -20/-14 mmHg)
+Week 16 (June 21, 2024): 136/86 mmHg (Change: -22/-16 mmHg)
+Week 20 (July 19, 2024): 134/84 mmHg (Change: -24/-18 mmHg)
+Week 24 (August 16, 2024): 132/82 mmHg (Change: -26/-20 mmHg)
+
+Blood Pressure Goal Achievement:
+- Target: <140/90 mmHg
+- Achieved at Week 12: Yes (138/88 mmHg)
+- Maintained through Week 24: Yes (132/82 mmHg)
+
+STUDY COMPLETION
+----------------
+Completion Status: COMPLETED
+Completion Date: August 16, 2024
+Reason for Completion: Completed all study visits per protocol
+Early Termination: No
+Protocol Deviations: None
+Major Protocol Violations: None
+
+STUDY COMPENSATION
+------------------
+Total Compensation: $1,200
+Payment Schedule:
+- Visit 1 (Screening): $50
+- Visit 2 (Baseline): $100
+- Visit 3 (Week 4): $150
+- Visit 4 (Week 8): $150
+- Visit 5 (Week 12): $200
+- Visit 6 (Week 16): $150
+- Visit 7 (Week 20): $200
+- Visit 8 (Week 24/Final): $200
+
+Payment Method: Check mailed to participant's address
+Tax Reporting: Form 1099 will be issued for tax year 2024
+
+FOLLOW-UP CARE
+--------------
+Post-Study Care:
+- Participant will continue care with primary care physician: Dr. Sarah Mitchell, MD, PhD
+- Study results will be shared with participant's primary care physician
+- Participant will be informed of study results when available
+- If study drug is found to be effective, participant may be eligible for open-label extension study
+- Participant's blood pressure will continue to be monitored by primary care physician
+
+Open-Label Extension Study:
+- Protocol Number: PROTO-2024-HTN-456-EXT
+- Eligibility: Participants who completed main study and achieved blood pressure goal
+- Status: Participant eligible, invitation to be sent
+
+CONFIDENTIALITY AND DATA PROTECTION
+------------------------------------
+All participant information is protected under HIPAA regulations and research privacy laws. Participant data is de-identified for analysis and reporting. Participant's identity will not be disclosed in any publications or presentations.
+
+Data Storage:
+- Electronic data: Secure, encrypted database with access controls
+- Paper records: Locked filing cabinet in secure research office
+- Data retention: Per IRB requirements and federal regulations
+- Data sharing: De-identified data may be shared with sponsor and regulatory authorities
+
+Participant Rights:
+- Right to access own research records
+- Right to request correction of information
+- Right to withdraw from study at any time
+- Right to privacy and confidentiality
+- Right to be informed of study results
+
+INVESTIGATOR SIGNATURE
+----------------------
+Sarah Elizabeth Mitchell, MD, PhD, FACP
+Principal Investigator
+License: MD-789456123
+NPI: 1234567890
+Date: August 16, 2024
+
+STUDY COORDINATOR SIGNATURE
+---------------------------
+Jennifer Martinez, RN, BSN, CCRC
+Study Coordinator
+License: RN-456789
+Date: August 16, 2024
+
+CONFIDENTIALITY NOTICE
+----------------------
+This document contains protected health information (PHI) and is subject to HIPAA regulations. This information is confidential and is intended solely for authorized research personnel, the IRB, regulatory authorities, and the participant. Unauthorized disclosure is prohibited.
+
+This research record is maintained in compliance with:
+- Health Insurance Portability and Accountability Act (HIPAA)
+- Food and Drug Administration (FDA) regulations
+- International Conference on Harmonisation (ICH) Good Clinical Practice (GCP) guidelines
+- Institutional Review Board (IRB) requirements
+
+END OF RECORD
+-------------
+Record ID: RES-2024-456789
+Version: 1.0
+Last Updated: August 16, 2024
+Updated By: Jennifer Martinez, RN, BSN, CCRC
+File Location: Secure Research Database
+Access Level: Confidential - Protected Health Information
+

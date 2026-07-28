@@ -1,0 +1,194 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1"   # Monday 06:00 UTC — catches upstream (openmed/torch) drift
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+  # The eval harness and tests import the OpenMed PII model; keeping the cache in the
+  # workspace lets actions/cache pick it up.
+  HF_HOME: ${{ github.workspace }}/.hf-cache
+  PYTHON_DEFAULT: "3.12"
+
+jobs:
+  # ---------------------------------------------------------------- lint
+  # No heavy dependencies, so this is the fast signal on every push.
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff==0.15.20
+
+      # Enforced today: the rules that catch defects (pyflakes + pycodestyle errors).
+      # The full ruleset in pyproject.toml (UP, I) is the target, not yet the gate —
+      # see the `style` job below.
+      - name: Ruff — correctness rules (blocking)
+        run: ruff check --select E9,F --output-format=github .
+
+      - name: Ruff — full ruleset (advisory)
+        continue-on-error: true
+        run: ruff check --output-format=github .
+
+      - name: Ruff format (advisory)
+        continue-on-error: true
+        run: ruff format --check --diff .
+
+  # ---------------------------------------------------------------- types
+  typecheck:
+    name: Type check (advisory)
+    runs-on: ubuntu-latest
+    # TODO(ci): make this blocking once mypy runs clean. It currently aborts inside
+    # numpy's stubs because pyproject pins python_version = "3.10" while CI runs 3.12.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: mypy
+
+  # ---------------------------------------------------------------- fast tests
+  test:
+    name: Tests (fast) — py${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Every PR runs one version; main and the weekly run fan out to the full range.
+        python: ${{ github.event_name == 'pull_request' && fromJSON('["3.12"]') || fromJSON('["3.10","3.11","3.12"]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      # The OpenMed PII model is ~550 MB. Without this every job re-downloads it.
+      - name: Cache HuggingFace models
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.HF_HOME }}
+          key: hf-${{ runner.os }}-openmed-pii-superclinical-small-44m-v1
+          restore-keys: hf-${{ runner.os }}-
+
+      - run: pip install -e ".[dev]"
+
+      - name: Run fast tests
+        run: pytest -m "not slow" -q --durations=10
+
+  # ---------------------------------------------------------------- eval gates
+  # Split out because these four tests are ~88% of total suite runtime. Keeping them
+  # in their own job means a broken unit test surfaces in ~2 min, not ~7.
+  eval:
+    name: Eval regression gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Cache HuggingFace models
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.HF_HOME }}
+          key: hf-${{ runner.os }}-openmed-pii-superclinical-small-44m-v1
+          restore-keys: hf-${{ runner.os }}-
+      - run: pip install -e ".[dev]"
+
+      - name: Quality gates vs checked-in baselines
+        run: pytest -m slow -q --durations=10
+
+  # ---------------------------------------------------------------- package
+  # Guards two things that only a real build can catch: that the project builds at all,
+  # and that the medical gazetteer artifact ships. Without the artifact the scanner
+  # silently degrades to an empty dictionary instead of failing.
+  build:
+    name: Build & verify package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build twine
+
+      - name: Build wheel + sdist
+        run: python -m build
+
+      - name: Validate metadata
+        run: twine check dist/*
+
+      - name: Assert the gazetteer artifact is in the wheel
+        run: |
+          python - <<'PY'
+          import glob, sys, zipfile
+          target = "med_ontology_sources/cleaned/medical_terms_gazetteer.json"
+          wheel = glob.glob("dist/*.whl")[0]
+          names = zipfile.ZipFile(wheel).namelist()
+          hit = [n for n in names if n.endswith(target)]
+          if not hit:
+              sys.exit(f"FAIL: {target} missing from {wheel} — detection would silently degrade")
+          print(f"OK: {hit[0]}")
+          PY
+
+      - name: Assert raw vocabulary dumps are NOT shipped
+        run: |
+          python - <<'PY'
+          import glob, sys, zipfile, tarfile
+          forbidden = ("RXNCONSO.RRF", "MONDO.csv", "CHV_concepts_terms_flatfile")
+          bad = []
+          for whl in glob.glob("dist/*.whl"):
+              bad += [n for n in zipfile.ZipFile(whl).namelist() if any(f in n for f in forbidden)]
+          for sd in glob.glob("dist/*.tar.gz"):
+              bad += [n for n in tarfile.open(sd).getnames() if any(f in n for f in forbidden)]
+          if bad:
+              sys.exit(f"FAIL: raw vocabulary dumps must not be redistributed (see NOTICE): {bad}")
+          print("OK: no raw vocabulary dumps in dist")
+          PY
+
+      - name: Install the wheel in a clean environment and import it
+        run: |
+          python -m venv /tmp/smoke
+          /tmp/smoke/bin/pip install --quiet dist/*.whl
+          /tmp/smoke/bin/python - <<'PY'
+          from seiba_risk_scanner import SeibaScanner, load_entity_configs
+          from seiba_risk_scanner.classification_engine.ontologies.gazetteer import (
+              get_default_index,
+          )
+          configs = load_entity_configs()
+          index = get_default_index()
+          print(f"entities: {len(configs)}  gazetteer terms: {len(index._terms)}")
+          assert configs, "ontologies did not load from the installed wheel"
+          assert len(index._terms) > 0, "gazetteer is empty in the installed wheel"
+
+          # Deterministic-only: no model download, so this stays fast and offline.
+          result = SeibaScanner(skip_ner=True).classify_text(
+              "Contact jane@example.com or 555-123-4567."
+          )
+          found = {r.entity for r in result.detections}
+          print("detected:", sorted(found))
+          assert "email_address" in found, f"smoke scan found only {found}"
+          print("OK: installed wheel scans")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 14

@@ -1,0 +1,397 @@
+# Financial Entity Ontology
+# This file defines rules, validators, and classification for financial entities
+
+# default_action — what to DO with each entity when a policy is applied.
+#   DEFAULT            use whatever the chosen policy profile decides (hipaa_safe_harbor, ...)
+#   keep               leave the value untouched
+#   mask / redact      blank it out            -> [ENTITY]
+#   hash               stable token, still joinable
+#   replace            realistic fake value
+#   format_preserve    fake value keeping the original shape
+#   generalize[:level] coarsen instead of destroy. Only for dates, ages, zip codes and
+#                      coordinates. Levels: date month|year|decade, age 5_year_band|
+#                      10_year_band|20_year_band, zip 3_digit|1_digit, coords 1_decimal|integer
+# Edit these freely — this file is the config.
+
+entities:
+  credit_card_number:
+    description: "Credit/debit card number (PAN)"
+    regex_patterns:
+      accepted_patterns:
+        # Literal block scalars (|-): regex metacharacters use a single backslash.
+        - |-
+          (?<!\d)(?:\d[ -]*?){13,19}(?!\d)
+        - |-
+          \b(?:(?:\d|X|x|\*|#)[ -]*?){13,19}\b
+        # Last-4 digits pattern: "card ending in 2222", "ending in 1234"
+        # Near-zero base so it ONLY fires when strong contextual phrase is present.
+        - |-
+          (?i)(?:card\s+ending\s+in|ending\s+in|last\s+(?:4|four)\s+digits?)\s+(\d{4})\b
+      prohibited_patterns: []
+      confidence_weight: 0.9
+    validators:
+      enum: VALIDATE_LUHN_CHECKSUM
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - credit card
+        - card number
+        - cc#
+        - visa
+        - mastercard
+        - amex
+        - discover
+        - card ending in
+        - ending in
+        - last 4 digits
+        - last four digits
+      confidence_weight: null
+    prohibited_prefix:
+      values:
+        - cvv
+        - cvv:
+        - cvc
+        - cvc:
+      # A number following cvv/cvc is the CVV, not the card number.
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: CREDIT_CARD
+    default_action: DEFAULT
+
+  cvv_code:
+    description: "Card verification value (CVV)"
+    regex_patterns:
+      accepted_patterns:
+        # Negative lookarounds prevent matching inside PAN groups (4111-1111), SSN segments,
+        # IP octets, and other longer digit runs. Base confidence is deliberately near-zero
+        # so only context-backed spans clear min_fused_confidence.
+        - |-
+          (?<!\d)(?<!-)\b\d{3,4}\b(?!\d)(?!-)
+      prohibited_patterns: []
+      confidence_weight: 0.05
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - cvv
+        - cvc
+        - security code
+        - card code
+        - verification code
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: CVV
+    default_action: DEFAULT
+
+  card_expiry_date:
+    description: "Payment card expiry date"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b(0[1-9]|1[0-2])\/\d{2}\b
+      prohibited_patterns: []
+      # Raised from 0.55 — needs to beat NER-dates (0.65+) when context confirms expiry
+      confidence_weight: 0.72
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - expiry
+        - expires
+        - valid thru
+        - valid through
+        - exp date
+        - expiration
+        - exp
+        - ending in
+        - card ending
+        - valid until
+        - good thru
+      confidence_weight: 0.80
+    prohibited_prefix:
+      values:
+        - date of birth
+        - dob
+        - born
+        - birth date
+        - birthday
+        - birth
+      confidence_weight: null
+    prohibited_suffix:
+      values:
+        # Blocks MM/DD inside full dates like 12/05/1975 ("/1975" follows the span)
+        - /
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: null
+    default_action: DEFAULT
+
+  bank_account_number:
+    description: "Bank account number"
+    # A financial account accessor — a distinct, highly sensitive concept, NOT a kind of
+    # unique_identifier (employee/policy IDs). They only share a digit shape, so there is
+    # deliberately no is_a: which one a bare number is gets decided by proximity, not
+    # taxonomy. Shape is pure regex (6-17 digits); bank accounts have no checksum.
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b\d{6,17}\b
+      prohibited_patterns: []
+      # Near-zero base so bare digit runs are blocked; only context-backed spans clear min_fused_confidence.
+      confidence_weight: 0.10
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - checking
+        - savings
+        - bank account
+        - bank account number
+        - account number
+        - account ending
+        - acct
+        - a/c
+        - ach
+        - deposit
+        - direct deposit
+        - wire transfer
+        - checking account
+        - savings account
+        - routing
+        - routing and account
+        - sort code
+        - current account
+        - debit
+        - account
+        - transfer to
+        - deposited to
+        - sent to account
+        - credited to
+        - debited from
+      confidence_weight: 0.80
+      window_before_chars: 80
+      window_after_chars: 25
+    prohibited_prefix:
+      values:
+        - ssn
+        - ssn:
+        - social security
+        - itin
+        - ein
+        - mrn
+        - mrn:
+        - medical record
+        - patient id
+        - patient
+        - pat
+        - pat-
+        - res-
+        - ins-
+        - inv-
+        - cust-
+        - ticket
+        - policy
+        - claim
+        - research
+        - study
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: ACCOUNT_NUMBER
+    default_action: DEFAULT
+
+  routing_number_aba:
+    description: "Bank routing number (ABA)"
+    regex_patterns:
+      accepted_patterns:
+        # Not part of a longer token: the 9-digit tail of "ASSET-789456123" or
+        # "CR-789456123" is not a routing number, and the ABA checksum is weak enough
+        # (1 in 10 of any 9 digits) that such tails pass it by chance.
+        - |-
+          (?<![-\w])\d{9}(?![-\w])
+      prohibited_patterns: []
+      # Deliberately below the confidence floor: nine digits, even checksum-valid ones,
+      # are only a routing number when something nearby says so. Context lifts it over.
+      confidence_weight: 0.22
+    validators:
+      enum: VALIDATE_ABA_ROUTING_NUMBER
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - routing number
+        - routing
+        - aba
+        - rtn
+        - ach
+        - wire transfer
+        - wire
+        - transit number
+        - bank
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: quasi_identifier
+    de_identifier: ACCOUNT_NUMBER
+    default_action: DEFAULT
+
+  iban:
+    description: "International Bank Account Number (IBAN)"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-Z]{2}\d{2}[A-Z0-9]{11,28}\b
+      prohibited_patterns: []
+      confidence_weight: 0.85
+    validators:
+      enum: VALIDATE_IBAN
+      confidence_weight: null
+    contextual_phrases:
+      values: []
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: IBAN
+    default_action: DEFAULT
+
+  payment_transaction_id:
+    description: "Payment transaction identifier"
+    regex_patterns:
+      accepted_patterns:
+        # INV-789456, TXN-ABC123, PMT-001, REF-XYZ, ORD-2024-001
+        - |-
+          \b(?:INV|TXN|PMT|REF|ORD|PAY|PYMT)[-]\w{3,20}\b
+      prohibited_patterns: []
+      confidence_weight: 0.75
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - invoice
+        - transaction
+        - transaction id
+        - payment
+        - reference
+        - order
+        - receipt
+        - payment reference
+        - transaction reference
+      confidence_weight: null
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: null
+    default_action: DEFAULT
+
+  crypto_wallet_address:
+    description: "Cryptocurrency wallet address"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b0x[a-fA-F0-9]{40}\b
+        - |-
+          \b(?:bc1[a-z0-9]{25,39}|[13][a-km-zA-HJ-NP-Z1-9]{25,34})\b
+      prohibited_patterns: []
+      confidence_weight: 0.8
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - wallet
+        - wallet address
+        - crypto
+        - bitcoin
+        - ethereum
+        - btc
+        - eth
+      confidence_weight: 0.4
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: BITCOIN_ADDRESS
+    default_action: DEFAULT
+
+# fin::account_number removed: it had no patterns, phrases, or NER mapping, so it could
+# never fire — a dead duplicate of pii::account_number, which owns the concept.
+# bank_account_number is_a pii::account_number (below) for the bank-specific case.
+
+  swift_bic:
+    description: "SWIFT/BIC bank identifier code"
+    regex_patterns:
+      accepted_patterns:
+        - |-
+          \b[A-Z]{6}[A-Z0-9]{2}(?:[A-Z0-9]{3})?\b
+      prohibited_patterns: []
+      # 8/11-char uppercase tokens are common; gate on SWIFT/BIC context.
+      confidence_weight: 0.15
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - swift
+        - bic
+        - swift code
+        - bic code
+        - swift/bic
+        - swift bic
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: Financial
+        data_class: financial_data
+    de_identifier: BIC
+    default_action: DEFAULT

@@ -1,0 +1,1070 @@
+{
+  "config": {
+    "fusion_weights": [
+      0.65,
+      0.35
+    ],
+    "gold_dir": "eval/ground_truth/unstructured_v2",
+    "llm_backend": null,
+    "llm_coverage": "gaps",
+    "llm_model": null,
+    "llm_skip_if_above": 0.85,
+    "min_fused_confidence": 0.3,
+    "ner_backend": "openmed",
+    "ner_model": null,
+    "skip_ner": false,
+    "warmup": false
+  },
+  "confusion": {
+    "phi_entity_ontology::health_plan_beneficiary_number": {
+      "phi_entity_ontology::certificate_license_number": 1,
+      "pii_entity_ontology::unique_identifier": 5
+    },
+    "phi_entity_ontology::medical_record_number_mrn": {
+      "pii_entity_ontology::unique_identifier": 2
+    },
+    "phi_entity_ontology::provider_npi": {
+      "phi_entity_ontology::medical_record_number_mrn": 1,
+      "pii_entity_ontology::person_names": 8,
+      "pii_entity_ontology::phone_number": 4
+    },
+    "pii_entity_ontology::dates": {
+      "pii_entity_ontology::relative_date_expressions": 3,
+      "pii_entity_ontology::timestamps": 2
+    },
+    "pii_entity_ontology::drivers_license_number": {
+      "phi_entity_ontology::certificate_license_number": 1
+    },
+    "pii_entity_ontology::person_names": {
+      "pii_entity_ontology::email_address": 1
+    },
+    "pii_entity_ontology::relative_date_expressions": {
+      "phi_entity_ontology::relative_date_expressions": 1
+    },
+    "pii_entity_ontology::state": {
+      "phi_entity_ontology::certificate_license_number": 8,
+      "phi_entity_ontology::health_plan_beneficiary_number": 2
+    },
+    "pii_entity_ontology::timestamps": {
+      "pii_entity_ontology::dates": 4
+    },
+    "pii_entity_ontology::unique_identifier": {
+      "phi_entity_ontology::certificate_license_number": 4,
+      "phi_entity_ontology::medical_record_number_mrn": 1,
+      "pii_entity_ontology::dates": 2,
+      "pii_entity_ontology::phone_number": 1
+    }
+  },
+  "git_sha": "160e86e738f0cd19d1b4b200d2295e91e72f6d15",
+  "headline": {
+    "macro": {
+      "f1": 0.8206892464047565,
+      "precision": 0.8051623481229199,
+      "recall": 0.8891621975703012
+    },
+    "matcher": "type_overlap",
+    "micro": {
+      "f1": 0.8258946521913952,
+      "precision": 0.7624350408314774,
+      "recall": 0.9008771929824562
+    }
+  },
+  "per_doc": {
+    "behavioral_phi_confidential.txt": {
+      "f1": 0.8571428571428572,
+      "precision": 0.8275862068965517,
+      "recall": 0.8888888888888888,
+      "support": 27
+    },
+    "comprehensive_medical_report.txt": {
+      "f1": 0.8359788359788359,
+      "precision": 0.79,
+      "recall": 0.8876404494382022,
+      "support": 89
+    },
+    "email_thread_pii.txt": {
+      "f1": 0.9704142011834319,
+      "precision": 1.0,
+      "recall": 0.9425287356321839,
+      "support": 87
+    },
+    "financial_confidential_banking.txt": {
+      "f1": 0.878048780487805,
+      "precision": 1.0,
+      "recall": 0.782608695652174,
+      "support": 23
+    },
+    "financial_loan_application.txt": {
+      "f1": 0.8684210526315789,
+      "precision": 0.825,
+      "recall": 0.9166666666666666,
+      "support": 144
+    },
+    "genetic_restricted_research.txt": {
+      "f1": 0.8307692307692307,
+      "precision": 0.7297297297297297,
+      "recall": 0.9642857142857143,
+      "support": 28
+    },
+    "hr_employee_file.txt": {
+      "f1": 0.752851711026616,
+      "precision": 0.6470588235294118,
+      "recall": 0.9,
+      "support": 110
+    },
+    "insurance_claim_detailed.txt": {
+      "f1": 0.7976539589442816,
+      "precision": 0.7351351351351352,
+      "recall": 0.8717948717948718,
+      "support": 156
+    },
+    "internal_public_company_memo.txt": {
+      "f1": 0.9090909090909091,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "support": 5
+    },
+    "legal_contract_pii.txt": {
+      "f1": 0.8614457831325302,
+      "precision": 0.7988826815642458,
+      "recall": 0.934640522875817,
+      "support": 153
+    },
+    "neutral_public_article.txt": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 3
+    },
+    "patient_discharge_summary.txt": {
+      "f1": 0.7766323024054983,
+      "precision": 0.6890243902439024,
+      "recall": 0.889763779527559,
+      "support": 127
+    },
+    "phi_restricted_clinical_notes.txt": {
+      "f1": 0.6666666666666667,
+      "precision": 0.8888888888888888,
+      "recall": 0.5333333333333333,
+      "support": 15
+    },
+    "pii_confidential_customer_service.txt": {
+      "f1": 0.6666666666666666,
+      "precision": 0.5192307692307693,
+      "recall": 0.9310344827586207,
+      "support": 29
+    },
+    "pii_restricted_medical_report.txt": {
+      "f1": 0.8620689655172413,
+      "precision": 0.8620689655172413,
+      "recall": 0.8620689655172413,
+      "support": 29
+    },
+    "research_study_phi.txt": {
+      "f1": 0.8310502283105021,
+      "precision": 0.7647058823529411,
+      "recall": 0.91,
+      "support": 100
+    },
+    "synthetic_fintech_device.txt": {
+      "f1": 0.8,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "support": 8
+    },
+    "synthetic_provider_admin.txt": {
+      "f1": 0.8235294117647058,
+      "precision": 0.7,
+      "recall": 1.0,
+      "support": 7
+    }
+  },
+  "per_entity": {
+    "fin_entity_ontology::bank_account_number": {
+      "f1": 0.5,
+      "fn": 2,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "support": 3,
+      "tp": 1
+    },
+    "fin_entity_ontology::card_expiry_date": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 6,
+      "tp": 6
+    },
+    "fin_entity_ontology::credit_card_number": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 5,
+      "tp": 5
+    },
+    "fin_entity_ontology::crypto_wallet_address": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 2,
+      "tp": 2
+    },
+    "fin_entity_ontology::cvv_code": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 3,
+      "tp": 3
+    },
+    "fin_entity_ontology::iban": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "fin_entity_ontology::payment_transaction_id": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 2,
+      "tp": 2
+    },
+    "fin_entity_ontology::routing_number_aba": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 10,
+      "tp": 10
+    },
+    "fin_entity_ontology::swift_bic": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "phi_entity_ontology::certificate_license_number": {
+      "f1": 0.8076923076923076,
+      "fn": 2,
+      "fp": 8,
+      "precision": 0.7241379310344828,
+      "recall": 0.9130434782608695,
+      "support": 23,
+      "tp": 21
+    },
+    "phi_entity_ontology::claim_control_number": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "phi_entity_ontology::date_of_birth": {
+      "f1": 0.9777777777777777,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.9565217391304348,
+      "recall": 1.0,
+      "support": 22,
+      "tp": 22
+    },
+    "phi_entity_ontology::genomic_variants": {
+      "f1": 0.8571428571428571,
+      "fn": 0,
+      "fp": 2,
+      "precision": 0.75,
+      "recall": 1.0,
+      "support": 6,
+      "tp": 6
+    },
+    "phi_entity_ontology::health_plan_beneficiary_number": {
+      "f1": 0.8292682926829268,
+      "fn": 7,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.7083333333333334,
+      "support": 24,
+      "tp": 17
+    },
+    "phi_entity_ontology::icd10_diagnosis_codes": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "phi_entity_ontology::medical_record_number_mrn": {
+      "f1": 0.9,
+      "fn": 0,
+      "fp": 2,
+      "precision": 0.8181818181818182,
+      "recall": 1.0,
+      "support": 9,
+      "tp": 9
+    },
+    "phi_entity_ontology::medication_dosage": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 3,
+      "tp": 3
+    },
+    "phi_entity_ontology::provider_npi": {
+      "f1": 0.125,
+      "fn": 13,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 0.07142857142857142,
+      "support": 14,
+      "tp": 1
+    },
+    "phi_entity_ontology::relative_date_expressions": {
+      "f1": 0.6666666666666666,
+      "fn": 1,
+      "fp": 3,
+      "precision": 0.5714285714285714,
+      "recall": 0.8,
+      "support": 5,
+      "tp": 4
+    },
+    "phi_entity_ontology::vital_signs": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::age": {
+      "f1": 0.5454545454545454,
+      "fn": 0,
+      "fp": 20,
+      "precision": 0.375,
+      "recall": 1.0,
+      "support": 12,
+      "tp": 12
+    },
+    "pii_entity_ontology::canadian_social_insurance_number_sin": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::city": {
+      "f1": 0.9322033898305084,
+      "fn": 0,
+      "fp": 8,
+      "precision": 0.873015873015873,
+      "recall": 1.0,
+      "support": 55,
+      "tp": 55
+    },
+    "pii_entity_ontology::county": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::dates": {
+      "f1": 0.6970387243735764,
+      "fn": 21,
+      "fp": 112,
+      "precision": 0.5773584905660377,
+      "recall": 0.8793103448275862,
+      "support": 174,
+      "tp": 153
+    },
+    "pii_entity_ontology::drivers_license_number": {
+      "f1": 0.0,
+      "fn": 1,
+      "fp": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 1,
+      "tp": 0
+    },
+    "pii_entity_ontology::email_address": {
+      "f1": 0.9945945945945946,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.989247311827957,
+      "recall": 1.0,
+      "support": 92,
+      "tp": 92
+    },
+    "pii_entity_ontology::imei_number": {
+      "f1": 0.6666666666666666,
+      "fn": 1,
+      "fp": 1,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "support": 3,
+      "tp": 2
+    },
+    "pii_entity_ontology::indian_aadhaar_number": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::ip_address": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 10,
+      "tp": 10
+    },
+    "pii_entity_ontology::mac_address": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::passport_number": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::person_names": {
+      "f1": 0.8864000000000001,
+      "fn": 11,
+      "fp": 60,
+      "precision": 0.8219584569732937,
+      "recall": 0.9618055555555556,
+      "support": 288,
+      "tp": 277
+    },
+    "pii_entity_ontology::phone_number": {
+      "f1": 0.9716981132075472,
+      "fn": 0,
+      "fp": 6,
+      "precision": 0.944954128440367,
+      "recall": 1.0,
+      "support": 103,
+      "tp": 103
+    },
+    "pii_entity_ontology::relative_date_expressions": {
+      "f1": 0.5,
+      "fn": 1,
+      "fp": 3,
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "support": 3,
+      "tp": 2
+    },
+    "pii_entity_ontology::ssn": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 16,
+      "tp": 16
+    },
+    "pii_entity_ontology::state": {
+      "f1": 0.7666666666666666,
+      "fn": 13,
+      "fp": 15,
+      "precision": 0.7540983606557377,
+      "recall": 0.7796610169491526,
+      "support": 59,
+      "tp": 46
+    },
+    "pii_entity_ontology::street_address": {
+      "f1": 0.693069306930693,
+      "fn": 0,
+      "fp": 31,
+      "precision": 0.5303030303030303,
+      "recall": 1.0,
+      "support": 35,
+      "tp": 35
+    },
+    "pii_entity_ontology::timestamps": {
+      "f1": 0.3018867924528301,
+      "fn": 4,
+      "fp": 33,
+      "precision": 0.1951219512195122,
+      "recall": 0.6666666666666666,
+      "support": 12,
+      "tp": 8
+    },
+    "pii_entity_ontology::unique_identifier": {
+      "f1": 0.5769230769230769,
+      "fn": 36,
+      "fp": 8,
+      "precision": 0.7894736842105263,
+      "recall": 0.45454545454545453,
+      "support": 66,
+      "tp": 30
+    },
+    "pii_entity_ontology::us_ein": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::us_itin": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::uuid_guid": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::vehicle_identification_number_vin": {
+      "f1": 0.888888888888889,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.8,
+      "recall": 1.0,
+      "support": 4,
+      "tp": 4
+    },
+    "pii_entity_ontology::web_url": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::zip_code": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 56,
+      "tp": 56
+    }
+  },
+  "per_entity_strict": {
+    "fin_entity_ontology::bank_account_number": {
+      "f1": 0.5,
+      "fn": 2,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "support": 3,
+      "tp": 1
+    },
+    "fin_entity_ontology::card_expiry_date": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 6,
+      "tp": 6
+    },
+    "fin_entity_ontology::credit_card_number": {
+      "f1": 0.4000000000000001,
+      "fn": 3,
+      "fp": 3,
+      "precision": 0.4,
+      "recall": 0.4,
+      "support": 5,
+      "tp": 2
+    },
+    "fin_entity_ontology::crypto_wallet_address": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 2,
+      "tp": 2
+    },
+    "fin_entity_ontology::cvv_code": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 3,
+      "tp": 3
+    },
+    "fin_entity_ontology::iban": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "fin_entity_ontology::payment_transaction_id": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 2,
+      "tp": 2
+    },
+    "fin_entity_ontology::routing_number_aba": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 10,
+      "tp": 10
+    },
+    "fin_entity_ontology::swift_bic": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "phi_entity_ontology::certificate_license_number": {
+      "f1": 0.7692307692307693,
+      "fn": 3,
+      "fp": 9,
+      "precision": 0.6896551724137931,
+      "recall": 0.8695652173913043,
+      "support": 23,
+      "tp": 20
+    },
+    "phi_entity_ontology::claim_control_number": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "phi_entity_ontology::date_of_birth": {
+      "f1": 0.9777777777777777,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.9565217391304348,
+      "recall": 1.0,
+      "support": 22,
+      "tp": 22
+    },
+    "phi_entity_ontology::genomic_variants": {
+      "f1": 0.14285714285714288,
+      "fn": 5,
+      "fp": 7,
+      "precision": 0.125,
+      "recall": 0.16666666666666666,
+      "support": 6,
+      "tp": 1
+    },
+    "phi_entity_ontology::health_plan_beneficiary_number": {
+      "f1": 0.7317073170731708,
+      "fn": 9,
+      "fp": 2,
+      "precision": 0.8823529411764706,
+      "recall": 0.625,
+      "support": 24,
+      "tp": 15
+    },
+    "phi_entity_ontology::icd10_diagnosis_codes": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "phi_entity_ontology::medical_record_number_mrn": {
+      "f1": 0.7000000000000001,
+      "fn": 2,
+      "fp": 4,
+      "precision": 0.6363636363636364,
+      "recall": 0.7777777777777778,
+      "support": 9,
+      "tp": 7
+    },
+    "phi_entity_ontology::medication_dosage": {
+      "f1": 0.0,
+      "fn": 3,
+      "fp": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 3,
+      "tp": 0
+    },
+    "phi_entity_ontology::provider_npi": {
+      "f1": 0.125,
+      "fn": 13,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 0.07142857142857142,
+      "support": 14,
+      "tp": 1
+    },
+    "phi_entity_ontology::relative_date_expressions": {
+      "f1": 0.5,
+      "fn": 2,
+      "fp": 4,
+      "precision": 0.42857142857142855,
+      "recall": 0.6,
+      "support": 5,
+      "tp": 3
+    },
+    "phi_entity_ontology::vital_signs": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::age": {
+      "f1": 0.045454545454545456,
+      "fn": 11,
+      "fp": 31,
+      "precision": 0.03125,
+      "recall": 0.08333333333333333,
+      "support": 12,
+      "tp": 1
+    },
+    "pii_entity_ontology::canadian_social_insurance_number_sin": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::city": {
+      "f1": 0.9322033898305084,
+      "fn": 0,
+      "fp": 8,
+      "precision": 0.873015873015873,
+      "recall": 1.0,
+      "support": 55,
+      "tp": 55
+    },
+    "pii_entity_ontology::county": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::dates": {
+      "f1": 0.6469248291571753,
+      "fn": 32,
+      "fp": 123,
+      "precision": 0.5358490566037736,
+      "recall": 0.8160919540229885,
+      "support": 174,
+      "tp": 142
+    },
+    "pii_entity_ontology::drivers_license_number": {
+      "f1": 0.0,
+      "fn": 1,
+      "fp": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "support": 1,
+      "tp": 0
+    },
+    "pii_entity_ontology::email_address": {
+      "f1": 0.9945945945945946,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.989247311827957,
+      "recall": 1.0,
+      "support": 92,
+      "tp": 92
+    },
+    "pii_entity_ontology::imei_number": {
+      "f1": 0.6666666666666666,
+      "fn": 1,
+      "fp": 1,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "support": 3,
+      "tp": 2
+    },
+    "pii_entity_ontology::indian_aadhaar_number": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::ip_address": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 10,
+      "tp": 10
+    },
+    "pii_entity_ontology::mac_address": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::passport_number": {
+      "f1": 0.6666666666666666,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::person_names": {
+      "f1": 0.8735999999999999,
+      "fn": 15,
+      "fp": 64,
+      "precision": 0.8100890207715133,
+      "recall": 0.9479166666666666,
+      "support": 288,
+      "tp": 273
+    },
+    "pii_entity_ontology::phone_number": {
+      "f1": 0.9716981132075472,
+      "fn": 0,
+      "fp": 6,
+      "precision": 0.944954128440367,
+      "recall": 1.0,
+      "support": 103,
+      "tp": 103
+    },
+    "pii_entity_ontology::relative_date_expressions": {
+      "f1": 0.5,
+      "fn": 1,
+      "fp": 3,
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "support": 3,
+      "tp": 2
+    },
+    "pii_entity_ontology::ssn": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 16,
+      "tp": 16
+    },
+    "pii_entity_ontology::state": {
+      "f1": 0.7666666666666666,
+      "fn": 13,
+      "fp": 15,
+      "precision": 0.7540983606557377,
+      "recall": 0.7796610169491526,
+      "support": 59,
+      "tp": 46
+    },
+    "pii_entity_ontology::street_address": {
+      "f1": 0.6534653465346535,
+      "fn": 2,
+      "fp": 33,
+      "precision": 0.5,
+      "recall": 0.9428571428571428,
+      "support": 35,
+      "tp": 33
+    },
+    "pii_entity_ontology::timestamps": {
+      "f1": 0.18867924528301888,
+      "fn": 7,
+      "fp": 36,
+      "precision": 0.12195121951219512,
+      "recall": 0.4166666666666667,
+      "support": 12,
+      "tp": 5
+    },
+    "pii_entity_ontology::unique_identifier": {
+      "f1": 0.5769230769230769,
+      "fn": 36,
+      "fp": 8,
+      "precision": 0.7894736842105263,
+      "recall": 0.45454545454545453,
+      "support": 66,
+      "tp": 30
+    },
+    "pii_entity_ontology::us_ein": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::us_itin": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::uuid_guid": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::vehicle_identification_number_vin": {
+      "f1": 0.888888888888889,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.8,
+      "recall": 1.0,
+      "support": 4,
+      "tp": 4
+    },
+    "pii_entity_ontology::web_url": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1,
+      "tp": 1
+    },
+    "pii_entity_ontology::zip_code": {
+      "f1": 1.0,
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 56,
+      "tp": 56
+    }
+  },
+  "rescue": {
+    "applied": 123,
+    "fp_after": 68,
+    "original_entity_id_counts": {
+      "fin_entity_ontology::bank_account_number": 2,
+      "fin_entity_ontology::cvv_code": 28,
+      "fin_entity_ontology::swift_bic": 7,
+      "pii_entity_ontology::dates": 22,
+      "pii_entity_ontology::drivers_license_number": 23,
+      "pii_entity_ontology::fax_number": 1,
+      "pii_entity_ontology::german_passport_number": 2,
+      "pii_entity_ontology::phone_number": 11,
+      "pii_entity_ontology::relative_date_expressions": 6,
+      "pii_entity_ontology::unique_identifier": 20,
+      "pii_entity_ontology::us_itin": 1
+    },
+    "tp_after": 55
+  },
+  "run_id": "20260727-001239-openmed",
+  "strict": {
+    "macro": {
+      "f1": 0.743891413843758,
+      "precision": 0.735544787812182,
+      "recall": 0.796047329021139
+    },
+    "micro": {
+      "f1": 0.7872939284278246,
+      "precision": 0.726800296956199,
+      "recall": 0.8587719298245614
+    }
+  },
+  "timing": {
+    "batch_docs": 18,
+    "batch_ms_per_1k_chars": 326.4998265925814,
+    "batch_ms_per_doc": 2815.589393500381,
+    "batch_wall_s": 50.68060908300686,
+    "batched": true,
+    "llm_total_s": 0,
+    "per_doc": [],
+    "profile_enabled": false,
+    "warmup_ran": false
+  },
+  "winner_kind_breakdown": {
+    "context_candidate": {
+      "fp": 55,
+      "tp": 31
+    },
+    "deterministic": {
+      "fp": 133,
+      "tp": 555
+    },
+    "ner": {
+      "fp": 132,
+      "tp": 441
+    }
+  }
+}

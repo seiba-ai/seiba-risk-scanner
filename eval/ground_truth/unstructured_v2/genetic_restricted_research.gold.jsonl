@@ -1,0 +1,29 @@
+{"_meta": {"ontology_set": "bundled", "allowed_entity_ids": ["fin_entity_ontology::account_number", "fin_entity_ontology::bank_account_number", "fin_entity_ontology::card_expiry_date", "fin_entity_ontology::credit_card_number", "fin_entity_ontology::crypto_wallet_address", "fin_entity_ontology::cvv_code", "fin_entity_ontology::iban", "fin_entity_ontology::payment_transaction_id", "fin_entity_ontology::routing_number_aba", "phi_entity_ontology::authorization_precertification_code", "phi_entity_ontology::certificate_license_number", "phi_entity_ontology::claim_control_number", "phi_entity_ontology::cpt_procedure_codes", "phi_entity_ontology::date_of_birth", "phi_entity_ontology::dates", "phi_entity_ontology::dna_sequences", "phi_entity_ontology::facial_photographs", "phi_entity_ontology::fingerprints", "phi_entity_ontology::genomic_variants", "phi_entity_ontology::hcpcs_codes", "phi_entity_ontology::health_plan_beneficiary_number", "phi_entity_ontology::hospital_abbreviations", "phi_entity_ontology::hospital_names", "phi_entity_ontology::icd10_diagnosis_codes", "phi_entity_ontology::lab_results", "phi_entity_ontology::measurement_units", "phi_entity_ontology::medical_record_number_mrn", "phi_entity_ontology::medication_dosage", "phi_entity_ontology::ndc_codes", "phi_entity_ontology::physician_names", "phi_entity_ontology::provider_npi", "phi_entity_ontology::provider_tax_id_ein", "phi_entity_ontology::relative_date_expressions", "phi_entity_ontology::retinal_scans", "phi_entity_ontology::timestamps", "phi_entity_ontology::vital_signs", "phi_entity_ontology::voiceprints", "pii_entity_ontology::age", "pii_entity_ontology::canadian_social_insurance_number_sin", "pii_entity_ontology::city", "pii_entity_ontology::county", "pii_entity_ontology::dates", "pii_entity_ontology::device_serial_number", "pii_entity_ontology::drivers_license_number", "pii_entity_ontology::email_address", "pii_entity_ontology::fax_number", "pii_entity_ontology::imei_number", "pii_entity_ontology::indian_aadhaar_number", "pii_entity_ontology::ip_address", "pii_entity_ontology::latitude_coordinates", "pii_entity_ontology::longitude_coordinates", "pii_entity_ontology::mac_address", "pii_entity_ontology::nationality", "pii_entity_ontology::passport_number", "pii_entity_ontology::person_names", "pii_entity_ontology::phone_number", "pii_entity_ontology::po_box", "pii_entity_ontology::relative_date_expressions", "pii_entity_ontology::religious_affiliation", "pii_entity_ontology::ssn", "pii_entity_ontology::state", "pii_entity_ontology::street_address", "pii_entity_ontology::timestamps", "pii_entity_ontology::uk_national_insurance_number_nino", "pii_entity_ontology::uk_nhs_number", "pii_entity_ontology::unique_identifier", "pii_entity_ontology::us_ein", "pii_entity_ontology::us_itin", "pii_entity_ontology::uuid_guid", "pii_entity_ontology::vehicle_identification_number_vin", "pii_entity_ontology::visa_number", "pii_entity_ontology::web_url", "pii_entity_ontology::zip_code"], "file": "genetic_restricted_research.txt", "version": 1}}
+{"start": 35, "end": 53, "text": "GEN-STUDY-2024-001", "entity_id": "phi_entity_ontology::claim_control_number"}
+{"start": 78, "end": 91, "text": "Dr. Sarah Kim", "entity_id": "phi_entity_ontology::physician_names"}
+{"start": 98, "end": 108, "text": "2024-01-18", "entity_id": "pii_entity_ontology::dates"}
+{"start": 122, "end": 134, "text": "GEN-SUBJ-001", "entity_id": "phi_entity_ontology::medical_record_number_mrn"}
+{"start": 148, "end": 160, "text": "James Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 166, "end": 176, "text": "05/18/1980", "entity_id": "phi_entity_ontology::date_of_birth"}
+{"start": 182, "end": 184, "text": "43", "entity_id": "pii_entity_ontology::age"}
+{"start": 191, "end": 202, "text": "789-12-3456", "entity_id": "pii_entity_ontology::ssn"}
+{"start": 216, "end": 229, "text": "RES-456789012", "entity_id": "pii_entity_ontology::unique_identifier"}
+{"start": 245, "end": 270, "text": "james.wilson@research.org", "entity_id": "pii_entity_ontology::email_address"}
+{"start": 278, "end": 292, "text": "(415) 555-9876", "entity_id": "pii_entity_ontology::phone_number"}
+{"start": 303, "end": 321, "text": "321 Research Drive", "entity_id": "pii_entity_ontology::street_address"}
+{"start": 323, "end": 336, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
+{"start": 338, "end": 340, "text": "CA", "entity_id": "pii_entity_ontology::state"}
+{"start": 341, "end": 346, "text": "94102", "entity_id": "pii_entity_ontology::zip_code"}
+{"start": 387, "end": 405, "text": "from the lab today", "entity_id": "phi_entity_ontology::relative_date_expressions"}
+{"start": 438, "end": 452, "text": "BRCA1 positive", "entity_id": "phi_entity_ontology::genomic_variants"}
+{"start": 502, "end": 519, "text": "BRCA2 is negative", "entity_id": "phi_entity_ontology::genomic_variants"}
+{"start": 691, "end": 696, "text": "E3/E4", "entity_id": "phi_entity_ontology::genomic_variants"}
+{"start": 836, "end": 847, "text": "MTHFR C677T", "entity_id": "phi_entity_ontology::genomic_variants"}
+{"start": 1004, "end": 1010, "text": "age 52", "entity_id": "pii_entity_ontology::age"}
+{"start": 1012, "end": 1026, "text": "BRCA1 positive", "entity_id": "phi_entity_ontology::genomic_variants"}
+{"start": 1057, "end": 1063, "text": "age 48", "entity_id": "pii_entity_ontology::age"}
+{"start": 1070, "end": 1084, "text": "BRCA1 positive", "entity_id": "phi_entity_ontology::genomic_variants"}
+{"start": 1813, "end": 1822, "text": "10.0.0.45", "entity_id": "pii_entity_ontology::ip_address"}
+{"start": 1826, "end": 1848, "text": "2024-01-18 at 09:15:23", "entity_id": "pii_entity_ontology::dates"}
+{"start": 2296, "end": 2303, "text": "in June", "entity_id": "pii_entity_ontology::dates"}
+{"start": 2867, "end": 2879, "text": "last weekend", "entity_id": "pii_entity_ontology::relative_date_expressions"}

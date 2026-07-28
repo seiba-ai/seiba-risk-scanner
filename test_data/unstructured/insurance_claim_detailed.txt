@@ -1,0 +1,356 @@
+AUTO INSURANCE CLAIM REPORT - CONFIDENTIAL
+===========================================
+Insurance Company: SecureGuard Insurance Group
+Claim Number: CLM-2024-789456123
+Policy Number: POL-456789012
+Date of Loss: February 28, 2024
+Time of Loss: Approximately 3:45 PM PST
+Report Date: March 1, 2024
+Claim Status: Under Investigation
+Adjuster: Jennifer Martinez, Senior Claims Adjuster
+Adjuster ID: ADJ-789456
+License Number: INS-ADJ-CA-123456
+Phone: (800) 555-4567
+Email: j.martinez@secureguard-ins.com
+
+POLICYHOLDER INFORMATION
+-------------------------
+Full Name: Amanda Patricia Williams
+Date of Birth: November 7, 1989
+Age: 34 years
+Social Security Number: 567-89-0123
+Driver's License Number: CA-D789-456-789-01
+License Expiration: June 15, 2026
+License Class: Class C (Standard Passenger Vehicle)
+
+Mailing Address:
+Primary: 4521 Sunset Boulevard, Unit 8B, Los Angeles, CA 90027
+Secondary: 7892 Hollywood Hills Drive, Los Angeles, CA 90046
+
+Contact Information:
+Home Phone: (323) 555-4521
+Mobile Phone: 1-323-555-7890
+Work Phone: (310) 555-1234
+Email: amanda.williams.personal@gmail.com
+Work Email: awilliams@entertainmentstudio.com
+
+Emergency Contact:
+Name: Michael Williams (Brother)
+Relationship: Brother
+Phone: (323) 555-4522
+Address: 1234 Vine Street, Los Angeles, CA 90028
+
+POLICY INFORMATION
+------------------
+Policy Type: Comprehensive Auto Insurance with Full Coverage
+Policy Period: January 1, 2024 - December 31, 2024
+Policy Number: POL-456789012
+Group Number: GRP-789456
+Premium: $1,847.50 per 6 months
+Payment Method: Automatic bank draft
+Bank Account: ****5678 (Last 4 digits)
+Routing Number: 121000248
+Next Payment Due: July 1, 2024
+
+Coverage Details:
+- Bodily Injury Liability: $250,000 per person / $500,000 per accident
+- Property Damage Liability: $100,000 per accident
+- Uninsured/Underinsured Motorist: $250,000 / $500,000
+- Medical Payments: $10,000 per person
+- Comprehensive Coverage: $500 deductible
+- Collision Coverage: $1,000 deductible
+- Rental Reimbursement: $30/day, up to $900
+- Roadside Assistance: Included
+
+VEHICLE INFORMATION
+-------------------
+Insured Vehicle:
+Year: 2022
+Make: Tesla
+Model: Model 3 Long Range
+VIN: 5YJ3E1EA8NF123456
+License Plate: CA-8ABC123
+Registration Number: REG-789456123
+Registration Expiration: March 31, 2025
+Color: Midnight Silver Metallic
+Mileage at Time of Loss: 18,547 miles
+Purchase Date: March 15, 2022
+Purchase Price: $54,990
+Current Estimated Value: $42,500 (per Kelly Blue Book)
+Lienholder: First National Auto Finance
+Loan Account Number: LOAN-456789012
+Loan Balance: Approximately $28,500
+
+ACCIDENT DETAILS
+----------------
+Date of Incident: February 28, 2024
+Time: Approximately 3:45 PM PST
+Location: Intersection of Wilshire Boulevard and La Cienega Boulevard, Los Angeles, CA 90048
+Weather Conditions: Clear, sunny, 72°F
+Road Conditions: Dry pavement, good visibility
+Traffic Conditions: Moderate to heavy traffic
+
+Narrative of Incident:
+According to the policyholder's statement, Ms. Williams was driving her 2022 Tesla Model 3 eastbound on Wilshire Boulevard in the left lane, traveling at approximately 35-40 miles per hour (the posted speed limit is 35 mph). She states that she had a green light and was proceeding through the intersection at La Cienega Boulevard when another vehicle, described as a dark-colored SUV (make and model unknown), ran a red light while traveling northbound on La Cienega Boulevard and struck the front passenger side of her vehicle.
+
+Ms. Williams reports that she did not see the other vehicle until the moment of impact, as it appeared suddenly from her right side. She states that she attempted to brake but was unable to avoid the collision. The impact caused her vehicle to spin approximately 180 degrees and come to rest facing westbound in the eastbound lanes.
+
+The other vehicle, which Ms. Williams describes as a "dark gray or black SUV, maybe a Ford Explorer or similar," did not stop at the scene. Witnesses report that the vehicle continued northbound on La Cienega Boulevard and was last seen turning east onto Santa Monica Boulevard. The license plate was not clearly visible to any witnesses.
+
+Ms. Williams was wearing her seatbelt at the time of the accident. Her vehicle's airbags did not deploy. She reports that she was able to exit the vehicle under her own power but felt shaken and disoriented immediately following the collision.
+
+INJURIES AND MEDICAL TREATMENT
+-------------------------------
+Policyholder Injuries:
+Ms. Williams reports the following injuries:
+- Neck pain and stiffness (began approximately 2 hours after the accident)
+- Lower back pain
+- Right shoulder pain
+- Headache
+- Minor cuts and abrasions on her right hand from broken glass
+
+Medical Treatment:
+- Initial evaluation at Cedars-Sinai Medical Center Emergency Department on February 28, 2024 at 4:30 PM
+- Emergency Department Physician: Dr. Jonathan Park, MD
+- Medical Record Number: MRN-ED-456789
+- Discharge Diagnosis: Whiplash injury, cervical strain, lumbar strain, contusions
+- Treatment: Physical examination, X-rays of cervical and lumbar spine (negative for fractures), pain medication (Ibuprofen 600mg), muscle relaxant (Cyclobenzaprine 10mg)
+- Discharged same day with instructions for follow-up care
+- Total Emergency Department charges: $3,247.50
+- Claim Number for Medical: MED-CLM-789456
+
+Follow-up Care:
+- Primary Care Physician: Dr. Sarah Mitchell, MD
+- Office Address: 1234 Medical Plaza, Suite 300, Los Angeles, CA 90048
+- Phone: (310) 555-5678
+- NPI: 2345678901
+- Appointment scheduled for March 5, 2024
+- Referral to physical therapy provided
+- Prescription for additional pain medication: Tramadol 50mg as needed
+
+Physical Therapy:
+- Provider: Advanced Physical Therapy Center
+- Address: 5678 Wellness Drive, Los Angeles, CA 90048
+- Phone: (310) 555-9012
+- Initial evaluation scheduled for March 8, 2024
+- Anticipated treatment: 8-12 weeks of physical therapy, 2-3 times per week
+- Estimated cost: $4,500 - $6,000
+
+Lost Wages:
+Ms. Williams is employed as a Senior Marketing Manager at Entertainment Studio Productions, 8901 Sunset Boulevard, Los Angeles, CA 90069. Employee ID: EMP-789456123. She earns $95,000 per year (approximately $1,827 per week, $365 per day).
+
+She missed work on:
+- February 29, 2024 (1 day) - due to pain and medical appointments
+- March 1, 2024 (0.5 day) - left early for insurance claim appointment
+
+Total lost wages claimed: $547.50
+
+VEHICLE DAMAGE ASSESSMENT
+-------------------------
+Vehicle Inspection Date: March 2, 2024
+Inspector: Robert Chen, Auto Damage Appraiser
+Inspector ID: APP-456789
+Inspection Location: SecureGuard Insurance Auto Repair Center, 1234 Auto Row, Los Angeles, CA 90025
+
+Damage Assessment:
+The vehicle sustained significant damage to the front passenger side and front end. Detailed damage includes:
+
+Front End Damage:
+- Front bumper cover: Severely damaged, requires replacement
+- Front grille: Cracked and broken, requires replacement
+- Hood: Dented and misaligned, may require replacement or extensive repair
+- Front passenger fender: Severely damaged, requires replacement
+- Front passenger headlight assembly: Broken, requires replacement
+- Front passenger side marker light: Broken, requires replacement
+- Radiator support: Bent and damaged, requires replacement
+- Front passenger wheel: Rim damaged, tire sidewall damaged, both require replacement
+
+Passenger Side Damage:
+- Passenger door: Dented and scratched, may require replacement
+- Passenger side mirror: Broken, requires replacement
+- Passenger side rocker panel: Scratched and dented
+- Passenger side rear quarter panel: Minor scratches
+
+Mechanical Damage:
+- Front suspension components: Damage suspected, requires inspection
+- Steering alignment: Vehicle pulls to the right, requires alignment
+- Front passenger wheel bearing: Possible damage, requires inspection
+- Brake system: Appears intact but requires inspection
+
+Estimated Repair Cost: $18,750.00
+Parts: $12,500.00
+Labor: $5,250.00
+Paint and Materials: $1,000.00
+
+Repair Shop Estimate:
+- Preferred Repair Facility: Elite Auto Body & Paint
+- Address: 4567 Repair Lane, Los Angeles, CA 90025
+- Phone: (310) 555-3456
+- Estimated Repair Time: 3-4 weeks
+- Shop License: CA-AUTO-789456
+
+Total Loss Evaluation:
+The vehicle's actual cash value (ACV) is estimated at $42,500. Given the estimated repair cost of $18,750, the damage represents approximately 44% of the vehicle's value. Per company policy, vehicles with damage exceeding 75% of ACV are typically declared total losses. This vehicle does not meet the total loss threshold, so repairs are recommended.
+
+However, if hidden damage is discovered during disassembly that increases the repair cost significantly, the vehicle may be re-evaluated for total loss status.
+
+RENTAL VEHICLE
+--------------
+Rental Vehicle Provided: Yes
+Rental Company: Enterprise Rent-A-Car
+Location: 1234 Rental Drive, Los Angeles, CA 90025
+Phone: (310) 555-7890
+Rental Agreement Number: RENT-456789012
+
+Vehicle Details:
+- Make/Model: 2024 Toyota Camry LE
+- License Plate: CA-9XYZ789
+- Rental Start Date: March 2, 2024
+- Daily Rate: $30.00 (covered under policy)
+- Maximum Coverage: $900 (30 days)
+- Estimated Return Date: March 30, 2024 (pending vehicle repair completion)
+
+WITNESS STATEMENTS
+------------------
+Witness 1:
+Name: David Thompson
+Address: 7890 Wilshire Boulevard, Apartment 5C, Los Angeles, CA 90048
+Phone: (323) 555-2345
+Email: dthompson@email.com
+Statement: "I was waiting at the red light on La Cienega Boulevard, facing north. I saw a dark gray SUV run the red light and hit the Tesla. The SUV didn't stop and drove away. The Tesla driver seemed okay but was clearly shaken up."
+
+Witness 2:
+Name: Maria Rodriguez
+Address: 4567 La Cienega Boulevard, Los Angeles, CA 90048
+Phone: (323) 555-6789
+Statement: "I was walking on the sidewalk near the intersection. I heard a loud crash and saw the accident. The SUV definitely had a red light and shouldn't have been going through the intersection. It looked like a Ford Explorer or similar SUV, dark colored. The driver didn't stop."
+
+POLICE REPORT
+-------------
+Police Department: Los Angeles Police Department (LAPD)
+Incident Report Number: LAPD-2024-0456789
+Officer: Officer James Anderson, Badge #7894
+Date of Report: February 28, 2024
+Time of Report: 4:15 PM
+
+Summary:
+Officer Anderson responded to the scene at approximately 4:00 PM. He documented the accident, took statements from the involved party and witnesses, and prepared an incident report. The report indicates that the other vehicle fled the scene (hit-and-run). The report classifies this as a hit-and-run collision with property damage and possible injuries.
+
+The police report notes that the other vehicle's license plate was not obtained, and no suspect vehicle has been located at this time. The case remains open for investigation.
+
+INVESTIGATION NOTES
+-------------------
+Adjuster Notes (Jennifer Martinez):
+- Initial contact with policyholder on March 1, 2024 at 10:00 AM
+- Policyholder was cooperative and provided detailed statement
+- Photos of damage received and reviewed
+- Vehicle inspection scheduled and completed
+- Medical records requested from Cedars-Sinai Medical Center
+- Police report obtained from LAPD
+- Witness statements collected
+
+Additional Investigation:
+- Review of traffic camera footage requested from City of Los Angeles Department of Transportation
+- Request submitted on March 2, 2024
+- Expected response: 5-7 business days
+- Camera ID: WIL-LAC-045 (located at intersection of Wilshire and La Cienega)
+
+- Review of nearby business security cameras
+- Contacted businesses in the area:
+  * Starbucks (7891 Wilshire Boulevard) - Camera may have captured incident
+  * Bank of America (4567 La Cienega Boulevard) - Exterior cameras may have relevant footage
+  * Chevron Gas Station (1234 Wilshire Boulevard) - Security cameras facing intersection
+
+Fraud Indicators:
+- No red flags identified at this time
+- Policyholder has been insured with SecureGuard for 6 years with no prior claims
+- Damage consistent with described accident
+- Medical treatment appears reasonable and necessary
+- Witness statements corroborate policyholder's account
+
+LIABILITY DETERMINATION
+-----------------------
+Based on the available information:
+- The other vehicle appears to be at fault for running a red light
+- However, the other vehicle fled the scene and has not been identified
+- This is being treated as an uninsured motorist claim
+- Policyholder's uninsured motorist coverage will apply
+- Deductible: $1,000 (collision coverage deductible applies)
+
+CLAIM RESOLUTION
+----------------
+Current Status: Under Investigation - Awaiting Additional Information
+
+Next Steps:
+1. Review traffic camera footage (pending)
+2. Review business security camera footage (pending)
+3. Complete vehicle repair estimate review
+4. Review all medical bills and treatment records
+5. Determine final settlement amount
+
+Estimated Timeline for Resolution: 2-3 weeks
+
+Settlement Breakdown (Preliminary Estimate):
+- Vehicle Repair: $18,750.00
+- Rental Vehicle: $900.00 (maximum covered)
+- Medical Expenses: $3,247.50 (Emergency Department) + estimated $5,000 (follow-up care and physical therapy) = $8,247.50
+- Lost Wages: $547.50
+- Total Estimated Claim Value: $28,445.00
+
+Payment Method:
+- Vehicle repair: Direct payment to repair facility
+- Medical expenses: Direct payment to providers (subject to policy limits)
+- Rental: Direct payment to rental company
+- Lost wages: Payment to policyholder
+- Deductible: $1,000 to be collected from policyholder
+
+CONTACT INFORMATION
+-------------------
+Policyholder:
+Amanda Patricia Williams
+Phone: (323) 555-7890
+Email: amanda.williams.personal@gmail.com
+
+Claims Adjuster:
+Jennifer Martinez
+Phone: (800) 555-4567
+Email: j.martinez@secureguard-ins.com
+Office Hours: Monday-Friday, 8:00 AM - 5:00 PM PST
+
+Claims Department:
+SecureGuard Insurance Group
+Claims Department
+1234 Insurance Boulevard, Suite 500
+Los Angeles, CA 90025
+Phone: (800) 555-4567
+Fax: (310) 555-4568
+Email: claims@secureguard-ins.com
+
+24-Hour Claims Hotline: (800) 555-9999
+
+LEGAL REPRESENTATION
+--------------------
+Policyholder has retained legal counsel:
+Attorney: Robert Kim, Esq.
+Law Firm: Kim & Associates, Personal Injury Law
+Address: 5678 Legal Plaza, Suite 200, Los Angeles, CA 90025
+Phone: (310) 555-5678
+Email: rkim@kimlaw.com
+Bar Number: CA-BAR-123456
+
+All future communications regarding this claim should be directed through legal counsel.
+
+CONFIDENTIALITY NOTICE
+----------------------
+This document contains confidential and proprietary information. It is intended solely for the use of SecureGuard Insurance Group, the policyholder, and authorized parties. Unauthorized disclosure, distribution, or use of this information is strictly prohibited and may result in legal action.
+
+This claim file contains personally identifiable information (PII) and is subject to privacy regulations including but not limited to the California Consumer Privacy Act (CCPA) and the Gramm-Leach-Bliley Act (GLBA).
+
+END OF REPORT
+-------------
+Report prepared by: Jennifer Martinez, Senior Claims Adjuster
+Date: March 1, 2024
+Time: 4:30 PM PST
+Report ID: RPT-2024-789456123
+Version: 1.0
+

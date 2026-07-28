@@ -1,0 +1,432 @@
+HUMAN RESOURCES - EMPLOYEE PERSONNEL FILE
+=========================================
+CONFIDENTIAL - INTERNAL USE ONLY
+
+Company: TechGlobal Solutions Inc.
+HR Department
+789 Corporate Drive, Suite 1200
+San Jose, CA 95110
+Phone: (408) 555-7890
+HR Director: Lisa Chen
+HR Director Email: lchen@techglobal.com
+Employee ID: EMP-789456123
+
+EMPLOYEE INFORMATION
+--------------------
+Full Legal Name: Christopher James Anderson
+Preferred Name: Chris Anderson
+Date of Birth: March 22, 1991
+Age: 33 years
+Social Security Number: 345-67-8901
+Employee ID: EMP-789456123
+Hire Date: June 15, 2018
+Employment Status: Full-Time, Regular
+Department: Software Engineering
+Job Title: Senior Software Engineer
+Reports To: Sarah Mitchell, Engineering Manager
+Manager ID: MGR-456789
+
+CONTACT INFORMATION
+-------------------
+Primary Address:
+1234 Innovation Way, Apartment 12B
+Mountain View, CA 94040
+
+Previous Address (on file):
+5678 Tech Street, Unit 5
+Palo Alto, CA 94301
+(Moved: January 2023)
+
+Phone Numbers:
+Primary Mobile: (650) 555-1234
+Secondary Mobile: 1-650-555-5678
+Home Phone: (650) 555-9012
+Emergency Contact Phone: (650) 555-3456
+
+Email Addresses:
+Work Email: canderson@techglobal.com
+Personal Email: chris.anderson.personal@gmail.com
+Alternate Email: cj.anderson.dev@protonmail.com
+
+Emergency Contact:
+Primary:
+Name: Jennifer Anderson
+Relationship: Spouse
+Phone: (650) 555-3456
+Address: Same as primary address
+Email: jennifer.anderson@email.com
+
+Secondary:
+Name: Robert Anderson
+Relationship: Father
+Phone: (415) 555-7890
+Address: 8901 Family Lane, San Francisco, CA 94102
+Email: robert.anderson@email.com
+
+IDENTIFICATION DOCUMENTS
+------------------------
+Driver's License:
+Number: CA-D123-456-789-01
+State: California
+Expiration Date: March 22, 2026
+Class: Class C
+
+Passport:
+Number: 456789012
+Country: United States
+Issue Date: January 15, 2015
+Expiration Date: January 15, 2025
+Place of Birth: San Francisco, CA
+
+Work Authorization:
+Citizenship Status: U.S. Citizen
+I-9 Form: Completed and verified on June 15, 2018
+Documents Provided: U.S. Passport
+Verification Status: Verified
+Verifier: Maria Santos, HR Specialist
+Verification Date: June 15, 2018
+
+EMPLOYMENT HISTORY
+------------------
+Current Position:
+Title: Senior Software Engineer
+Department: Software Engineering
+Division: Product Development
+Start Date: June 15, 2018
+Salary: $145,000 per year
+Pay Frequency: Bi-weekly
+Last Salary Review: March 1, 2024
+Next Salary Review: March 1, 2025
+Employment Type: Full-Time, Exempt
+Work Location: Corporate Headquarters (San Jose, CA)
+Remote Work Status: Hybrid (3 days in office, 2 days remote)
+
+Previous Positions at Company:
+1. Software Engineer II
+   - Dates: June 15, 2018 - March 1, 2021
+   - Salary: Started at $95,000, ended at $115,000
+   - Promotion Date: March 1, 2021
+
+2. Software Engineer I
+   - Dates: June 15, 2018 - June 15, 2020
+   - Salary: $95,000 - $105,000
+   - Promotion Date: June 15, 2020
+
+Previous Employment:
+Company: StartupTech Inc.
+Position: Junior Software Developer
+Dates: August 2016 - May 2018
+Reason for Leaving: Accepted position at TechGlobal Solutions
+Supervisor: Michael Park
+Contact: mpark@startuptech.com, (415) 555-2345
+Salary: $75,000 per year
+
+COMPENSATION AND BENEFITS
+-------------------------
+Current Compensation:
+Base Salary: $145,000 per year
+Annual Bonus Target: 15% of base salary ($21,750)
+Stock Options: 5,000 shares (vesting over 4 years)
+Restricted Stock Units (RSUs): 2,500 shares (vested: 1,250, remaining: 1,250)
+Total Compensation: Approximately $166,750 (base + target bonus)
+
+Payroll Information:
+Pay Frequency: Bi-weekly (26 pay periods per year)
+Gross Pay per Period: $5,576.92
+Direct Deposit:
+  - Primary Account: Bank of America, Account ****7890, Routing 121000248
+  - Secondary Account: Chase Bank, Account ****3456, Routing 021000021 (10% of net pay)
+Tax Withholdings:
+  - Federal: Married, 2 allowances
+  - State: California, Married, 2 allowances
+  - Social Security: 6.2%
+  - Medicare: 1.45%
+
+Benefits Enrollment:
+Health Insurance:
+  - Provider: Blue Shield of California
+  - Plan: PPO Gold Plan
+  - Policy Number: BS-CA-789456123
+  - Group Number: GRP-TECH-456
+  - Employee Contribution: $150 per month
+  - Coverage: Employee + Spouse
+  - Effective Date: July 1, 2018
+  - Dental: Delta Dental, Policy DENT-789456, $25/month
+  - Vision: VSP, Policy VSP-456789, $10/month
+
+Life Insurance:
+  - Provider: MetLife
+  - Coverage Amount: $500,000 (2x annual salary)
+  - Policy Number: LIFE-789456123
+  - Premium: Company paid
+  - Beneficiary: Jennifer Anderson (Spouse)
+
+Disability Insurance:
+  - Short-Term Disability: 60% of salary, 90-day elimination period
+  - Long-Term Disability: 60% of salary, 180-day elimination period
+  - Policy Number: STD-LTD-789456
+
+401(k) Retirement Plan:
+  - Provider: Fidelity Investments
+  - Account Number: 401K-789456123
+  - Employee Contribution: 8% of salary ($11,600 per year)
+  - Company Match: 50% of first 6% (maximum $4,350 per year)
+  - Current Balance: Approximately $87,500 (as of last statement)
+  - Vesting: 100% vested in company match
+
+Paid Time Off (PTO):
+  - Accrual Rate: 20 days per year (increases to 25 days after 5 years)
+  - Current Balance: 12.5 days
+  - Used This Year: 7.5 days
+  - Carryover: Maximum 5 days
+
+EDUCATION AND CERTIFICATIONS
+----------------------------
+Education:
+Bachelor of Science in Computer Science
+University: Stanford University
+Location: Stanford, CA
+Graduation Date: June 2016
+GPA: 3.7/4.0
+Degree: Bachelor of Science
+Major: Computer Science
+Minor: Mathematics
+Student ID (if needed for verification): STAN-123456789
+
+Professional Certifications:
+1. AWS Certified Solutions Architect - Associate
+   - Certification Number: AWS-CSA-789456123
+   - Issue Date: March 15, 2020
+   - Expiration Date: March 15, 2023
+   - Status: Expired (renewal in progress)
+
+2. Google Cloud Professional Cloud Architect
+   - Certification Number: GCP-PCA-456789012
+   - Issue Date: September 10, 2021
+   - Expiration Date: September 10, 2024
+   - Status: Active
+
+3. Certified Kubernetes Administrator (CKA)
+   - Certification Number: CKA-789456123
+   - Issue Date: November 5, 2022
+   - Expiration Date: November 5, 2025
+   - Status: Active
+
+PERFORMANCE REVIEWS
+-------------------
+2024 Annual Review (Most Recent):
+Review Period: January 1, 2023 - December 31, 2023
+Review Date: March 1, 2024
+Reviewer: Sarah Mitchell, Engineering Manager
+Overall Rating: Exceeds Expectations (4.5/5.0)
+
+Strengths:
+- Excellent technical skills and problem-solving abilities
+- Strong leadership qualities, frequently mentors junior engineers
+- Consistently delivers high-quality code on time
+- Proactive in identifying and addressing technical debt
+- Effective communicator, both written and verbal
+
+Areas for Development:
+- Could improve time management when working on multiple projects simultaneously
+- Should take on more cross-functional collaboration opportunities
+- Consider developing more strategic thinking skills
+
+Goals for 2024:
+1. Lead the migration of legacy systems to microservices architecture
+2. Mentor 2-3 junior engineers
+3. Complete advanced cloud architecture certification
+4. Improve documentation practices within the team
+
+Salary Increase: 5% ($6,904 increase, from $138,096 to $145,000)
+Bonus: $22,500 (16.3% of base salary, above target)
+
+Previous Reviews:
+2023: Exceeds Expectations (4.3/5.0)
+2022: Meets Expectations (3.8/5.0)
+2021: Exceeds Expectations (4.2/5.0)
+2020: Meets Expectations (3.9/5.0)
+2019: Meets Expectations (3.7/5.0)
+2018: Meets Expectations (3.5/5.0) - First year, 6 months
+
+DISCIPLINARY ACTIONS
+--------------------
+None on record.
+
+ATTENDANCE RECORDS
+------------------
+2024 Year-to-Date:
+- Total Days Worked: 48 days
+- Sick Days Used: 2 days
+- PTO Days Used: 7.5 days
+- Unpaid Leave: 0 days
+- Tardiness: 3 instances (all less than 15 minutes, excused)
+- No-Show: 0 instances
+
+2023 Annual:
+- Sick Days Used: 5 days
+- PTO Days Used: 18 days
+- Unpaid Leave: 0 days
+- Tardiness: 8 instances
+- Attendance Rating: Excellent
+
+TRAINING AND DEVELOPMENT
+------------------------
+Completed Training:
+1. "Advanced Kubernetes Administration" - March 2023
+2. "Microservices Architecture Patterns" - June 2023
+3. "Leadership Essentials for Engineers" - September 2023
+4. "Security Best Practices for Cloud Applications" - November 2023
+
+Upcoming Training:
+1. "Strategic Technical Leadership" - Scheduled for May 2024
+2. "Advanced System Design" - Scheduled for August 2024
+
+Professional Development Budget: $3,000 per year
+Used This Year: $1,200
+Remaining: $1,800
+
+SECURITY CLEARANCE AND ACCESS
+------------------------------
+Security Clearance Level: Standard (no special clearance required)
+Background Check: Completed June 10, 2018
+Background Check Company: SecureScreen Background Services
+Report Number: BC-789456123
+Status: Cleared
+
+System Access:
+- Active Directory: canderson@techglobal.com
+- Email: canderson@techglobal.com
+- Slack: @chris.anderson
+- GitHub: canderson-techglobal
+- Jira: canderson
+- Confluence: canderson
+- AWS Account: canderson-dev, canderson-prod
+- Google Cloud Project: techglobal-dev-eng
+- VPN Access: Yes
+- Remote Desktop: Yes
+- Database Access: Read/Write (development), Read-only (production)
+- Admin Rights: No (standard user privileges)
+
+Badge Access:
+- Building Access: Yes (24/7)
+- Server Room: No
+- Executive Floor: No
+- Parking Garage: Yes (Level 2, Space 45)
+
+EQUIPMENT AND ASSETS
+--------------------
+Company Laptop:
+- Model: MacBook Pro 16-inch, 2023
+- Serial Number: C02XY1234567
+- Asset Tag: ASSET-789456123
+- Issue Date: March 1, 2023
+- Estimated Value: $3,500
+
+Company Phone:
+- Model: iPhone 15 Pro
+- Phone Number: (650) 555-7890
+- IMEI: 123456789012345
+- Asset Tag: ASSET-789456124
+- Issue Date: March 1, 2023
+- Estimated Value: $1,200
+
+Other Equipment:
+- Monitor: Dell UltraSharp 27-inch (2x) - Asset ASSET-789456125, ASSET-789456126
+- Keyboard: Logitech MX Keys - Asset ASSET-789456127
+- Mouse: Logitech MX Master 3 - Asset ASSET-789456128
+- Headset: Bose QuietComfort 45 - Asset ASSET-789456129
+
+Total Asset Value: Approximately $6,500
+
+LEGAL AND COMPLIANCE
+--------------------
+Non-Disclosure Agreement (NDA):
+- Signed: June 15, 2018
+- Status: Active
+- Expiration: N/A (perpetual)
+
+Non-Compete Agreement:
+- Signed: June 15, 2018
+- Status: Active
+- Term: 12 months post-employment
+- Geographic Scope: United States
+- Industry Scope: Software development, cloud services, enterprise technology
+
+Intellectual Property Agreement:
+- Signed: June 15, 2018
+- Status: Active
+- Terms: All work-related inventions and intellectual property assigned to company
+
+Code of Conduct Acknowledgment:
+- Last Acknowledged: January 15, 2024
+- Status: Current
+
+Harassment Prevention Training:
+- Completed: March 15, 2023
+- Next Required: March 15, 2025
+- Certificate: HR-TRAIN-789456123
+
+DATA PRIVACY TRAINING
+---------------------
+GDPR Training:
+- Completed: May 10, 2023
+- Certificate: GDPR-789456123
+- Next Required: May 10, 2025
+
+CCPA Training:
+- Completed: May 10, 2023
+- Certificate: CCPA-789456123
+- Next Required: May 10, 2025
+
+HIPAA Training (if applicable):
+- Not required (not a healthcare company)
+
+NOTES AND COMMENTS
+------------------
+HR Notes:
+- Employee is highly valued member of the engineering team
+- Frequently volunteers for challenging projects
+- Strong candidate for future promotion to Staff Engineer or Engineering Manager
+- No performance or behavioral concerns
+- Excellent team player, well-liked by colleagues
+
+Manager Notes (Sarah Mitchell):
+- Chris is one of my top performers
+- Consistently goes above and beyond expectations
+- Excellent mentor to junior engineers
+- Strong technical leadership skills
+- Recommended for promotion consideration in 2025
+
+Special Accommodations:
+- None requested or provided
+
+Work Authorization Updates:
+- None required (U.S. Citizen)
+
+Last File Update: March 15, 2024
+Updated By: Maria Santos, HR Specialist
+Next Review Date: September 15, 2024
+
+CONFIDENTIALITY NOTICE
+----------------------
+This document contains confidential employee information and is protected under various privacy laws including but not limited to:
+- California Consumer Privacy Act (CCPA)
+- General Data Protection Regulation (GDPR) - if applicable
+- State and federal employment privacy laws
+
+Access to this file is restricted to:
+- Authorized HR personnel
+- Direct supervisors (with limited access)
+- Legal and compliance departments
+- Authorized third-party service providers (under strict confidentiality agreements)
+
+Unauthorized access, disclosure, or use of this information is strictly prohibited and may result in disciplinary action and/or legal consequences.
+
+END OF FILE
+-----------
+File ID: HR-EMP-789456123
+Version: 12.0
+Last Modified: March 15, 2024 2:45 PM PST
+Modified By: Maria Santos (HR Specialist, User ID: msantos-hr)
+

@@ -1,0 +1,8 @@
+{"_meta": {"file": "synthetic_provider_admin.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::county", "openmed::npi", "openmed::phone_number", "openmed::tax_id", "openmed::unique_id"]}}
+{"start": 558, "end": 568, "text": "1234567893", "entity_id": "openmed::npi"}
+{"start": 757, "end": 767, "text": "12-3456789", "entity_id": "openmed::tax_id"}
+{"start": 352, "end": 366, "text": "(617) 555-0148", "entity_id": "openmed::phone_number"}
+{"start": 852, "end": 868, "text": "Middlesex County", "entity_id": "openmed::county"}
+{"start": 1038, "end": 1049, "text": "912-78-4567", "entity_id": "openmed::tax_id"}
+{"start": 1302, "end": 1316, "text": "3675 9834 6012", "entity_id": "openmed::unique_id"}
+{"start": 1405, "end": 1416, "text": "046 454 286", "entity_id": "openmed::unique_id"}

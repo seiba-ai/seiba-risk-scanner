@@ -1,0 +1,34 @@
+{"_meta": {"file": "genetic_restricted_research.txt", "version": 1, "label_set": "openmed_pii_superclinical_44m", "allowed_entity_ids": ["openmed::age", "openmed::city", "openmed::date", "openmed::date_of_birth", "openmed::email", "openmed::first_name", "openmed::ipv4", "openmed::last_name", "openmed::phone_number", "openmed::postcode", "openmed::ssn", "openmed::state", "openmed::street_address", "openmed::time", "openmed::unique_id"], "clinical_label_set": "disease_detection_superclinical", "clinical_allowed_entity_ids": ["openmed::CONDITION", "openmed::DISEASE", "openmed::PATHOLOGY"], "clinical_annotation_notes": "Patient-specific disease/condition/pathology spans for OpenMed disease_detection_superclinical. Family-history-only mentions and negated conditions are excluded."}}
+{"start": 35, "end": 53, "text": "GEN-STUDY-2024-001", "entity_id": "openmed::unique_id"}
+{"start": 82, "end": 87, "text": "Sarah", "entity_id": "openmed::first_name"}
+{"start": 88, "end": 91, "text": "Kim", "entity_id": "openmed::last_name"}
+{"start": 98, "end": 108, "text": "2024-01-18", "entity_id": "openmed::date"}
+{"start": 122, "end": 134, "text": "GEN-SUBJ-001", "entity_id": "openmed::unique_id"}
+{"start": 148, "end": 153, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 154, "end": 160, "text": "Wilson", "entity_id": "openmed::last_name"}
+{"start": 166, "end": 176, "text": "05/18/1980", "entity_id": "openmed::date_of_birth"}
+{"start": 182, "end": 184, "text": "43", "entity_id": "openmed::age"}
+{"start": 191, "end": 202, "text": "789-12-3456", "entity_id": "openmed::ssn"}
+{"start": 216, "end": 229, "text": "RES-456789012", "entity_id": "openmed::unique_id"}
+{"start": 245, "end": 270, "text": "james.wilson@research.org", "entity_id": "openmed::email"}
+{"start": 278, "end": 292, "text": "(415) 555-9876", "entity_id": "openmed::phone_number"}
+{"start": 303, "end": 321, "text": "321 Research Drive", "entity_id": "openmed::street_address"}
+{"start": 323, "end": 336, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 338, "end": 340, "text": "CA", "entity_id": "openmed::state"}
+{"start": 341, "end": 346, "text": "94102", "entity_id": "openmed::postcode"}
+{"start": 429, "end": 434, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 1008, "end": 1010, "text": "52", "entity_id": "openmed::age"}
+{"start": 1061, "end": 1063, "text": "48", "entity_id": "openmed::age"}
+{"start": 1145, "end": 1150, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 1529, "end": 1534, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 1813, "end": 1822, "text": "10.0.0.45", "entity_id": "openmed::ipv4"}
+{"start": 1826, "end": 1836, "text": "2024-01-18", "entity_id": "openmed::date"}
+{"start": 1840, "end": 1848, "text": "09:15:23", "entity_id": "openmed::time"}
+{"start": 2299, "end": 2303, "text": "June", "entity_id": "openmed::date"}
+{"start": 2305, "end": 2310, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 2792, "end": 2805, "text": "San Francisco", "entity_id": "openmed::city"}
+{"start": 2836, "end": 2841, "text": "James", "entity_id": "openmed::first_name"}
+{"start": 756, "end": 767, "text": "Alzheimer's", "entity_id": "openmed::DISEASE"}
+{"start": 987, "end": 1000, "text": "breast cancer", "entity_id": "openmed::DISEASE"}
+{"start": 1039, "end": 1053, "text": "ovarian cancer", "entity_id": "openmed::DISEASE"}
+{"start": 1214, "end": 1229, "text": "prostate cancer", "entity_id": "openmed::DISEASE"}
