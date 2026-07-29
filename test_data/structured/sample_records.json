@@ -1,0 +1,13 @@
+[
+  {
+    "contact_email": "jane.doe@hospital.example.org",
+    "billing_email": "billing-team@hospital.example.org",
+    "callback_phone": "(415) 555-0199",
+    "patient_notes": "Reach billing@clinic.example for invoice #9921; callback on mobile."
+  },
+  {
+    "contact_email": "support@vendor.example",
+    "account_ref": "INV-2024-009921",
+    "notes": "No PHI in this row."
+  }
+]

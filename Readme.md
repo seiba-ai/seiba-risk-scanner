@@ -58,7 +58,7 @@ Most PII tools answer only the first, and answer it as a black box: a list of sp
 
 ## Installation
 
-Requires **Python 3.10+**.
+Requires **Python 3.12+**.
 
 ```bash
 pip install seiba-risk-scanner

@@ -20,7 +20,7 @@ Please read the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Development setup
 
-Requires Python 3.10+.
+Requires Python 3.12+.
 
 ```bash
 git clone https://github.com/seiba-ai/seiba-risk-scanner.git

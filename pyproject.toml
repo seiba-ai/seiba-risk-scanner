@@ -7,7 +7,7 @@ name = "seiba-risk-scanner"
 version = "0.1.0"
 description = "Ontology-driven PII/PHI/financial sensitive data detection SDK"
 readme = "Readme.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
 authors = [
@@ -28,8 +28,6 @@ classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Topic :: Security",
   "Topic :: Text Processing :: Linguistic",
@@ -71,7 +69,7 @@ where = ["src"]
 "seiba_risk_scanner.classification_engine.ner" = ["label_maps/*.yaml"]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.12"
 warn_return_any = true
 warn_unused_configs = true
 ignore_missing_imports = true
@@ -80,7 +78,7 @@ files = ["src/seiba_risk_scanner"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py312"
 src = ["src"]
 
 [tool.ruff.lint]

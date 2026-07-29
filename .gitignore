@@ -247,6 +247,7 @@ demo_scripts/local_runs/
 !eval/baselines/*.json
 !eval/ground_truth/**/*.jsonl
 !eval/ground_truth/ACTIVE
+!test_data/structured/*.json
 # Built gazetteer artifact ships with the repo (raw MONDO/RxNorm/CHV sources are large
 # and gitignored, so runtime relies on this checked-in build).
 !src/**/med_ontology_sources/cleaned/medical_terms_gazetteer.json
@@ -264,3 +265,4 @@ src/**/med_ontology_sources/cleaned/*.txt
 poetry.lock
 eval/openmed_runs/
 .RRF/
+
