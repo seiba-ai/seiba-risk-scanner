@@ -32,7 +32,7 @@ class OpenMedBackend(NERBackend):
         # OpenMed's regex merge of fragmented spans. Off by default so seiba deterministic
         # owns structured IDs (dates/SSN/phone) instead of competing in fusion.
         self._use_smart_merging = use_smart_merging
-        self._config = None
+        self._config: object | None = None
         self._label_map: Dict[str, _MappedLabel] = self._parse_map(
             yaml.safe_load(_LABEL_MAP_PATH.read_text(encoding="utf-8"))
         )
@@ -126,6 +126,7 @@ class OpenMedBackend(NERBackend):
                 )
 
             t1 = time.perf_counter()
+            result: object
             if self._is_pii:
                 result = extract_pii(
                     text,

@@ -98,7 +98,11 @@ class SeverityResolver:
         self, row: CombinedDetectionRow, config: Optional[EntityConfig]
     ) -> SeverityAssessment:
         data_class = config.data_class if config else None
-        base = self.base_scores.get(data_class, DEFAULT_BASE)
+        base = (
+            self.base_scores.get(data_class, DEFAULT_BASE)
+            if data_class is not None
+            else DEFAULT_BASE
+        )
         name = data_class.value if data_class else "unknown"
 
         # Severity is the parent's, always. By design a generic parent is at least as
@@ -152,12 +156,15 @@ class SeverityResolver:
             )
 
         tags = self._compliance_for(config)
-        if tags:
+        if tags and config is not None:
             trace.append(
                 RuleFired(
                     rule_id="compliance",
                     source="compliance",
-                    detail=f"category {config.classification_category} -> {', '.join(t.value for t in tags)}",
+                    detail=(
+                        f"category {config.classification_category} -> "
+                        f"{', '.join(t.value for t in tags)}"
+                    ),
                 )
             )
 

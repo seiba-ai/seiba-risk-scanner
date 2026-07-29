@@ -384,7 +384,8 @@ class ReadinessAssessor:
         nothing rather than a fabricated k.
         """
         records: Dict[RecordKey, Dict[str, str]] = defaultdict(dict)
-        quasi, sensitive = set(), set()
+        quasi: set[str] = set()
+        sensitive: set[str] = set()
         for finding, key in zip(findings, keys):
             data_class = self._data_class(finding.detection)
             if data_class not in QUASI_CLASSES and data_class not in SENSITIVE_CLASSES:

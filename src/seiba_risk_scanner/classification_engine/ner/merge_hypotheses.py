@@ -784,7 +784,7 @@ def resolve_deterministic_and_ner_to_combined(
 
         # Guard: a span with no digits should not be rescued — it is almost certainly a
         # prefix-only pattern match landing on the wrong entity.
-        if rescue_applied and not any(c.isdigit() for c in span_text):
+        if rescue_applied and det is not None and not any(c.isdigit() for c in span_text):
             rescue_applied = False
             reverted = _rescore_deterministic(
                 det,
@@ -846,9 +846,9 @@ def resolve_deterministic_and_ner_to_combined(
                     )
                 )
 
-        orig_id = det.entity_id if rescue_applied else None
-        orig_ent = det.entity if rescue_applied else None
-        orig_ont = det.ontology if rescue_applied else None
+        orig_id = det.entity_id if rescue_applied and det is not None else None
+        orig_ent = det.entity if rescue_applied and det is not None else None
+        orig_ont = det.ontology if rescue_applied and det is not None else None
 
         conf_det = det.confidence if det is not None else 0.0
         conf_ner_out: Optional[float] = None

@@ -189,7 +189,7 @@ def _best_side_contribution(
     for ms, me in spans:
         if side == "before":
             # Match ends at me; span starts after `before` string -> distance from match end to span
-            gap = n - me
+            gap = float(n - me)
             prox = 1.0 - min(1.0, gap / max(1.0, float(n)))
         else:
             # After: match starts at ms; gap from span end to phrase start

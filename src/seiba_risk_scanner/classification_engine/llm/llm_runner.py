@@ -114,7 +114,7 @@ class _OpenAIBackend(LLMBackend):
             max_tokens=_MAX_NEW_TOKENS,
             timeout=timeout,
         )
-        return resp.choices[0].message.content or ""
+        return str(resp.choices[0].message.content or "")
 
     @property
     def pipeline_name(self) -> str:
@@ -139,7 +139,7 @@ class _OllamaBackend(LLMBackend):
             timeout=timeout,
         )
         resp.raise_for_status()
-        return resp.json()["message"]["content"]
+        return str(resp.json()["message"]["content"])
 
     @property
     def pipeline_name(self) -> str:
@@ -161,7 +161,7 @@ class _LlamaCppBackend(LLMBackend):
             temperature=0.0,
             max_tokens=_MAX_NEW_TOKENS,
         )
-        return resp["choices"][0]["message"]["content"]
+        return str(resp["choices"][0]["message"]["content"])
 
     @property
     def pipeline_name(self) -> str:
@@ -186,7 +186,7 @@ class _VLLMBackend(LLMBackend):
             timeout=timeout,
         )
         resp.raise_for_status()
-        return resp.json()["choices"][0]["message"]["content"]
+        return str(resp.json()["choices"][0]["message"]["content"])
 
     @property
     def pipeline_name(self) -> str:
@@ -230,17 +230,17 @@ class _TransformersBackend(LLMBackend):
         self._pipe = hf_pipeline("text-generation", model=model, tokenizer=tokenizer)
 
     def complete(self, prompt: str, *, timeout: int = 120) -> str:
-        out = self._pipe(
+        out: Any = self._pipe(
             [{"role": "user", "content": prompt}],
             max_new_tokens=_MAX_NEW_TOKENS,
             do_sample=False,
             temperature=None,
             top_p=None,
-            pad_token_id=self._pipe.tokenizer.eos_token_id,
+            pad_token_id=getattr(self._pipe.tokenizer, "eos_token_id", None),
         )
         generated = out[0]["generated_text"]
         if isinstance(generated, list):
-            return generated[-1].get("content", "")
+            return str(generated[-1].get("content", "") or "")
         return str(generated)
 
     @property

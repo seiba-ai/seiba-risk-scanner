@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Literal, Optional, Sequence, Tuple
 
 from seiba_risk_scanner.assessment.models import (
     AssessedFinding,
@@ -249,6 +249,7 @@ class ReportBuilder:
         if reid and reid.record_count:
             uniqueness = reid.records_below_k_threshold / reid.record_count
 
+        mode: Literal["severity_only", "severity_x_uniqueness"]
         if uniqueness is None:
             risk, mode = severity_share, "severity_only"
         else:

@@ -93,10 +93,10 @@ def _decisive_key_entities(
     NER is left on — a wrong skip suppresses a real span, a missed skip only costs a
     model call.
     """
-    name_phrase: Dict[str, set] = {}
-    name_token: Dict[str, set] = {}
-    ctx_phrase: Dict[str, set] = {}
-    ctx_token: Dict[str, set] = {}
+    name_phrase: Dict[str, set[str]] = {}
+    name_token: Dict[str, set[str]] = {}
+    ctx_phrase: Dict[str, set[str]] = {}
+    ctx_token: Dict[str, set[str]] = {}
     for eid, cfg in configs.items():
         for alias, phrase_map, token_map in (
             (cfg.name, name_phrase, name_token),
@@ -251,6 +251,8 @@ class SeibaScanner:
         fusion_weight_contextual: float,
         stage_timings: Optional[Dict[str, float]] = None,
     ) -> List[CombinedDetectionRow]:
+        if self.llm_backend is None or self.llm_model is None:
+            return existing
         llm_spans = llm_runner.run_llm_gap_fill(
             text,
             existing=existing,
