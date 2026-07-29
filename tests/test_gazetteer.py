@@ -1,4 +1,8 @@
-"""Gazetteer dictionary detection + normalization, and the structured key-NER gate."""
+"""Gazetteer dictionary detection + normalization, and the structured key-NER gate.
+
+The shipped gazetteer is MONDO (+ CHV aliases) only — RxNorm drug names are not
+redistributed. These tests assert medical_condition matching, not medication_name.
+"""
 
 from __future__ import annotations
 
@@ -26,17 +30,16 @@ from seiba_risk_scanner.scanner import _decisive_key_entities  # noqa: E402
 def test_index_matches_and_types_clinical_terms():
     idx = get_default_index()
     got = {m.text.lower(): m.term.entity for m in idx.iter_matches(
-        "Prescribed sertraline and aspirin for depressive disorder and hypertension."
+        "History of depressive disorder and hypertension."
     )}
-    assert got["sertraline"] == "medication_name"
-    assert got["aspirin"] == "medication_name"  # RxNorm wins the disease/drug collision
     assert got["depressive disorder"] == "medical_condition"
+    assert got["hypertension"] == "medical_condition"
 
 
 def test_normalize_resolves_canonical_and_ignores_unknown():
     idx = get_default_index()
-    assert idx.normalize("aspirin").entity == "medication_name"
-    assert idx.normalize("ASPIRIN").canonical == "aspirin"  # case-insensitive
+    assert idx.normalize("hypertension").entity == "medical_condition"
+    assert idx.normalize("HYPERTENSION").canonical == "hypertensive disorder"  # case-insensitive
     assert idx.normalize("not a medical phrase at all") is None
 
 
@@ -54,9 +57,8 @@ def test_gazetteer_detect_emits_phi_rows_with_canonical_provenance():
 
 def test_scanner_surfaces_health_entities_end_to_end():
     scanner = SeibaScanner(skip_ner=True)  # isolate deterministic + gazetteer
-    res = scanner.classify_text("Patient on metformin, diagnosed with hypertension.")
+    res = scanner.classify_text("Patient diagnosed with hypertension and depressive disorder.")
     entities = {d.entity for d in res.detections}
-    assert "medication_name" in entities
     assert "medical_condition" in entities
 
 
