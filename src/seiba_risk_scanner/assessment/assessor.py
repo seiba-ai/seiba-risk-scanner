@@ -403,10 +403,13 @@ class ReadinessAssessor:
 
         from openmed.risk import kanon_report  # heavy import, only needed here
 
+        # No sensitive_attributes: l-diversity requires every record to carry every declared
+        # attribute, but ours are detections — absence means "not found", not a value. openmed
+        # >=2.0 rejects sparse ones outright; 1.9 silently scored missing as "None" and inflated
+        # l. We read only k and the class sizes, and those key on quasi-identifiers alone.
         report = kanon_report(
             [records[key] for key in ordered],
             quasi_identifiers=sorted(quasi),
-            sensitive_attributes=sorted(sensitive),
         )
         singletons = {
             ordered[member]
