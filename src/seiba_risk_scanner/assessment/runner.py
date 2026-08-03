@@ -63,16 +63,23 @@ def scan_paths(
     texts = [p for p in files if p.suffix.lower() in TEXT_SUFFIXES]
     tables = [p for p in files if p.suffix.lower() in TABULAR_SUFFIXES]
 
+    # source_id is the full path so two same-named files in different folders stay
+    # distinct; the label stays the basename, which is what a reader wants to see.
     results: List[PipelineStageResult] = []
     labels: List[str] = []
     if texts:
         results += scanner.classify_texts(
-            [p.read_text(encoding="utf-8", errors="ignore") for p in texts]
+            [p.read_text(encoding="utf-8", errors="ignore") for p in texts],
+            sources=[str(p) for p in texts],
         )
         labels += [p.name for p in texts]
     for table in tables:
         rows = _rows(table)
-        results.append(scanner.classify_structured_text(rows[:max_rows] if max_rows else rows))
+        results.append(
+            scanner.classify_structured_text(
+                rows[:max_rows] if max_rows else rows, source_id=str(table)
+            )
+        )
         labels.append(table.name)
     return results, labels
 

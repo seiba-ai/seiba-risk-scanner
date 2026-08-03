@@ -1,12 +1,25 @@
 from __future__ import annotations
 
+import hashlib
 import re
 import time
 from collections import defaultdict
-from typing import Any, Callable, Dict, Iterable, Iterator, List, Optional, Tuple, Union
+from typing import (
+    Any,
+    Callable,
+    Dict,
+    Iterable,
+    Iterator,
+    List,
+    Optional,
+    Sequence,
+    Tuple,
+    Union,
+)
 
 import pandas as pd
 
+from seiba_risk_scanner.classification_engine.affix_extend import extend_spans
 from seiba_risk_scanner.classification_engine.contextual.contextual_words import (
     ContextualWordsScorer,
     fuse_confidence,
@@ -37,6 +50,7 @@ from seiba_risk_scanner.classification_engine.ontologies.ontology_loader import 
 )
 from seiba_risk_scanner.classification_engine.pipeline_models import (
     CombinedDetectionRow,
+    Origin,
     PipelineStageResult,
 )
 from seiba_risk_scanner.config import (
@@ -138,6 +152,11 @@ def _cell_to_str(raw: Any) -> Optional[str]:
         pass
     value = str(raw).strip()
     return value if value else None
+
+
+def _synthetic_source_id(prefix: str, content: str) -> str:
+    """Name an input the caller did not name: same content always gets the same id."""
+    return f"{prefix}-{hashlib.sha256(content.encode('utf-8')).hexdigest()[:12]}"
 
 
 def _iter_structured_cells(
@@ -419,7 +438,7 @@ class SeibaScanner:
             if stage_timings is not None and "llm_s" not in stage_timings:
                 stage_timings["llm_s"] = time.perf_counter() - t_llm0
 
-        return out
+        return extend_spans(out, text, configs)
 
     def _make_context_scorer(
         self,
@@ -474,6 +493,8 @@ class SeibaScanner:
         self,
         data: StructuredInput,
         *,
+        source_id: Optional[str] = None,
+        source_label: Optional[str] = None,
         min_fused_confidence: float = 0.3,
         fusion_weight_deterministic: float = 0.65,
         fusion_weight_contextual: float = 0.35,
@@ -546,6 +567,11 @@ class SeibaScanner:
 
         combined.extend(self._column_consensus_fills(combined, cells, configs))
         combined.sort(key=lambda row: (row.start, -row.confidence))
+        Origin.stamp(
+            combined,
+            source_id or _synthetic_source_id("table", "\x00".join(c[0] for c in cells)),
+            source_label,
+        )
         return PipelineStageResult(
             detections=combined,
             text_length=total_chars,
@@ -633,6 +659,8 @@ class SeibaScanner:
         self,
         text: str,
         *,
+        source_id: Optional[str] = None,
+        source_label: Optional[str] = None,
         min_fused_confidence: float = 0.3,
         fusion_weight_deterministic: float = 0.65,
         fusion_weight_contextual: float = 0.35,
@@ -640,6 +668,8 @@ class SeibaScanner:
     ) -> PipelineStageResult:
         result, _ = self.classify_text_profiled(
             text,
+            source_id=source_id,
+            source_label=source_label,
             min_fused_confidence=min_fused_confidence,
             fusion_weight_deterministic=fusion_weight_deterministic,
             fusion_weight_contextual=fusion_weight_contextual,
@@ -651,6 +681,8 @@ class SeibaScanner:
         self,
         text: str,
         *,
+        source_id: Optional[str] = None,
+        source_label: Optional[str] = None,
         min_fused_confidence: float = 0.3,
         fusion_weight_deterministic: float = 0.65,
         fusion_weight_contextual: float = 0.35,
@@ -682,6 +714,7 @@ class SeibaScanner:
         )
 
         combined.sort(key=lambda row: (row.start, -row.confidence))
+        Origin.stamp(combined, source_id or _synthetic_source_id("doc", text), source_label)
         return (
             PipelineStageResult(
                 detections=combined,
@@ -696,6 +729,7 @@ class SeibaScanner:
         self,
         texts: List[str],
         *,
+        sources: Optional[Sequence[str]] = None,
         min_fused_confidence: float = 0.3,
         fusion_weight_deterministic: float = 0.65,
         fusion_weight_contextual: float = 0.35,
@@ -718,7 +752,7 @@ class SeibaScanner:
                 ner_by_text = dict(zip(unique, span_lists))
 
         results: List[PipelineStageResult] = []
-        for text in texts:
+        for index, text in enumerate(texts):
             if not text or not isinstance(text, str):
                 results.append(PipelineStageResult(detections=[], text_length=0))
                 continue
@@ -732,6 +766,8 @@ class SeibaScanner:
                 precomputed_ner=ner_by_text.get(text, []) if batched else None,
             )
             combined.sort(key=lambda row: (row.start, -row.confidence))
+            source = sources[index] if sources and index < len(sources) else None
+            Origin.stamp(combined, source or _synthetic_source_id("doc", text))
             results.append(
                 PipelineStageResult(
                     detections=combined,

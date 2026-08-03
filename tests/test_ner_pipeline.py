@@ -269,8 +269,11 @@ def test_is_a_reports_subtype_detections_as_the_parent_entity():
 
     sdk = SeibaScanner(verbose=False, ner_runner_override=fake_ner)
     res = sdk.classify_text("Attending physician: Dr. Alice Nguyen, MD reviewed the chart.")
-    names = [r for r in res.detections if r.text == "Alice Nguyen"]
+    # The span carries the title now: "Dr." is an affix on physician_names, absorbed so a
+    # scrub cannot leave it standing beside a redacted name.
+    names = [r for r in res.detections if "Alice Nguyen" in r.text]
     assert names, "physician name should still be detected"
+    assert [r.text for r in names] == ["Dr. Alice Nguyen"]
     assert all(r.entity_id == _PERSON_NAMES_EID for r in names)
     assert not any("physician_names" in r.entity_id for r in res.detections)
 

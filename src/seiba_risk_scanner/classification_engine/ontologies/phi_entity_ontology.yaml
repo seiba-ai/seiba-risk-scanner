@@ -585,6 +585,8 @@ entities:
     # a patient who happens to hold a doctorate is a judgement call, and getting it wrong
     # must not decide whether the name is treated as a name at all.
     is_a: pii_entity_ontology::person_names
+    affixes:
+      prefix: ["Dr.", "Dr", "Doctor", "Prof.", "Prof"]
     regex_patterns:
       accepted_patterns: []
       prohibited_patterns:
@@ -633,6 +635,14 @@ entities:
   hospital_names:
     description: "Hospital or healthcare facility name"
     is_a: pii_entity_ontology::organization
+    affixes:
+      suffix:
+        - CLINIC
+        - HOSPITAL
+        - MEDICAL CENTER
+        - HEALTH CENTER
+        - CENTER
+        - CENTRE
     regex_patterns:
       accepted_patterns: []
       prohibited_patterns: []

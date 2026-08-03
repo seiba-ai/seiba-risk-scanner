@@ -116,6 +116,11 @@ class EntityConfig:
     # as the parent, so a wrong guess about *which kind* of thing this is can never stop it
     # being reported as the kind we are sure about. See resolve_entity_alias.
     is_a: Optional[str] = None
+    # Adjacent words that belong inside a span rather than beside it: a title before a
+    # physician's name, a facility word after an organisation. Resolved through is_a, so a
+    # title declared on physician_names also extends spans reported as person_names.
+    affix_prefix: List[str] = field(default_factory=list)
+    affix_suffix: List[str] = field(default_factory=list)
 
 
 def _parse_accepted_patterns(raw_patterns: Any) -> tuple[List[str], Dict[str, float]]:
@@ -261,6 +266,14 @@ def load_ontology(path: str | Path, ontology_name: Optional[str] = None) -> Dict
         raw_is_a = raw_entity.get("is_a")
         is_a = str(raw_is_a).strip() if isinstance(raw_is_a, str) and raw_is_a.strip() else None
 
+        affix_cfg = raw_entity.get("affixes") or {}
+        affix_prefix = [
+            v.strip() for v in (affix_cfg.get("prefix") or []) if isinstance(v, str) and v.strip()
+        ]
+        affix_suffix = [
+            v.strip() for v in (affix_cfg.get("suffix") or []) if isinstance(v, str) and v.strip()
+        ]
+
         class_cfg = raw_entity.get("classification") or {}
         cat = class_cfg.get("category")
         classification_category = cat.strip() if isinstance(cat, str) and cat.strip() else None
@@ -318,6 +331,8 @@ def load_ontology(path: str | Path, ontology_name: Optional[str] = None) -> Dict
             context_rescue_override=context_rescue_override,
             pattern_confidence_weights=pattern_confidence_weights,
             is_a=is_a,
+            affix_prefix=affix_prefix,
+            affix_suffix=affix_suffix,
         )
 
     return result

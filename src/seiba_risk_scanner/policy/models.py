@@ -6,6 +6,7 @@ from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 
+from seiba_risk_scanner.classification_engine.pipeline_models import Origin
 
 PolicyActionSource = Literal[
     "openmed_action_for",
@@ -48,10 +49,15 @@ class ActionRecord(BaseModel):
         description="Ephemeral scrubbed value when execute ran; not a vault entry",
     )
     provenance: Optional[dict] = None
+    origin: Optional[Origin] = Field(
+        default=None, description="Which input this span came from; carried from the detection"
+    )
 
     @property
     def field_name(self) -> str:
         """The column/key this finding came from, else the entity name."""
+        if self.origin and self.origin.column:
+            return self.origin.column
         provenance = self.provenance or {}
         return provenance.get("column") or provenance.get("key") or self.entity
 

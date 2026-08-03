@@ -3,22 +3,18 @@
 {"start": 199, "end": 207, "text": "San Jose", "entity_id": "pii_entity_ontology::city"}
 {"start": 212, "end": 217, "text": "95110", "entity_id": "pii_entity_ontology::zip_code"}
 {"start": 225, "end": 239, "text": "(408) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
-{"start": 253, "end": 257, "text": "Lisa", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 258, "end": 262, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 253, "end": 262, "text": "Lisa Chen", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 282, "end": 302, "text": "lchen@techglobal.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 316, "end": 329, "text": "EMP-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 390, "end": 401, "text": "Christopher", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 408, "end": 416, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 433, "end": 438, "text": "Chris", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 439, "end": 447, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 390, "end": 416, "text": "Christopher James Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 433, "end": 447, "text": "Chris Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 463, "end": 477, "text": "March 22, 1991", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 463, "end": 477, "text": "March 22, 1991", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 483, "end": 485, "text": "33", "entity_id": "pii_entity_ontology::age"}
 {"start": 516, "end": 527, "text": "345-67-8901", "entity_id": "pii_entity_ontology::ssn"}
 {"start": 541, "end": 554, "text": "EMP-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 566, "end": 579, "text": "June 15, 2018", "entity_id": "pii_entity_ontology::dates"}
-{"start": 699, "end": 704, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 705, "end": 713, "text": "Mitchell", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 699, "end": 713, "text": "Sarah Mitchell", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 747, "end": 757, "text": "MGR-456789", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 816, "end": 850, "text": "1234 Innovation Way, Apartment 12B", "entity_id": "pii_entity_ontology::street_address"}
 {"start": 851, "end": 864, "text": "Mountain View", "entity_id": "pii_entity_ontology::city"}
@@ -33,12 +29,10 @@
 {"start": 1148, "end": 1172, "text": "canderson@techglobal.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 1189, "end": 1222, "text": "chris.anderson.personal@gmail.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 1240, "end": 1270, "text": "cj.anderson.dev@protonmail.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 1306, "end": 1314, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 1315, "end": 1323, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1306, "end": 1323, "text": "Jennifer Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 1352, "end": 1366, "text": "(650) 555-3456", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 1407, "end": 1434, "text": "jennifer.anderson@email.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 1453, "end": 1459, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 1460, "end": 1468, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1453, "end": 1468, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 1497, "end": 1511, "text": "(415) 555-7890", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 1521, "end": 1537, "text": "8901 Family Lane", "entity_id": "pii_entity_ontology::street_address"}
 {"start": 1539, "end": 1552, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
@@ -50,8 +44,7 @@
 {"start": 1855, "end": 1871, "text": "January 15, 2025", "entity_id": "pii_entity_ontology::dates"}
 {"start": 1888, "end": 1901, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
 {"start": 1996, "end": 2009, "text": "June 15, 2018", "entity_id": "pii_entity_ontology::dates"}
-{"start": 2084, "end": 2089, "text": "Maria", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 2090, "end": 2096, "text": "Santos", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 2084, "end": 2096, "text": "Maria Santos", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 2131, "end": 2144, "text": "June 15, 2018", "entity_id": "pii_entity_ontology::dates"}
 {"start": 2309, "end": 2322, "text": "June 15, 2018", "entity_id": "pii_entity_ontology::dates"}
 {"start": 2394, "end": 2407, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
@@ -59,8 +52,7 @@
 {"start": 2516, "end": 2524, "text": "San Jose", "entity_id": "pii_entity_ontology::city"}
 {"start": 2659, "end": 2672, "text": "June 15, 2018", "entity_id": "pii_entity_ontology::dates"}
 {"start": 2811, "end": 2824, "text": "June 15, 2018", "entity_id": "pii_entity_ontology::dates"}
-{"start": 3096, "end": 3103, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 3104, "end": 3108, "text": "Park", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 3096, "end": 3108, "text": "Michael Park", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 3118, "end": 3139, "text": "mpark@startuptech.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 3141, "end": 3155, "text": "(415) 555-2345", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 3698, "end": 3706, "text": "****7890", "entity_id": "pii_entity_ontology::unique_identifier"}
@@ -73,8 +65,7 @@
 {"start": 4268, "end": 4279, "text": "DENT-789456", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
 {"start": 4315, "end": 4325, "text": "VSP-456789", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
 {"start": 4444, "end": 4458, "text": "LIFE-789456123", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
-{"start": 4502, "end": 4510, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 4511, "end": 4519, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4502, "end": 4519, "text": "Jennifer Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 4707, "end": 4721, "text": "STD-LTD-789456", "entity_id": "phi_entity_ontology::health_plan_beneficiary_number"}
 {"start": 4802, "end": 4816, "text": "401K-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 5546, "end": 5560, "text": "STAN-123456789", "entity_id": "pii_entity_ontology::unique_identifier"}
@@ -82,8 +73,7 @@
 {"start": 5870, "end": 5887, "text": "GCP-PCA-456789012", "entity_id": "phi_entity_ontology::certificate_license_number"}
 {"start": 6057, "end": 6070, "text": "CKA-789456123", "entity_id": "phi_entity_ontology::certificate_license_number"}
 {"start": 6303, "end": 6316, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 6327, "end": 6332, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 6333, "end": 6341, "text": "Mitchell", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 6327, "end": 6341, "text": "Sarah Mitchell", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 8750, "end": 8762, "text": "BC-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 8815, "end": 8839, "text": "canderson@techglobal.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 8849, "end": 8873, "text": "canderson@techglobal.com", "entity_id": "pii_entity_ontology::email_address"}
@@ -98,14 +88,11 @@
 {"start": 10740, "end": 10758, "text": "HR-TRAIN-789456123", "entity_id": "phi_entity_ontology::certificate_license_number"}
 {"start": 10860, "end": 10874, "text": "GDPR-789456123", "entity_id": "phi_entity_ontology::certificate_license_number"}
 {"start": 10962, "end": 10976, "text": "CCPA-789456123", "entity_id": "phi_entity_ontology::certificate_license_number"}
-{"start": 11426, "end": 11431, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 11432, "end": 11440, "text": "Mitchell", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 11426, "end": 11440, "text": "Sarah Mitchell", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 11445, "end": 11450, "text": "Chris", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 11788, "end": 11802, "text": "March 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 11815, "end": 11820, "text": "Maria", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 11821, "end": 11827, "text": "Santos", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 11815, "end": 11827, "text": "Maria Santos", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 12617, "end": 12630, "text": "EMP-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 12660, "end": 12674, "text": "March 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 12700, "end": 12705, "text": "Maria", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12706, "end": 12712, "text": "Santos", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12700, "end": 12712, "text": "Maria Santos", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 12738, "end": 12748, "text": "msantos-hr", "entity_id": "pii_entity_ontology::person_names"}

@@ -53,11 +53,10 @@ def _subsumed_gold_run(
 ) -> List[GoldSpan]:
     """Gold spans that a single pred legitimately covers.
 
-    Gold annotates names token by token ("James", "Michael", "O'Connor" are three spans)
-    because it was derived from OpenMed's first_name/last_name schema, while the pipeline
-    emits one merged span. Pairing 1:1 would match the merged span to one token and turn
-    its siblings into false negatives. Strict additionally requires the pred to begin and
-    end exactly on the run, so an over-broad span still fails it.
+    Where gold still holds adjacent same-entity spans, one pred covering the run would
+    otherwise pair with a single member and turn its siblings into false negatives. Strict
+    additionally requires the pred to begin and end exactly on the run, so an over-broad
+    span still fails it.
     """
     covered = sorted(
         (g for g in golds if pred.start <= g.start and g.end <= pred.end),
@@ -127,6 +126,20 @@ def _greedy_pair_by_max_overlap(
         p = remaining_pred.pop(best_j)
         pairs.append(MatchPair(gold=g, pred=p, overlap=best_ov))
 
+    if not require_strict and pairs:
+        # A name the model split into several spans ("James", "Michael", "O'Connor" against
+        # one gold "James Michael O'Connor") pairs once and leaves siblings over. Overlap
+        # asks whether the name was found, so the leftovers are fragments of a hit, not new
+        # errors — they are dropped rather than charged as false positives. They stay
+        # unmatched, so they never inflate recall either. Strict keeps charging them: not
+        # covering the whole name in one span is exactly what strict exists to catch.
+        matched = [pair.gold for pair in pairs]
+        remaining_pred = [
+            p
+            for p in remaining_pred
+            if not any(overlap_len(g.start, g.end, p.start, p.end) > 0 for g in matched)
+        ]
+
     return pairs, remaining_gold, remaining_pred
 
 
@@ -136,7 +149,11 @@ def match_type_overlap(
     *,
     kind: MatchKind = "type_overlap",
 ) -> MatchOutput:
-    """Match spans with same entity_id using overlap>=1, one-to-one greedy pairing."""
+    """Match spans with same entity_id using overlap>=1.
+
+    Greedy one-to-one, then fragments of an already-matched gold span are absorbed rather
+    than charged: overlap answers "was this value found", not "was it found in one piece".
+    """
     gold_by = _bucket_by_entity_id(gold)
     pred_by = _bucket_by_entity_id(pred)
 
