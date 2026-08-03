@@ -237,6 +237,7 @@ eval/openmed_runs/*
 demo_results/
 local_runs/
 demo_scripts/local_runs/
+temp/
 
 *.json
 *.jsonl

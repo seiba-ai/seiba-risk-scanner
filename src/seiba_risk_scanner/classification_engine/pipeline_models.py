@@ -99,6 +99,10 @@ class CombinedDetectionRow(BaseModel):
     contextual_matches_before: Optional[List[str]] = None
     contextual_matches_after: Optional[List[str]] = None
     candidates: Optional[List["ContextCandidate"]] = None
+    alternates: Optional[List["SpanAlternate"]] = Field(
+        default=None,
+        description="Overlapping detections this span won against; None when uncontested.",
+    )
     rescue_applied: bool = False
     original_entity_id: Optional[str] = None
     original_entity: Optional[str] = None
@@ -159,6 +163,29 @@ class CombinedDetectionRow(BaseModel):
         )
 
 
+class SpanAlternate(BaseModel):
+    """A real detection that lost its overlap cluster to the canonical span.
+
+    Scrubbing needs one winner per character range, but the loser is still evidence: kept
+    here so a suppressed reading stays auditable instead of vanishing from the report.
+    """
+
+    model_config = {"extra": "forbid"}
+
+    entity_id: str
+    entity: str
+    start: int
+    end: int
+    text: str
+    confidence: float
+    reason: Literal["absorbed", "nested", "outranked"] = Field(
+        description=(
+            "absorbed: finer grain of the winner (a ZIP inside its address); nested: a "
+            "different entity read inside it; outranked: partly overlapping, lost on rank"
+        )
+    )
+
+
 class ContextCandidate(BaseModel):
     """Alternative entity suggested by contextual phrases near the same span."""
 
@@ -192,4 +219,5 @@ __all__ = [
     "ContextualFusionInput",
     "Origin",
     "PipelineStageResult",
+    "SpanAlternate",
 ]

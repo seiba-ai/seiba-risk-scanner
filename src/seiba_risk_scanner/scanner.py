@@ -34,11 +34,8 @@ from seiba_risk_scanner.classification_engine.deterministic_detectors.determinis
 from seiba_risk_scanner.classification_engine.llm import llm_runner
 from seiba_risk_scanner.classification_engine.ner.backends.base import NerSpanRecord
 from seiba_risk_scanner.classification_engine.ner.merge_hypotheses import (
-    _deduplicate_overlapping_same_entity,
-    _suppress_lower_priority_overlapping_spans,
-    _suppress_strictly_contained_spans,
-    _validator_passes,
     resolve_deterministic_and_ner_to_combined,
+    resolve_overlaps,
 )
 from seiba_risk_scanner.classification_engine.ner.ner_runner import (
     _get_backend,
@@ -335,10 +332,7 @@ class SeibaScanner:
 
         combined = existing + new_rows
         combined.sort(key=lambda row: (row.start, -row.confidence))
-        combined = _suppress_strictly_contained_spans(combined)
-        combined = _deduplicate_overlapping_same_entity(combined)
-        combined = _suppress_lower_priority_overlapping_spans(combined)
-        return combined
+        return resolve_overlaps(combined, configs, span_election=self.config.span_election)
 
     def _value_is_validated_id(self, text: str, configs: Dict[str, EntityConfig]) -> bool:
         """True when a validator-backed deterministic hit spans the whole value.
@@ -357,7 +351,7 @@ class SeibaScanner:
         ).detections:
             if d.start == 0 and d.end == len(text):
                 cfg = configs.get(d.entity_id)
-                if cfg is not None and cfg.validator_enum is not None and _validator_passes(cfg, d.text):
+                if cfg is not None and cfg.validator_enum is not None and cfg.validates(d.text):
                     return True
         return False
 

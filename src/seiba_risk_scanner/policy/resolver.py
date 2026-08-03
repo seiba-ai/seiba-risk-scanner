@@ -15,6 +15,7 @@ from seiba_risk_scanner.classification_engine.ontologies.ontology_loader import 
 )
 from seiba_risk_scanner.classification_engine.pipeline_models import (
     CombinedDetectionRow,
+    SpanAlternate,
 )
 from seiba_risk_scanner.policy.bridge import (
     canonical_label_for,
@@ -28,6 +29,14 @@ from seiba_risk_scanner.policy.generalize import (
 from seiba_risk_scanner.policy.models import ActionRecord, PolicyPlanSection
 
 FindingLike = Union[CombinedDetectionRow, "AssessedFinding"]
+
+# Least to most protective. An action outside this ladder is executed as a mask, so it is
+# compared as one rather than being treated as unknown-and-therefore-safest.
+_ACTION_STRENGTH = ("keep", "generalize", "format_preserve", "replace", "hash", "mask", "redact")
+
+
+def _action_strength(action: str) -> int:
+    return _ACTION_STRENGTH.index(action if action in _ACTION_STRENGTH else "mask")
 
 
 def _row(finding: FindingLike) -> CombinedDetectionRow:
@@ -82,9 +91,14 @@ class PolicyResolver:
         update["detail"] = f"{record.detail}; entity config → {spec}"
         return record.model_copy(update=update)
 
-    def resolve_one(self, finding: FindingLike) -> ActionRecord:
-        row = _row(finding)
-        config = self.configs.get(row.entity_id)
+    def _decide(
+        self, entity_id: str, detected_subtype: Optional[str]
+    ) -> tuple[str, Optional[str], Optional[str], str, str]:
+        """Pick (action, openmed_label, policy_class, source, detail) for one entity.
+
+        Exact de_identifier label first, then the data_class fallback, then a neutral keep.
+        """
+        config = self.configs.get(entity_id)
         data_class = config.data_class if config else None
         dc_value = data_class.value if data_class else None
 
@@ -92,84 +106,97 @@ class PolicyResolver:
         # more accurate policy mapping when it has one (a physician is de-identified as a
         # clinician, not merely as a person). Falls back to the reported parent.
         subtype_label = (
-            canonical_label_for(row.detected_subtype, self.configs)
-            if row.detected_subtype
-            else None
+            canonical_label_for(detected_subtype, self.configs) if detected_subtype else None
         )
-        label = subtype_label or canonical_label_for(row.entity_id, self.configs)
-        label_source_id = row.detected_subtype if subtype_label else row.entity_id
-
+        label = subtype_label or canonical_label_for(entity_id, self.configs)
         if label:
             action = self.profile.action_for(label)
             via = (
-                f"{label_source_id} (subtype of {row.entity_id}) → {label}"
+                f"{detected_subtype} (subtype of {entity_id}) → {label}"
                 if subtype_label
-                else f"{row.entity_id} → {label}"
+                else f"{entity_id} → {label}"
             )
-            return ActionRecord(
-                entity_id=row.entity_id,
-                entity=row.entity,
-                text=row.text,
-                start=row.start,
-                end=row.end,
-                openmed_label=label,
-                seiba_data_class=dc_value,
-                openmed_policy_class=None,
-                policy_name=self.profile.name,
-                action=action,
-                source="openmed_action_for",
-                detail=f"{via}; {self.profile.name}.action_for → {action}",
-                provenance=row.provenance,
-                origin=row.origin,
+            return action, label, None, "openmed_action_for", (
+                f"{via}; {self.profile.name}.action_for → {action}"
             )
 
         policy_class = openmed_policy_class_for(data_class)
         if policy_class is None:
-            return ActionRecord(
-                entity_id=row.entity_id,
-                entity=row.entity,
-                text=row.text,
-                start=row.start,
-                end=row.end,
-                openmed_label=None,
-                seiba_data_class=dc_value,
-                openmed_policy_class=None,
-                policy_name=self.profile.name,
-                action="keep",
-                source="neutral_keep",
-                detail=(
-                    f"{row.entity_id} has no OpenMed label; "
-                    f"data_class={dc_value or 'missing'} → keep"
-                ),
-                provenance=row.provenance,
-                origin=row.origin,
+            return "keep", None, None, "neutral_keep", (
+                f"{entity_id} has no OpenMed label; data_class={dc_value or 'missing'} → keep"
             )
 
-        actions = self.profile.policy_label_actions or {}
-        action = actions.get(policy_class, self.profile.default_action)
+        action = (self.profile.policy_label_actions or {}).get(
+            policy_class, self.profile.default_action
+        )
+        return action, None, policy_class, "openmed_policy_label_actions", (
+            f"{entity_id} de_identifier=null; "
+            f"data_class={dc_value} → {policy_class}; "
+            f"{self.profile.name}.policy_label_actions → {action}"
+        )
+
+    def resolve_one(self, finding: FindingLike) -> ActionRecord:
+        row = _row(finding)
+        config = self.configs.get(row.entity_id)
+        action, label, policy_class, source, detail = self._decide(
+            row.entity_id, row.detected_subtype
+        )
         return ActionRecord(
             entity_id=row.entity_id,
             entity=row.entity,
             text=row.text,
             start=row.start,
             end=row.end,
-            openmed_label=None,
-            seiba_data_class=dc_value,
+            openmed_label=label,
+            seiba_data_class=config.data_class.value if config and config.data_class else None,
             openmed_policy_class=policy_class,
             policy_name=self.profile.name,
             action=action,
-            source="openmed_policy_label_actions",
-            detail=(
-                f"{row.entity_id} de_identifier=null; "
-                f"data_class={dc_value} → {policy_class}; "
-                f"{self.profile.name}.policy_label_actions → {action}"
-            ),
+            source=source,
+            detail=detail,
             provenance=row.provenance,
             origin=row.origin,
         )
 
+    def _escalate(self, record: ActionRecord, row: CombinedDetectionRow) -> ActionRecord:
+        """Raise the action to the strongest any span this one beat would have received.
+
+        Election keeps a single span per overlap, so the losers are never scrubbed on their
+        own. Without this a canonical mapped to a weaker action than the rival it absorbed
+        would leave that identifier *more* exposed for having been contested.
+        """
+        if not row.alternates:
+            return record
+        strongest = max(
+            (self._alternate_action(alt) for alt in row.alternates),
+            key=_action_strength,
+            default=record.action,
+        )
+        if _action_strength(strongest) <= _action_strength(record.action):
+            return record
+        return record.model_copy(
+            update={
+                "action": strongest,
+                "detail": (
+                    f"{record.detail}; escalated → {strongest} for absorbed "
+                    f"{', '.join(sorted({a.entity for a in row.alternates}))}"
+                ),
+            }
+        )
+
+    def _alternate_action(self, alternate: SpanAlternate) -> str:
+        config = self.configs.get(alternate.entity_id)
+        spec = self.action_overrides.get(alternate.entity) or (
+            config.default_action if config else DEFAULT_ACTION_SENTINEL
+        )
+        if spec and spec != DEFAULT_ACTION_SENTINEL:
+            return spec.partition(":")[0]
+        return self._decide(alternate.entity_id, None)[0]
+
     def resolve(self, findings: Sequence[FindingLike]) -> PolicyPlanSection:
-        records = [self._override(self.resolve_one(f)) for f in findings]
+        records = [
+            self._escalate(self._override(self.resolve_one(f)), _row(f)) for f in findings
+        ]
         hist = Counter(r.action for r in records)
         return PolicyPlanSection(
             policy_name=self.profile.name,

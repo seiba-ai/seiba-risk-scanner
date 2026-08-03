@@ -32,6 +32,8 @@ DEFAULT_LLM_CONCURRENCY: Final[int] = 4
 DEFAULT_LLM_MODEL: Final[str] = "Qwen/Qwen2.5-3B-Instruct"
 DEFAULT_FUSION_WEIGHT_DETERMINISTIC: Final[float] = 0.65
 DEFAULT_FUSION_WEIGHT_CONTEXTUAL: Final[float] = 0.35
+# Single switch back to the legacy overlap passes if election costs accuracy.
+DEFAULT_SPAN_ELECTION: Final[bool] = True
 
 ONTOLOGY_STEM_PII: Final[str] = "pii_entity_ontology"
 ONTOLOGY_STEM_PHI: Final[str] = "phi_entity_ontology"
@@ -85,6 +87,7 @@ class ScannerConfig(BaseModel):
     detector_callable: Optional[Callable[..., Any]] = None
     min_confidence: float = Field(default=DEFAULT_MIN_CONFIDENCE, ge=0.0, le=1.0)
     enable_gazetteer: bool = True
+    span_election: bool = DEFAULT_SPAN_ELECTION
     skip_ner: bool = False
     ner_runner_override: Optional[Callable[[str], List[Any]]] = None
     ner_backend: NERBackendName = NERBackendName.OPENMED
@@ -149,6 +152,7 @@ class ScannerConfig(BaseModel):
             extra_after_text=extra_after_text,
             provenance_if_no_det=provenance_if_no_det,
             decisive_key_entity_id=decisive_key_entity_id,
+            span_election=self.span_election,
             rescue_det_threshold=self.rescue_det_threshold,
             rescue_margin=self.rescue_margin,
             rescue_min_candidate_ctx=self.rescue_min_candidate_ctx,
@@ -187,6 +191,14 @@ class FusionConfig(BaseModel):
     )
     decisive_key_candidate_base: float = Field(
         default=DEFAULT_DECISIVE_KEY_CANDIDATE_BASE, ge=0.0, le=1.0
+    )
+    span_election: bool = Field(
+        default=DEFAULT_SPAN_ELECTION,
+        description=(
+            "Resolve overlapping spans by cluster election, keeping losers as alternates. "
+            "False restores the legacy containment + entity-priority passes, which can "
+            "leave an unscrubbable overlap standing."
+        ),
     )
 
 
