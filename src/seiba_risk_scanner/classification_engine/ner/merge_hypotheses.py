@@ -39,10 +39,6 @@ from seiba_risk_scanner.classification_engine.deterministic_detectors.determinis
     DeterministicDetectionRow,
     DeterministicStageResult,
     _compute_confidence,
-    _validator_result_to_bool,
-)
-from seiba_risk_scanner.classification_engine.deterministic_detectors.validators_config import (
-    get_validator_function,
 )
 from seiba_risk_scanner.classification_engine.ner.backends.base import NerSpanRecord
 from seiba_risk_scanner.classification_engine.ontologies.ontology_loader import (
@@ -50,6 +46,7 @@ from seiba_risk_scanner.classification_engine.ontologies.ontology_loader import 
     resolve_entity_alias,
 )
 from seiba_risk_scanner.classification_engine.pipeline_models import CombinedDetectionRow, ContextCandidate
+from seiba_risk_scanner.classification_engine.span_election import SpanElection
 from seiba_risk_scanner.config import FusionConfig
 
 
@@ -196,7 +193,7 @@ def _build_hypotheses_for_span(
             # A validator is a shape guard even without patterns: date_of_birth is
             # pattern-less but VALIDATE_DATE keeps context from stamping "SSN" (a spaCy
             # ORG landing nearby "date"/"birth" words) as a birth date.
-            if cand_cfg is not None and not _validator_passes(cand_cfg, span_text):
+            if cand_cfg is not None and not cand_cfg.validates(span_text):
                 continue
             # Cross-ontology rescue: when a candidate has patterns, the span must match
             # at least one. Pattern-less entities rely on context alone.
@@ -259,16 +256,6 @@ def _matches_prohibited(pattern: str, text: str) -> bool:
     return compiled is not None and compiled.search(text) is not None
 
 
-def _validator_passes(cfg: EntityConfig, span_text: str) -> bool:
-    """Run the entity's validator on the span; entities without one always pass."""
-    if cfg.validator_enum is None:
-        return True
-    try:
-        return _validator_result_to_bool(get_validator_function(cfg.validator_enum)(span_text))
-    except Exception:  # noqa: BLE001
-        return False
-
-
 def _rescore_deterministic(
     det: DeterministicDetectionRow,
     *,
@@ -326,7 +313,7 @@ def _find_context_override(
     for eid, cfg in override_configs:
         if cfg.accepted_patterns and not _span_matches_any_pattern(span_text, cfg.accepted_patterns):
             continue
-        if not _validator_passes(cfg, span_text):
+        if not cfg.validates(span_text):
             continue
         ev = scorer.score_span_with_evidence(
             text, start, end, cfg,
@@ -512,6 +499,20 @@ def _suppress_strictly_contained_spans(rows: List[CombinedDetectionRow]) -> List
                 break
 
     return [r for r in rows if id(r) not in remove_ids]
+
+
+def resolve_overlaps(
+    rows: List[CombinedDetectionRow],
+    configs: Dict[str, EntityConfig],
+    *,
+    span_election: bool = True,
+) -> List[CombinedDetectionRow]:
+    """Reduce overlapping spans to a scrubbable set — the one place that decides overlaps."""
+    if span_election:
+        return SpanElection(configs).resolve(rows)
+    rows = _suppress_strictly_contained_spans(rows)
+    rows = _deduplicate_overlapping_same_entity(rows)
+    return _suppress_lower_priority_overlapping_spans(rows)
 
 
 def _deduplicate_overlapping_same_entity(rows: List[CombinedDetectionRow]) -> List[CombinedDetectionRow]:
@@ -727,15 +728,18 @@ def resolve_deterministic_and_ner_to_combined(
         rescue_applied = bool(det is not None and best_h.entity_id != det.entity_id)
 
         # Rescue gates: only relabel when deterministic confidence is weak enough,
-        # and the candidate's contextual score beats the primary by rescue_margin.
-        if rescue_applied and det is not None:
+        # and the candidate's contextual score beats the primary by rescue_margin. A
+        # decisive column key is exempt: it names the entity outright, so a generic regex
+        # winning on confidence alone (a 5-digit ZIP inside an "mrn" column) must not veto
+        # it. Only compact structured cells set this, so prose is untouched.
+        if rescue_applied and det is not None and best_h.entity_id != fusion.decisive_key_entity_id:
             det_cfg0 = configs.get(det.entity_id)
             # Validator-lock: a checksum-verified deterministic hit is proof, not a
             # guess — NER may never relabel it (context-override path is handled above).
             if (
                 det_cfg0 is not None
                 and det_cfg0.validator_enum is not None
-                and _validator_passes(det_cfg0, span_text)
+                and det_cfg0.validates(span_text)
             ):
                 rescue_applied = False
             elif det.confidence >= rescue_det_threshold:
@@ -885,7 +889,4 @@ def resolve_deterministic_and_ner_to_combined(
         )
 
     combined.sort(key=lambda r: (r.start, -r.confidence))
-    combined = _suppress_strictly_contained_spans(combined)
-    combined = _deduplicate_overlapping_same_entity(combined)
-    combined = _suppress_lower_priority_overlapping_spans(combined)
-    return combined
+    return resolve_overlaps(combined, configs, span_election=fusion.span_election)

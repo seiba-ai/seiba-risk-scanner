@@ -10,6 +10,7 @@ import yaml
 
 from seiba_risk_scanner.classification_engine.deterministic_detectors.validators_config import (
     ValidatorName,
+    get_validator_function,
 )
 from seiba_risk_scanner.config import DEFAULT_ONTOLOGY_STEMS
 
@@ -116,11 +117,32 @@ class EntityConfig:
     # as the parent, so a wrong guess about *which kind* of thing this is can never stop it
     # being reported as the kind we are sure about. See resolve_entity_alias.
     is_a: Optional[str] = None
+    # entity_id of a broader entity this one legitimately sits *inside* (a ZIP within a
+    # street address). Unlike is_a these stay different entities; the relation only says a
+    # nested span is the same claim at finer grain, so the wider one may absorb it rather
+    # than fight it. See SpanElection.
+    part_of: Optional[str] = None
     # Adjacent words that belong inside a span rather than beside it: a title before a
     # physician's name, a facility word after an organisation. Resolved through is_a, so a
     # title declared on physician_names also extends spans reported as person_names.
     affix_prefix: List[str] = field(default_factory=list)
     affix_suffix: List[str] = field(default_factory=list)
+
+    def validates(self, text: str) -> bool:
+        """Run this entity's validator over ``text``; entities without one always pass."""
+        if self.validator_enum is None:
+            return True
+        try:
+            result = get_validator_function(self.validator_enum)(text)
+        except Exception:  # noqa: BLE001
+            return False
+        return bool(result[0]) if isinstance(result, tuple) and result else bool(result)
+
+
+def _relation(raw_entity: Dict[str, Any], key: str) -> Optional[str]:
+    """Read an ``is_a``/``part_of`` entity_id reference, ignoring blanks."""
+    raw = raw_entity.get(key)
+    return raw.strip() if isinstance(raw, str) and raw.strip() else None
 
 
 def _parse_accepted_patterns(raw_patterns: Any) -> tuple[List[str], Dict[str, float]]:
@@ -263,8 +285,8 @@ def load_ontology(path: str | Path, ontology_name: Optional[str] = None) -> Dict
 
         context_rescue_override = ctx_cfg.get("rescue_override") is True
 
-        raw_is_a = raw_entity.get("is_a")
-        is_a = str(raw_is_a).strip() if isinstance(raw_is_a, str) and raw_is_a.strip() else None
+        is_a = _relation(raw_entity, "is_a")
+        part_of = _relation(raw_entity, "part_of")
 
         affix_cfg = raw_entity.get("affixes") or {}
         affix_prefix = [
@@ -331,6 +353,7 @@ def load_ontology(path: str | Path, ontology_name: Optional[str] = None) -> Dict
             context_rescue_override=context_rescue_override,
             pattern_confidence_weights=pattern_confidence_weights,
             is_a=is_a,
+            part_of=part_of,
             affix_prefix=affix_prefix,
             affix_suffix=affix_suffix,
         )
