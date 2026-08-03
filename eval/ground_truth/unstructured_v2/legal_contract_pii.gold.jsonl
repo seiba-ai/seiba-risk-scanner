@@ -6,19 +6,15 @@
 {"start": 272, "end": 286, "text": "(415) 555-1234", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 292, "end": 306, "text": "(415) 555-1235", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 314, "end": 334, "text": "info@andersonlaw.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 375, "end": 381, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 382, "end": 390, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 375, "end": 390, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 409, "end": 411, "text": "CA", "entity_id": "pii_entity_ontology::state"}
 {"start": 409, "end": 422, "text": "CA-BAR-456789", "entity_id": "phi_entity_ontology::certificate_license_number"}
 {"start": 468, "end": 493, "text": "randerson@andersonlaw.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 508, "end": 522, "text": "(415) 555-1236", "entity_id": "pii_entity_ontology::phone_number"}
-{"start": 535, "end": 543, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 544, "end": 552, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 535, "end": 552, "text": "Jennifer Martinez", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 560, "end": 585, "text": "jmartinez@andersonlaw.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 593, "end": 607, "text": "(415) 555-1237", "entity_id": "pii_entity_ontology::phone_number"}
-{"start": 664, "end": 671, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 672, "end": 677, "text": "David", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 678, "end": 682, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 664, "end": 682, "text": "Michael David Chen", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 698, "end": 711, "text": "July 18, 1985", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 698, "end": 711, "text": "July 18, 1985", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 717, "end": 719, "text": "38", "entity_id": "pii_entity_ontology::age"}
@@ -39,8 +35,7 @@
 {"start": 1264, "end": 1295, "text": "michael.chen.personal@gmail.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 1308, "end": 1329, "text": "mchen@techstartup.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 1347, "end": 1368, "text": "mdchen@protonmail.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 1395, "end": 1399, "text": "Lisa", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 1400, "end": 1404, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1395, "end": 1404, "text": "Lisa Chen", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 1433, "end": 1447, "text": "(415) 555-5679", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 1487, "end": 1506, "text": "lisa.chen@email.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 1619, "end": 1640, "text": "1234 Innovation Drive", "entity_id": "pii_entity_ontology::street_address"}
@@ -50,8 +45,7 @@
 {"start": 1720, "end": 1733, "text": "EMP-456789012", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 1791, "end": 1805, "text": "(415) 555-3456", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 1813, "end": 1834, "text": "mchen@techstartup.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 1847, "end": 1852, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 1853, "end": 1861, "text": "Mitchell", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1847, "end": 1861, "text": "Sarah Mitchell", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 1885, "end": 1910, "text": "smitchell@techstartup.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 2271, "end": 2280, "text": "121042882", "entity_id": "fin_entity_ontology::routing_number_aba"}
 {"start": 2444, "end": 2453, "text": "121042882", "entity_id": "fin_entity_ontology::routing_number_aba"}
@@ -77,30 +71,23 @@
 {"start": 4709, "end": 4713, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 5306, "end": 5319, "text": "San Francisco", "entity_id": "pii_entity_ontology::city"}
 {"start": 5399, "end": 5415, "text": "January 30, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 5465, "end": 5470, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 5471, "end": 5479, "text": "Mitchell", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 5496, "end": 5501, "text": "Maria", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 5502, "end": 5508, "text": "Santos", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5465, "end": 5479, "text": "Sarah Mitchell", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5496, "end": 5508, "text": "Maria Santos", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 6596, "end": 6612, "text": "January 30, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 6848, "end": 6853, "text": "David", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 6854, "end": 6862, "text": "Thompson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 6848, "end": 6862, "text": "David Thompson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 6917, "end": 6936, "text": "dthompson@email.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 6938, "end": 6952, "text": "(415) 555-2345", "entity_id": "pii_entity_ontology::phone_number"}
-{"start": 7057, "end": 7065, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 7066, "end": 7075, "text": "Rodriguez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 7057, "end": 7075, "text": "Jennifer Rodriguez", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 7121, "end": 7141, "text": "jrodriguez@email.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 7143, "end": 7157, "text": "(415) 555-3456", "entity_id": "pii_entity_ontology::phone_number"}
-{"start": 7278, "end": 7283, "text": "Maria", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 7284, "end": 7290, "text": "Santos", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 7278, "end": 7290, "text": "Maria Santos", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 7332, "end": 7355, "text": "msantos@techstartup.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 7357, "end": 7371, "text": "(415) 555-4567", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 8313, "end": 8326, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 8346, "end": 8360, "text": "March 15, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 8575, "end": 8592, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 8742, "end": 8748, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 8749, "end": 8757, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 8802, "end": 8810, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 8811, "end": 8819, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 8742, "end": 8757, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 8802, "end": 8819, "text": "Jennifer Martinez", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 8847, "end": 8864, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 8886, "end": 8901, "text": "TRUST-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 10294, "end": 10311, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
@@ -108,47 +95,30 @@
 {"start": 10378, "end": 10391, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 10422, "end": 10436, "text": "March 15, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 10645, "end": 10659, "text": "April 10, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 10829, "end": 10835, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 10836, "end": 10844, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 10829, "end": 10844, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 12099, "end": 12116, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 12123, "end": 12130, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12131, "end": 12135, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12140, "end": 12146, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12147, "end": 12155, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12123, "end": 12135, "text": "Michael Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12140, "end": 12155, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 12296, "end": 12313, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 12320, "end": 12326, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12327, "end": 12335, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12340, "end": 12347, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12348, "end": 12352, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12512, "end": 12519, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12520, "end": 12524, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12529, "end": 12535, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12536, "end": 12544, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12320, "end": 12335, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12340, "end": 12352, "text": "Michael Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12512, "end": 12524, "text": "Michael Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12529, "end": 12544, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 12669, "end": 12682, "text": "March 1, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 12689, "end": 12695, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12696, "end": 12704, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12689, "end": 12704, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 12924, "end": 12938, "text": "March 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 12980, "end": 12983, "text": "Kim", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 12995, "end": 13001, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13002, "end": 13010, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13161, "end": 13167, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13168, "end": 13176, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13181, "end": 13188, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13189, "end": 13193, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13734, "end": 13740, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13741, "end": 13749, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12974, "end": 12983, "text": "James Kim", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 12995, "end": 13010, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13161, "end": 13176, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13181, "end": 13193, "text": "Michael Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13734, "end": 13749, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 13760, "end": 13768, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 14017, "end": 14024, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 14025, "end": 14030, "text": "David", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 14031, "end": 14035, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 14017, "end": 14035, "text": "Michael David Chen", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 14042, "end": 14059, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 14108, "end": 14116, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 14117, "end": 14125, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 14108, "end": 14125, "text": "Jennifer Martinez", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 14144, "end": 14161, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 14201, "end": 14207, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 14208, "end": 14216, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 14201, "end": 14216, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 14252, "end": 14260, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 14280, "end": 14297, "text": "February 15, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 14790, "end": 14805, "text": "LEG-2024-456789", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 14860, "end": 14866, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 14867, "end": 14875, "text": "Anderson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 14860, "end": 14875, "text": "Robert Anderson", "entity_id": "pii_entity_ontology::person_names"}

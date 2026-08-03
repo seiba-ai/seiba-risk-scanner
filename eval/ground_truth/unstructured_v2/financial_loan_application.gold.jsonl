@@ -5,16 +5,14 @@
 {"start": 288, "end": 302, "text": "(310) 555-1234", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 308, "end": 322, "text": "(310) 555-1235", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 330, "end": 353, "text": "loans@firstnational.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 400, "end": 408, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 409, "end": 417, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 400, "end": 417, "text": "Jennifer Martinez", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 435, "end": 444, "text": "LO-789456", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 454, "end": 468, "text": "NMLS ID 456789", "entity_id": "phi_entity_ontology::certificate_license_number"}
 {"start": 476, "end": 504, "text": "j.martinez@firstnational.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 519, "end": 533, "text": "(310) 555-1236", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 560, "end": 578, "text": "APP-2024-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 597, "end": 609, "text": "May 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 830, "end": 836, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 843, "end": 849, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 830, "end": 849, "text": "Robert James Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 865, "end": 881, "text": "October 22, 1987", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 887, "end": 889, "text": "36", "entity_id": "pii_entity_ontology::age"}
 {"start": 920, "end": 931, "text": "123-45-6789", "entity_id": "pii_entity_ontology::ssn"}
@@ -40,15 +38,13 @@
 {"start": 1611, "end": 1634, "text": "robert.wilson@email.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 1647, "end": 1670, "text": "rwilson@corporation.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 1688, "end": 1711, "text": "rjwilson@protonmail.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 1750, "end": 1755, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 1756, "end": 1762, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1750, "end": 1762, "text": "Sarah Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 1800, "end": 1814, "text": "March 15, 1989", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 1800, "end": 1814, "text": "March 15, 1989", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 1846, "end": 1857, "text": "234-56-7890", "entity_id": "pii_entity_ontology::ssn"}
 {"start": 1883, "end": 1885, "text": "CA", "entity_id": "pii_entity_ontology::state"}
 {"start": 1883, "end": 1901, "text": "CA-D890-234-567-89", "entity_id": "phi_entity_ontology::certificate_license_number"}
-{"start": 1971, "end": 1976, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 1987, "end": 1993, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 1971, "end": 1993, "text": "Sarah Elizabeth Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 2009, "end": 2023, "text": "March 15, 1989", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 2009, "end": 2023, "text": "March 15, 1989", "entity_id": "phi_entity_ontology::date_of_birth"}
 {"start": 2029, "end": 2031, "text": "35", "entity_id": "pii_entity_ontology::age"}
@@ -64,55 +60,43 @@
 {"start": 2548, "end": 2550, "text": "CA", "entity_id": "pii_entity_ontology::state"}
 {"start": 2551, "end": 2556, "text": "90025", "entity_id": "pii_entity_ontology::zip_code"}
 {"start": 2605, "end": 2618, "text": "EMP-123456789", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 2869, "end": 2876, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 2877, "end": 2881, "text": "Park", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 2869, "end": 2881, "text": "Michael Park", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 2921, "end": 2935, "text": "(310) 555-2346", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 2954, "end": 2972, "text": "mpark@techcorp.com", "entity_id": "pii_entity_ontology::email_address"}
-{"start": 3192, "end": 3197, "text": "David", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 3198, "end": 3206, "text": "Thompson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 3192, "end": 3206, "text": "David Thompson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 3225, "end": 3239, "text": "(415) 555-5678", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 3348, "end": 3359, "text": "Los Angeles", "entity_id": "pii_entity_ontology::city"}
 {"start": 3361, "end": 3363, "text": "CA", "entity_id": "pii_entity_ontology::state"}
 {"start": 3364, "end": 3369, "text": "90025", "entity_id": "pii_entity_ontology::zip_code"}
 {"start": 3412, "end": 3425, "text": "EMP-234567890", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 3656, "end": 3660, "text": "Lisa", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 3661, "end": 3665, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 3656, "end": 3665, "text": "Lisa Chen", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 3701, "end": 3715, "text": "(310) 555-3457", "entity_id": "pii_entity_ontology::phone_number"}
 {"start": 3734, "end": 3759, "text": "lchen@marketingagency.com", "entity_id": "pii_entity_ontology::email_address"}
 {"start": 4583, "end": 4592, "text": "121000248", "entity_id": "fin_entity_ontology::routing_number_aba"}
 {"start": 4774, "end": 4783, "text": "021000021", "entity_id": "fin_entity_ontology::routing_number_aba"}
-{"start": 4810, "end": 4816, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 4817, "end": 4823, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 4810, "end": 4823, "text": "Robert Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 4990, "end": 4999, "text": "121000248", "entity_id": "fin_entity_ontology::routing_number_aba"}
 {"start": 5181, "end": 5190, "text": "121042882", "entity_id": "fin_entity_ontology::routing_number_aba"}
 {"start": 5378, "end": 5391, "text": "INV-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 5514, "end": 5520, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 5521, "end": 5527, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5514, "end": 5527, "text": "Robert Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 5596, "end": 5610, "text": "401K-123456789", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 5756, "end": 5761, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 5762, "end": 5768, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5756, "end": 5768, "text": "Sarah Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 5837, "end": 5851, "text": "401K-234567890", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 5941, "end": 5947, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 5948, "end": 5954, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 5941, "end": 5954, "text": "Robert Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 5998, "end": 6011, "text": "IRA-456789012", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 6079, "end": 6084, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 6085, "end": 6091, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 6079, "end": 6091, "text": "Sarah Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 6135, "end": 6148, "text": "IRA-567890123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 6263, "end": 6280, "text": "4T1B11HK5MU123456", "entity_id": "pii_entity_ontology::vehicle_identification_number_vin"}
 {"start": 6393, "end": 6407, "text": "AUTO-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 6482, "end": 6499, "text": "5J6RM4H75LL234567", "entity_id": "pii_entity_ontology::vehicle_identification_number_vin"}
 {"start": 6612, "end": 6626, "text": "AUTO-890567234", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 7142, "end": 7148, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 7149, "end": 7155, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 7528, "end": 7533, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 7534, "end": 7540, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 7142, "end": 7155, "text": "Robert Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 7528, "end": 7540, "text": "Sarah Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 7689, "end": 7703, "text": "AUTO-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 7890, "end": 7904, "text": "AUTO-890567234", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 8125, "end": 8131, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 8132, "end": 8138, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 8125, "end": 8138, "text": "Robert Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 8183, "end": 8196, "text": "STU-123456789", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 8321, "end": 8326, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 8327, "end": 8333, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 8321, "end": 8333, "text": "Sarah Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 8378, "end": 8391, "text": "STU-234567890", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 8644, "end": 8657, "text": "PER-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 8942, "end": 8957, "text": "7890 Oak Street", "entity_id": "pii_entity_ontology::street_address"}
@@ -124,22 +108,17 @@
 {"start": 10520, "end": 10532, "text": "CR-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 10975, "end": 10987, "text": "May 15, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 11010, "end": 11022, "text": "CR-890567234", "entity_id": "pii_entity_ontology::unique_identifier"}
-{"start": 13332, "end": 13339, "text": "Michael", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 13340, "end": 13344, "text": "Chen", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 13332, "end": 13344, "text": "Michael Chen", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 13381, "end": 13390, "text": "UW-456789", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 13410, "end": 13422, "text": "May 20, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 13907, "end": 13919, "text": "May 30, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 13944, "end": 13957, "text": "June 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 15163, "end": 15169, "text": "Robert", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 15176, "end": 15182, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 15163, "end": 15182, "text": "Robert James Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 15189, "end": 15201, "text": "May 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 15265, "end": 15270, "text": "Sarah", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 15281, "end": 15287, "text": "Wilson", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 15265, "end": 15287, "text": "Sarah Elizabeth Wilson", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 15294, "end": 15306, "text": "May 15, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 15354, "end": 15362, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 15363, "end": 15371, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 15354, "end": 15371, "text": "Jennifer Martinez", "entity_id": "pii_entity_ontology::person_names"}
 {"start": 15435, "end": 15447, "text": "May 15, 2024", "entity_id": "pii_entity_ontology::dates"}
 {"start": 16071, "end": 16089, "text": "APP-2024-789456123", "entity_id": "pii_entity_ontology::unique_identifier"}
 {"start": 16117, "end": 16129, "text": "May 20, 2024", "entity_id": "pii_entity_ontology::dates"}
-{"start": 16142, "end": 16150, "text": "Jennifer", "entity_id": "pii_entity_ontology::person_names"}
-{"start": 16151, "end": 16159, "text": "Martinez", "entity_id": "pii_entity_ontology::person_names"}
+{"start": 16142, "end": 16159, "text": "Jennifer Martinez", "entity_id": "pii_entity_ontology::person_names"}

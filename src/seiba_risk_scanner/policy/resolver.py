@@ -120,6 +120,7 @@ class PolicyResolver:
                 source="openmed_action_for",
                 detail=f"{via}; {self.profile.name}.action_for → {action}",
                 provenance=row.provenance,
+                origin=row.origin,
             )
 
         policy_class = openmed_policy_class_for(data_class)
@@ -141,6 +142,7 @@ class PolicyResolver:
                     f"data_class={dc_value or 'missing'} → keep"
                 ),
                 provenance=row.provenance,
+                origin=row.origin,
             )
 
         actions = self.profile.policy_label_actions or {}
@@ -163,6 +165,7 @@ class PolicyResolver:
                 f"{self.profile.name}.policy_label_actions → {action}"
             ),
             provenance=row.provenance,
+            origin=row.origin,
         )
 
     def resolve(self, findings: Sequence[FindingLike]) -> PolicyPlanSection:

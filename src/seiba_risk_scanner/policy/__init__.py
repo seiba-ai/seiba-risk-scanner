@@ -9,6 +9,8 @@ from seiba_risk_scanner.policy.bridge import (
 from seiba_risk_scanner.policy.executor import (
     apply_action_to_text,
     execute_plan,
+    scrub_documents,
+    scrub_rows,
     scrub_text,
 )
 from seiba_risk_scanner.policy.generalize import (
@@ -46,5 +48,7 @@ __all__ = [
     "generalize",
     "kind_for_label",
     "openmed_policy_class_for",
+    "scrub_documents",
+    "scrub_rows",
     "scrub_text",
 ]

@@ -4,7 +4,7 @@
       0.65,
       0.35
     ],
-    "gold_dir": "eval/ground_truth/unstructured_v2",
+    "gold_dir": "/Users/shoaaamir/Documents/codes/seiba-risk-scanner/eval/ground_truth/unstructured_v2",
     "llm_backend": null,
     "llm_coverage": "gaps",
     "llm_model": null,
@@ -55,18 +55,18 @@
       "pii_entity_ontology::phone_number": 1
     }
   },
-  "git_sha": "160e86e738f0cd19d1b4b200d2295e91e72f6d15",
+  "git_sha": "5e0ad00548701c883feaec3183ec718ea89e2cc3",
   "headline": {
     "macro": {
-      "f1": 0.8206892464047565,
-      "precision": 0.8051623481229199,
-      "recall": 0.8891621975703012
+      "f1": 0.8205751476490698,
+      "precision": 0.8051508288719476,
+      "recall": 0.8888917961149108
     },
     "matcher": "type_overlap",
     "micro": {
-      "f1": 0.8258946521913952,
-      "precision": 0.7624350408314774,
-      "recall": 0.9008771929824562
+      "f1": 0.8075370121130553,
+      "precision": 0.7383100902379,
+      "recall": 0.8910891089108911
     }
   },
   "per_doc": {
@@ -77,10 +77,10 @@
       "support": 27
     },
     "comprehensive_medical_report.txt": {
-      "f1": 0.8359788359788359,
-      "precision": 0.79,
-      "recall": 0.8876404494382022,
-      "support": 89
+      "f1": 0.8098159509202454,
+      "precision": 0.7586206896551724,
+      "recall": 0.868421052631579,
+      "support": 76
     },
     "email_thread_pii.txt": {
       "f1": 0.9704142011834319,
@@ -95,28 +95,28 @@
       "support": 23
     },
     "financial_loan_application.txt": {
-      "f1": 0.8684210526315789,
-      "precision": 0.825,
-      "recall": 0.9166666666666666,
-      "support": 144
+      "f1": 0.8517110266159696,
+      "precision": 0.8,
+      "recall": 0.9105691056910569,
+      "support": 123
     },
     "genetic_restricted_research.txt": {
-      "f1": 0.8307692307692307,
-      "precision": 0.7297297297297297,
+      "f1": 0.8437499999999999,
+      "precision": 0.75,
       "recall": 0.9642857142857143,
       "support": 28
     },
     "hr_employee_file.txt": {
-      "f1": 0.752851711026616,
-      "precision": 0.6470588235294118,
-      "recall": 0.9,
-      "support": 110
+      "f1": 0.7364016736401674,
+      "precision": 0.6197183098591549,
+      "recall": 0.9072164948453608,
+      "support": 97
     },
     "insurance_claim_detailed.txt": {
-      "f1": 0.7976539589442816,
-      "precision": 0.7351351351351352,
-      "recall": 0.8717948717948718,
-      "support": 156
+      "f1": 0.779552715654952,
+      "precision": 0.7134502923976608,
+      "recall": 0.8591549295774648,
+      "support": 142
     },
     "internal_public_company_memo.txt": {
       "f1": 0.9090909090909091,
@@ -125,10 +125,10 @@
       "support": 5
     },
     "legal_contract_pii.txt": {
-      "f1": 0.8614457831325302,
-      "precision": 0.7988826815642458,
-      "recall": 0.934640522875817,
-      "support": 153
+      "f1": 0.8308823529411764,
+      "precision": 0.7583892617449665,
+      "recall": 0.9186991869918699,
+      "support": 123
     },
     "neutral_public_article.txt": {
       "f1": 1.0,
@@ -137,10 +137,10 @@
       "support": 3
     },
     "patient_discharge_summary.txt": {
-      "f1": 0.7766323024054983,
-      "precision": 0.6890243902439024,
-      "recall": 0.889763779527559,
-      "support": 127
+      "f1": 0.7368421052631579,
+      "precision": 0.6408450704225352,
+      "recall": 0.8666666666666667,
+      "support": 105
     },
     "phi_restricted_clinical_notes.txt": {
       "f1": 0.6666666666666667,
@@ -161,10 +161,10 @@
       "support": 29
     },
     "research_study_phi.txt": {
-      "f1": 0.8310502283105021,
-      "precision": 0.7647058823529411,
-      "recall": 0.91,
-      "support": 100
+      "f1": 0.7999999999999999,
+      "precision": 0.7254901960784313,
+      "recall": 0.891566265060241,
+      "support": 83
     },
     "synthetic_fintech_device.txt": {
       "f1": 0.8,
@@ -289,10 +289,10 @@
       "tp": 22
     },
     "phi_entity_ontology::genomic_variants": {
-      "f1": 0.8571428571428571,
+      "f1": 0.923076923076923,
       "fn": 0,
-      "fp": 2,
-      "precision": 0.75,
+      "fp": 1,
+      "precision": 0.8571428571428571,
       "recall": 1.0,
       "support": 6,
       "tp": 6
@@ -469,13 +469,13 @@
       "tp": 1
     },
     "pii_entity_ontology::person_names": {
-      "f1": 0.8864000000000001,
-      "fn": 11,
+      "f1": 0.8152173913043479,
+      "fn": 8,
       "fp": 60,
-      "precision": 0.8219584569732937,
-      "recall": 0.9618055555555556,
-      "support": 288,
-      "tp": 277
+      "precision": 0.7142857142857143,
+      "recall": 0.9493670886075949,
+      "support": 158,
+      "tp": 150
     },
     "pii_entity_ontology::phone_number": {
       "f1": 0.9716981132075472,
@@ -885,13 +885,13 @@
       "tp": 1
     },
     "pii_entity_ontology::person_names": {
-      "f1": 0.8735999999999999,
-      "fn": 15,
-      "fp": 64,
-      "precision": 0.8100890207715133,
-      "recall": 0.9479166666666666,
-      "support": 288,
-      "tp": 273
+      "f1": 0.8097826086956521,
+      "fn": 9,
+      "fp": 61,
+      "precision": 0.7095238095238096,
+      "recall": 0.9430379746835443,
+      "support": 158,
+      "tp": 149
     },
     "pii_entity_ontology::phone_number": {
       "f1": 0.9716981132075472,
@@ -1029,24 +1029,24 @@
     },
     "tp_after": 55
   },
-  "run_id": "20260727-001239-openmed",
+  "run_id": "20260803-121339-openmed",
   "strict": {
     "macro": {
-      "f1": 0.743891413843758,
-      "precision": 0.735544787812182,
-      "recall": 0.796047329021139
+      "f1": 0.7425040792501852,
+      "precision": 0.7333585875676667,
+      "recall": 0.7959412704997667
     },
     "micro": {
-      "f1": 0.7872939284278246,
-      "precision": 0.726800296956199,
-      "recall": 0.8587719298245614
+      "f1": 0.7668161434977578,
+      "precision": 0.7008196721311475,
+      "recall": 0.8465346534653465
     }
   },
   "timing": {
     "batch_docs": 18,
-    "batch_ms_per_1k_chars": 326.4998265925814,
-    "batch_ms_per_doc": 2815.589393500381,
-    "batch_wall_s": 50.68060908300686,
+    "batch_ms_per_1k_chars": 343.7366123601741,
+    "batch_ms_per_doc": 2964.2317731664257,
+    "batch_wall_s": 53.35617191699566,
     "batched": true,
     "llm_total_s": 0,
     "per_doc": [],
@@ -1059,12 +1059,12 @@
       "tp": 31
     },
     "deterministic": {
-      "fp": 133,
+      "fp": 132,
       "tp": 555
     },
     "ner": {
       "fp": 132,
-      "tp": 441
+      "tp": 314
     }
   }
 }

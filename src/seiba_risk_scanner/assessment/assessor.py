@@ -27,6 +27,7 @@ from seiba_risk_scanner.classification_engine.ontologies.ontology_loader import 
 )
 from seiba_risk_scanner.classification_engine.pipeline_models import (
     CombinedDetectionRow,
+    Origin,
     PipelineStageResult,
 )
 from seiba_risk_scanner.policy.models import ActionRecord, PolicyPlanSection
@@ -112,6 +113,9 @@ class ReadinessAssessor:
         When ``policy`` is set (constructor or call), attach an OpenMed policy action plan.
         Severity scoring is unchanged by policy.
         """
+        if isinstance(results, PipelineStageResult):
+            results = [results]
+        self._name_origins(results, labels)
         findings, keys, reid, strong = self.assess_findings(results, health_context)
         record_labels = [self._record_label(key, labels) for key in keys]
         locations = [
@@ -160,6 +164,26 @@ class ReadinessAssessor:
                 report.residual_severity = self._residual_severity(report, plan)
             report.policy_plan = plan
         return report
+
+    @staticmethod
+    def _name_origins(
+        results: Sequence[PipelineStageResult], labels: Optional[Sequence[str]]
+    ) -> None:
+        """Let ``labels`` name each source without overwriting the scanner's ids.
+
+        A caller who scanned bare strings has synthetic ids and no filenames; naming them
+        here is what makes the plan readable. The id itself stays as scanned, because it is
+        what keeps two same-named files apart.
+        """
+        for index, result in enumerate(results):
+            label = labels[index] if labels and index < len(labels) else None
+            if not label:
+                continue
+            for row in result.detections:
+                if row.origin is None:
+                    Origin.stamp([row], label)
+                elif row.origin.source_label != label:
+                    row.origin.source_label = label
 
     def _residual_severity(
         self, report: SensitiveDataReadinessReport, plan: PolicyPlanSection

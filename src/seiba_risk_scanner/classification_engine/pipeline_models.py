@@ -1,12 +1,56 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List, Literal, Optional
+from os.path import basename
+from typing import Any, Dict, List, Literal, Optional, Sequence, Tuple, Union
 
 from pydantic import BaseModel, Field
 
 from seiba_risk_scanner.classification_engine.deterministic_detectors.deterministic_detector import (
     DeterministicDetectionRow,
 )
+
+
+class Origin(BaseModel):
+    """Where a span came from: which input, and which cell within it.
+
+    Distinct from ``provenance``, which holds detector evidence (gazetteer codes, column
+    consensus). Offsets are only meaningful against their own source, so scrubbing needs
+    this to route a replacement back to the right document.
+    """
+
+    model_config = {"extra": "forbid"}
+
+    source_id: str = Field(description="Unique and stable per input, e.g. a file path")
+    source_label: str = Field(description="Readable name, e.g. 'patients.csv'")
+    row: Optional[Union[int, str]] = None
+    column: Optional[str] = None
+
+    @classmethod
+    def stamp(
+        cls,
+        rows: Sequence["CombinedDetectionRow"],
+        source_id: str,
+        source_label: Optional[str] = None,
+    ) -> None:
+        """Attach source identity in place; row/column are read from ``provenance``.
+
+        One instance is shared per document and per cell, so a large corpus adds objects
+        per cell rather than per detection.
+        """
+        label = source_label or basename(source_id) or source_id
+        shared = cls(source_id=source_id, source_label=label)
+        cells: Dict[Tuple[Any, Any], Origin] = {}
+        for row in rows:
+            provenance = row.provenance or {}
+            cell = (provenance.get("row"), provenance.get("column") or provenance.get("key"))
+            if cell == (None, None):
+                row.origin = shared
+                continue
+            if cell not in cells:
+                cells[cell] = cls(
+                    source_id=source_id, source_label=label, row=cell[0], column=cell[1]
+                )
+            row.origin = cells[cell]
 
 
 class ContextualFusionInput(BaseModel):
@@ -79,6 +123,9 @@ class CombinedDetectionRow(BaseModel):
         default=None,
         description="Optional source (e.g. dataframe row/column) for structured inputs",
     )
+    origin: Optional[Origin] = Field(
+        default=None, description="Which input this span came from; set by the scanner"
+    )
 
     @classmethod
     def from_deterministic(
@@ -139,4 +186,10 @@ class PipelineStageResult(BaseModel):
     fusion_weight_contextual: float = 0.35
 
 
-__all__ = ["CombinedDetectionRow", "ContextCandidate", "ContextualFusionInput", "PipelineStageResult"]
+__all__ = [
+    "CombinedDetectionRow",
+    "ContextCandidate",
+    "ContextualFusionInput",
+    "Origin",
+    "PipelineStageResult",
+]

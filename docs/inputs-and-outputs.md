@@ -34,6 +34,11 @@ report = report_from_paths(
 
 For structured data, a column or key such as `mrn`, `city`, or `date_of_birth` is evidence about the value beneath it. Findings retain source provenance such as `row` and `column` (or `key` for a dictionary).
 
+Each API also accepts a source name — `source_id` and `source_label`, or `sources` for the
+batch form — which `report_from_paths` fills in from the file path. Naming sources is what
+lets one scan cover many files and still scrub each one correctly; leave them unset and a
+stable id is derived from the content.
+
 ## Scan output
 
 A scan returns a `PipelineStageResult` containing `CombinedDetectionRow` findings. A finding contains:
@@ -42,7 +47,13 @@ A scan returns a `PipelineStageResult` containing `CombinedDetectionRow` finding
 - `text`, `start`, and `end` for its location in the scanned value;
 - final `confidence` and contributions from deterministic detection, context, NER, and optional LLM stages;
 - `winner_kind`, contextual matches, and rescue/relabeling metadata when relevant;
-- source `provenance`, including table row/column location or dictionary metadata.
+- `origin`, naming which input the span came from (`source_id`, `source_label`) and which
+  cell within it (`row`, `column`);
+- detector `provenance`, such as gazetteer codes, column consensus, and the raw input kind.
+
+`origin` answers *where the value is*; `provenance` answers *what the detector saw*. Offsets
+only mean something against their own source, so scrubbing reads `origin` to route each
+replacement back to the right document.
 
 ```python
 result = scanner.classify_text("Email emily@example.com")
@@ -65,3 +76,20 @@ print(result.model_dump(mode="json"))
 | `residual_severity` and `utility` | What remains exposed and useful after a policy is executed. |
 
 Markdown and JSON files are both written when `out_dir` is supplied. See the [sample Markdown report](../demo_scripts/local_runs/readiness_report_unstructured_20260726_005916.md) and [matching JSON](../demo_scripts/local_runs/readiness_report_unstructured_20260726_005916.json).
+
+## Scrubbed output
+
+`scrub_documents` applies an executed plan back to the inputs it came from, keyed by
+`origin.source_id`. Strings are scrubbed by span, tables cell by cell, and a source with no
+findings is returned unchanged.
+
+```python
+from seiba_risk_scanner.policy import scrub_documents
+
+sources = {"notes/intake.txt": intake_text, "patients.csv": rows}
+scrubbed = scrub_documents(report.policy_plan, sources)
+```
+
+A record whose span no longer matches its source, or that belongs to a different source, is
+an error rather than a skipped replacement — a silently skipped record leaves an identifier
+in output that reads as de-identified. `scrub_text` and `scrub_rows` handle one source each.
