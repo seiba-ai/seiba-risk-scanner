@@ -26,7 +26,7 @@ from seiba_risk_scanner.policy.generalize import (
     LABEL_KINDS,
     kind_for_label,
 )
-from seiba_risk_scanner.policy.models import ActionRecord, PolicyPlanSection
+from seiba_risk_scanner.policy.models import ActionRecord, PolicyActionSource, PolicyPlanSection
 
 FindingLike = Union[CombinedDetectionRow, "AssessedFinding"]
 
@@ -93,7 +93,7 @@ class PolicyResolver:
 
     def _decide(
         self, entity_id: str, detected_subtype: Optional[str]
-    ) -> tuple[str, Optional[str], Optional[str], str, str]:
+    ) -> tuple[str, Optional[str], Optional[str], PolicyActionSource, str]:
         """Pick (action, openmed_label, policy_class, source, detail) for one entity.
 
         Exact de_identifier label first, then the data_class fallback, then a neutral keep.

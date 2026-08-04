@@ -16,7 +16,6 @@ from .core import (
     add_backend_args,
     scanner_from_args,
     throughput,
-    timed_scan,
     warmup,
     write_findings,
     write_risk_report,
