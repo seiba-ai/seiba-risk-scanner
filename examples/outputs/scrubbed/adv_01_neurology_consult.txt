@@ -1,0 +1,26 @@
+[ORGANIZATION]
+[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+
+NEUROLOGY CONSULTATION
+Date of service: [DATE]
+Re: [PERSON] | DOB: [DATE_OF_BIRTH] | MRN: [ID_NUM] | Sex: F
+Referring clinician: [PERSON], MD
+
+Dear Colleague:
+
+Thank you for asking me to evaluate [PERSON] for progressive tremor and gait slowing. She reports that the right hand tremor began about eighteen months ago and is now more apparent when resting. Her partner has noticed smaller handwriting and reduced arm swing. She denies loss of consciousness, recent [CONDITION], or change in vision.
+
+HPI: There is no family history of [CONDITION]. She has no history suggestive of [CONDITION]. Examination shows masked facies, mild right-sided bradykinesia, and a resting tremor. There is no facial weakness to suggest [CONDITION]. The overall pattern is most consistent with early [CONDITION].
+
+Assessment/[CONDITION]: I reviewed medication options and referred her to physical therapy for balance training. MRI brain without contrast and ceruloplasmin are ordered. She will return in eight weeks or sooner for worsening falls, confusion, or new focal symptoms.
+
+Sincerely,
+
+[PERSON], MD
+Neurology | NPI [PERSON]
+Electronically signed [DATE]
+
+[ORGANIZATION], [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+This consultation contains confidential health information intended only for the receiving clinician.
+
+

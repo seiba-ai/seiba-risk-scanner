@@ -1,0 +1,21 @@
+[ORGANIZATION]
+[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+
+DISCHARGE SUMMARY
+Patient: [PERSON] | DOB: [DATE_OF_BIRTH] | MRN: [ID_NUM] | Sex: Male
+Admit date/time: [DATE] [TIME] | Discharge date/time: [DATE] [TIME]
+Discharge address: [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+
+Principal diagnosis: Community-[CONDITION] [CONDITION] with acute hypoxemia.
+
+Hospital course: [ORGANIZATION], age [AGE], was admitted from home after three days of cough, fever, and increasing shortness of breath. Chest radiograph showed a right lower-lobe infiltrate. He received ceftriaxone and azithromycin, supplemental oxygen, and respiratory therapy. Blood cultures remained negative. By discharge he was ambulating with a walker, maintaining oxygen saturation on room air, and tolerating a regular diet.
+
+Discharge medications: amoxicillin-clavulanate for four additional days; continue home lisinopril and acetaminophen as needed. Stop over-the-counter decongestants.
+
+Follow-up: See primary care within [TIME] to seven days and repeat chest imaging in six weeks. Home health nursing will assess medication adherence and fall risk. Return to the emergency department for [CONDITION], worsening dyspnea, chest pain, or confusion.
+
+Discharging clinician: [PERSON], [PERSON] | NPI [PERSON]
+Signed: [DATE] [TIME]
+
+[ORGANIZATION] | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+This summary is confidential and accompanies the patient’s transition of care.

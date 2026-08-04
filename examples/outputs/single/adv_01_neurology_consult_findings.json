@@ -1,0 +1,1768 @@
+{
+  "sources": 1,
+  "total_findings": 27,
+  "timing": {
+    "warmup_s": 7.14,
+    "scan_s": 1.47,
+    "sources_per_s": 0.68,
+    "records_per_s": 0.68,
+    "chars_per_s": 1007,
+    "findings_per_s": 18.4
+  },
+  "results": [
+    {
+      "source": "adv_01_neurology_consult.txt",
+      "stage": "deterministic+ner+contextual",
+      "detections": [
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::organization",
+          "entity": "organization",
+          "start": 0,
+          "end": 26,
+          "text": "RIVERBEND SPECIALTY CLINIC",
+          "confidence": 0.6176578402519226,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.384,
+          "confidence_ner": 0.5582923293113708,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "clinic"
+          ],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [
+            "clinic"
+          ],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::relative_date_expressions",
+              "entity": "relative_date_expressions",
+              "confidence_contextual": 0.768,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "clinic"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "company_name",
+          "detected_subtype": "phi_entity_ontology::hospital_names",
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::street_address",
+          "entity": "street_address",
+          "start": 27,
+          "end": 56,
+          "text": "1200 Harbor Avenue, Suite 410",
+          "confidence": 0.6471880316734314,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.6471880316734314,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::relative_date_expressions",
+              "entity": "relative_date_expressions",
+              "confidence_contextual": 0.9629629629629631,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [
+                "clinic"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::organization",
+              "entity": "organization",
+              "confidence_contextual": 0.48148148148148157,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [
+                "clinic"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": [
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "start": 47,
+              "end": 56,
+              "text": "Suite 410",
+              "confidence": 0.7086436170212767,
+              "reason": "absorbed"
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "start": 27,
+              "end": 45,
+              "text": "1200 Harbor Avenue",
+              "confidence": 0.65,
+              "reason": "absorbed"
+            }
+          ],
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "street_address",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::city",
+          "entity": "city",
+          "start": 58,
+          "end": 66,
+          "text": "Portland",
+          "confidence": 0.6484496593475342,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.6484496593475342,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.7842857142857144,
+              "matched_phrases": [
+                "suite",
+                "or"
+              ],
+              "matched_in_before": [
+                "suite"
+              ],
+              "matched_in_after": [
+                "or"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.37,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [
+                "avenue"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "phi_entity_ontology::relative_date_expressions",
+              "entity": "relative_date_expressions",
+              "confidence_contextual": 0.36,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [
+                "clinic"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "city",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::state",
+          "entity": "state",
+          "start": 68,
+          "end": 70,
+          "text": "OR",
+          "confidence": 0.6487950921058655,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.6487950921058655,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.27142857142857146,
+              "matched_phrases": [
+                "suite"
+              ],
+              "matched_in_before": [
+                "suite"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.27,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [
+                "avenue"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::phone_number",
+              "entity": "phone_number",
+              "confidence_contextual": 0.256,
+              "matched_phrases": [
+                "tel"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "tel"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "state",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "pii_entity_ontology::zip_code",
+          "entity": "zip_code",
+          "start": 71,
+          "end": 76,
+          "text": "97205",
+          "confidence": 0.875475,
+          "confidence_deterministic": 0.8300000000000001,
+          "confidence_contextual": 0.7642857142857143,
+          "confidence_ner": 0.6459451943635941,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "suite",
+            "or"
+          ],
+          "contextual_matches_before": [
+            "suite",
+            "or"
+          ],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::phone_number",
+              "entity": "phone_number",
+              "confidence_contextual": 0.35200000000000004,
+              "matched_phrases": [
+                "tel"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "tel"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.24,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [
+                "avenue"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::fax_number",
+              "entity": "fax_number",
+              "confidence_contextual": 0.048,
+              "matched_phrases": [
+                "fax"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "fax"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "pii_entity_ontology::phone_number",
+          "entity": "phone_number",
+          "start": 83,
+          "end": 95,
+          "text": "503-555-0142",
+          "confidence": 0.90058,
+          "confidence_deterministic": 0.88,
+          "confidence_contextual": 0.49,
+          "confidence_ner": 0.5093922853469849,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "tel"
+          ],
+          "contextual_matches_before": [
+            "tel"
+          ],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::fax_number",
+              "entity": "fax_number",
+              "confidence_contextual": 0.35200000000000004,
+              "matched_phrases": [
+                "fax"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "fax"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.3142857142857143,
+              "matched_phrases": [
+                "or"
+              ],
+              "matched_in_before": [
+                "or"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.12,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [
+                "avenue"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "pii_entity_ontology::phone_number",
+          "entity": "phone_number",
+          "start": 102,
+          "end": 114,
+          "text": "503-555-0198",
+          "confidence": 0.8926,
+          "confidence_deterministic": 0.88,
+          "confidence_contextual": 0.3,
+          "confidence_ner": 0.5620530366897584,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "tel"
+          ],
+          "contextual_matches_before": [
+            "tel"
+          ],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::fax_number",
+              "entity": "fax_number",
+              "confidence_contextual": 0.49,
+              "matched_phrases": [
+                "fax"
+              ],
+              "matched_in_before": [
+                "fax"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.04285714285714288,
+              "matched_phrases": [
+                "or"
+              ],
+              "matched_in_before": [
+                "or"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "pii_entity_ontology::dates",
+          "entity": "dates",
+          "start": 156,
+          "end": 166,
+          "text": "08/01/2026",
+          "confidence": 0.757,
+          "confidence_deterministic": 0.75,
+          "confidence_contextual": 0.07999999999999999,
+          "confidence_ner": 0.7195393896102905,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "dob"
+          ],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [
+            "dob"
+          ],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "confidence_contextual": 0.15999999999999998,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "dob"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::age",
+              "entity": "age",
+              "confidence_contextual": 0.07999999999999999,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "dob"
+              ]
+            },
+            {
+              "entity_id": "phi_entity_ontology::dates",
+              "entity": "dates",
+              "confidence_contextual": 0.07999999999999999,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "dob"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::person_names",
+          "entity": "person_names",
+          "start": 171,
+          "end": 183,
+          "text": "Maya Ellison",
+          "confidence": 0.4997968375682831,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.4997968375682831,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "confidence_contextual": 0.7040000000000001,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "dob"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::dates",
+              "entity": "dates",
+              "confidence_contextual": 0.35200000000000004,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "dob"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::age",
+              "entity": "age",
+              "confidence_contextual": 0.35200000000000004,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "dob"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "first_name",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "context_candidate",
+          "entity_id": "phi_entity_ontology::date_of_birth",
+          "entity": "date_of_birth",
+          "start": 191,
+          "end": 201,
+          "text": "03/14/1978",
+          "confidence": 0.9004000000000001,
+          "confidence_deterministic": 0.75,
+          "confidence_contextual": 0.96,
+          "confidence_ner": null,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "dob"
+          ],
+          "contextual_matches_before": [
+            "dob"
+          ],
+          "contextual_matches_after": [],
+          "candidates": null,
+          "alternates": [
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "start": 191,
+              "end": 196,
+              "text": "03/14",
+              "confidence": 0.9004000000000001,
+              "reason": "absorbed"
+            },
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "start": 194,
+              "end": 196,
+              "text": "14",
+              "confidence": 0.8972500000000001,
+              "reason": "absorbed"
+            },
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "start": 196,
+              "end": 201,
+              "text": "/1978",
+              "confidence": 0.8951500000000001,
+              "reason": "absorbed"
+            },
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "start": 197,
+              "end": 201,
+              "text": "1978",
+              "confidence": 0.8941000000000001,
+              "reason": "absorbed"
+            }
+          ],
+          "rescue_applied": true,
+          "original_entity_id": "pii_entity_ontology::dates",
+          "original_entity": "dates",
+          "original_ontology": "pii_entity_ontology",
+          "ontology": "phi_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "phi_entity_ontology::medical_record_number_mrn",
+          "entity": "medical_record_number_mrn",
+          "start": 209,
+          "end": 218,
+          "text": "RB-472918",
+          "confidence": 0.6148502230644226,
+          "confidence_deterministic": 0.25,
+          "confidence_contextual": 1.0,
+          "confidence_ner": 0.40746188163757324,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "mrn"
+          ],
+          "contextual_matches_before": [
+            "mrn"
+          ],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "confidence_contextual": 0.6,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [
+                "dob"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::dates",
+              "entity": "dates",
+              "confidence_contextual": 0.3,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [
+                "dob"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::age",
+              "entity": "age",
+              "confidence_contextual": 0.3,
+              "matched_phrases": [
+                "dob"
+              ],
+              "matched_in_before": [
+                "dob"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": [
+            {
+              "entity_id": "phi_entity_ontology::date_of_birth",
+              "entity": "date_of_birth",
+              "start": 212,
+              "end": 218,
+              "text": "472918",
+              "confidence": 0.8783500000000001,
+              "reason": "nested"
+            }
+          ],
+          "rescue_applied": true,
+          "original_entity_id": "pii_entity_ontology::unique_identifier",
+          "original_entity": "unique_identifier",
+          "original_ontology": "pii_entity_ontology",
+          "ontology": "phi_entity_ontology",
+          "ner_label": "medical_record_number",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::person_names",
+          "entity": "person_names",
+          "start": 249,
+          "end": 265,
+          "text": "Dr. Elena Brooks",
+          "confidence": 0.6747434437274933,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 1.0,
+          "confidence_ner": 0.49960529804229736,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "dr",
+            "md"
+          ],
+          "contextual_matches_before": [
+            "dr"
+          ],
+          "contextual_matches_after": [
+            "md"
+          ],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::physician_names",
+              "entity": "physician_names",
+              "confidence_contextual": 1.0,
+              "matched_phrases": [
+                "dr",
+                "md"
+              ],
+              "matched_in_before": [
+                "dr"
+              ],
+              "matched_in_after": [
+                "md"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.48,
+              "matched_phrases": [
+                "dr"
+              ],
+              "matched_in_before": [
+                "dr"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.32000000000000006,
+              "matched_phrases": [
+                "md"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "md"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "first_name",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::person_names",
+          "entity": "person_names",
+          "start": 324,
+          "end": 336,
+          "text": "Maya Ellison",
+          "confidence": 0.49976974725723267,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.49976974725723267,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.3142857142857143,
+              "matched_phrases": [
+                "me"
+              ],
+              "matched_in_before": [
+                "me"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "first_name",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "phi_entity_ontology::medical_condition",
+          "entity": "medical_condition",
+          "start": 596,
+          "end": 607,
+          "text": "head injury",
+          "confidence": 0.6,
+          "confidence_deterministic": 0.6,
+          "confidence_contextual": 0.0,
+          "confidence_ner": null,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.32000000000000006,
+              "matched_phrases": [
+                "or"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "or"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "phi_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": {
+            "gazetteer_canonical": "head injury",
+            "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0800482"
+          },
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "phi_entity_ontology::medical_condition",
+          "entity": "medical_condition",
+          "start": 666,
+          "end": 680,
+          "text": "Wilson disease",
+          "confidence": 0.6686,
+          "confidence_deterministic": 0.6,
+          "confidence_contextual": 0.49,
+          "confidence_ner": null,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "history of"
+          ],
+          "contextual_matches_before": [
+            "history of"
+          ],
+          "contextual_matches_after": [],
+          "candidates": null,
+          "alternates": [
+            {
+              "entity_id": "phi_entity_ontology::medical_condition",
+              "entity": "medical_condition",
+              "start": 666,
+              "end": 672,
+              "text": "Wilson",
+              "confidence": 0.6617,
+              "reason": "absorbed"
+            }
+          ],
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "phi_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": {
+            "gazetteer_canonical": "Wilson disease",
+            "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0010200"
+          },
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "phi_entity_ontology::medical_condition",
+          "entity": "medical_condition",
+          "start": 715,
+          "end": 728,
+          "text": "Crohn disease",
+          "confidence": 0.621,
+          "confidence_deterministic": 0.6,
+          "confidence_contextual": 0.15000000000000002,
+          "confidence_ner": null,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "disease"
+          ],
+          "contextual_matches_before": [
+            "disease"
+          ],
+          "contextual_matches_after": [],
+          "candidates": null,
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "phi_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": {
+            "gazetteer_canonical": "Crohn disease",
+            "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0005011"
+          },
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "phi_entity_ontology::medical_condition",
+          "entity": "medical_condition",
+          "start": 855,
+          "end": 867,
+          "text": "Bell's palsy",
+          "confidence": 0.6,
+          "confidence_deterministic": 0.6,
+          "confidence_contextual": 0.0,
+          "confidence_ner": null,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": null,
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "phi_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": {
+            "gazetteer_canonical": "Bell's palsy",
+            "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0005665"
+          },
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "phi_entity_ontology::medical_condition",
+          "entity": "medical_condition",
+          "start": 919,
+          "end": 936,
+          "text": "Parkinson disease",
+          "confidence": 0.6,
+          "confidence_deterministic": 0.6,
+          "confidence_contextual": 0.0,
+          "confidence_ner": null,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::icd10_diagnosis_codes",
+              "entity": "icd10_diagnosis_codes",
+              "confidence_contextual": 0.748,
+              "matched_phrases": [
+                "assessment"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "assessment"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "phi_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": {
+            "gazetteer_canonical": "Parkinson disease",
+            "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0005180"
+          },
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "phi_entity_ontology::medical_condition",
+          "entity": "medical_condition",
+          "start": 950,
+          "end": 954,
+          "text": "Plan",
+          "confidence": 0.6504,
+          "confidence_deterministic": 0.6,
+          "confidence_contextual": 0.36,
+          "confidence_ner": null,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "disease"
+          ],
+          "contextual_matches_before": [
+            "disease"
+          ],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::icd10_diagnosis_codes",
+              "entity": "icd10_diagnosis_codes",
+              "confidence_contextual": 1.0,
+              "matched_phrases": [
+                "assessment"
+              ],
+              "matched_in_before": [
+                "assessment"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "phi_entity_ontology::medication_dosage",
+              "entity": "medication_dosage",
+              "confidence_contextual": 0.192,
+              "matched_phrases": [
+                "medication"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "medication"
+              ]
+            },
+            {
+              "entity_id": "phi_entity_ontology::medication_name",
+              "entity": "medication_name",
+              "confidence_contextual": 0.192,
+              "matched_phrases": [
+                "medication"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "medication"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "phi_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": {
+            "gazetteer_canonical": "PLA2G6-associated neurodegeneration",
+            "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0017998"
+          },
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::person_names",
+          "entity": "person_names",
+          "start": 1212,
+          "end": 1228,
+          "text": "Dr. Elena Brooks",
+          "confidence": 0.6747476667165756,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 1.0,
+          "confidence_ner": 0.4996117949485779,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "dr",
+            "md"
+          ],
+          "contextual_matches_before": [
+            "dr"
+          ],
+          "contextual_matches_after": [
+            "md"
+          ],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::physician_names",
+              "entity": "physician_names",
+              "confidence_contextual": 1.0,
+              "matched_phrases": [
+                "dr",
+                "md"
+              ],
+              "matched_in_before": [
+                "dr"
+              ],
+              "matched_in_after": [
+                "md"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.48,
+              "matched_phrases": [
+                "dr"
+              ],
+              "matched_in_before": [
+                "dr"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.32000000000000006,
+              "matched_phrases": [
+                "md"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "md"
+              ]
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "first_name",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "context_candidate",
+          "entity_id": "pii_entity_ontology::person_names",
+          "entity": "person_names",
+          "start": 1249,
+          "end": 1259,
+          "text": "1467829351",
+          "confidence": 0.6347499999999999,
+          "confidence_deterministic": 0.43560000000000004,
+          "confidence_contextual": 0.77,
+          "confidence_ner": 0.41893337965011596,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "dr",
+            "md"
+          ],
+          "contextual_matches_before": [
+            "dr",
+            "md"
+          ],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::physician_names",
+              "entity": "physician_names",
+              "confidence_contextual": 1.0,
+              "matched_phrases": [
+                "dr",
+                "md"
+              ],
+              "matched_in_before": [
+                "dr",
+                "md"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "phi_entity_ontology::provider_npi",
+              "entity": "provider_npi",
+              "confidence_contextual": 1.0,
+              "matched_phrases": [
+                "npi"
+              ],
+              "matched_in_before": [
+                "npi"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.2571428571428571,
+              "matched_phrases": [
+                "md"
+              ],
+              "matched_in_before": [
+                "md"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": true,
+          "original_entity_id": "pii_entity_ontology::phone_number",
+          "original_entity": "phone_number",
+          "original_ontology": "pii_entity_ontology",
+          "ontology": "pii_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": "phi_entity_ontology::physician_names",
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "pii_entity_ontology::dates",
+          "entity": "dates",
+          "start": 1282,
+          "end": 1292,
+          "text": "08/01/2026",
+          "confidence": 0.75,
+          "confidence_deterministic": 0.75,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.7188062238693237,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::provider_npi",
+              "entity": "provider_npi",
+              "confidence_contextual": 0.33999999999999997,
+              "matched_phrases": [
+                "npi"
+              ],
+              "matched_in_before": [
+                "npi"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::organization",
+          "entity": "organization",
+          "start": 1294,
+          "end": 1320,
+          "text": "Riverbend Specialty Clinic",
+          "confidence": 0.6443309664726258,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.6443309664726258,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.176,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [],
+              "matched_in_after": [
+                "avenue"
+              ]
+            },
+            {
+              "entity_id": "phi_entity_ontology::provider_npi",
+              "entity": "provider_npi",
+              "confidence_contextual": 0.08499999999999995,
+              "matched_phrases": [
+                "npi"
+              ],
+              "matched_in_before": [
+                "npi"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "company_name",
+          "detected_subtype": "phi_entity_ontology::hospital_names",
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::street_address",
+          "entity": "street_address",
+          "start": 1322,
+          "end": 1351,
+          "text": "1200 Harbor Avenue, Suite 410",
+          "confidence": 0.6488354817032814,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.6488354817032814,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "phi_entity_ontology::relative_date_expressions",
+              "entity": "relative_date_expressions",
+              "confidence_contextual": 0.96,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [
+                "clinic"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::organization",
+              "entity": "organization",
+              "confidence_contextual": 0.48,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [
+                "clinic"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": [
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "start": 1342,
+              "end": 1351,
+              "text": "Suite 410",
+              "confidence": 0.7088,
+              "reason": "absorbed"
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "start": 1322,
+              "end": 1340,
+              "text": "1200 Harbor Avenue",
+              "confidence": 0.65,
+              "reason": "absorbed"
+            }
+          ],
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "street_address",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::city",
+          "entity": "city",
+          "start": 1353,
+          "end": 1361,
+          "text": "Portland",
+          "confidence": 0.6488820314407349,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.6488820314407349,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.7842857142857144,
+              "matched_phrases": [
+                "suite",
+                "or"
+              ],
+              "matched_in_before": [
+                "suite"
+              ],
+              "matched_in_after": [
+                "or"
+              ]
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.37,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [
+                "avenue"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "phi_entity_ontology::relative_date_expressions",
+              "entity": "relative_date_expressions",
+              "confidence_contextual": 0.33999999999999997,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [
+                "clinic"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "city",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "ner",
+          "entity_id": "pii_entity_ontology::state",
+          "entity": "state",
+          "start": 1363,
+          "end": 1365,
+          "text": "OR",
+          "confidence": 0.6484945237636567,
+          "confidence_deterministic": 0.0,
+          "confidence_contextual": 0.0,
+          "confidence_ner": 0.6484945237636567,
+          "confidence_llm": null,
+          "contextual_matches": [],
+          "contextual_matches_before": [],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::zip_code",
+              "entity": "zip_code",
+              "confidence_contextual": 0.27142857142857146,
+              "matched_phrases": [
+                "suite"
+              ],
+              "matched_in_before": [
+                "suite"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.27,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [
+                "avenue"
+              ],
+              "matched_in_after": []
+            },
+            {
+              "entity_id": "phi_entity_ontology::relative_date_expressions",
+              "entity": "relative_date_expressions",
+              "confidence_contextual": 0.14,
+              "matched_phrases": [
+                "clinic"
+              ],
+              "matched_in_before": [
+                "clinic"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": "state",
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        },
+        {
+          "winner_kind": "deterministic",
+          "entity_id": "pii_entity_ontology::zip_code",
+          "entity": "zip_code",
+          "start": 1366,
+          "end": 1371,
+          "text": "97205",
+          "confidence": 0.875475,
+          "confidence_deterministic": 0.8300000000000001,
+          "confidence_contextual": 0.7642857142857143,
+          "confidence_ner": 0.6467379540205002,
+          "confidence_llm": null,
+          "contextual_matches": [
+            "suite",
+            "or"
+          ],
+          "contextual_matches_before": [
+            "suite",
+            "or"
+          ],
+          "contextual_matches_after": [],
+          "candidates": [
+            {
+              "entity_id": "pii_entity_ontology::street_address",
+              "entity": "street_address",
+              "confidence_contextual": 0.24,
+              "matched_phrases": [
+                "avenue"
+              ],
+              "matched_in_before": [
+                "avenue"
+              ],
+              "matched_in_after": []
+            }
+          ],
+          "alternates": null,
+          "rescue_applied": false,
+          "original_entity_id": null,
+          "original_entity": null,
+          "original_ontology": null,
+          "ontology": "pii_entity_ontology",
+          "ner_label": null,
+          "detected_subtype": null,
+          "stage": "deterministic+ner+contextual",
+          "provenance": null,
+          "origin": {
+            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_label": "adv_01_neurology_consult.txt",
+            "row": null,
+            "column": null
+          }
+        }
+      ],
+      "text_length": 1476,
+      "fusion_weight_deterministic": 0.65,
+      "fusion_weight_contextual": 0.35
+    }
+  ]
+}
