@@ -252,6 +252,14 @@ temp/
 # Built gazetteer artifact ships with the repo (raw MONDO/RxNorm/CHV sources are large
 # and gitignored, so runtime relies on this checked-in build).
 !src/**/med_ontology_sources/cleaned/medical_terms_gazetteer.json
+
+# Examples ship their input data and a small set of sample outputs, so the walkthrough
+# can be read without running it. The two large batch artifacts (corpus_risk.json ~5MB,
+# corpus_findings.json ~2MB) stay local — regenerate with examples.walkthrough.batch.
+!examples/data/**/*.csv
+!examples/outputs/**/*.csv
+!examples/outputs/single/*.json
+!examples/outputs/scrubbed/*.json
 # ---------------------------------------------------------------------------
 # OSS distribution boundary — these stay on disk, they just never get committed.
 # ---------------------------------------------------------------------------

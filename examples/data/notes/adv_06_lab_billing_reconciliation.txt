@@ -1,0 +1,27 @@
+SUMMIT DIAGNOSTICS REVENUE CYCLE
+4550 Quarry Road, Suite 120, Columbus, OH 43215 | Tel 614-555-0134 | Fax 614-555-0191
+
+LAB REQUISITION / BILLING RECONCILIATION
+Reconciliation date: 08/01/2026
+Patient: Jordan Lee | DOB: 10/18/1971 | MRN: SD-304991 | Sex: X
+Ordering provider: Dr. Amina Shah, MD | NPI 1847392056
+
+Specimen accession: ACC-26-781443
+Internal order: ORD-4472109
+Invoice reference: INV-2026-08831
+Payer claim control: CLM-2026-5601934
+
+Tests billed
+CPT 80053 — Comprehensive metabolic panel | ICD-10 E11.9 — Type 2 diabetes mellitus without complications
+CPT 85025 — Complete blood count | ICD-10 R53.83 — Other fatigue
+CPT 83036 — Hemoglobin A1c | ICD-10 Z13.1 — Encounter for screening for diabetes mellitus
+
+Billing review: The accession and internal order were reconciled to the specimen label. The claim is pending because the diagnosis pointer for CPT 83036 was omitted on the first transmission. Please correct the claim and resubmit; do not create a second laboratory order.
+
+Identity verification received by phone: SSN 587-42-1936. No balance or payment information was discussed.
+
+Reviewed and released by Dr. Amina Shah, MD | NPI 1847392056
+Release time: 08/01/2026 14:06
+
+Summit Diagnostics Revenue Cycle | 4550 Quarry Road, Suite 120, Columbus, OH 43215
+Confidential laboratory and billing communication. This document is not a patient statement.

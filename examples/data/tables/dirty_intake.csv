@@ -1,0 +1,201 @@
+rec_id,pat_nm,mrn,ssn_num,dob,phone,zip_cd,comments,status,amount
+R-0001,"Delgado, Maria",MRN-0012345,412-88-7390,1978-03-14,617-555-0143,02149,"left vm, call back after 4pm",active,124.50
+R-0002,ROBERT CHEN,0012346,XXX-XX-7391,03/15/1978,(508) 555-0188,02149-1201,"pt states insurance changed, will fax new card",pending,0.00
+R-0003,linda whitfield,mrn 12347,512-44-8821,16-Mar-78,+1 781 555 0122,2149,"call daughter Maria Delgado at 617-555-0143",active,89.00
+R-0004,"Souza, Ana",A-12348,000-00-0000,1978-03-17,6175550144,02150,"NO SHOW",closed,0.00
+R-0005,Dr. Kevin O'Brien,12349,318-55-2094,1978-03-18,Cell: 617-555-0145,02151,"duplicate acct, see MRN 0084412",in review,55.25
+R-0006,N/A,MRN-0012350,,0000-00-00,N/A,00000,"returned mail - bad addr",closed,0.00
+R-0007,"Peters, Sandra",0012351,999-99-9999,1978-03-20,508-555-0189,02152,"spoke w/ spouse Robert Chen 508-555-0188, ok to leave msg",active,210.75
+R-0008,TOMAS RIVERA,mrn 12352,204-66-3311,03/21/1978,(617) 555-0146,02153,,pending,17.40
+R-0009,grace kim,A-12353,-,1900-01-01,781-555-0123,02154,"pt ssn on file 412-88-7390 verify at next visit",active,0.00
+R-0010,"Alvarez, Hector",12354,455-21-7788,1978-03-23,+1 508 555 0190,02155-0044,"billing q - refer to acct 4471029",in review,340.00
+R-0011,Nadia Haddad,MRN-0012355,unknown,1978-03-24,617-555-0147,02156,"emergency contact Linda Whitfield (781) 555-0122",active,62.10
+R-0012,"Brennan, Paul",0012356,127-93-4402,03/25/1978,,2156,"consent signed 03/14/2024",closed,0.00
+R-0013,ROSA FERRARO,mrn 12357,XXX-XX-4403,26-Mar-78,(781) 555-0124,02157,"pt requests statements to home addr only",active,78.90
+R-0014,ellen novak,A-12358,662-14-9903,1978-03-27,000-000-0000,02158,"wrong number, per Ana Souza pt moved to 42 Cross St Lowell",pending,0.00
+R-0015,"Adeyemi, Samuel",12359,301-77-5512,1978-03-28,508-555-0191,N/A,"lab results pending, ordered 04/02/2024",active,133.20
+R-0016,Priya Bhatt,MRN-0012360,,03/29/1978,617-555-0148,02159,"pt hard of hearing - call son Kevin O'Brien 617-555-0145",active,0.00
+R-0017,"Okafor, James",0012361,209-45-6607,1978-03-30,(617) 555-0149,02160,"N/A",closed,44.00
+R-0018,RUTH ELLINGTON,mrn 12362,999-12-3456,1978-03-31,781-555-0125,02161-0912,"acct in collections as of 05/01/2024",in review,890.15
+R-0019,victor moreau,A-12363,538-22-1140,04/01/1978,+1 617 555 0150,2161,"left msg w/ Rosa Ferraro, will call back",pending,0.00
+R-0020,"Rahman, Aisha",12364,-,1978-04-02,508-555-0192,02162,"pt declined to provide ssn",active,27.65
+R-0021,Daniel Vasquez,MRN-0012365,174-38-9021,1978-04-03,617-555-0151,02163,"new addr 118 Bright St Somerville, verify zip",active,101.00
+R-0022,"Chen, Robert",0012366,XXX-XX-9022,04/04/1978,(508) 555-0193,00000,"see prior note",closed,0.00
+R-0023,MARIA DELGADO,mrn 12367,420-51-7734,05-Apr-78,781-555-0126,02164,"emergency contact Nadia Haddad 617-555-0147 - sister",active,215.40
+R-0024,ana souza,A-12368,000-00-0000,1978-04-06,,02165,"unable to reach, no vm set up",pending,0.00
+R-0025,"Whitfield, Linda",12369,266-90-4418,1978-04-07,617-555-0152,02166,"pt asked for itemized bill",in review,412.80
+R-0026,Dr. Grace Kim,MRN-0012370,,04/08/1978,(617) 555-0153,02167-1100,"referral sent to Dr. Paul Brennan",active,0.00
+R-0027,"Novak, Ellen",0012371,383-16-2255,1978-04-09,508-555-0194,2167,"pt moved out of state, closing acct",closed,0.00
+R-0028,HECTOR ALVAREZ,mrn 12372,unknown,1978-04-10,781-555-0127,02168,"claim denied, resubmit w/ corrected dob",in review,0.00
+R-0029,samuel adeyemi,A-12373,591-77-3308,04/11/1978,+1 508 555 0195,02169,"call work line, ask for Grace Kim ext 4412",active,66.30
+R-0030,"Kim, Grace",12374,145-62-8890,1978-04-12,617-555-0154,02170,"pt ssn 145-62-8890 confirmed at visit",active,188.00
+R-0031,James Okafor,MRN-0012375,XXX-XX-8891,1978-04-13,(781) 555-0128,N/A,"NO SHOW - 2nd occurrence",closed,25.00
+R-0032,"Moreau, Victor",0012376,238-04-1176,04/14/1978,508-555-0196,02171,,pending,0.00
+R-0033,PRIYA BHATT,mrn 12377,999-45-6789,15-Apr-78,617-555-0155,02172-0300,"spouse Daniel Vasquez authorized to discuss acct",active,73.55
+R-0034,paul brennan,A-12378,-,1978-04-16,(617) 555-0156,2172,"bad phone, try 781-555-0129",in review,0.00
+R-0035,"Ellington, Ruth",12379,472-33-6614,1978-04-17,781-555-0129,02173,"pt prefers text reminders",active,49.99
+R-0036,Aisha Rahman,MRN-0012380,,04/18/1978,,00000,"returned mail - no fwd addr",closed,0.00
+R-0037,"Ferraro, Rosa",0012381,315-88-2201,1978-04-19,508-555-0197,02174,"call after 6pm, works days",active,157.20
+R-0038,KEVIN O'BRIEN,mrn 12382,000-00-0000,1978-04-20,617-555-0157,02175,"acct merged w/ MRN 0012345",closed,0.00
+R-0039,tomas rivera,A-12383,624-19-7743,04/21/1978,(508) 555-0198,02176-0055,"pt disputes charge from 03/14/2024",in review,299.00
+R-0040,"Vasquez, Daniel",12384,unknown,1978-04-22,781-555-0130,2176,"left vm w/ Aisha Rahman at 508-555-0192",pending,0.00
+R-0041,Sandra Peters,MRN-0012385,187-54-9928,1978-04-23,617-555-0158,02177,"insurance verified 04/23/2024",active,84.15
+R-0042,"Bhatt, Priya",0012386,XXX-XX-9929,04/24/1978,,02178,"N/A",closed,0.00
+R-0043,ROBERT CHEN,mrn 12387,559-71-3382,25-Apr-78,(617) 555-0159,02179,"pt requests new provider, see Dr. Ruth Ellington",active,0.00
+R-0044,linda whitfield,A-12388,-,1978-04-26,508-555-0199,N/A,"duplicate - see rec R-0011",closed,0.00
+R-0045,"Rivera, Tomas",12389,208-46-5517,1978-04-27,781-555-0131,02180,"pt ssn on file, do not re-request",active,122.60
+R-0046,Ellen Novak,MRN-0012390,,04/28/1978,617-555-0160,02181-0777,"call sister Sandra Peters 508-555-0189 if no answer",active,0.00
+R-0047,"Haddad, Nadia",0012391,347-92-6605,1978-04-29,(781) 555-0132,2181,"claim reprocessed 05/02/2024",in review,505.30
+R-0048,GRACE KIM,mrn 12392,999-83-1923,04/30/1978,508-555-0200,02182,"pt no longer at this number",pending,0.00
+R-0049,hector alvarez,A-12393,411-27-8836,1978-05-01,617-555-0161,02183,"emergency contact James Okafor (617) 555-0149",active,91.45
+R-0050,"O'Brien, Kevin",12394,000-00-0000,05/02/1978,,00000,"returned mail",closed,0.00
+R-0051,Maria Delgado,MRN-0012395,263-58-1194,1978-05-03,781-555-0133,02184,"pt asked to update dob, currently listed 05/03/1978",active,38.75
+R-0052,"Peters, Sandra",0012396,XXX-XX-1195,03-May-78,(508) 555-0201,02185,"see billing note from Victor Moreau",in review,0.00
+R-0053,DANIEL VASQUEZ,mrn 12397,522-14-7708,1978-05-04,617-555-0162,02186-0021,"pt requests itemized statement mailed",active,266.90
+R-0054,ruth ellington,A-12398,-,05/05/1978,508-555-0202,2186,"no vm, try again",pending,0.00
+R-0055,"Alvarez, Hector",12399,196-73-4429,1978-05-06,781-555-0134,02187,"acct current",active,0.00
+R-0056,Paul Brennan,MRN-0012400,,1978-05-07,(617) 555-0163,N/A,"pt moved, new addr 77 Elm St Medford 02155",active,144.00
+R-0057,"Souza, Ana",0012401,378-21-9950,05/08/1978,617-555-0164,02188,"call daughter Priya Bhatt at 617-555-0155",active,72.30
+R-0058,JAMES OKAFOR,mrn 12402,unknown,1978-05-09,,02189,"N/A",closed,0.00
+R-0059,aisha rahman,A-12403,604-38-2276,09-May-78,508-555-0203,02190-0888,"pt hard to reach, works nights",pending,0.00
+R-0060,"Moreau, Victor",12404,000-00-0000,1978-05-10,781-555-0135,2190,"acct in collections",in review,733.10
+R-0061,Rosa Ferraro,MRN-0012405,249-85-3361,05/11/1978,617-555-0165,02191,"consent on file",active,58.20
+R-0062,"Kim, Grace",0012406,XXX-XX-3362,1978-05-12,(781) 555-0136,02192,"spouse Hector Alvarez authorized",active,0.00
+R-0063,SAMUEL ADEYEMI,mrn 12407,433-60-1187,1978-05-13,508-555-0204,00000,"returned mail - bad zip",closed,0.00
+R-0064,tomas rivera,A-12408,-,05/14/1978,617-555-0166,02193,"pt ssn 433-60-1187 does not match records",in review,0.00
+R-0065,"Whitfield, Linda",12409,571-29-8843,1978-05-15,781-555-0137,02194-0102,"call back requested",active,96.85
+R-0066,Kevin O'Brien,MRN-0012410,,15-May-78,(508) 555-0205,2194,"NO SHOW",closed,25.00
+R-0067,"Novak, Ellen",0012411,162-47-5529,1978-05-16,617-555-0167,02195,"insurance card on file",active,181.40
+R-0068,NADIA HADDAD,mrn 12412,999-11-2233,05/17/1978,,02196,"pt declined ssn",pending,0.00
+R-0069,daniel vasquez,A-12413,285-93-6674,1978-05-18,508-555-0206,02197,"emergency contact Ellen Novak 617-555-0160",active,64.70
+R-0070,"Bhatt, Priya",12414,000-00-0000,05/19/1978,781-555-0138,N/A,"bad addr, mail returned twice",closed,0.00
+R-0071,Sandra Peters,MRN-0012415,318-72-4415,1978-05-20,(617) 555-0168,02198,"pt requests paperless billing",active,29.95
+R-0072,"Ellington, Ruth",0012416,XXX-XX-4416,20-May-78,617-555-0169,02199-0333,"see note from Maria Delgado re: coverage",in review,0.00
+R-0073,VICTOR MOREAU,mrn 12417,547-16-9982,1978-05-21,508-555-0207,2199,"acct current, no balance",active,0.00
+R-0074,grace kim,A-12418,-,05/22/1978,781-555-0139,02200,"call spouse Tomas Rivera 617-555-0146",pending,0.00
+R-0075,"Okafor, James",12419,231-58-7704,1978-05-23,,02201,"pt moved to FL, closing",closed,0.00
+R-0076,Ana Souza,MRN-0012420,,1978-05-24,(781) 555-0140,02202,"claim submitted 05/24/2024",active,377.55
+R-0077,"Rahman, Aisha",0012421,406-31-2298,05/25/1978,508-555-0208,00000,"returned mail",closed,0.00
+R-0078,HECTOR ALVAREZ,mrn 12422,unknown,1978-05-26,617-555-0170,02203-0044,"pt asked for interpreter at next visit",active,88.30
+R-0079,paul brennan,A-12423,673-24-5540,26-May-78,781-555-0141,2203,"left vm",pending,0.00
+R-0080,"Delgado, Maria",12424,000-00-0000,1978-05-27,(508) 555-0209,02204,"acct merged, see MRN 0012395",closed,0.00
+R-0081,Robert Chen,MRN-0012425,159-83-6627,05/28/1978,617-555-0171,02205,"emergency contact Samuel Adeyemi (508) 555-0191",active,203.15
+R-0082,"Ferraro, Rosa",0012426,XXX-XX-6628,1978-05-29,,02206,"N/A",in review,0.00
+R-0083,RUTH ELLINGTON,mrn 12427,394-70-1153,1978-05-30,508-555-0210,02207-0999,"pt ssn on file 394-70-1153",active,117.60
+R-0084,linda whitfield,A-12428,-,05/31/1978,781-555-0142,2207,"no answer, try mobile",pending,0.00
+R-0085,"Vasquez, Daniel",12429,528-49-3376,1978-06-01,617-555-0172,N/A,"pt requests call from Dr. Kevin O'Brien",active,0.00
+R-0086,Priya Bhatt,MRN-0012430,,01-Jun-78,(617) 555-0173,02208,"insurance lapsed 06/01/2024",in review,644.20
+R-0087,"Adeyemi, Samuel",0012431,247-15-8802,06/02/1978,508-555-0211,02209,"pt current on payments",active,0.00
+R-0088,ELLEN NOVAK,mrn 12432,999-55-4433,1978-06-03,781-555-0143,00000,"bad zip on file",closed,0.00
+R-0089,tomas rivera,A-12433,362-88-7719,1978-06-04,,02210,"call daughter Nadia Haddad at 617-555-0147",active,52.80
+R-0090,"Kim, Grace",12434,000-00-0000,06/05/1978,617-555-0174,02211-0066,"acct closed at pt request",closed,0.00
+R-0091,Kevin O'Brien,MRN-0012435,415-92-6640,1978-06-06,(508) 555-0212,2211,"pt asked for records copy",active,15.00
+R-0092,"Moreau, Victor",0012436,XXX-XX-6641,06-Jun-78,781-555-0144,02212,"see prior auth note",in review,0.00
+R-0093,MARIA DELGADO,mrn 12437,276-34-9915,1978-06-07,508-555-0213,02213,"emergency contact Robert Chen 508-555-0188",active,134.45
+R-0094,james okafor,A-12438,-,06/08/1978,617-555-0175,N/A,"unable to verify addr",pending,0.00
+R-0095,"Haddad, Nadia",12439,583-27-1108,1978-06-09,,02214,"pt requests billing in Spanish",active,77.25
+R-0096,Aisha Rahman,MRN-0012440,,1978-06-10,(781) 555-0145,02215-0011,"claim denied - wrong dob 06/10/1978",in review,0.00
+R-0097,"Novak, Ellen",0012441,341-76-5583,06/11/1978,508-555-0214,2215,"acct current",active,0.00
+R-0098,SANDRA PETERS,mrn 12442,unknown,1978-06-12,617-555-0176,02216,"left msg w/ Paul Brennan 617-555-0163",pending,0.00
+R-0099,hector alvarez,A-12443,619-40-2274,12-Jun-78,781-555-0146,02217,"pt moved, fwd addr on file",active,169.90
+R-0100,"Chen, Robert",12444,000-00-0000,1978-06-13,,00000,"returned mail - final notice",closed,0.00
+R-0101,Rosa Ferraro,MRN-0012445,222-58-9931,06/14/1978,(617) 555-0177,02218,"pt verified identity at desk",active,43.10
+R-0102,"Brennan, Paul",0012446,XXX-XX-9932,1978-06-15,508-555-0215,02219-0505,"see note from Grace Kim",in review,0.00
+R-0103,DANIEL VASQUEZ,mrn 12447,468-13-7745,1978-06-16,781-555-0147,2219,"pt requests evening appt",active,0.00
+R-0104,ana souza,A-12448,-,06/17/1978,617-555-0178,02220,"call back after 5pm",pending,0.00
+R-0105,"Peters, Sandra",12449,135-64-2216,1978-06-18,(508) 555-0216,N/A,"acct in dispute",in review,421.75
+R-0106,James Okafor,MRN-0012450,,18-Jun-78,508-555-0217,02221,"emergency contact Victor Moreau (617) 555-0150",active,0.00
+R-0107,"Whitfield, Linda",0012451,590-82-3367,06/19/1978,781-555-0148,02222,"insurance verified",active,98.55
+R-0108,GRACE KIM,mrn 12452,999-77-8899,1978-06-20,,02223-0080,"pt declined to confirm ssn",pending,0.00
+R-0109,victor moreau,A-12453,304-29-6658,1978-06-21,617-555-0179,2223,"left vm w/ Ruth Ellington 781-555-0125",active,61.40
+R-0110,"Rivera, Tomas",12454,000-00-0000,06/22/1978,(781) 555-0149,00000,"bad addr and zip",closed,0.00
+R-0111,Nadia Haddad,MRN-0012455,177-45-8823,1978-06-23,508-555-0218,02224,"pt asked for itemized bill",active,255.00
+R-0112,"Rahman, Aisha",0012456,XXX-XX-8824,23-Jun-78,617-555-0180,02225,"N/A",in review,0.00
+R-0113,SAMUEL ADEYEMI,mrn 12457,451-30-1194,1978-06-24,781-555-0150,02226-0700,"pt ssn 451-30-1194 verified",active,109.35
+R-0114,ellen novak,A-12458,-,06/25/1978,,2226,"no phone on file",pending,0.00
+R-0115,"Bhatt, Priya",12459,286-91-7740,1978-06-26,(508) 555-0219,02227,"call spouse Hector Alvarez 617-555-0161",active,0.00
+R-0116,Kevin O'Brien,MRN-0012460,,06/27/1978,508-555-0220,N/A,"claim pending since 06/27/2024",in review,588.20
+R-0117,"Alvarez, Hector",0012461,613-27-4482,1978-06-28,781-555-0151,02228,"pt current",active,0.00
+R-0118,MARIA DELGADO,mrn 12462,000-00-0000,28-Jun-78,617-555-0181,02229,"returned mail",closed,0.00
+R-0119,daniel vasquez,A-12463,329-56-8817,06/29/1978,(617) 555-0182,02230-0012,"emergency contact Ana Souza 617-555-0164",active,86.90
+R-0120,"Okafor, James",12464,548-72-3305,1978-06-30,508-555-0221,2230,"pt requests records by mail",active,20.00
+R-0121,Robert Chen,MRN-0012465,XXX-XX-3306,07/01/1978,781-555-0152,02231,"see billing dispute note",in review,0.00
+R-0122,"Ferraro, Rosa",0012466,unknown,1978-07-02,,00000,"bad zip",closed,0.00
+R-0123,RUTH ELLINGTON,mrn 12467,204-83-9958,1978-07-03,617-555-0183,02232,"pt moved to 15 Water St Lynn 01901",active,143.60
+R-0124,grace kim,A-12468,-,03-Jul-78,(508) 555-0222,02233,"call back",pending,0.00
+R-0125,"Moreau, Victor",12469,371-49-2263,07/04/1978,508-555-0223,02234-0404,"acct current, autopay on",active,0.00
+R-0126,Paul Brennan,MRN-0012470,,1978-07-05,781-555-0153,2234,"left msg w/ Maria Delgado 617-555-0143",active,67.15
+R-0127,"Souza, Ana",0012471,459-16-7729,1978-07-06,617-555-0184,N/A,"pt asked to update phone",in review,0.00
+R-0128,TOMAS RIVERA,mrn 12472,999-22-3344,07/07/1978,(781) 555-0154,02235,"ssn appears invalid, re-verify",pending,0.00
+R-0129,linda whitfield,A-12473,238-70-5591,1978-07-08,508-555-0224,02236,"emergency contact Priya Bhatt (617) 555-0155",active,192.40
+R-0130,"Kim, Grace",12474,000-00-0000,08-Jul-78,617-555-0185,02237-0090,"returned mail - no fwd",closed,0.00
+R-0131,Sandra Peters,MRN-0012475,517-38-6647,07/09/1978,781-555-0155,2237,"pt verified at desk",active,31.80
+R-0132,"Novak, Ellen",0012476,XXX-XX-6648,1978-07-10,,02238,"N/A",in review,0.00
+R-0133,HECTOR ALVAREZ,mrn 12477,142-95-8874,1978-07-11,(508) 555-0225,02239,"pt requests appt reminder call",active,0.00
+R-0134,aisha rahman,A-12478,-,07/12/1978,617-555-0186,02240,"no answer x3",pending,0.00
+R-0135,"Vasquez, Daniel",12479,395-27-1136,1978-07-13,781-555-0156,00000,"bad zip on file, pt says 02140",closed,0.00
+R-0136,Nadia Haddad,MRN-0012480,,13-Jul-78,508-555-0226,02241-0303,"claim resubmitted 07/13/2024",in review,466.05
+R-0137,"Adeyemi, Samuel",0012481,268-54-9920,07/14/1978,617-555-0187,2241,"pt current on plan",active,0.00
+R-0138,JAMES OKAFOR,mrn 12482,000-00-0000,1978-07-15,(617) 555-0188,02242,"acct merged w/ MRN 0012419",closed,0.00
+R-0139,rosa ferraro,A-12483,583-41-2207,07/16/1978,781-555-0157,02243,"call daughter Ruth Ellington at 781-555-0125",active,74.50
+R-0140,"Ellington, Ruth",12484,unknown,1978-07-17,,N/A,"unable to verify identity",in review,0.00
+R-0141,Victor Moreau,MRN-0012485,417-86-3352,17-Jul-78,508-555-0227,02244,"pt asked for statement copy",active,55.90
+R-0142,"O'Brien, Kevin",0012486,XXX-XX-3353,07/18/1978,617-555-0189,02245-0011,"see note from Sandra Peters",in review,0.00
+R-0143,PRIYA BHATT,mrn 12487,326-19-7783,1978-07-19,781-555-0158,2245,"pt current",active,0.00
+R-0144,tomas rivera,A-12488,-,07/20/1978,(508) 555-0228,02246,"left vm",pending,0.00
+R-0145,"Chen, Robert",12489,491-73-5518,1978-07-21,508-555-0229,02247,"emergency contact Grace Kim 617-555-0154",active,128.70
+R-0146,Maria Delgado,MRN-0012490,,21-Jul-78,617-555-0190,00000,"returned mail",closed,0.00
+R-0147,"Whitfield, Linda",0012491,205-38-6694,07/22/1978,781-555-0159,02248,"pt requests paperless",active,42.25
+R-0148,ELLEN NOVAK,mrn 12492,999-66-7788,1978-07-23,,02249-0808,"ssn on file looks wrong",pending,0.00
+R-0149,daniel vasquez,A-12493,354-62-1149,23-Jul-78,(781) 555-0160,2249,"call after 7pm",active,0.00
+R-0150,"Bhatt, Priya",12494,000-00-0000,07/24/1978,508-555-0230,02250,"bad addr",closed,0.00
+R-0151,Ana Souza,MRN-0012495,278-45-9036,1978-07-25,617-555-0191,02251,"pt verified insurance 07/25/2024",active,231.10
+R-0152,"Alvarez, Hector",0012496,XXX-XX-9037,07/26/1978,781-555-0161,02252-0022,"N/A",in review,0.00
+R-0153,SAMUEL ADEYEMI,mrn 12495,536-84-2271,1978-07-27,(617) 555-0192,2252,"pt current, no balance",active,0.00
+R-0154,grace kim,A-12496,-,27-Jul-78,508-555-0231,02253,"no vm set up",pending,0.00
+R-0155,"Peters, Sandra",12497,163-29-7745,07/28/1978,617-555-0193,N/A,"pt moved, addr unknown",in review,0.00
+R-0156,Kevin O'Brien,MRN-0012497,,1978-07-29,781-555-0162,02254,"claim paid 07/29/2024",active,0.00
+R-0157,"Moreau, Victor",0012498,420-57-3318,07/30/1978,,02255,"emergency contact Nadia Haddad (508) 555-0218",active,153.35
+R-0158,ROSA FERRARO,mrn 12499,000-00-0000,1978-07-31,(508) 555-0232,00000,"returned mail - bad zip and addr",closed,0.00
+R-0159,james okafor,A-12500,347-91-6682,31-Jul-78,617-555-0194,02256-0777,"pt asked for interpreter",active,69.80
+R-0160,"Haddad, Nadia",12501,unknown,08/01/1978,781-555-0163,2256,"left msg w/ Daniel Vasquez 617-555-0172",pending,0.00
+R-0161,Ruth Ellington,MRN-0012502,592-16-4423,1978-08-02,508-555-0233,02257,"pt requests itemized bill",active,308.60
+R-0162,"Rivera, Tomas",0012503,XXX-XX-4424,08/03/1978,617-555-0195,02258,"see prior note from Ellen Novak",in review,0.00
+R-0163,LINDA WHITFIELD,mrn 12504,215-73-9958,1978-08-04,,02259-0044,"pt current",active,0.00
+R-0164,priya bhatt,A-12505,-,04-Aug-78,(781) 555-0164,2259,"no answer",pending,0.00
+R-0165,"Novak, Ellen",12506,468-35-2290,08/05/1978,508-555-0234,02260,"emergency contact James Okafor 617-555-0149",active,87.45
+R-0166,Robert Chen,MRN-0012507,,1978-08-06,617-555-0196,N/A,"addr on file is a PO box",in review,0.00
+R-0167,"Kim, Grace",0012508,371-84-6615,08/07/1978,781-555-0165,02261,"pt verified ssn 371-84-6615 at desk",active,116.20
+R-0168,HECTOR ALVAREZ,mrn 12509,999-33-4455,1978-08-08,(508) 555-0235,02262-0100,"ssn flagged invalid by system",pending,0.00
+R-0169,samuel adeyemi,A-12510,254-67-8831,08-Aug-78,508-555-0236,2262,"call back requested",active,0.00
+R-0170,"Vasquez, Daniel",12511,000-00-0000,08/09/1978,617-555-0197,00000,"returned mail",closed,0.00
+R-0171,Aisha Rahman,MRN-0012512,183-52-7746,1978-08-10,781-555-0166,02263,"pt asked for records",active,25.00
+R-0172,"Ferraro, Rosa",0012513,XXX-XX-7747,08/11/1978,,02264,"N/A",in review,0.00
+R-0173,MARIA DELGADO,mrn 12514,429-16-3387,1978-08-12,(617) 555-0198,02265-0055,"pt current on payments",active,0.00
+R-0174,kevin o'brien,A-12515,-,12-Aug-78,508-555-0237,2265,"left vm x2",pending,0.00
+R-0175,"Okafor, James",12516,516-38-9924,08/13/1978,617-555-0199,02266,"call spouse Rosa Ferraro 617-555-0165",active,141.75
+R-0176,Victor Moreau,MRN-0012517,,1978-08-14,781-555-0167,N/A,"claim denied, appeal filed 08/14/2024",in review,0.00
+R-0177,"Souza, Ana",0012518,237-95-1160,08/15/1978,(508) 555-0238,02267,"pt requests evening calls only",active,63.30
+R-0178,GRACE KIM,mrn 12519,000-00-0000,1978-08-16,508-555-0239,02268,"bad phone and addr",closed,0.00
+R-0179,paul brennan,A-12520,405-23-8873,16-Aug-78,617-555-0200,02269-0909,"emergency contact Aisha Rahman 781-555-0166",active,94.60
+R-0180,"Adeyemi, Samuel",12521,unknown,08/17/1978,781-555-0168,2269,"unable to reach",pending,0.00
+R-0181,Nadia Haddad,MRN-0012522,362-48-5519,1978-08-18,,02270,"pt verified at visit",active,178.90
+R-0182,"Ellington, Ruth",0012523,XXX-XX-5520,08/19/1978,(781) 555-0169,00000,"bad zip",in review,0.00
+R-0183,TOMAS RIVERA,mrn 12524,148-76-2235,1978-08-20,508-555-0240,02271,"pt current",active,0.00
+R-0184,linda whitfield,A-12525,-,20-Aug-78,617-555-0201,02272-0033,"no vm",pending,0.00
+R-0185,"Bhatt, Priya",12526,573-29-4408,08/21/1978,781-555-0170,2272,"call daughter Linda Whitfield at 781-555-0122",active,102.15
+R-0186,Ellen Novak,MRN-0012527,,1978-08-22,(508) 555-0241,02273,"claim submitted 08/22/2024",in review,395.40
+R-0187,"Chen, Robert",0012528,291-64-7752,08/23/1978,508-555-0242,02274,"pt asked for itemized statement",active,0.00
+R-0188,DANIEL VASQUEZ,mrn 12529,999-44-5566,1978-08-24,617-555-0202,N/A,"ssn invalid, needs update",pending,0.00
+R-0189,rosa ferraro,A-12530,336-81-9967,24-Aug-78,781-555-0171,02275,"emergency contact Kevin O'Brien (617) 555-0145",active,58.85
+R-0190,"Rahman, Aisha",12531,000-00-0000,08/25/1978,,02276-0066,"returned mail - final",closed,0.00
+R-0191,James Okafor,MRN-0012532,482-57-3341,1978-08-26,(617) 555-0203,2276,"pt current, autopay",active,0.00
+R-0192,"Moreau, Victor",0012533,XXX-XX-3342,08/27/1978,508-555-0243,02277,"see note from Hector Alvarez",in review,0.00
+R-0193,SANDRA PETERS,mrn 12534,159-42-8806,1978-08-28,617-555-0204,02278,"pt requests text reminders",active,47.20
+R-0194,hector alvarez,A-12535,-,28-Aug-78,781-555-0172,02279-0121,"call back after 6",pending,0.00
+R-0195,"Kim, Grace",12536,264-73-1198,08/29/1978,(781) 555-0173,2279,"left msg w/ Samuel Adeyemi 508-555-0191",active,0.00
+R-0196,Priya Bhatt,MRN-0012537,,1978-08-30,508-555-0244,00000,"bad zip, pt says 02135",closed,0.00
+R-0197,"Whitfield, Linda",0012538,507-26-9983,08/31/1978,617-555-0205,02280,"pt verified insurance",active,212.55
+R-0198,ANA SOUZA,mrn 12539,unknown,1978-09-01,781-555-0174,02281-0011,"ssn not on file",in review,0.00
+R-0199,daniel vasquez,A-12540,325-68-4429,01-Sep-78,,2281,"emergency contact Maria Delgado 617-555-0143",active,131.05
+R-0200,"Rivera, Tomas",12541,000-00-0000,09/02/1978,(508) 555-0245,02282,"acct closed",closed,0.00

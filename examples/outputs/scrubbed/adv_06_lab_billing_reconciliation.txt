@@ -1,0 +1,27 @@
+SUMMIT DIAGNOSTICS REVENUE CYCLE
+[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+
+LAB REQUISITION / BILLING RECONCILIATION
+Reconciliation date: [DATE]
+Patient: [PERSON] | DOB: [DATE_OF_BIRTH] | MRN: [ID_NUM] | Sex: X
+Ordering provider: [PERSON], [PERSON] | NPI [PERSON]
+
+Specimen accession: [ID_NUM]
+Internal order: [PAYMENT_TRANSACTION_ID]
+Invoice reference: [PAYMENT_TRANSACTION_ID]
+Payer claim control: [ID_NUM]
+
+Tests billed
+CPT [ZIPCODE] — Comprehensive metabolic panel | ICD-10 [CONDITION] — [CONDITION] without complications
+CPT [ZIPCODE] — [CONDITION] blood count | ICD-10 [CONDITION] — Other fatigue
+CPT [ZIPCODE] — Hemoglobin A1c | ICD-10 [CONDITION] — Encounter for screening for [CONDITION]
+
+Billing review: The accession and internal order were reconciled to the specimen label. The claim is pending because the diagnosis pointer for CPT [ZIPCODE] was omitted on the first transmission. Please correct the claim and resubmit; do not create a second laboratory order.
+
+Identity verification received by phone: SSN [SSN]. No balance or payment information was discussed.
+
+Reviewed and released by [PERSON], [LOCATION] | NPI [PERSON]
+Release time: [DATE] [TIME]
+
+[ORGANIZATION] Revenue Cycle | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+Confidential laboratory and billing communication. This document is not a patient statement.

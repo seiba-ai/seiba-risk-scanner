@@ -1,0 +1,27 @@
+[ORGANIZATION]
+Outpatient Referral Office | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+Tel: [PHONE]  Fax: [PHONE]
+
+FAX TRANSMISSION - [TIME]
+To: [PERSON], [LOCATION] Rehabilitation Hospital
+Fax: [PHONE]
+From: [PERSON] Medical Cen-
+ter, Cardiology Referral Office
+Pages: 2 including cover sheet
+
+RE: [PERSON] | DOB [DATE_OF_BIRTH] | [ID_NUM] | male
+
+Dear Receiving Team,
+
+Please accept [PERSON] for outpatient cardiac rehabilitation after his recent admission for acute decompensated [CONDITION]. He is euvolemic at today's visit, but continues to fatigue with one flight of stairs. The discharge medication list and most recent echocardiogram are enclosed. He will need nursing review of daily weights, sodium restriction, and transportation support before the first session.
+
+Our cardiology team requests an intake within seven days. Please send the completed therapy [CONDITION] back to [ORGANIZATION] by secure fax. If the patient develops chest pain, syncope, or resting dyspnea, direct him to the emergency department rather than scheduling routine follow-up.
+
+Sincerely,
+
+[PERSON], [CONDITION]
+Cardiology | NPI [PHONE]
+Signed [DATE]
+
+Mercy Cummings Medical Center | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+Confidentiality notice: this fax may contain protected health information. If received in error, destroy it and notify the sender.

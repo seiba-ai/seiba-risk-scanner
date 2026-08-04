@@ -1,0 +1,30 @@
+[ORGANIZATION] - MEMBER INTAKE
+[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+
+INTAKE QUESTIONNAIRE RESPONSE
+Submitted: [DATE]
+Member: [PERSON] | DOB: [DATE_OF_BIRTH] | Member ID: [ACCOUNT_NUMBER] | Sex: Female
+
+1. What brings you in today?
+Persistent [CONDITION] and difficulty sleeping for approximately three months. I would like to discuss preventive treatment and a refill of my rescue medication.
+
+2. Emergency contact
+Name: [PERSON] (spouse) | Phone: [PHONE] | Relationship: spouse
+
+3. Family medical history
+Mother: [PERSON], age [AGE] — [CONDITION] and [CONDITION].
+Father: [PERSON], age [AGE] — [CONDITION] and [CONDITION].
+Sister: [PERSON], age [AGE] — no major medical conditions reported.
+Maternal grandmother: [PERSON], deceased at [DATE] — [CONDITION].
+
+4. Current care and preferences
+Primary clinician is [PERSON], MD. I prefer portal messages for routine results and telephone calls for urgent changes. I do not need an interpreter. No current pregnancy, tobacco use, or known medication allergies.
+
+5. Consent
+I authorize [ORGANIZATION] to contact me regarding appointment scheduling and care coordination.
+
+Reviewed by [PERSON], [LOCATION] | NPI [PERSON]
+Review date: [DATE]
+
+[ORGANIZATION] | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+Responses are part of the member record. Do not forward outside the care team without authorization.
