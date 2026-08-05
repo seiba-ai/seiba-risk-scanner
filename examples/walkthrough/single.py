@@ -1,4 +1,4 @@
-"""Scan one unstructured document and one table, and write the findings."""
+"""Scan one unstructured document and one table; write findings and a risk report."""
 
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ from .core import (
     timed_scan,
     warmup,
     write_findings,
+    write_risk_report,
 )
 
 DEFAULT_TEXT = DATA / "notes/adv_01_neurology_consult.txt"
@@ -39,11 +40,16 @@ def main(argv: list[str] | None = None) -> int:
     ):
         results, labels, elapsed = timed_scan(job, source)
         timing = throughput(results, labels, elapsed, warmed)
-        path = write_findings(results, labels, source.stem, args.out / "single", timing)
+        findings = write_findings(results, labels, source.stem, args.out / "single", timing)
+        report = write_risk_report(
+            results, labels, f"{source.stem}_risk", out_dir=args.out / "reports"
+        )
         print(
             f"{source.name}: {sum(len(r.detections) for r in results)} findings "
-            f"in {timing['scan_s']}s ({timing['records_per_s']} records/s) -> {path}"
+            f"in {timing['scan_s']}s ({timing['records_per_s']} records/s)"
         )
+        print(f"  findings -> {findings}")
+        print(f"  report   -> {report}")
     return 0
 
 
