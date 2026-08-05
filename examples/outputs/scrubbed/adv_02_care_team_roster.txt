@@ -1,29 +1,29 @@
 [ORGANIZATION]
-[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+STREET_ADDRESS_40dfcc47, [LOCATION], [LOCATION] [ZIPCODE] | Tel PHONE_31f97253 | Fax PHONE_3a626131
 
 WEEKEND NEUROLOGY COVERAGE ROSTER
 Effective [DATE] through [DATE]
 
 This roster is for transfer-center routing and after-hours consultation coverage. Confirm availability through the operator before connecting a call.
 
-Friday [TIME] - Saturday [PERSON]
-Primary: [PERSON], MD | Neurology | NPI [PERSON]
-Backup: [PERSON], DO | Neurology | NPI [PHONE]
+Friday [TIME] - Saturday PERSON_3afc20e9
+Primary: PERSON_1c57f57c, MD | Neurology | NPI PERSON_b5f62d39
+Backup: PERSON_5dc98235, DO | Neurology | NPI PHONE_018a97af
 
-Saturday 0700 - Sunday [PERSON]
-Primary: [PERSON], DO | Neurology | NPI [PERSON]
-Backup: [PERSON], MD | [CONDITION] service | NPI [PERSON]
+Saturday 0700 - Sunday PERSON_3afc20e9
+Primary: PERSON_5dc98235, DO | Neurology | NPI PERSON_018a97af
+Backup: PERSON_43e02a5b, MD | [CONDITION] service | NPI PERSON_d03f1aa4
 
-Sunday 0700 - Monday [PERSON]
-Primary: [PERSON], [PERSON] | [CONDITION] service | NPI [PERSON]
-Backup: [PERSON], [PERSON] | Neurology | NPI [PERSON]
+Sunday 0700 - Monday PERSON_3afc20e9
+Primary: PERSON_43e02a5b, PERSON_7abcf6da | [CONDITION] service | NPI PERSON_d03f1aa4
+Backup: [PERSON], PERSON_7abcf6da | Neurology | NPI PERSON_56ab56d9
 
-Escalation: [PERSON], MD is the attending on call for urgent EEG interpretation after [PERSON]. [PERSON], [PERSON] may approve temporary diversion when the [CONDITION] service is at capacity.
+Escalation: PERSON_1c57f57c, MD is the attending on call for urgent EEG interpretation after PERSON_e41d64db. [PERSON], PERSON_7abcf6da may approve temporary diversion when the [CONDITION] service is at capacity.
 
-Handoff details: questions about Monday clinic coverage should route to [PERSON], MD through the operator. The transfer center will confirm the final assignment at [TIME].
+Handoff details: questions about Monday clinic coverage should route to PERSON_1c57f57c, MD through the operator. The transfer center will confirm the final assignment at [TIME].
 
 Prepared by: Provider Access Desk
 Released [DATE] [TIME]
 
-[PERSON] Provider Operations | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+PERSON_69929af9 Provider Operations | STREET_ADDRESS_40dfcc47, [LOCATION], [LOCATION] [ZIPCODE]
 Internal operations document. Verify the roster in the scheduling system before use.

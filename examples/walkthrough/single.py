@@ -11,6 +11,8 @@ from .core import (
     TableScan,
     TextScan,
     add_backend_args,
+    add_policy_args,
+    optimize_from_args,
     scanner_from_args,
     throughput,
     timed_scan,
@@ -30,6 +32,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--out", type=Path, default=OUTPUT)
     parser.add_argument("--max-rows", type=int, help="Cap rows per table.")
     add_backend_args(parser)
+    add_policy_args(parser)
     args = parser.parse_args(argv)
 
     scanner = scanner_from_args(args)
@@ -42,7 +45,11 @@ def main(argv: list[str] | None = None) -> int:
         timing = throughput(results, labels, elapsed, warmed)
         findings = write_findings(results, labels, source.stem, args.out / "single", timing)
         report = write_risk_report(
-            results, labels, f"{source.stem}_risk", out_dir=args.out / "reports"
+            results,
+            labels,
+            f"{source.stem}_risk",
+            optimize=optimize_from_args(args),
+            out_dir=args.out / "reports",
         )
         print(
             f"{source.name}: {sum(len(r.detections) for r in results)} findings "

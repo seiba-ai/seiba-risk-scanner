@@ -4,7 +4,7 @@
       0.65,
       0.35
     ],
-    "gold_dir": "/Users/shoaaamir/Documents/codes/seiba-risk-scanner/eval/ground_truth/unstructured_v2",
+    "gold_dir": "/eval/ground_truth/unstructured_v2",
     "llm_backend": null,
     "llm_coverage": "gaps",
     "llm_model": null,

@@ -151,8 +151,8 @@ Could someone work out *who* a record belongs to, even after the obvious identif
 
 The policy was applied, then the scrubbed data was compared back against the original. The first numbers say how *safe* the result is (lower is better); the last says how much of the data's structure survived (higher is better).
 
-- **Data properties retained: 31%** across the 27 values the policy rewrote. This is a **structural** measure, not a judgement about your analysis: it counts how many useful properties survived in the scrubbed values, nothing more. Whether that is enough depends entirely on what you plan to do with the data.
-  - Retained by kind of data: quasi identifier 45%, direct identifier 30%, sensitive attribute 8%
+- **Data properties retained: 39%** across the 27 values the policy rewrote. This is a **structural** measure, not a judgement about your analysis: it counts how many useful properties survived in the scrubbed values, nothing more. Whether that is enough depends entirely on what you plan to do with the data.
+  - Retained by kind of data: direct identifier 50%, quasi identifier 45%, sensitive attribute 8%
 
   *The three properties checked on each rewritten value: can it still be read (weight 0.2); can two different originals still be told apart, which is what joining and counting need (0.5); does it keep its original shape and format (0.3). Masking to `[EMAIL]` destroys all three, so a fully masked field retains 0%. A realistic fake value keeps the last two. Only these weights are a judgement call — the three checks are measured on the real output.*
 
@@ -174,6 +174,31 @@ The whole point of applying a policy. Every finding was re-scored against what t
 | info | 0 | 27 |
 
 > This is exposure remaining in the **scrubbed** copy. The original data is unchanged and still carries the number on the left.
+
+## What the optimizer chose, and why
+
+You asked for actions to be chosen automatically rather than taken from the policy profile. Each entity below was given the least destructive action that still met the privacy target; anything not listed was left as configured.
+
+**Reading this table**
+
+- **Data type** — the kind of data the decision applies to
+- **Action chosen** — what will be done to every value of that type
+- **Why** — the reason this action was picked over a gentler or harsher one
+
+| Data type | Action chosen | Why |
+|---|---|---|
+| city | `mask` | combines with other fields to single people out; mask reaches k=1 (target 5) — even the strongest setting could not reach the target |
+| date_of_birth | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| dates | `mask` | combines with other fields to single people out; mask reaches k=1 (target 5) — even the strongest setting could not reach the target |
+| medical_record_number_mrn | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| organization | `mask` | combines with other fields to single people out; mask reaches k=1 (target 5) — even the strongest setting could not reach the target |
+| person_names | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| phone_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| state | `mask` | combines with other fields to single people out; mask reaches k=1 (target 5) — even the strongest setting could not reach the target |
+| street_address | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| zip_code | `mask` | combines with other fields to single people out; mask reaches k=1 (target 5) — even the strongest setting could not reach the target |
+
+Reached a smallest crowd size of **k=1** after testing 160 combinations. Combinations that could only be more destructive than one already known to work were skipped rather than measured.
 
 ## Human approval flagged entities
 
@@ -219,7 +244,7 @@ The action taken on every finding, decided by the chosen rulebook. The action co
 
 OpenMed profile **`hipaa_safe_harbor`** — executed (values rewritten).
 
-- Exact label lookups (`action_for`): **27**
+- Exact label lookups (`action_for`): **6**
 - Class fallback (`policy_label_actions` via seiba `data_class`): **0**
 - Neutral / missing → keep: **0**
 
@@ -227,7 +252,8 @@ OpenMed profile **`hipaa_safe_harbor`** — executed (values rewritten).
 
 | Action | Findings |
 |---|---|
-| mask | 27 |
+| hash | 11 |
+| mask | 16 |
 
 **Sample action records**
 
@@ -241,25 +267,25 @@ OpenMed profile **`hipaa_safe_harbor`** — executed (values rewritten).
 
 | Entity | OpenMed label | Policy class | Action | Source | Execute fallback | Replacement |
 |---|---|---|---|---|---|---|
-| organization | ORGANIZATION | — | mask | openmed_action_for | — | [ORGANIZATION] |
-| street_address | STREET_ADDRESS | — | mask | openmed_action_for | — | [STREET_ADDRESS] |
-| city | LOCATION | — | mask | openmed_action_for | — | [LOCATION] |
-| state | LOCATION | — | mask | openmed_action_for | — | [LOCATION] |
-| zip_code | ZIPCODE | — | mask | openmed_action_for | — | [ZIPCODE] |
-| phone_number | PHONE | — | mask | openmed_action_for | — | [PHONE] |
-| phone_number | PHONE | — | mask | openmed_action_for | — | [PHONE] |
-| dates | DATE | — | mask | openmed_action_for | — | [DATE] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
-| date_of_birth | DATE_OF_BIRTH | — | mask | openmed_action_for | — | [DATE_OF_BIRTH] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
+| organization | ORGANIZATION | — | mask | seiba_action_override | — | [ORGANIZATION] |
+| street_address | STREET_ADDRESS | — | hash | seiba_action_override | — | STREET_ADDRESS_54b46fe3 |
+| city | LOCATION | — | mask | seiba_action_override | — | [LOCATION] |
+| state | LOCATION | — | mask | seiba_action_override | — | [LOCATION] |
+| zip_code | ZIPCODE | — | mask | seiba_action_override | — | [ZIPCODE] |
+| phone_number | PHONE | — | hash | seiba_action_override | — | PHONE_ee84ec5b |
+| phone_number | PHONE | — | hash | seiba_action_override | — | PHONE_60b6ab0d |
+| dates | DATE | — | mask | seiba_action_override | — | [DATE] |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_815fd9a3 |
+| date_of_birth | DATE_OF_BIRTH | — | hash | seiba_action_override | — | DATE_OF_BIRTH_64be4a7b |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_84bc14b5 |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_c7fb6b99 |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_815fd9a3 |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_c7fb6b99 |
 
 *Showing 20 of 27. All 27 action records — with the full rule trace behind every finding — are in `adv_01_neurology_consult_risk.json`.*

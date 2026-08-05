@@ -4,6 +4,7 @@ import csv
 import json
 from pathlib import Path
 from time import perf_counter
+from typing import Any
 
 from seiba_risk_scanner import ScannerConfig, SeibaScanner
 from seiba_risk_scanner.assessment import ReadinessAssessor, write_report
@@ -97,6 +98,20 @@ def scanner_from_args(args) -> SeibaScanner:
     )
 
 
+def add_policy_args(parser) -> None:
+    """How hard to scrub. The optimizer's picks become the policy plan's action overrides."""
+    parser.add_argument(
+        "--privacy",
+        default="balanced",
+        choices=["maximum", "balanced", "required", "off"],
+        help="Optimizer target; 'off' falls back to each entity's ontology default action.",
+    )
+
+
+def optimize_from_args(args):
+    return False if args.privacy == "off" else args.privacy
+
+
 def warmup(scanner: SeibaScanner) -> float:
     """Models load on the first scan; time that separately or throughput is wrong."""
     started = perf_counter()
@@ -152,7 +167,7 @@ def write_findings(results, labels, stem: str, out_dir: Path = OUTPUT, timing: d
 
 
 def write_risk_report(
-    results, labels, stem: str, optimize: bool = False, out_dir: Path = OUTPUT
+    results, labels, stem: str, optimize: Any = False, out_dir: Path = OUTPUT
 ) -> Path:
     """Assess severity and exposure, then write the Markdown report and its JSON companion."""
     report = ReadinessAssessor(optimize=optimize).assess(

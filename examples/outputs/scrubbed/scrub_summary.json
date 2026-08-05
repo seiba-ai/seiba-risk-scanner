@@ -1,52 +1,52 @@
 {
   "sources": 9,
   "written": 9,
-  "findings": 1133,
+  "findings": 5889,
   "files": [
     {
       "source": "adv_01_neurology_consult.txt",
       "findings": 27,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/adv_01_neurology_consult.txt"
+      "output": "/examples/outputs/scrubbed/adv_01_neurology_consult.txt"
     },
     {
       "source": "adv_02_care_team_roster.txt",
       "findings": 43,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/adv_02_care_team_roster.txt"
+      "output": "/examples/outputs/scrubbed/adv_02_care_team_roster.txt"
     },
     {
       "source": "adv_03_fax_referral_letter.txt",
       "findings": 28,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/adv_03_fax_referral_letter.txt"
+      "output": "/examples/outputs/scrubbed/adv_03_fax_referral_letter.txt"
     },
     {
       "source": "adv_04_intake_questionnaire.txt",
       "findings": 38,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/adv_04_intake_questionnaire.txt"
+      "output": "/examples/outputs/scrubbed/adv_04_intake_questionnaire.txt"
     },
     {
       "source": "adv_05_elderly_discharge_summary.txt",
       "findings": 34,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/adv_05_elderly_discharge_summary.txt"
+      "output": "/examples/outputs/scrubbed/adv_05_elderly_discharge_summary.txt"
     },
     {
       "source": "adv_06_lab_billing_reconciliation.txt",
       "findings": 38,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/adv_06_lab_billing_reconciliation.txt"
+      "output": "/examples/outputs/scrubbed/adv_06_lab_billing_reconciliation.txt"
     },
     {
       "source": "dirty_intake.csv",
-      "findings": 136,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/dirty_intake.csv"
+      "findings": 1293,
+      "output": "/examples/outputs/scrubbed/dirty_intake.csv"
     },
     {
       "source": "patients_clean.csv",
-      "findings": 396,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/patients_clean.csv"
+      "findings": 2202,
+      "output": "/examples/outputs/scrubbed/patients_clean.csv"
     },
     {
       "source": "patients_opaque.csv",
-      "findings": 393,
-      "output": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/outputs/scrubbed/patients_opaque.csv"
+      "findings": 2186,
+      "output": "/examples/outputs/scrubbed/patients_opaque.csv"
     }
   ]
 }
