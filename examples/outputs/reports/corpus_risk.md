@@ -4,7 +4,7 @@
 
 ## Exposure index
 
-# 46.3 / 100
+# 46.9 / 100
 
 **0 means nothing sensitive was found. 100 means maximally exposed.**
 
@@ -12,8 +12,8 @@ This is *not* a pass/fail grade. Whether this level of exposure is acceptable de
 
 **How it was calculated**
 
-- **46%** of findings are high or critical severity
-- **100%** of the 66 records are re-identifiable (fewer than 5 records share their combination of traits)
+- **48%** of findings are high or critical severity
+- **97%** of the 428 records are re-identifiable (fewer than 5 records share their combination of traits)
 
 *(method: severity_x_uniqueness)*
 
@@ -23,10 +23,10 @@ The size of the job: how much sensitive data was found, and where.
 
 |  | Count |
 |---|---|
-| Findings | 1133 |
-| Locations with findings | 55 |
-| Records scanned | 66 |
-| Findings needing human review | 296 |
+| Findings | 5889 |
+| Locations with findings | 59 |
+| Records scanned | 428 |
+| Findings needing human review | 1730 |
 
 **Reading this table**
 
@@ -40,10 +40,10 @@ Severity = how bad this would be if exposed. It starts from the *kind* of data, 
 
 | Severity | Findings | What it means |
 |---|---|---|
-| critical | 497 | Names a specific person outright |
-| high | 28 | Harmful on its own — a direct, financial, or health identifier |
-| medium | 567 | Harmless alone, but narrows down who someone is when combined with other fields |
-| low | 41 | Barely sensitive |
+| critical | 2777 | Names a specific person outright |
+| high | 29 | Harmful on its own — a direct, financial, or health identifier |
+| medium | 2860 | Harmless alone, but narrows down who someone is when combined with other fields |
+| low | 223 | Barely sensitive |
 
 ## Where the risk is
 
@@ -57,61 +57,65 @@ Which columns (or documents) the sensitive data actually sits in — so you know
 
 | Location | critical | high | medium | low | info |
 |---|---|---|---|---|---|
+| pat_nm | 263 |  |  |  |  |
+| dob | 204 |  | 1 |  |  |
+| mrn | 200 | 1 |  |  |  |
+| phone | 175 |  |  |  |  |
+| ssn_num | 136 |  |  |  |  |
+| addr_x | 111 |  |  |  |  |
+| f_14 | 111 |  |  |  |  |
+| first_name | 111 |  |  |  |  |
+| geo_a | 111 |  |  |  |  |
+| geo_b | 111 |  |  |  |  |
+| last_name | 111 |  |  |  |  |
+| nm_a | 111 |  |  |  |  |
+| nm_c | 111 |  |  |  |  |
+| ssn | 111 |  |  |  |  |
+| street_address | 111 |  |  |  |  |
+| comments | 100 | 1 | 27 |  |  |
+| f_23 | 92 |  |  |  |  |
+| passport_number | 92 |  |  |  |  |
+| middle_name | 85 |  |  |  |  |
+| nm_b | 85 |  |  |  |  |
+| loc_1 | 47 |  | 48 |  |  |
+| maiden_name | 40 |  |  |  |  |
+| nm_d | 40 |  |  |  |  |
 | adv_02_care_team_roster.txt | 27 | 3 | 13 |  |  |
-| pat_nm | 25 |  |  |  |  |
 | adv_04_intake_questionnaire.txt | 17 | 6 | 15 |  |  |
 | adv_06_lab_billing_reconciliation.txt | 17 | 6 | 15 |  |  |
-| dob | 21 |  | 1 |  |  |
-| addr_x | 20 |  |  |  |  |
-| f_14 | 20 |  |  |  |  |
-| first_name | 20 |  |  |  |  |
-| geo_a | 20 |  |  |  |  |
-| geo_b | 20 |  |  |  |  |
-| last_name | 20 |  |  |  |  |
-| mrn | 19 | 1 |  |  |  |
-| nm_a | 20 |  |  |  |  |
-| nm_c | 20 |  |  |  |  |
-| ssn | 20 |  |  |  |  |
-| street_address | 20 |  |  |  |  |
-| phone | 18 |  |  |  |  |
 | adv_01_neurology_consult.txt | 11 | 6 | 10 |  |  |
-| f_23 | 17 |  |  |  |  |
-| passport_number | 17 |  |  |  |  |
 | adv_03_fax_referral_letter.txt | 13 | 3 | 11 | 1 |  |
-| middle_name | 16 |  |  |  |  |
-| nm_b | 16 |  |  |  |  |
-| comments | 15 |  | 4 |  |  |
 | adv_05_elderly_discharge_summary.txt | 11 | 3 | 20 |  |  |
-| ssn_num | 13 |  |  |  |  |
-| loc_1 | 8 |  | 9 |  |  |
-| maiden_name | 8 |  |  |  |  |
-| nm_d | 8 |  |  |  |  |
-| amt_1 |  |  | 20 |  |  |
-| amt_2 |  |  | 20 |  |  |
-| amt_3 |  |  | 20 |  |  |
-| birthplace |  |  | 39 |  |  |
-| city |  |  | 20 |  |  |
-| county |  |  | 20 |  |  |
-| coverage |  |  | 20 |  |  |
-| date_of_birth |  |  | 20 |  |  |
-| date_of_death |  |  | 3 |  |  |
-| dt_2 |  |  | 20 |  |  |
-| dt_9 |  |  | 3 |  |  |
-| expenses |  |  | 20 |  |  |
-| f_01 |  |  |  | 20 |  |
-| fips |  |  | 13 |  |  |
-| income |  |  | 20 |  |  |
-| latitude |  |  | 20 |  |  |
-| loc_0 |  |  | 39 |  |  |
-| loc_2 |  |  | 20 |  |  |
-| loc_3 |  |  | 20 |  |  |
-| longitude |  |  | 20 |  |  |
-| num_7 |  |  | 13 |  |  |
-| patient_id |  |  |  | 20 |  |
-| pcode |  |  | 20 |  |  |
-| state |  |  | 20 |  |  |
-| zip_cd |  |  | 19 |  |  |
-| zip_code |  |  | 20 |  |  |
+| birthplace | 3 |  | 216 |  |  |
+| loc_0 | 3 |  | 216 |  |  |
+| c_2 | 2 |  | 1 |  |  |
+| suffix | 2 |  | 1 |  |  |
+| c_4 | 1 |  |  |  |  |
+| race | 1 |  |  |  |  |
+| amt_1 |  |  | 111 |  |  |
+| amt_2 |  |  | 111 |  |  |
+| amt_3 |  |  | 111 |  |  |
+| city |  |  | 111 |  |  |
+| county |  |  | 111 |  |  |
+| coverage |  |  | 111 |  |  |
+| date_of_birth |  |  | 111 |  |  |
+| date_of_death |  |  | 13 |  |  |
+| dt_2 |  |  | 111 |  |  |
+| dt_9 |  |  | 13 |  |  |
+| expenses |  |  | 111 |  |  |
+| f_01 |  |  |  | 111 |  |
+| fips |  |  | 84 |  |  |
+| income |  |  | 111 |  |  |
+| latitude |  |  | 111 |  |  |
+| loc_2 |  |  | 111 |  |  |
+| loc_3 |  |  | 111 |  |  |
+| longitude |  |  | 111 |  |  |
+| num_7 |  |  | 84 |  |  |
+| patient_id |  |  |  | 111 |  |
+| pcode |  |  | 111 |  |  |
+| state |  |  | 111 |  |  |
+| zip_cd |  |  | 185 |  |  |
+| zip_code |  |  | 111 |  |  |
 
 ## Data types / entities identified
 
@@ -128,36 +132,37 @@ The inventory: which *types* of sensitive data live in this dataset, and how exp
 
 | Data type | Findings | Worst severity | Typical severity (0–1) | Rolled up from | Regulations |
 |---|---|---|---|---|---|
-| zip_code | 222 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
-| person_names | 221 | critical | 0.95 | physician_names (15) | CCPA, GDPR, HIPAA |
-| state | 93 | medium | 0.55 | — | CCPA, GDPR |
-| city | 83 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
-| dates | 63 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
-| ssn | 53 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
-| street_address | 52 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
-| county | 40 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
-| uuid_guid | 40 | low | 0.30 | — | HIPAA |
-| phone_number | 38 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
-| genomic_variants | 34 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
-| credit_card_number | 33 | critical | 0.93 | — | CCPA, GDPR, HIPAA, PCI |
-| date_of_birth | 26 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
-| medical_condition | 24 | high | 0.91 | — | CCPA, GDPR, HIPAA |
-| medical_record_number_mrn | 24 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
-| latitude_coordinates | 20 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
-| longitude_coordinates | 20 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
+| zip_code | 1262 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
+| person_names | 1123 | critical | 0.95 | physician_names (15) | CCPA, GDPR, HIPAA |
+| state | 448 | medium | 0.55 | — | CCPA, GDPR |
+| city | 392 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
+| ssn | 348 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
+| dates | 276 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
+| street_address | 233 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
+| county | 230 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
+| phone_number | 224 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
+| uuid_guid | 222 | low | 0.30 | — | HIPAA |
+| date_of_birth | 211 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
+| medical_record_number_mrn | 210 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
+| credit_card_number | 188 | critical | 0.93 | — | CCPA, GDPR, HIPAA, PCI |
+| genomic_variants | 184 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
+| latitude_coordinates | 111 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
+| longitude_coordinates | 111 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
+| imei_number | 31 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
+| medical_condition | 25 | high | 0.91 | — | CCPA, GDPR, HIPAA |
+| timestamps | 14 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
 | organization | 12 | medium | 0.55 | hospital_names (5), employer_organization (5) | CCPA, GDPR |
-| timestamps | 10 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
-| imei_number | 7 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
+| us_itin | 11 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
+| bank_account_number | 5 | critical | 0.93 | — | CCPA, GDPR, HIPAA |
 | age | 4 | medium | 0.55 | — | CCPA, GDPR, HIPAA |
 | icd10_diagnosis_codes | 3 | high | 0.91 | — | CCPA, GDPR, HIPAA |
-| bank_account_number | 2 | critical | 0.93 | — | CCPA, GDPR, HIPAA |
+| indian_aadhaar_number | 3 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
 | payment_transaction_id | 2 | critical | 0.93 | — | CCPA, GDPR, HIPAA |
-| us_itin | 2 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
+| unique_identifier | 2 | critical | 0.95 | — | CCPA, GDPR, HIPAA |
 | certificate_license_number | 1 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
 | claim_control_number | 1 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
 | date_of_death | 1 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
 | relative_date_expressions | 1 | low | 0.30 | — | HIPAA |
-| unique_identifier | 1 | critical | 0.96 | — | CCPA, GDPR, HIPAA |
 
 ## Riskiest records
 
@@ -176,14 +181,14 @@ The individual people (rows, or documents) most exposed by this dataset. Ranked 
 |---|---|---|---|---|---|---|
 | adv_06_lab_billing_reconciliation.txt | 9 | 0.79 | 29.9 | 38 | critical | yes |
 | dirty_intake.csv row 13 | 6 | 0.91 | 7.2 | 8 | critical | yes |
+| dirty_intake.csv row 137 | 6 | 0.90 | 7.2 | 8 | critical | yes |
+| dirty_intake.csv row 79 | 6 | 0.90 | 7.2 | 8 | critical | yes |
 | dirty_intake.csv row 9 | 6 | 0.90 | 7.2 | 8 | critical | yes |
+| dirty_intake.csv row 37 | 6 | 0.89 | 6.3 | 7 | critical | yes |
 | dirty_intake.csv row 4 | 6 | 0.89 | 6.3 | 7 | critical | yes |
+| dirty_intake.csv row 20 | 6 | 0.85 | 6.8 | 8 | critical | yes |
+| dirty_intake.csv row 122 | 6 | 0.82 | 7.4 | 9 | critical | yes |
 | adv_04_intake_questionnaire.txt | 6 | 0.79 | 30.0 | 38 | critical | yes |
-| patients_opaque.csv row 15 | 6 | 0.73 | 15.3 | 21 | critical | yes |
-| patients_opaque.csv row 12 | 6 | 0.73 | 13.8 | 19 | critical | yes |
-| patients_opaque.csv row 3 | 6 | 0.72 | 14.4 | 20 | critical | yes |
-| patients_opaque.csv row 18 | 6 | 0.71 | 13.4 | 19 | critical | yes |
-| patients_opaque.csv row 7 | 6 | 0.69 | 12.5 | 18 | critical | yes |
 
 ## HIPAA Safe Harbor checklist
 
@@ -191,17 +196,17 @@ HIPAA lists 18 categories of identifier that must be removed for health data to 
 
 | Identifier category present | Findings | Found as |
 |---|---|---|
-| names | 221 | person_names |
-| geographic subdivision | 437 | city, county, latitude_coordinates, longitude_coordinates, street_address, zip_code |
-| dates | 105 | age, date_of_birth, date_of_death, dates, relative_date_expressions, timestamps |
-| telephone | 38 | phone_number |
-| ssn | 53 | ssn |
-| medical record number | 24 | medical_record_number_mrn |
-| account number | 37 | bank_account_number, credit_card_number, payment_transaction_id |
+| names | 1123 | person_names |
+| geographic subdivision | 2339 | city, county, latitude_coordinates, longitude_coordinates, street_address, zip_code |
+| dates | 507 | age, date_of_birth, date_of_death, dates, relative_date_expressions, timestamps |
+| telephone | 224 | phone_number |
+| ssn | 348 | ssn |
+| medical record number | 210 | medical_record_number_mrn |
+| account number | 195 | bank_account_number, credit_card_number, payment_transaction_id |
 | certificate license number | 1 | certificate_license_number |
-| device identifier | 7 | imei_number |
-| biometric identifier | 34 | genomic_variants |
-| other unique id | 44 | claim_control_number, unique_identifier, us_itin, uuid_guid |
+| device identifier | 31 | imei_number |
+| biometric identifier | 184 | genomic_variants |
+| other unique id | 239 | claim_control_number, indian_aadhaar_number, unique_identifier, us_itin, uuid_guid |
 
 **Not found (7 of 18):** fax, email, health plan beneficiary number, vehicle identifier, url, ip address, full face photo
 
@@ -220,10 +225,10 @@ Which rulebooks this data falls under, and how much of it each one covers.
 
 | Regulation | Findings subject to it | Worst severity |
 |---|---|---|
-| CCPA | 1092 | critical |
-| GDPR | 1092 | critical |
-| HIPAA | 1028 | critical |
-| PCI | 33 | critical |
+| CCPA | 5666 | critical |
+| GDPR | 5666 | critical |
+| HIPAA | 5429 | critical |
+| PCI | 188 | critical |
 
 > **These are counts, not scores** — a bigger number is not automatically worse, it just reflects how much data of that kind is present.
 
@@ -235,13 +240,13 @@ Which rulebooks this data falls under, and how much of it each one covers.
 
 Could someone work out *who* a record belongs to, even after the obvious identifiers (name, email) are taken away — just by combining ordinary-looking fields like city, zip code and visit date? This measures the data **as scanned, before any scrubbing**.
 
-### 100% of records can be singled out — **CRITICAL**
+### 97% of records can be singled out — **CRITICAL**
 
-- **66 of 66 records** sit below the k=5 bar used to call data de-identified.
-- **66** are completely one of a kind (nobody else matches them at all).
+- **404 of 417 records** sit below the k=5 bar used to call data de-identified.
+- **404** are completely one of a kind (nobody else matches them at all).
 - **Smallest crowd size (k) = 1.**
-- Compared on these traits: **age, amt_1, amt_2, amt_3, birthplace, city, comments, county, coverage, date_of_birth, date_of_death, dates, dob, dt_2, dt_9, expenses, fips, income, latitude, loc_0, loc_1, loc_2, loc_3, longitude, num_7, organization, pcode, state, timestamps, zip_cd, zip_code**
-- Values that would be exposed: **f_23, icd10_diagnosis_codes, medical_condition, passport_number**
+- Compared on these traits: **age, amt_1, amt_2, amt_3, birthplace, c_2, city, comments, county, coverage, date_of_birth, date_of_death, dates, dob, dt_2, dt_9, expenses, fips, income, latitude, loc_0, loc_1, loc_2, loc_3, longitude, num_7, organization, pcode, state, suffix, timestamps, zip_cd, zip_code**
+- Values that would be exposed: **comments, f_23, icd10_diagnosis_codes, medical_condition, passport_number**
 
 **What k means.** k is the size of the crowd a person hides in: how many records share their exact combination of the traits above. k=1 means that person matches nobody else and can be picked out; k=5 or more is the usual bar for calling data de-identified. Higher k = safer.
 
@@ -253,8 +258,8 @@ The policy was applied, then the scrubbed data was compared back against the ori
 
 - **Residue left behind: 0% — clean.** No raw sensitive value survived; every direct identifier was removed as planned.
 - **Still re-identifiable: 0% — strong.** After scrubbing, no record can be singled out by the traits left behind.
-- **Data properties retained: 5%** across the 1133 values the policy rewrote. This is a **structural** measure, not a judgement about your analysis: it counts how many useful properties survived in the scrubbed values, nothing more. Whether that is enough depends entirely on what you plan to do with the data.
-  - Retained by kind of data: quasi identifier 6%, financial data 5%, neutral 5%, direct identifier 4%, sensitive attribute 4%, genetic data 3%
+- **Data properties retained: 25%** across the 5889 values the policy rewrote. This is a **structural** measure, not a judgement about your analysis: it counts how many useful properties survived in the scrubbed values, nothing more. Whether that is enough depends entirely on what you plan to do with the data.
+  - Retained by kind of data: financial data 50%, direct identifier 49%, quasi identifier 7%, sensitive attribute 5%, neutral 1%, genetic data 1%
 
   *The three properties checked on each rewritten value: can it still be read (weight 0.2); can two different originals still be told apart, which is what joining and counting need (0.5); does it keep its original shape and format (0.3). Masking to `[EMAIL]` destroys all three, so a fully masked field retains 0%. A realistic fake value keeps the last two. Only these weights are a judgement call — the three checks are measured on the real output.*
 
@@ -266,21 +271,62 @@ The policy was applied, then the scrubbed data was compared back against the ori
 
 The whole point of applying a policy. Every finding was re-scored against what the scrub actually left behind — a blanked value carries no risk, a coarsened one carries only what its remaining precision is worth, a fake-but-realistic value carries a little because records can still be linked.
 
-### 46.3 → 0.0 out of 100 — nearly all exposure removed
+### 46.9 → 0.0 out of 100 — nearly all exposure removed
 
 | Severity | Findings before | Findings after |
 |---|---|---|
-| critical | 497 | 0 |
-| high | 28 | 0 |
-| medium | 567 | 0 |
-| low | 41 | 1 |
-| info | 0 | 1132 |
+| critical | 2777 | 0 |
+| high | 29 | 0 |
+| medium | 2860 | 0 |
+| low | 223 | 1 |
+| info | 0 | 5888 |
 
 > This is exposure remaining in the **scrubbed** copy. The original data is unchanged and still carries the number on the left.
 
+## What the optimizer chose, and why
+
+You asked for actions to be chosen automatically rather than taken from the policy profile. Each entity below was given the least destructive action that still met the privacy target; anything not listed was left as configured.
+
+**Reading this table**
+
+- **Data type** — the kind of data the decision applies to
+- **Action chosen** — what will be done to every value of that type
+- **Why** — the reason this action was picked over a gentler or harsher one
+
+| Data type | Action chosen | Why |
+|---|---|---|
+| age | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| bank_account_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| certificate_license_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| city | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| claim_control_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| county | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| credit_card_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| date_of_birth | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| date_of_death | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| dates | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| imei_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| indian_aadhaar_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| latitude_coordinates | `generalize:integer` | combines with other fields to single people out; generalize:integer reaches k=32 (target 5) |
+| longitude_coordinates | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| medical_record_number_mrn | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| organization | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| payment_transaction_id | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| person_names | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| phone_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| ssn | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| state | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| street_address | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| timestamps | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+| unique_identifier | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| us_itin | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| zip_code | `mask` | combines with other fields to single people out; mask reaches k=32 (target 5) |
+
+Reached a smallest crowd size of **k=32** after testing 51199 combinations. Combinations that could only be more destructive than one already known to work were skipped rather than measured.
+
 ## Human approval flagged entities
 
-**296 findings, 288 distinct.** These are severe findings the scanner is **not confident** about, queued for a person to confirm or reject. Severity and confidence are separate: a name is just as sensitive whether we are 50% or 99% sure it is a name — so these are never downgraded, only flagged.
+**1730 findings, 1722 distinct.** These are severe findings the scanner is **not confident** about, queued for a person to confirm or reject. Severity and confidence are separate: a name is just as sensitive whether we are 50% or 99% sure it is a name — so these are never downgraded, only flagged.
 
 **Reading this table**
 
@@ -317,7 +363,7 @@ The whole point of applying a policy. Every finding was re-scored against what t
 | critical | adv_05_elderly_discharge_summary.txt | date_of_birth | `01/25/1932` | rescue | 1 |
 | critical | adv_05_elderly_discharge_summary.txt | medical_record_number_mrn | `GO-881274` | rescue | 1 |
 
-*…and 263 more distinct items.*
+*…and 1697 more distinct items.*
 
 ## Worked example: how one score was reached
 
@@ -338,7 +384,7 @@ Nothing in this report is a black box. Below is the **highest-scoring finding in
 | compliance | category PII -> GDPR, CCPA | — |
 | compliance | declared health data, so this Safe Harbor identifier is HIPAA-regulated here | — |
 | cooccurrence | 5 strong identifier types stacked in one record: closes 45% of the gap to 1.0 | 0.45 |
-| reid | record is unique on age, amt_1, amt_2, amt_3, birthplace, city, comments, county, coverage, date_of_birth, date_of_death, dates, dob, dt_2, dt_9, expenses, fips, income, latitude, loc_0, loc_1, loc_2, loc_3, longitude, num_7, organization, pcode, state, timestamps, zip_cd, zip_code (k=1): closes 20% of the gap to 1.0 | 0.20 |
+| reid | record is unique on age, amt_1, amt_2, amt_3, birthplace, c_2, city, comments, county, coverage, date_of_birth, date_of_death, dates, dob, dt_2, dt_9, expenses, fips, income, latitude, loc_0, loc_1, loc_2, loc_3, longitude, num_7, organization, pcode, state, suffix, timestamps, zip_cd, zip_code (k=1): closes 20% of the gap to 1.0 | 0.20 |
 
 ## Policy plan (what was done to each finding)
 
@@ -346,16 +392,17 @@ The action taken on every finding, decided by the chosen rulebook. The action co
 
 OpenMed profile **`hipaa_safe_harbor`** — executed (values rewritten).
 
-- Exact label lookups (`action_for`): **1094**
-- Class fallback (`policy_label_actions` via seiba `data_class`): **38**
+- Exact label lookups (`action_for`): **250**
+- Class fallback (`policy_label_actions` via seiba `data_class`): **184**
 - Neutral / missing → keep: **1**
 
 **Action histogram**
 
 | Action | Findings |
 |---|---|
+| hash | 2699 |
 | keep | 1 |
-| mask | 1132 |
+| mask | 3189 |
 
 **Sample action records**
 
@@ -369,25 +416,25 @@ OpenMed profile **`hipaa_safe_harbor`** — executed (values rewritten).
 
 | Entity | OpenMed label | Policy class | Action | Source | Execute fallback | Replacement |
 |---|---|---|---|---|---|---|
-| organization | ORGANIZATION | — | mask | openmed_action_for | — | [ORGANIZATION] |
-| street_address | STREET_ADDRESS | — | mask | openmed_action_for | — | [STREET_ADDRESS] |
-| city | LOCATION | — | mask | openmed_action_for | — | [LOCATION] |
-| state | LOCATION | — | mask | openmed_action_for | — | [LOCATION] |
-| zip_code | ZIPCODE | — | mask | openmed_action_for | — | [ZIPCODE] |
-| phone_number | PHONE | — | mask | openmed_action_for | — | [PHONE] |
-| phone_number | PHONE | — | mask | openmed_action_for | — | [PHONE] |
-| dates | DATE | — | mask | openmed_action_for | — | [DATE] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
-| date_of_birth | DATE_OF_BIRTH | — | mask | openmed_action_for | — | [DATE_OF_BIRTH] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
+| organization | ORGANIZATION | — | mask | seiba_action_override | — | [ORGANIZATION] |
+| street_address | STREET_ADDRESS | — | hash | seiba_action_override | — | STREET_ADDRESS_54b46fe3 |
+| city | LOCATION | — | mask | seiba_action_override | — | [LOCATION] |
+| state | LOCATION | — | mask | seiba_action_override | — | [LOCATION] |
+| zip_code | ZIPCODE | — | mask | seiba_action_override | — | [ZIPCODE] |
+| phone_number | PHONE | — | hash | seiba_action_override | — | PHONE_ee84ec5b |
+| phone_number | PHONE | — | hash | seiba_action_override | — | PHONE_60b6ab0d |
+| dates | DATE | — | mask | seiba_action_override | — | [DATE] |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_815fd9a3 |
+| date_of_birth | DATE_OF_BIRTH | — | hash | seiba_action_override | — | DATE_OF_BIRTH_64be4a7b |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_84bc14b5 |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_c7fb6b99 |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_815fd9a3 |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
 | medical_condition | CONDITION | — | mask | openmed_action_for | — | [CONDITION] |
-| person_names | PERSON | — | mask | openmed_action_for | — | [PERSON] |
+| person_names | PERSON | — | hash | seiba_action_override | — | PERSON_c7fb6b99 |
 
-*Showing 20 of 1133. All 1133 action records — with the full rule trace behind every finding — are in `corpus_risk.json`.*
+*Showing 20 of 5889. All 5889 action records — with the full rule trace behind every finding — are in `corpus_risk.json`.*

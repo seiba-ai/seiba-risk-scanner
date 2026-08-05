@@ -1,15 +1,15 @@
 SUMMIT DIAGNOSTICS REVENUE CYCLE
-[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+STREET_ADDRESS_c5384a10, [LOCATION], [LOCATION] [ZIPCODE] | Tel PHONE_202b85bc | Fax PHONE_70c6183b
 
 LAB REQUISITION / BILLING RECONCILIATION
 Reconciliation date: [DATE]
-Patient: [PERSON] | DOB: [DATE_OF_BIRTH] | MRN: [ID_NUM] | Sex: X
-Ordering provider: [PERSON], [PERSON] | NPI [PERSON]
+Patient: PERSON_1e51bf6c | DOB: DATE_OF_BIRTH_d1673286 | MRN: ID_NUM_e494860c | Sex: X
+Ordering provider: PERSON_b6585a7f, PERSON_7abcf6da | NPI PERSON_ec69e6d4
 
 Specimen accession: [ID_NUM]
-Internal order: [PAYMENT_TRANSACTION_ID]
+Internal order: PAYMENT_TRANSACTION_ID_07b85eca
 Invoice reference: [PAYMENT_TRANSACTION_ID]
-Payer claim control: [ID_NUM]
+Payer claim control: ID_NUM_bcc5a9d1
 
 Tests billed
 CPT [ZIPCODE] — Comprehensive metabolic panel | ICD-10 [CONDITION] — [CONDITION] without complications
@@ -18,10 +18,10 @@ CPT [ZIPCODE] — Hemoglobin A1c | ICD-10 [CONDITION] — Encounter for screenin
 
 Billing review: The accession and internal order were reconciled to the specimen label. The claim is pending because the diagnosis pointer for CPT [ZIPCODE] was omitted on the first transmission. Please correct the claim and resubmit; do not create a second laboratory order.
 
-Identity verification received by phone: SSN [SSN]. No balance or payment information was discussed.
+Identity verification received by phone: SSN SSN_b0fd0e18. No balance or payment information was discussed.
 
-Reviewed and released by [PERSON], [LOCATION] | NPI [PERSON]
+Reviewed and released by PERSON_b6585a7f, [LOCATION] | NPI PERSON_ec69e6d4
 Release time: [DATE] [TIME]
 
-[ORGANIZATION] Revenue Cycle | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+[ORGANIZATION] Revenue Cycle | STREET_ADDRESS_c5384a10, [LOCATION], [LOCATION] [ZIPCODE]
 Confidential laboratory and billing communication. This document is not a patient statement.

@@ -2,12 +2,12 @@
   "sources": 1,
   "total_findings": 27,
   "timing": {
-    "warmup_s": 7.14,
-    "scan_s": 1.47,
-    "sources_per_s": 0.68,
-    "records_per_s": 0.68,
-    "chars_per_s": 1007,
-    "findings_per_s": 18.4
+    "warmup_s": 8.21,
+    "scan_s": 1.59,
+    "sources_per_s": 0.63,
+    "records_per_s": 0.63,
+    "chars_per_s": 929,
+    "findings_per_s": 17.0
   },
   "results": [
     {
@@ -58,7 +58,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -135,7 +135,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -208,7 +208,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -278,7 +278,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -354,7 +354,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -428,7 +428,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -490,7 +490,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -564,7 +564,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -634,7 +634,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -708,7 +708,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -792,7 +792,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -872,7 +872,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -918,7 +918,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -967,7 +967,7 @@
             "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0800482"
           },
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1017,7 +1017,7 @@
             "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0010200"
           },
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1057,7 +1057,7 @@
             "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0005011"
           },
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1093,7 +1093,7 @@
             "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0005665"
           },
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1142,7 +1142,7 @@
             "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0005180"
           },
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1219,7 +1219,7 @@
             "gazetteer_code": "http://purl.obolibrary.org/obo/MONDO_0017998"
           },
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1299,7 +1299,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1377,7 +1377,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1423,7 +1423,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1481,7 +1481,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1558,7 +1558,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1631,7 +1631,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1701,7 +1701,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null
@@ -1753,7 +1753,7 @@
           "stage": "deterministic+ner+contextual",
           "provenance": null,
           "origin": {
-            "source_id": "/Users/shoaaamir/Documents/codes/experimentation/seiba_sdks_experiment/seiba-risk-scanner/examples/data/notes/adv_01_neurology_consult.txt",
+            "source_id": "/examples/data/notes/adv_01_neurology_consult.txt",
             "source_label": "adv_01_neurology_consult.txt",
             "row": null,
             "column": null

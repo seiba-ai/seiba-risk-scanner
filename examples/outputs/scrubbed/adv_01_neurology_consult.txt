@@ -1,14 +1,14 @@
 [ORGANIZATION]
-[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+STREET_ADDRESS_54b46fe3, [LOCATION], [LOCATION] [ZIPCODE] | Tel PHONE_ee84ec5b | Fax PHONE_60b6ab0d
 
 NEUROLOGY CONSULTATION
 Date of service: [DATE]
-Re: [PERSON] | DOB: [DATE_OF_BIRTH] | MRN: [ID_NUM] | Sex: F
-Referring clinician: [PERSON], MD
+Re: PERSON_815fd9a3 | DOB: DATE_OF_BIRTH_64be4a7b | MRN: ID_NUM_84bc14b5 | Sex: F
+Referring clinician: PERSON_c7fb6b99, MD
 
 Dear Colleague:
 
-Thank you for asking me to evaluate [PERSON] for progressive tremor and gait slowing. She reports that the right hand tremor began about eighteen months ago and is now more apparent when resting. Her partner has noticed smaller handwriting and reduced arm swing. She denies loss of consciousness, recent [CONDITION], or change in vision.
+Thank you for asking me to evaluate PERSON_815fd9a3 for progressive tremor and gait slowing. She reports that the right hand tremor began about eighteen months ago and is now more apparent when resting. Her partner has noticed smaller handwriting and reduced arm swing. She denies loss of consciousness, recent [CONDITION], or change in vision.
 
 HPI: There is no family history of [CONDITION]. She has no history suggestive of [CONDITION]. Examination shows masked facies, mild right-sided bradykinesia, and a resting tremor. There is no facial weakness to suggest [CONDITION]. The overall pattern is most consistent with early [CONDITION].
 
@@ -16,11 +16,11 @@ Assessment/[CONDITION]: I reviewed medication options and referred her to physic
 
 Sincerely,
 
-[PERSON], MD
-Neurology | NPI [PERSON]
+PERSON_c7fb6b99, MD
+Neurology | NPI PERSON_474dd161
 Electronically signed [DATE]
 
-[ORGANIZATION], [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+[ORGANIZATION], STREET_ADDRESS_54b46fe3, [LOCATION], [LOCATION] [ZIPCODE]
 This consultation contains confidential health information intended only for the receiving clinician.
 
 

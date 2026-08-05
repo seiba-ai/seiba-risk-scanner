@@ -1,10 +1,10 @@
 [ORGANIZATION]
-[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+STREET_ADDRESS_04655577, [LOCATION], [LOCATION] [ZIPCODE] | Tel PHONE_7fe4d5d9 | Fax PHONE_7747590a
 
 DISCHARGE SUMMARY
-Patient: [PERSON] | DOB: [DATE_OF_BIRTH] | MRN: [ID_NUM] | Sex: Male
+Patient: PERSON_07647d28 | DOB: DATE_OF_BIRTH_8c83f5b8 | MRN: ID_NUM_5a48ba54 | Sex: Male
 Admit date/time: [DATE] [TIME] | Discharge date/time: [DATE] [TIME]
-Discharge address: [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+Discharge address: STREET_ADDRESS_71c3619e, [LOCATION], [LOCATION] [ZIPCODE]
 
 Principal diagnosis: Community-[CONDITION] [CONDITION] with acute hypoxemia.
 
@@ -14,8 +14,8 @@ Discharge medications: amoxicillin-clavulanate for four additional days; continu
 
 Follow-up: See primary care within [TIME] to seven days and repeat chest imaging in six weeks. Home health nursing will assess medication adherence and fall risk. Return to the emergency department for [CONDITION], worsening dyspnea, chest pain, or confusion.
 
-Discharging clinician: [PERSON], [PERSON] | NPI [PERSON]
+Discharging clinician: PERSON_0492b335, PERSON_7abcf6da | NPI PERSON_0054719a
 Signed: [DATE] [TIME]
 
-[ORGANIZATION] | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+[ORGANIZATION] | STREET_ADDRESS_04655577, [LOCATION], [LOCATION] [ZIPCODE]
 This summary is confidential and accompanies the patient’s transition of care.

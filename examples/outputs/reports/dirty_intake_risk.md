@@ -185,8 +185,8 @@ The policy was applied, then the scrubbed data was compared back against the ori
 
 - **Residue left behind: 0% — clean.** No raw sensitive value survived; every direct identifier was removed as planned.
 - **Still re-identifiable: 0% — strong.** After scrubbing, no record can be singled out by the traits left behind.
-- **Data properties retained: 1%** across the 1293 values the policy rewrote. This is a **structural** measure, not a judgement about your analysis: it counts how many useful properties survived in the scrubbed values, nothing more. Whether that is enough depends entirely on what you plan to do with the data.
-  - Retained by kind of data: sensitive attribute 6%, financial data 6%, direct identifier 1%, quasi identifier 1%
+- **Data properties retained: 42%** across the 1293 values the policy rewrote. This is a **structural** measure, not a judgement about your analysis: it counts how many useful properties survived in the scrubbed values, nothing more. Whether that is enough depends entirely on what you plan to do with the data.
+  - Retained by kind of data: direct identifier 49%, sensitive attribute 39%, financial data 39%, quasi identifier 5%
 
   *The three properties checked on each rewritten value: can it still be read (weight 0.2); can two different originals still be told apart, which is what joining and counting need (0.5); does it keep its original shape and format (0.3). Masking to `[EMAIL]` destroys all three, so a fully masked field retains 0%. A realistic fake value keeps the last two. Only these weights are a judgement call — the three checks are measured on the real output.*
 
@@ -208,6 +208,35 @@ The whole point of applying a policy. Every finding was re-scored against what t
 | info | 0 | 1293 |
 
 > This is exposure remaining in the **scrubbed** copy. The original data is unchanged and still carries the number on the left.
+
+## What the optimizer chose, and why
+
+You asked for actions to be chosen automatically rather than taken from the policy profile. Each entity below was given the least destructive action that still met the privacy target; anything not listed was left as configured.
+
+**Reading this table**
+
+- **Data type** — the kind of data the decision applies to
+- **Action chosen** — what will be done to every value of that type
+- **Why** — the reason this action was picked over a gentler or harsher one
+
+| Data type | Action chosen | Why |
+|---|---|---|
+| bank_account_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| city | `mask` | combines with other fields to single people out; mask reaches k=189 (target 5) |
+| date_of_birth | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| dates | `mask` | combines with other fields to single people out; mask reaches k=189 (target 5) |
+| medical_record_number_mrn | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| person_names | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| phone_number | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| ssn | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| state | `mask` | combines with other fields to single people out; mask reaches k=189 (target 5) |
+| street_address | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| timestamps | `mask` | combines with other fields to single people out; mask reaches k=189 (target 5) |
+| unique_identifier | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| us_itin | `hash` | identifies a person outright, so the raw value cannot survive; hashed, which hides it but keeps records joinable |
+| zip_code | `mask` | combines with other fields to single people out; mask reaches k=189 (target 5) |
+
+Reached a smallest crowd size of **k=189** after testing 160 combinations. Combinations that could only be more destructive than one already known to work were skipped rather than measured.
 
 ## Human approval flagged entities
 
@@ -277,15 +306,16 @@ The action taken on every finding, decided by the chosen rulebook. The action co
 
 OpenMed profile **`hipaa_safe_harbor`** — executed (values rewritten).
 
-- Exact label lookups (`action_for`): **1282**
-- Class fallback (`policy_label_actions` via seiba `data_class`): **11**
+- Exact label lookups (`action_for`): **1**
+- Class fallback (`policy_label_actions` via seiba `data_class`): **0**
 - Neutral / missing → keep: **0**
 
 **Action histogram**
 
 | Action | Findings |
 |---|---|
-| mask | 1293 |
+| hash | 1079 |
+| mask | 214 |
 
 **Sample action records**
 
@@ -299,25 +329,25 @@ OpenMed profile **`hipaa_safe_harbor`** — executed (values rewritten).
 
 | Entity | OpenMed label | Policy class | Action | Source | Execute fallback | Replacement |
 |---|---|---|---|---|---|---|
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
-| medical_record_number_mrn | ID_NUM | — | mask | openmed_action_for | — | [ID_NUM] |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_5370e321 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_e2e48190 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_133a0bfd |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_5d1d7b03 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_a709594b |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_e449ffaf |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_82e6cca4 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_c34570f5 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_ff951449 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_d2ec9f38 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_182ff340 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_f0f20308 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_272a0925 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_cedff6b7 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_ffbf322e |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_77ef5539 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_46da55e7 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_8ac6fe87 |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_492f7ebf |
+| medical_record_number_mrn | ID_NUM | — | hash | seiba_action_override | — | ID_NUM_cb1569d7 |
 
 *Showing 20 of 1293. All 1293 action records — with the full rule trace behind every finding — are in `dirty_intake_risk.json`.*

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 from collections import defaultdict
-from typing import Any, Dict, List, Mapping, Optional, Sequence
+from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
 from seiba_risk_scanner.policy.bridge import seiba_mask_token
 from seiba_risk_scanner.policy.generalize import generalize, kind_for_label
@@ -117,39 +117,41 @@ def _for_source(records: Sequence[ActionRecord], source_id: Optional[str]) -> Li
     return mine
 
 
-def scrub_text(
-    text: str, records: Sequence[ActionRecord], source_id: Optional[str] = None
-) -> str:
-    """Apply replacements to ``text`` by descending span start.
+def _splice(text: str, records: Sequence[ActionRecord], where: str) -> str:
+    """Replace each record's span in ``text``, working from the last offset backwards.
 
     Every record must match ``text`` at its recorded span; a stale or foreign span raises
     rather than being skipped, because a silently skipped record leaves an identifier in
-    output the caller believes is de-identified.
+    output the caller believes is de-identified. Overlaps raise for the same reason: one of
+    two colliding spans would have to be dropped, and neither choice is safe to make here.
     """
-    applied = [
-        r if r.replacement is not None else apply_action_to_text(r)
-        for r in _for_source(records, source_id)
-    ]
+    applied = [r if r.replacement is not None else apply_action_to_text(r) for r in records]
     ordered = sorted(applied, key=lambda r: (r.start, r.end), reverse=True)
     for record, nxt in zip(ordered[1:], ordered):
         if record.end > nxt.start:
-            raise ValueError(f"overlapping spans: {record.entity} and {nxt.entity}")
-    out = text
+            raise ValueError(
+                f"overlapping spans in {where}: {record.entity} and {nxt.entity}"
+            )
     for record in ordered:
-        if record.replacement is None:
-            continue
-        if not 0 <= record.start <= record.end <= len(out):
+        if not 0 <= record.start <= record.end <= len(text):
             raise ValueError(
                 f"{record.entity} span [{record.start},{record.end}] is outside a "
-                f"{len(out)}-character source"
+                f"{len(text)}-character {where}"
             )
-        if out[record.start : record.end] != record.text:
+        if text[record.start : record.end] != record.text:
             raise ValueError(
                 f"{record.entity} span [{record.start},{record.end}] holds "
-                f"{out[record.start:record.end]!r}, not {record.text!r} — stale or wrong source"
+                f"{text[record.start:record.end]!r}, not {record.text!r} — stale or wrong source"
             )
-        out = out[: record.start] + record.replacement + out[record.end :]
-    return out
+        text = text[: record.start] + str(record.replacement) + text[record.end :]
+    return text
+
+
+def scrub_text(
+    text: str, records: Sequence[ActionRecord], source_id: Optional[str] = None
+) -> str:
+    """Apply every record belonging to ``source_id`` to ``text``."""
+    return _splice(text, _for_source(records, source_id), "source")
 
 
 def scrub_rows(
@@ -159,20 +161,29 @@ def scrub_rows(
 ) -> List[Dict[str, Any]]:
     """Rebuild table rows with scrubbed cell values.
 
-    Tables are addressed by row/column rather than character offsets, so this replaces the
-    whole cell; a cell holding two findings keeps the last one applied.
+    Row and column name the cell, ``start``/``end`` locate the span inside it. Splicing by
+    offset rather than overwriting the cell keeps the text around a finding — a free-text
+    note loses its identifiers, not its content — and applies every finding in a cell
+    instead of whichever record happened to be handled last.
     """
     out = [dict(row) for row in rows]
+    by_cell: Dict[Tuple[int, str], List[ActionRecord]] = defaultdict(list)
     for record in _for_source(records, source_id):
-        applied = record if record.replacement is not None else apply_action_to_text(record)
-        origin = applied.origin
+        origin = record.origin
         if origin is None or origin.row is None or origin.column is None:
-            raise ValueError(f"{applied.entity} has no row/column origin; it is not tabular")
+            raise ValueError(f"{record.entity} has no row/column origin; it is not tabular")
         if not isinstance(origin.row, int) or not 0 <= origin.row < len(out):
             raise ValueError(
-                f"{applied.entity} row {origin.row!r} is outside a {len(out)}-row table"
+                f"{record.entity} row {origin.row!r} is outside a {len(out)}-row table"
             )
-        out[origin.row][origin.column] = applied.replacement
+        by_cell[(origin.row, origin.column)].append(record)
+
+    for (row, column), cell_records in by_cell.items():
+        # Offsets were measured against the scanned form of the cell, so a padded string or
+        # a non-string value has to be normalised the same way before any span applies.
+        out[row][column] = _splice(
+            str(out[row][column]).strip(), cell_records, f"cell {column!r}"
+        )
     return out
 
 

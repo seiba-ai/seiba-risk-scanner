@@ -1,30 +1,30 @@
 [ORGANIZATION] - MEMBER INTAKE
-[STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE] | Tel [PHONE] | Fax [PHONE]
+STREET_ADDRESS_f51eeefc, [LOCATION], [LOCATION] [ZIPCODE] | Tel PHONE_9ce39423 | Fax PHONE_924938ef
 
 INTAKE QUESTIONNAIRE RESPONSE
 Submitted: [DATE]
-Member: [PERSON] | DOB: [DATE_OF_BIRTH] | Member ID: [ACCOUNT_NUMBER] | Sex: Female
+Member: PERSON_46cbdda3 | DOB: DATE_OF_BIRTH_932effe7 | Member ID: ACCOUNT_NUMBER_c6cce523 | Sex: Female
 
 1. What brings you in today?
 Persistent [CONDITION] and difficulty sleeping for approximately three months. I would like to discuss preventive treatment and a refill of my rescue medication.
 
 2. Emergency contact
-Name: [PERSON] (spouse) | Phone: [PHONE] | Relationship: spouse
+Name: PERSON_0d49af1f (spouse) | Phone: PHONE_132bea6d | Relationship: spouse
 
 3. Family medical history
-Mother: [PERSON], age [AGE] — [CONDITION] and [CONDITION].
-Father: [PERSON], age [AGE] — [CONDITION] and [CONDITION].
-Sister: [PERSON], age [AGE] — no major medical conditions reported.
-Maternal grandmother: [PERSON], deceased at [DATE] — [CONDITION].
+Mother: PERSON_fca7d9b1, age [AGE] — [CONDITION] and [CONDITION].
+Father: PERSON_a70a75a6, age [AGE] — [CONDITION] and [CONDITION].
+Sister: PERSON_181fe74a, age [AGE] — no major medical conditions reported.
+Maternal grandmother: PERSON_a6f0682c, deceased at DATE_a46e3763 — [CONDITION].
 
 4. Current care and preferences
-Primary clinician is [PERSON], MD. I prefer portal messages for routine results and telephone calls for urgent changes. I do not need an interpreter. No current pregnancy, tobacco use, or known medication allergies.
+Primary clinician is PERSON_51e9e7bb, MD. I prefer portal messages for routine results and telephone calls for urgent changes. I do not need an interpreter. No current pregnancy, tobacco use, or known medication allergies.
 
 5. Consent
 I authorize [ORGANIZATION] to contact me regarding appointment scheduling and care coordination.
 
-Reviewed by [PERSON], [LOCATION] | NPI [PERSON]
+Reviewed by PERSON_51e9e7bb, [LOCATION] | NPI PERSON_3438ca02
 Review date: [DATE]
 
-[ORGANIZATION] | [STREET_ADDRESS], [LOCATION], [LOCATION] [ZIPCODE]
+[ORGANIZATION] | STREET_ADDRESS_f51eeefc, [LOCATION], [LOCATION] [ZIPCODE]
 Responses are part of the member record. Do not forward outside the care team without authorization.

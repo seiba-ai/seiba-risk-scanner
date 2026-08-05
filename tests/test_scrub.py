@@ -111,6 +111,32 @@ def test_origin_survives_into_the_plan_and_report_json(scanner):
     assert dumped["findings"][0]["detection"]["origin"]["source_label"] == "alice.txt"
 
 
+def _row_plan(scanner: SeibaScanner, rows: list[dict], source_id: str):
+    result = scanner.classify_structured_text(rows, source_id=source_id)
+    return ReadinessAssessor().assess([result], labels=[source_id]).policy_plan
+
+
+def test_free_text_cell_keeps_everything_around_its_findings(scanner):
+    rows = [{"comments": "duplicate acct, see SSN 123-45-6789"}]
+    plan = _row_plan(scanner, rows, "notes.csv")
+
+    scrubbed = scrub_rows(rows, plan.records, "notes.csv")[0]["comments"]
+    assert scrubbed.startswith("duplicate acct, see ")
+    assert "123-45-6789" not in scrubbed
+
+
+def test_cell_with_two_findings_applies_both_whatever_the_record_order(scanner):
+    rows = [{"comments": "SSN 123-45-6789 or mail bob@example.com instead"}]
+    plan = _row_plan(scanner, rows, "notes.csv")
+    assert len(plan.records) >= 2, "fixture needs a cell holding more than one finding"
+
+    scrubbed = scrub_rows(rows, plan.records, "notes.csv")[0]["comments"]
+    assert "123-45-6789" not in scrubbed and "bob@example.com" not in scrubbed
+    assert "or mail" in scrubbed and scrubbed.endswith(" instead")
+    # Whole-cell overwrite made the surviving identifier depend on iteration order.
+    assert scrub_rows(rows, plan.records[::-1], "notes.csv")[0]["comments"] == scrubbed
+
+
 def test_scrub_rows_refuses_a_non_tabular_record(scanner):
     plan = _plan(scanner, {"alice.txt": ALICE})
 

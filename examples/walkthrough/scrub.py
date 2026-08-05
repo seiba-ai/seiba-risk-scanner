@@ -11,7 +11,14 @@ from seiba_risk_scanner import SeibaScanner
 from seiba_risk_scanner.assessment import ReadinessAssessor
 from seiba_risk_scanner.policy import scrub_rows, scrub_text
 
-from .core import DATA, OUTPUT, add_backend_args, scanner_from_args
+from .core import (
+    DATA,
+    OUTPUT,
+    add_backend_args,
+    add_policy_args,
+    optimize_from_args,
+    scanner_from_args,
+)
 
 DEFAULT_NOTES = DATA / "notes"
 DEFAULT_TABLES = DATA / "tables"
@@ -47,12 +54,16 @@ def write(path: Path, data) -> Path:
     return path
 
 
-def scrub_corpus(scanner: SeibaScanner, paths: list[Path], out_dir: Path, max_rows=None) -> dict:
+def scrub_corpus(
+    scanner: SeibaScanner, paths: list[Path], out_dir: Path, max_rows=None, optimize=False
+) -> dict:
     sources = {str(path): load(path, max_rows) for path in paths}
     results = [scan_one(scanner, path, sources[str(path)]) for path in paths]
     labels = [path.name for path in paths]
 
-    report = ReadinessAssessor().assess(results, labels=labels, health_context=True)
+    report = ReadinessAssessor(optimize=optimize).assess(
+        results, labels=labels, health_context=True
+    )
     records = report.policy_plan.records
 
     summary = []
@@ -81,11 +92,14 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--out", type=Path, default=OUTPUT)
     parser.add_argument("--max-rows", type=int, help="Cap rows per table.")
     add_backend_args(parser)
+    add_policy_args(parser)
     args = parser.parse_args(argv)
 
     paths = collect(args.notes, ".txt") + collect(args.tables, ".csv")
     out_dir = args.out / "scrubbed"
-    summary = scrub_corpus(scanner_from_args(args), paths, out_dir, args.max_rows)
+    summary = scrub_corpus(
+        scanner_from_args(args), paths, out_dir, args.max_rows, optimize_from_args(args)
+    )
     (out_dir / "scrub_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
     print(
