@@ -33,6 +33,7 @@ class OpenMedBackend(NERBackend):
         # owns structured IDs (dates/SSN/phone) instead of competing in fusion.
         self._use_smart_merging = use_smart_merging
         self._config: object | None = None
+        self._loader: object | None = None
         self._label_map: Dict[str, _MappedLabel] = self._parse_map(
             yaml.safe_load(_LABEL_MAP_PATH.read_text(encoding="utf-8"))
         )
@@ -61,6 +62,15 @@ class OpenMedBackend(NERBackend):
             # when available (output-identical to CPU), else CPU.
             self._config = OpenMedConfig(torch_attention_backend="eager", device="auto")
         return self._config
+
+    def _get_loader(self):
+        # OpenMed builds a fresh ModelLoader per call when none is passed, reloading the
+        # weights every time (~3.2s). One per backend removes that fixed cost entirely.
+        if self._loader is None:
+            from openmed.core.models import ModelLoader
+
+            self._loader = ModelLoader(self._get_config())
+        return self._loader
 
     def _resolve(self, label: str, text: str, start: int, end: int) -> Optional[str]:
         # PII: map to ontology entity_id (drop unmapped / failed context gate).
@@ -135,6 +145,7 @@ class OpenMedBackend(NERBackend):
                     use_smart_merging=self._use_smart_merging,
                     cache_results=True,
                     max_cache_entries=_NER_CACHE_ENTRIES,
+                    loader=self._get_loader(),
                 )
             else:
                 result = analyze_text(
@@ -143,6 +154,7 @@ class OpenMedBackend(NERBackend):
                     config=config,
                     cache_results=True,
                     max_cache_entries=_NER_CACHE_ENTRIES,
+                    loader=self._get_loader(),
                 )
             if timings is not None:
                 timings["ner_tokenize_infer_s"] = timings.get("ner_tokenize_infer_s", 0.0) + (
@@ -231,6 +243,7 @@ class OpenMedBackend(NERBackend):
                 model_name=self._model_name,
                 config=self._get_config(),
                 use_smart_merging=self._use_smart_merging,
+                loader=self._get_loader(),
             )
             if timings is not None:
                 timings["ner_tokenize_infer_s"] = timings.get("ner_tokenize_infer_s", 0.0) + (
