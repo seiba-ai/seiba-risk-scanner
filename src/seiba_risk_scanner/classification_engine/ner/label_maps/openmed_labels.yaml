@@ -1,5 +1,5 @@
 # Maps OpenMed PII model labels to Seiba ontology entity_id (runtime NER backend).
-# Labels with no entry here are dropped (e.g. occupation, gender).
+# Labels with no entry here are dropped (e.g. occupation, race_ethnicity).
 # Clinical models bypass this map: their type labels pass through as openmed::<label>.
 #
 # A value is either:
@@ -35,6 +35,7 @@ date_time: pii_entity_ontology::timestamps
 time: pii_entity_ontology::timestamps
 
 age: pii_entity_ontology::age
+gender: pii_entity_ontology::sex
 
 medical_record_number: phi_entity_ontology::medical_record_number_mrn
 npi: phi_entity_ontology::provider_npi

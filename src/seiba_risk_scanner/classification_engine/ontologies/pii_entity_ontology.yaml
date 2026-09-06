@@ -372,6 +372,52 @@ entities:
     de_identifier: LOCATION
     default_action: DEFAULT
 
+  sex:
+    description: "Sex or gender"
+    regex_patterns:
+      accepted_patterns:
+        # Spelled-out values, anywhere in the text.
+        - |-
+          \b(?:male|female|non[-\s]?binary|nonbinary|transgender|intersex|agender|genderqueer)\b
+        # Single-letter codes only when the value is nothing else — "M" inside prose
+        # is a middle initial far more often than a sex code.
+        - |-
+          ^[MFmf]$
+      prohibited_patterns: []
+      # Near-zero base: these are ordinary English words and single letters, so only a
+      # sex/gender column or an explicit label should clear min_fused_confidence.
+      confidence_weight: 0.05
+    validators:
+      enum: null
+      confidence_weight: null
+    contextual_phrases:
+      values:
+        - sex
+        - gender
+        - sex code
+        - gender code
+        - birth sex
+        - sex at birth
+        - administrative gender
+        - gender identity
+        - legal sex
+        - patient sex
+        - patient gender
+      confidence_weight: 0.85
+    prohibited_prefix:
+      values: []
+      confidence_weight: null
+    prohibited_suffix:
+      values: []
+      confidence_weight: null
+    classification:
+        category: PII
+        data_class: quasi_identifier
+    # No OpenMed canonical label for sex, so the policy bridge falls back to the
+    # data class (quasi-identifier), which is the correct handling anyway.
+    de_identifier: null
+    default_action: DEFAULT
+
   zip_code:
     description: "Postal/ZIP code"
     part_of: pii_entity_ontology::street_address

@@ -51,11 +51,15 @@ def configs():
 def test_ontology_de_identifier_coverage(configs):
     mapped = [c for c in configs.values() if c.de_identifier]
     nulls = [c for c in configs.values() if not c.de_identifier]
-    # 84 = 83 + account_reference_number, split out of unique_identifier so the HIPAA
-    # checklist can report ACC- values under "account number" instead of "other unique id".
-    assert len(configs) == 84
+    # 85 = 84 + sex, added so k-anonymity can form the canonical {DOB, ZIP, sex}
+    # quasi-identifier combination. The OpenMed model already emitted a `gender` label;
+    # it was dropped for want of an entity to map it to.
+    assert len(configs) == 85
     assert len(mapped) == 65
-    assert len(nulls) == 19
+    # 20th null is `sex`: OpenMed has no canonical label for it, so the policy bridge
+    # falls back to the data class (quasi-identifier), which is the right handling.
+    assert len(nulls) == 20
+    assert configs["pii_entity_ontology::sex"].de_identifier is None
     assert configs["pii_entity_ontology::ssn"].de_identifier == "SSN"
     assert configs["pii_entity_ontology::us_itin"].de_identifier is None
     assert configs["phi_entity_ontology::dna_sequences"].de_identifier is None

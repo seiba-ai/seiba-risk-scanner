@@ -1,5 +1,7 @@
 """PHI/PII/financial sensitive data detection SDK."""
 
+__version__ = "0.1.1"
+
 from seiba_risk_scanner.classification_engine.deterministic_detectors.deterministic_detector import (
     DeterministicDetectionRow,
     DeterministicStageResult,
@@ -34,6 +36,7 @@ from seiba_risk_scanner.config import (
 from seiba_risk_scanner.scanner import SeibaScanner
 
 __all__ = [
+    "__version__",
     "DEFAULT_MIN_FUSED_CONFIDENCE",
     "SeibaScanner",
     "EvalConfig",
