@@ -61,11 +61,9 @@ where = ["src"]
 # The gazetteer artifact is a runtime dependency of detection, not a build input: without
 # it get_default_index() falls back to an empty index and medical-term detection silently
 # disables. Raw source dumps (MONDO/RxNorm/CHV) are deliberately NOT shipped — see NOTICE.
-# NOTE: this wheel ships the RxNorm-derived gazetteer, whose redistribution the UMLS
-# licence governs. It is the internal readiness build, not the OSS one.
 "seiba_risk_scanner.classification_engine.ontologies" = [
   "*.yaml",
-  "med_ontology_sources/cleaned/medical_terms_gazetteer_rxnorm_included.json",
+  "med_ontology_sources/cleaned/medical_terms_gazetteer.json",
 ]
 "seiba_risk_scanner.classification_engine.llm" = ["label_maps/*.yaml"]
 "seiba_risk_scanner.classification_engine.ner" = ["label_maps/*.yaml"]
